@@ -1,0 +1,17 @@
+
+[alias]
+    a = add
+    amend = commit --verbose --amend --reset-author
+    br = branch -vv
+    co = checkout
+    cm = commit -m
+    st = status
+[color]
+    ui = true
+[core]
+    editor = subl
+[user]
+    name = Matthew Carruth
+    email = mcarruth@blacksky.com
+[push]
+    default = simple
