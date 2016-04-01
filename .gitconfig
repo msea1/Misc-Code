@@ -1,17 +1,76 @@
+[advice]
+    commitBeforeMerge = false
+    detachedHead = false
+    pushNonFastForward = false
+    resolveConflict = false
+    statusHints = false
 
 [alias]
+    ### SELF-EXPLANATORY ###
     a = add
+    aa = add --all
     amend = commit --verbose --amend --reset-author
+    authors = "!git log --pretty=format:%aN | sort | uniq -c | sort -rn"
     br = branch -vv
     co = checkout
     cm = commit -m
-    st = status
+    da = diff HEAD
+    ds = diff --staged
+    history = log --oneline --abbrev-commit --all --graph --decorate --color
+    pb = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
+    st = status --short --branch
+
+    ### OTHERS ###
+
+    # stage just parts of files
+    ap = add --patch
+
+    # stage modified files
+    au = add --update
+
+    # Which files are receiving the most "love"
+    churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
+
+    # lists the topmost 20 commits without a pager.
+    l = "!git --no-pager log -20 --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'; echo"
+
+    # lists all commits (linearized).
+    ll = log --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+
+    # lists files that were changed in the commits.
+    lf = log --name-status --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+
+    # displays a commit graph
+    lg = log --graph --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+
+    # displays also a commit graph but includes info about all branches.
+    lga = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+
 [color]
     ui = true
+
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+
 [core]
     editor = subl
+
+[push]
+    default = simple
+
 [user]
     name = Matthew Carruth
     email = mcarruth@blacksky.com
-[push]
-    default = simple
