@@ -94,7 +94,6 @@ complete -o default -o nospace -F _git g
 export DJANGO_ENV=development
 export EDITOR=subl
 export GREP_OPTIONS='-I --color=always --exclude=*.xhprof'
-export HISTFILE=~/.bash.d/history
 export HISTCONTROL=ignoreboth
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000

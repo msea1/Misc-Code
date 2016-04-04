@@ -1,3 +1,5 @@
+# http://blog.self.li/post/74294988486/creating-a-post-installation-script-for-ubuntu
+
 #! /bin/sh
 
 sudo su -
@@ -8,8 +10,8 @@ add-apt-repository -y ppa:gnome-terminator
 add-apt-repository -y ppa:peterlevi/ppa
 add-apt-repository -y ppa:webupd8team/sublime-text-3
 
-
 apt-get update
+apt-get upgrade
 
 # RUN INSTALLS
 apt-get install -y ack-grep
@@ -25,7 +27,6 @@ apt-get install -y terminator
 apt-get install -y variety
 apt-get install -y vlc
 
-apt-get upgrade
 
 exit
 
