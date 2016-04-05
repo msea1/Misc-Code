@@ -18,7 +18,7 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias mkdir='mkdir -pv'
 alias root="sudo su -"
-alias sorry="sudo !!"
+alias sorry='sudo $(fc -ln -1)'
 alias update='sudo apt-get update'
 alias vauth='vault auth -method=ldap username=$USER'
 alias vssh='vault ssh -role otp_key_role'
