@@ -87,6 +87,12 @@ if [[ -f ~/.git-completion.bash ]]; then
 fi
 complete -o default -o nospace -F _git g
 
+### COLORS ###
+BLUE="\033[38;5;39m\]"
+GREEN="\033[38;5;47m\]"
+GREY="\033[38;5;7m\]"
+WHITE="\033[38;5;15m\]"
+YELLOW="\033[38;5;11m\]"
 
 ### ENVIRONMENT VARIABLES ###
 export DJANGO_ENV=development
@@ -97,7 +103,8 @@ export HISTSIZE=1000000
 export HISTFILESIZE=1000000
 export MC_HOME=$HOME/code/mission_control
 export NVM_DIR="$HOME/.nvm"
-export PS1="\[\033[38;5;47m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;7m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;39m\]\w\[$(tput sgr0)\]\[\033[38;5;6m\]]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[$GREEN\u@\[$(tput sgr0)\]\[$GREY\h \[$(tput sgr0)\]\[$BLUE[\w] \[$(tput sgr0)\]\[$YELLOW\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
+export PS1="\[$BLUE[\w] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.4
 export SFN_HOME="$HOME/code/spaceflightnetworks"
 export WORKON_HOME=$HOME/.virtualenvs
