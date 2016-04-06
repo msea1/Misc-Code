@@ -8,14 +8,12 @@ alias addrep='sudo add-apt-repository'
 alias bashrc='subl ~/.bashrc'
 alias cd..="cd .."
 alias diskspace="du -S | sort -n -r |more"
-alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
 alias g='git'
 alias gitconfig='subl ~/.gitconfig'
 alias h='history | grep'
 alias inst='sudo apt-get install'
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -alF'
+alias ld='ls -ABF --group-directories-first'
+alias ll='ls -AhlF --group-directories-first'
 alias mkdir='mkdir -pv'
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'
@@ -139,6 +137,14 @@ extract () {
  else
      echo "'$1' is not a valid file!"
  fi
+}
+
+gps() {
+  arg=$1
+  letter=${arg:0:1}
+  brack='['$letter']'
+  srch=$brack${arg:1}
+  ps -ax | grep -i $srch
 }
 
 new_venv() {
