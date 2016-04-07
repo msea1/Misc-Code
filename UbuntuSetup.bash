@@ -16,7 +16,6 @@ apt-get upgrade
 # RUN INSTALLS
 apt-get install -y ack-grep
 apt-get install -y audio-recorder
-apt-get install -y cairo-dock cairo-dock-plug-ins
 apt-get install -y deluge
 apt-get install -y git bash-completion
 apt-get install -y openjdk-7-jre
