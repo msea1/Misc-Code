@@ -6,6 +6,9 @@ sudo apt-get install lightzone
 sudo add-apt-repository -y ppa:pmjdebruijn/darktable-release
 sudo apt-get install darktable
 
-# pycharm
-sudo add-apt-repository ppa:mystic-mirage/pycharm
-sudo apt-get install pycharm
+# kdiff3
+sudo apt-get install meld
+
+# meld
+sudo apt-get install meld
+
