@@ -7,6 +7,7 @@ force_color_prompt=yes
 alias addrep='sudo add-apt-repository'
 alias bashrc='subl ~/.bashrc'
 alias cd..="cd .."
+alias code='cd ~/code'
 alias diskspace="du -S | sort -n -r |more"
 alias g='git'
 alias gitconfig='subl ~/.gitconfig'

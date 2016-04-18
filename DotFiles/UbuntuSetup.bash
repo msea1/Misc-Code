@@ -19,6 +19,7 @@ apt-get install -y ack-grep
 apt-get install -y audio-recorder
 apt-get install -y deluge
 apt-get install -y git bash-completion
+apt-get install -y git-flow
 apt-get install -y openjdk-7-jre
 apt-get install -y pycharm
 apt-get install -y redshift redshift-gtk
