@@ -13,7 +13,7 @@
     authors = "!git log --pretty=format:%aN | sort | uniq -c | sort -rn"
     br = branch -vv
     co = checkout
-    cm = commit -m
+    cm = commit --allow-empty -m
     da = diff HEAD
     ds = diff --staged
     dt = difftool
