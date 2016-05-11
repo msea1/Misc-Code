@@ -11,8 +11,15 @@ add-apt-repository -y ppa:mystic-mirage/pycharm
 add-apt-repository -y ppa:peterlevi/ppa
 add-apt-repository -y ppa:webupd8team/sublime-text-3
 
+# Get DEBs
+mkdir -p ~/temp
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb -P ~/temp
+
+# Copy DEBs
+cp ~/temp/*.deb /var/cache/apt/archives/
+
 apt-get update
-apt-get upgrade
+apt-get -y upgrade
 
 # RUN INSTALLS
 apt-get install -y ack-grep
@@ -20,6 +27,7 @@ apt-get install -y audio-recorder
 apt-get install -y deluge
 apt-get install -y git bash-completion
 apt-get install -y git-flow
+apt-get install -y meld
 apt-get install -y openjdk-7-jre
 apt-get install -y pycharm
 apt-get install -y redshift redshift-gtk
@@ -29,6 +37,8 @@ apt-get install -y terminator
 apt-get install -y ubuntu-gnome-desktop
 apt-get install -y variety
 apt-get install -y vlc
+
+dpkg -i ~/temp/*.deb
 
 
 # SUDO COMMANDS

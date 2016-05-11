@@ -9,12 +9,13 @@
     ### SELF-EXPLANATORY ###
     a = add
     aa = add --all
-    amend = commit --verbose --amend --reset-author
+    amend = commit --amend
     authors = "!git log --pretty=format:%aN | sort | uniq -c | sort -rn"
     br = branch -vv
     co = checkout
     cm = commit --allow-empty -m
     da = diff HEAD
+    del = push origin --delete
     ds = diff --staged
     dt = difftool
     hist = log --oneline --abbrev-commit --all --graph --decorate --color
@@ -67,7 +68,7 @@
     untracked = red bold
 
 [core]
-    editor = subl
+    editor = vim
 
 [diff]
     tool = meld

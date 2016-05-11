@@ -99,7 +99,7 @@ YELLOW="\033[38;5;11m\]"
 
 ### ENVIRONMENT VARIABLES ###
 export DJANGO_ENV=development
-export EDITOR=subl
+export EDITOR=vim
 export GREP_OPTIONS='-I --color=always --exclude=*.xhprof'
 export HISTCONTROL=ignoreboth
 export HISTSIZE=1000000
