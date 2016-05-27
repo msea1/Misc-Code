@@ -24,7 +24,7 @@ apt-get -y upgrade
 # RUN INSTALLS
 apt-get install -y ack-grep
 apt-get install -y audio-recorder
-apt-get install -y deluge
+apt-get install -y gimp
 apt-get install -y git bash-completion
 apt-get install -y git-flow
 apt-get install -y meld
@@ -64,6 +64,7 @@ wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 
 # SUBLIME TEXT 3
 wget -O ~/.config/sublime-text-3/Installed\ Packages/Package\ Control.sublime-package https://sublime.wbond.net/Package%20Control.sublime-package --no-check-certificate
+sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/bin/subl
 printf "{\"installed_packages\":[\"AutoFileName\",\"BracketHighlighter\",\"ExportHtml\",\"GenerateUUID\",\"GitGutter-Edge\",\"HexViewer\",\"Neon Color Scheme\",\"PackageResourceViewer\",\"PlistJsonConverter\",\"Python Flake8 Lint\",\"Python Improved\",\"SideBarEnhancements\",\"SideBarGit\",\"SublimeCodeIntel\",\"SublimeREPL\",\"Tag\",\"Terminal\"]}" > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
 printf "{\"wrap_width\":120}" > ~/.config/sublime-text-3/Packages/User/Java.sublime-settings
 printf "{\"wrap_width\":120}" > ~/.config/sublime-text-3/Packages/User/Javascript.sublime-settings
