@@ -1,5 +1,5 @@
 ﻿# enter password
-sudo apt-get update 
+sudo apt-get update
 
 # ADD Repos
 sudo add-apt-repository -y ppa:audio-recorder/ppa ppa:osmoma/audio-recorder ppa:gnome-terminatorp pa:mystic-mirage/pycharm ppa:peterlevi/ppa ppa:webupd8team/java ppa:webupd8team/sublime-text-3
