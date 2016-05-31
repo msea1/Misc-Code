@@ -6,3 +6,4 @@ nose
 jupyter
 requests
 virtualenv
+virtualenvwrapper
