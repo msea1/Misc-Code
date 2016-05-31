@@ -86,6 +86,6 @@ gsettings set org.mate.panel.toplevel:/org/mate/panel/toplevels/bottom/ size 45 
 
 
 # SSH
-ssh-keygen -t rsa
+ssh-keygen -t rsa -b 4096 -C "carruthm@gmail.com"
 (auto enter three times)
-
+ssh-add ~/.ssh/id_rsa
