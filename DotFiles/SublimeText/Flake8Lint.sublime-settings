@@ -1,6 +1,0 @@
-{
-    "ignore": ["C0103", "C0111", "C0301", "C1001", "D103", "E24", "E121", "E123", "E126", "E226", "E231", "E265", "E501", "E704", "E1101", "E1102", "E1103"],
-    "import-order": true,
-    "lint_on_load": true,
-    "pep8_max_line_length": 100,
-}

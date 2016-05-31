@@ -19,7 +19,7 @@ wget https://release.gitkraken.com/linux/gitkraken-amd64.deb -P ~/temp
 sudo cp ~/Temp/*.deb /var/cache/apt/archives/
 
 # Install DEBs
-sudo dpkg -i ~/temp/*.deb
+sudo dpkg -i ~/Temp/*.deb
 
 sudo apt-get update
 sudo apt-get -y upgrade
@@ -28,7 +28,13 @@ sudo apt-get -y upgrade
 sudo sed -i 's/false/true/g' /etc/apt/apt.conf.d/00recommends
 
 # RUN INSTALLS
-sudo apt-get install -y ack-grep audio-recorder chromium-browser flashplugin-installer gimp git bash-completion git-flow meld numlockx oracle-java8-installer pycharm redshift redshift-gtk skype sublime-text-installer terminator variety vlc
+sudo apt-get install -y ack-grep audio-recorder build-essential chromium-browser flashplugin-installer gimp git bash-completion git-flow meld numlockx oracle-java8-installer pycharm python3-dev redshift redshift-gtk skype sublime-text-installer terminator variety vlc
+
+# PIPs
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/pip_requirements.txt -O ~/Temp/requirements.txt
+cd ~/Temp
+pip install -r requirements.txt
+cd -
 
 # RUN UNINSTALLS
 sudo apt-get remove -y gnome-orca mono-runtime-common pidgin thunderbird
@@ -37,11 +43,11 @@ sudo apt-get remove -y gnome-orca mono-runtime-common pidgin thunderbird
 sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 
 #  BASH_RC
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/DotFiles/bash/.bashrc -O ~/.bashrc
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/bashrc -O ~/.bashrc
 
 # GIT
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/DotFiles/bash/.gitconfig -O ~/.gitconfig
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/gitconfig -O ~/.gitconfig
 
 # Change default terminal to terminator
 gsettings set org.gnome.desktop.default-applications.terminal exec /usr/bin/terminator

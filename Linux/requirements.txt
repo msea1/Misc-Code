@@ -1,0 +1,8 @@
+BeautifulSoup
+coverage
+ipython
+mock
+nose
+jupyter
+requests
+virtualenv
