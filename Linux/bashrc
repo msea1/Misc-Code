@@ -198,3 +198,4 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/software/arc/arcanist/bin"
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.4/site-packages

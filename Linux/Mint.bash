@@ -28,12 +28,13 @@ sudo apt-get -y upgrade
 sudo sed -i 's/false/true/g' /etc/apt/apt.conf.d/00recommends
 
 # RUN INSTALLS
-sudo apt-get install -y ack-grep audio-recorder build-essential chromium-browser flashplugin-installer gimp git bash-completion git-flow meld numlockx oracle-java8-installer pycharm python3-dev redshift redshift-gtk skype sublime-text-installer terminator variety vlc
+sudo apt-get install -y ack-grep audio-recorder build-essential chromium-browser curl flashplugin-installer gimp git bash-completion git-flow meld numlockx oracle-java8-installer pycharm python3-dev redshift redshift-gtk skype sublime-text-installer terminator variety vlc
 
 # PIPs
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/pip_requirements.txt -O ~/Temp/requirements.txt
+curl https://bootstrap.pypa.io/get-pip.py | sudo python3
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/requirements.txt -O ~/Temp/requirements.txt
 cd ~/Temp
-pip install -r requirements.txt
+sudo pip3 install -r requirements.txt
 cd -
 
 # RUN UNINSTALLS
@@ -53,7 +54,11 @@ wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/gitconfig -O 
 gsettings set org.gnome.desktop.default-applications.terminal exec /usr/bin/terminator
 gsettings set org.gnome.desktop.default-applications.terminal exec-arg “-x”
 
+# PyCharm
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/pycharm_settings.jar -O ~/Temp/pycharm_settings.jar
+
 # SUBLIME TEXT 3
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/Neon_Flake.tmTheme -O ~/.config/sublime-text-3/Packages/User/Neon\ (Flake8Lint).tmTheme
 wget -O ~/.config/sublime-text-3/Installed\ Packages/Package\ Control.sublime-package https://sublime.wbond.net/Package%20Control.sublime-package --no-check-certificate
 sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/bin/subl
 printf "{\"installed_packages\":[\"AutoFileName\",\"BracketHighlighter\",\"ExportHtml\",\"GenerateUUID\",\"GitGutter-Edge\",\"HexViewer\",\"Neon Color Scheme\",\"PackageResourceViewer\",\"PlistJsonConverter\",\"Python Flake8 Lint\",\"Python Improved\",\"SideBarEnhancements\",\"SideBarGit\",\"SublimeCodeIntel\",\"SublimeREPL\",\"Tag\",\"Terminal\"]}" > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
