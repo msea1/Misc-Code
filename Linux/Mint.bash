@@ -12,14 +12,16 @@ mkdir -p ~/Code
 mkdir -p ~/Temp
 
 # Get DEBs
-wget https://release.gitkraken.com/linux/gitkraken-amd64.deb -P ~/temp
-# chrome goes here
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb -P ~/Temp
+wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_i686.deb -P ~/Temp
+wget http://www.statcorner.com/misc/32bChrome.deb -P ~/Temp
 
 # Copy DEBs
 sudo cp ~/Temp/*.deb /var/cache/apt/archives/
 
 # Install DEBs
 sudo dpkg -i ~/Temp/*.deb
+rm ~/Temp/*.deb
 
 sudo apt-get update
 sudo apt-get -y upgrade
@@ -28,13 +30,14 @@ sudo apt-get -y upgrade
 sudo sed -i 's/false/true/g' /etc/apt/apt.conf.d/00recommends
 
 # RUN INSTALLS
-sudo apt-get install -y ack-grep audio-recorder build-essential chromium-browser curl flashplugin-installer gimp git bash-completion git-flow meld numlockx oracle-java8-installer pycharm python3-dev redshift redshift-gtk skype sublime-text-installer terminator variety vlc
+sudo apt-get install -y ack-grep audio-recorder build-essential chromium-browser curl filezilla flashplugin-installer gimp git bash-completion git-flow meld numlockx oracle-java8-installer pycharm python3-dev redshift redshift-gtk skype sublime-text-installer terminator variety vlc
 
 # PIPs
 curl https://bootstrap.pypa.io/get-pip.py | sudo python3
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/requirements.txt -O ~/Temp/requirements.txt
 cd ~/Temp
 sudo pip3 install -r requirements.txt
+rm requirements.txt
 cd -
 
 # RUN UNINSTALLS
@@ -73,8 +76,11 @@ pkill -f sublime_text
 subl .
 pkill -f sublime_text
 
+# Terminator
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/terminator_config -O ~/.config/terminator/config
 
-
+# Variety
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/variety.conf -O /home/matthew/.config/variety/variety.conf
 
 
 
@@ -87,13 +93,6 @@ purge_orphans{ dpkg -l | awk '/^rc/{ print $2}' | sudo xargs dpkg –purge }
 
 # Panel Settings
 gsettings set org.mate.panel.toplevel:/org/mate/panel/toplevels/bottom/ size 45  ?
-
-# Clock format
-%A %B %e %T     (%Z %z)
-
-# 32bit replacement for GitKraken (SmartGit?)
-
-#Terminator config
 
 
 # SSH
