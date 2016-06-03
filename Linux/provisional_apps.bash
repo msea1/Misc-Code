@@ -1,10 +1,16 @@
-# lightzone
-sudo add-apt-repository -y ppa:otto-kesselgulasch/lightzone
-sudo apt-get install lightzone
-
 # darkTable
 sudo add-apt-repository -y ppa:pmjdebruijn/darktable-release
 sudo apt-get install darktable
 
-# SmartGit
-wget http://www.syntevo.com/smartgit/download?file=smartgit/smartgit-linux-7_1_3.tar.gz
+# digikam
+sudo add-apt-repository ppa:philip5/extra
+sudo apt-get update
+sudo aptitude install digikam
+
+# theme
+sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install ambiance-crunchy
+
+# unison
+sudo apt-get install unison

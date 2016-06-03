@@ -1,9 +1,17 @@
 [global_config]
+  geometry_hinting = False
   suppress_multiple_term_dialog = True
   title_hide_sizetext = True
 [keybindings]
 [layouts]
   [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+  [[basic_layout]]
     [[[child0]]]
       fullscreen = False
       last_active_term = 6c1e69c4-c6a0-4337-8cbc-12081b4ebe96
@@ -12,13 +20,13 @@
       order = 0
       parent = ""
       position = 0:0
-      size = 960, 1073
+      size = 960, 1158
       title = /bin/bash
       type = Window
     [[[child1]]]
       order = 0
       parent = child0
-      position = 618
+      position = 579
       ratio = 0.5
       type = VPaned
     [[[terminal2]]]
@@ -29,19 +37,11 @@
       type = Terminal
       uuid = 6c1e69c4-c6a0-4337-8cbc-12081b4ebe96
     [[[terminal3]]]
-      command = ""
       order = 1
       parent = child1
       profile = default
       type = Terminal
-      uuid = cdc02336-148e-4feb-a02d-83761b58c3f4
-  [[old_default]]
-    [[[child1]]]
-      parent = window0
-      type = Terminal
-    [[[window0]]]
-      parent = ""
-      type = Window
+      uuid = 9c6cbce7-c75b-45b9-a815-cbd02886b7b2
 [plugins]
 [profiles]
   [[default]]
