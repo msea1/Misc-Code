@@ -21,3 +21,14 @@ sudo apt-get install openssh-server
 ppa:stellarium/stellarium-releases
 sudo apt-get update
 sudo apt-get install stellarium
+
+# node
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+#spotify
+cd ~/Code
+git clone https://github.com/Lordmau5/node-spotify-downloader
+mv node-spotify-downloader/ Spotify_DLer/
+cd Spotify_DLer
+npm install
