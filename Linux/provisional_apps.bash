@@ -14,6 +14,8 @@ sudo apt-get install ambiance-crunchy
 
 # unison
 sudo apt-get install unison
+sudo apt-get install unison-gtk
+sudo apt-get install openssh-server
 
 # stallarium
 ppa:stellarium/stellarium-releases
