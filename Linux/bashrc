@@ -107,6 +107,12 @@ export WORKON_HOME=$HOME/.virtualenvs
 
 ### FUNCTIONS ###
 
+add_local_path() {
+    export PYTHONPATH=$PYTHONPATH:.
+    export PYTHONPATH=$PYTHONPATH:$VIRTUAL_ENV/lib/python3.4/site-packages
+    echo $PYTHONPATH
+}
+
 cdl() {
     builtin cd "${@}"
     if [ "$( ls | wc -l )" -gt 30 ] ; then
