@@ -131,6 +131,20 @@ docker_clean(){
     docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
+docker_kill(){
+  sudo systemctl stop docker
+  sudo rm /var/lib/docker/linkgraph.db
+  sudo rm -rf /var/lib/docker/containers/
+  sudo systemctl start docker
+}
+
+docker_local(){
+  rsync -a --exclude='.*' ./ $HOME/code/devops/docker/sources/$1/
+  cd $HOME/code/devops/docker
+  sudo docker build -t $2 -f dockerfiles/$2.docker .
+  cd -
+}
+
 extract () {
  if [ -f $1 ] ; then
      case $1 in
