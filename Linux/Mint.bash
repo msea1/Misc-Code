@@ -30,7 +30,7 @@ sudo apt-get -y upgrade
 sudo sed -i 's/false/true/g' /etc/apt/apt.conf.d/00recommends
 
 # RUN INSTALLS
-sudo apt-get install -y ack-grep audio-recorder build-essential chromium-browser curl filezilla flashplugin-installer gimp git bash-completion git-flow meld numlockx oracle-java8-installer pycharm python3-dev redshift redshift-gtk skype sublime-text-installer terminator variety vlc
+sudo apt-get install -y ack-grep audio-recorder build-essential chromium-browser curl filezilla flashplugin-installer gimp git bash-completion git-flow meld numlockx oracle-java8-installer pycharm python-mysqldb python3-dev redshift redshift-gtk skype sublime-text-installer terminator variety vlc
 
 # PIPs
 curl https://bootstrap.pypa.io/get-pip.py | sudo python3
