@@ -8,13 +8,14 @@ alias addrep='sudo add-apt-repository'
 alias bashrc='subl ~/.bashrc'
 alias cd..="cd .."
 alias code='cd ~/code'
-alias codervw='echo "ERybczynski, JHersch, MBlondeel, GBarnett, LTaylor, RCahn" | xsel -ib && arc diff'
+alias codervw='echo "ERybczynski, JHersch, MBlondeel, GBarnett, LTaylor, RCahn, CPeel" | xsel -ib && arc diff'
 alias diskspace="du -S | sort -n -r |more"
+alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+alias dockstop='docker rm -f -v $(docker ps -a -q)'
 alias g='git'
 alias gitconfig='subl ~/.gitconfig'
 alias h='history | grep'
 alias inst='sudo apt-get install'
-alias jn='jupyter notebook'
 alias ld='ls -ABF --group-directories-first'
 alias ll='ls -AhlF --group-directories-first'
 alias mkdir='mkdir -pv'
@@ -22,6 +23,7 @@ alias py='python3'
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'
 alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'
 alias wget='wget -c'
 alias workon='source /usr/local/bin/virtualenvwrapper.sh && workon'
 
@@ -174,6 +176,14 @@ gps() {
   ps -ax | grep -i $srch
 }
 
+ipy_note() {
+  cd $HOME/code/jupyter_notebooks
+  workon jupyter
+  jupyter notebook
+  deactivate
+  cd -
+}
+
 new_venv() {
   source /usr/local/bin/virtualenvwrapper.sh
   mkvirtualenv -p /usr/bin/python3 $1
@@ -196,6 +206,13 @@ up(){
     d=..
   fi
   cd $d
+}
+
+start_vpn() {
+    cd ~/code/vpn
+    sudo cp vpn_resolv.conf /etc/resolv.conf
+    sudo openvpn pfSense-udp-1195.ovpn
+    cd -
 }
 
 
