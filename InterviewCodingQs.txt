@@ -1,0 +1,44 @@
+Q1: Given a unordered list of integers that contains one unique number and all others are duplicates, write a function to return the one, and only unique.
+    Hash: deletes keys? or otherwise handles finding the unique out of the hash quickly (preferably without another O(n) search)
+    Sort: ok if mentions use for space-constraints (can be in place sort) and acks that it's slow (n lg n)
+    Best: XOR, in place and O(n) time - but mentions issues (no way to catch invalid input, only works if exactly 1 unique + duplicates)
+    Tests: lists w/single int, empty lists, lists that violate assumption, lists with objects aside from int
+
+
+Q2: Alternately: take f(x) from above and how to test vs a black box method to see which is faster. How would you test/prove it?
+
+Q2: Given these two functions
+
+    int_list = random.sample(range(-100000,100000), 1000)
+
+    def f1(int_list): int_list.sort(); t1 = [x for x in int_list if x%2 == 1]; return [x**2 for x in t1]
+
+    def f2(int_list): t1 = [x**2 for x in int_list if x%2 == 1]; t1.sort(); return t2
+
+How would you determine which is faster? (t2 by a hair)
+
+    Looking for: TimeIt or cProfile
+
+
+Q3: Our log files are rows of plain text usually prepended by a UTC datetime stamp. How would you write and test a function to parse those log files and convert the times to local?
+
+    Looking for: File I/O, parsing/regex to find datetime in line, some use of Datetime objects, testing to ensure the datetimes are valid
+
+
+General Q: We have a satellite in a stable orbit and what's called a TLE that tells us where we believe the satellite is in the sky at all times. We have an antenna that's limited to two-axis movement and speeds that mean sometimes we have to cheat in positioning it (keyhole, can explain if needed). We have a couple different algorithm ideas for positioning the antenna to provide the best track of the satellite overhead. What are some testing concerns you'd have / what would you do to assist us in testing these. Consider what we'd need to do if the antenna hardware changed
+
+    Looking for: controlled (repeatable) test cases, regression system if the antenna hardware changes, is the TLE accurate? how do we determine "best"? can we virtualize the satellite? can we virtualize the antenna? Able to plug-in-play algorithms with visual results?
+
+
+
+Stretch Qs
+
+Q1. Tell me about some of the differences between Python 2 and Python 3 and what to watch out for.
+
+    Looking for: print, integer division, bytes, xrange, exception handling, iterable objects (via range, zip, map, filter) instead of list, rounding (2 rounds up on .5, 3 rounds to even)
+
+Q2. Write a function for doing an in-place shuffle of a list. The shuffle must be "uniform," meaning each item in the original list must have the same probability of ending up in each spot in the final list.
+
+    Looking for: gotcha about probability.
+
+Q3. You have a unit test thats intermittenly failing only on the build machine, never locally. What steps would you take to investigate why?
