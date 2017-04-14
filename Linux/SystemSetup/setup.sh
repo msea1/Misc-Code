@@ -37,8 +37,8 @@ sudo ln -sf /usr/bin/ack-grep /usr/local/bin/ack
 
 # AUTOSTART
 mkdir -p ~/.config/autostart
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/redshift-gtk.desktop ~/.config/autostart
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.desktop ~/.config/autostart
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/redshift-gtk.desktop -O ~/.config/autostart/redshift-gtk.desktop
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.desktop -O ~/.config/autostart/variety.desktop
 
 # ARCRC
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/arcrc -O ~/.arcrc
@@ -55,7 +55,7 @@ wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/g
 
 # GNOME-SHELL
 mkdir -p ~/.local/share/gnome-shell/extensions
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gnome-extensions.tar.gz ~/.local/share/gnome-shell
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gnome-extensions.tar.gz -O ~/.local/share/gnome-shell/gnome-extensions.tar.gz
 cd ~/.local/share/gnome-shell
 tar -xzf gnome-extensions.tar.gz -C ./extensions
 rm gnome-extensions.tar.gz
@@ -69,7 +69,7 @@ wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/g
 
 # PIP
 mkdir -p ~/.config/pip
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/pip.conf ~/.config/pip
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/pip.conf -O ~/.config/pip
 
 # PyCharm
 
@@ -97,7 +97,7 @@ wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/t
 
 # Variety
 mkdir -p ~/.config/variety/
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.conf ~/.config/variety
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.conf -O ~/.config/variety/variety.conf
 
 sudo apt -y autoremove
 sudo reboot
