@@ -37,8 +37,8 @@ sudo ln -sf /usr/bin/ack-grep /usr/local/bin/ack
 
 # AUTOSTART
 mkdir -p ~/.config/autostart
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/redshift-gtk.desktop -O ~/.config/autostart
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.desktop -O ~/.config/autostart
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/redshift-gtk.desktop ~/.config/autostart
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.desktop ~/.config/autostart
 
 # ARCRC
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/arcrc -O ~/.arcrc
@@ -55,7 +55,7 @@ wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/g
 
 # GNOME-SHELL
 mkdir -p ~/.local/share/gnome-shell/extensions
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gnome-extensions.tar.gz -O ~/.local/share/gnome-shell
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gnome-extensions.tar.gz ~/.local/share/gnome-shell
 cd ~/.local/share/gnome-shell
 tar -xzf gnome-extensions.tar.gz -C ./extensions
 rm gnome-extensions.tar.gz
@@ -63,13 +63,13 @@ cd -
 
 # GTK3
 mkdir -p ~/.config/gtk-3.0
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gtk-bookmarks -O ~/.config/gtk-3.0
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gtk-servers -O ~/.config/gtk-3.0
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/get-settings -O ~/.config/gtk-3.0
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gtk-bookmarks -O ~/.config/gtk-3.0/bookmarks
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gtk-servers -O ~/.config/gtk-3.0/servers
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/get-settings -O ~/.config/gtk-3.0/settings.ini
 
 # PIP
 mkdir -p ~/.config/pip
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/pip.conf -O ~/.config/pip
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/pip.conf ~/.config/pip
 
 # PyCharm
 
@@ -97,7 +97,7 @@ wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/t
 
 # Variety
 mkdir -p ~/.config/variety/
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.conf -O ~/.config/variety/variety.conf
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.conf ~/.config/variety
 
 sudo apt -y autoremove
 sudo reboot
