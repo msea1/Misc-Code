@@ -14,6 +14,7 @@
     br = branch -vv
     co = checkout
     cm = commit --allow-empty -m
+    commits = "!git shortlog -s -n --all --no-merges"
     da = diff HEAD
     del = push origin --delete
     ds = diff --staged
@@ -84,4 +85,4 @@
 
 [user]
     name = Matthew Carruth
-    email = carruthm@gmail.com
+    email = mcarruth@blacksky.com

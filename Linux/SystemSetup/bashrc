@@ -7,6 +7,7 @@ force_color_prompt=yes
 alias addrep='sudo add-apt-repository'
 alias bashrc='subl ~/.bashrc'
 alias cd..="cd .."
+alias cmd='work cmder && cd ~/Code/block2/cmdseq-service'
 alias code='cd ~/Code'
 alias diskspace="du -S | sort -n -r |more"
 alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
@@ -17,8 +18,9 @@ alias h='history | grep'
 alias inst='sudo apt-get install'
 alias ld='ls -ABF --group-directories-first'
 alias ll='ls -AhlF --group-directories-first'
+alias mothra='cd ~/Code/block2/mothra'
 alias mkdir='mkdir -pv'
-alias py='python3'
+alias py='python3.6'
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'
 alias update='sudo apt-get update'
@@ -126,7 +128,7 @@ cdl() {
 }
 
 code_rvw() {
-  echo "erybczynski, MBlondeel, JHersch, LTaylor, jbrazel, CPeel" | xsel -ib
+  echo "erybczynski, MBlondeel, JHersch, LTaylor, jbrazel, CPeel, Asmirnov" | xsel -ib
   arc diff $1
 }
 
@@ -167,6 +169,7 @@ extract () {
          *.zip)       unzip $1       ;;
          *.Z)         uncompress $1  ;;
          *.7z)        7z x $1        ;;
+         *.xz)        xz -d $1        ;;
          *)           echo "don't know how to extract '$1'..." ;;
      esac
  else

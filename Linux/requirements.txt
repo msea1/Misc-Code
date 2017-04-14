@@ -1,9 +1,0 @@
-beautifulsoup4
-coverage
-ipython
-mock
-nose
-jupyter
-requests
-virtualenv
-virtualenvwrapper
