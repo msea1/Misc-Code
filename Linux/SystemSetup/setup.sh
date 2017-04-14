@@ -65,17 +65,17 @@ cd -
 mkdir -p ~/.config/gtk-3.0
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gtk-bookmarks -O ~/.config/gtk-3.0/bookmarks
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gtk-servers -O ~/.config/gtk-3.0/servers
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/get-settings -O ~/.config/gtk-3.0/settings.ini
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gtk-settings -O ~/.config/gtk-3.0/settings.ini
 
 # PIP
 mkdir -p ~/.config/pip
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/pip.conf -O ~/.config/pip
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/pip.conf -O ~/.config/pip/pip.conf
 
 # PyCharm
 
 # SSH
 
-# SUBLIME TEXT 3
+# SUBLIME TEXT 3 ---- NEEDS FIX
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/Neon_Flake.tmTheme -O ~/.config/sublime-text-3/Packages/User/Neon\ (Flake8Lint).tmTheme
 wget -O ~/.config/sublime-text-3/Installed\ Packages/Package\ Control.sublime-package https://sublime.wbond.net/Package%20Control.sublime-package --no-check-certificate
 sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/bin/subl
