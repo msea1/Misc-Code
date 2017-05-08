@@ -15,7 +15,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 
 # PACKAGES
-sudo apt-get install -y ack-grep audio-recorder bash-completion cmake curl digikam default-jdk gcc gimp git htop ipython ipython-notebook network-manager-openvpn openssh-server openvpn perl pinta python3-pip redshift redshift-gtk rsync socat silversearcher-ag spotify-client sublime-text-installer terminator traceroute unison-gtk variety variety-slideshow vim vlc xsel
+sudo apt-get install -y ack-grep audio-recorder bash-completion cmake curl digikam default-jdk gcc gimp git gnome-clocks htop ipython ipython-notebook network-manager-openvpn openssh-server openvpn perl pinta python3-pip redshift redshift-gtk rsync socat silversearcher-ag spotify-client sublime-text-installer terminator traceroute unison-gtk variety variety-slideshow vim vlc xsel
 
 # Chrome via www.google.com/chrome
 # PyCharm via www.jetbrains.com/pycharm
