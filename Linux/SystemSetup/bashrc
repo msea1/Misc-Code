@@ -7,7 +7,6 @@ force_color_prompt=yes
 alias addrep='sudo add-apt-repository'
 alias bashrc='subl ~/.bashrc'
 alias cd..="cd .."
-alias cmd='work cmder && cd ~/Code/block2/cmdseq-service'
 alias code='cd ~/Code'
 alias diskspace="du -S | sort -n -r |more"
 alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
@@ -98,25 +97,18 @@ WHITE="\033[38;5;15m\]"
 YELLOW="\033[38;5;11m\]"
 
 ### ENVIRONMENT VARIABLES ###
-export DJANGO_ENV=development
 export EDITOR=vim
 export HISTCONTROL=ignoreboth
 export HISTSIZE=1000
-export HISTFILESIZE=2000
+export HISTFILESIZE=200000
+export HISTTIMEFORMAT="%e %b %R: "
 export PS1="\[$BLUE[\w] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
 export REQUEST_CA_BUNDLE=/usr/local/share/ca-certificates/gd_bundle-g2.crt
-export VAULT_ADDR=https://vault.prod.blacksky.com:8200
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VAULT_ADDR=https://vault.spaceflightindustries.com:8200
 export WORKON_HOME=$HOME/.virtualenvs
 
 
 ### FUNCTIONS ###
-
-add_local_path() {
-    export PYTHONPATH=$PYTHONPATH:.
-    export PYTHONPATH=$PYTHONPATH:$VIRTUAL_ENV/lib/python3.6/site-packages
-    echo $PYTHONPATH
-}
 
 cdl() {
     builtin cd "${@}"
@@ -125,6 +117,15 @@ cdl() {
     else
         ls
     fi
+}
+
+cinder() {
+  check=$(ifconfig | grep -A 1 qemu | grep inet)
+  if [ -z "$check" ]
+    then nmcli d delete qemu-tap0
+  fi
+  cd ~/Code/block2/mothra/output/sp0
+  make && cinderblock -i images/ -Q host/usr/bin/qemu-system-ppc
 }
 
 code_rvw() {
@@ -207,6 +208,16 @@ work() {
   source $WORKON_HOME/$1/bin/activate
 }
 
+upd_master() {
+  mothra
+  g stash
+  g co master
+  g fetch --prune
+  g reset --hard
+  g rebase
+  g submodule update
+}
+
 new_venv() {
   py -m venv $2 $WORKON_HOME/$1
   work $1
@@ -228,20 +239,6 @@ up(){
     d=..
   fi
   cd $d
-}
-
-start_vpn() {
-    cd ~/Code/vpn
-    sudo cp vpn_resolv.conf /etc/resolv.conf
-    sudo openvpn pfSense-udp-1195.ovpn
-    cd -
-}
-
-start_moc_vpn() {
-    cd ~/Code/vpn/moc
-    sudo cp moc_vpn_resolv.conf /etc/resolv.conf
-    sudo openvpn linux-1.ovpn
-    cd -
 }
 
 
