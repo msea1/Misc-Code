@@ -11,15 +11,19 @@ alias code='cd ~/Code'
 alias diskspace="du -S | sort -n -r |more"
 alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dockstop='docker rm -f -v $(docker ps -a -q)'
+alias flatsat='ssh -p 24022 root@192.168.6.10'
 alias g='git'
 alias gitconfig='subl ~/.gitconfig'
 alias h='history | grep'
 alias inst='sudo apt-get install'
 alias ld='ls -ABF --group-directories-first'
 alias ll='ls -AhlF --group-directories-first'
-alias mothra='cd ~/Code/block2/mothra'
+alias mothra='cd ~/Code/mothra'
 alias mkdir='mkdir -pv'
+alias pip='pip3'
 alias py='python3.6'
+alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc'
+alias supy='sudo python3.6'
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'
 alias update='sudo apt-get update'
@@ -102,7 +106,12 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=1000
 export HISTFILESIZE=200000
 export HISTTIMEFORMAT="%e %b %R: "
-export PS1="\[$BLUE[\w] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
+
+export PS1='\[\033[38;5;39m\][${PWD#"${PWD%/*/*}/"}] \
+\[\033[38;5:47m\]$(parse_git_branch) \
+\[\033[38;5;15m\]$ $(tput sgr0)'
+
+# export PS1="\[$BLUE[\w] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
 export REQUEST_CA_BUNDLE=/usr/local/share/ca-certificates/gd_bundle-g2.crt
 export VAULT_ADDR=https://vault.spaceflightindustries.com:8200
 export WORKON_HOME=$HOME/.virtualenvs
@@ -188,6 +197,12 @@ get_certs() {
   cd -
 }
 
+gdb() {
+  local d=$(git rev-parse --abbrev-ref HEAD)
+  g co master
+  g branch -D $d
+}
+
 gps() {
   arg=$1
   letter=${arg:0:1}
@@ -209,13 +224,21 @@ work() {
 }
 
 upd_master() {
+  pushd -n $(pwd)
   mothra
+  local d=$(git rev-parse --abbrev-ref HEAD)
   g stash
   g co master
   g fetch --prune
   g reset --hard
   g rebase
   g submodule update
+  g fetch --prune
+  g reset --hard
+  g rebase
+  g submodule update
+  g co $d
+  popd
 }
 
 new_venv() {
@@ -239,6 +262,16 @@ up(){
     d=..
   fi
   cd $d
+}
+
+vsat() {
+  ip=$(($1 + 39))
+  ssh -p 24022 root@10.234.1.$ip
+}
+
+pdt() {
+  ip=$(($1 + 89))
+  ssh -p 24022 root@10.234.1.$ip
 }
 
 
