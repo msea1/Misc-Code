@@ -15,7 +15,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 
 # PACKAGES
-sudo apt-get install -y ack-grep audio-recorder bash-completion cmake curl digikam default-jdk gcc gimp git gnome-clocks htop ipython ipython-notebook network-manager-openvpn openssh-server openvpn perl pinta python3-pip redshift redshift-gtk rsync socat silversearcher-ag spotify-client sublime-text-installer terminator traceroute unison-gtk variety variety-slideshow vim vlc xsel
+sudo apt install -y ack-grep audio-recorder bash-completion cmake curl default-jdk gcc gimp git gnome-clocks htop ipython ipython-notebook network-manager-openvpn openssh-server openvpn perl pinta python3-pip rsync socat spotify-client sublime-text terminator traceroute vim vlc xsel
 
 # Chrome via www.google.com/chrome
 # PyCharm via www.jetbrains.com/pycharm
@@ -37,17 +37,9 @@ sudo ln -sf /usr/bin/ack-grep /usr/local/bin/ack
 
 # AUTOSTART
 mkdir -p ~/.config/autostart
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/redshift-gtk.desktop -O ~/.config/autostart/redshift-gtk.desktop
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.desktop -O ~/.config/autostart/variety.desktop
-
-# ARCRC
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/arcrc -O ~/.arcrc
 
 # BASHRC
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/bashrc -O ~/.bashrc
-
-# /bin
-
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/bashrc -O ~/.bashrc
 
 # GIT
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
@@ -55,7 +47,7 @@ wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/g
 
 # GNOME-SHELL
 mkdir -p ~/.local/share/gnome-shell/extensions
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gnome-extensions.tar.gz -O ~/.local/share/gnome-shell/gnome-extensions.tar.gz
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/gnome-extensions.tar.gz -O ~/.local/share/gnome-shell/gnome-extensions.tar.gz
 cd ~/.local/share/gnome-shell
 tar -xzf gnome-extensions.tar.gz -C ./extensions
 rm gnome-extensions.tar.gz
@@ -67,9 +59,6 @@ wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/g
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gtk-servers -O ~/.config/gtk-3.0/servers
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/gtk-settings -O ~/.config/gtk-3.0/settings.ini
 
-# PIP
-mkdir -p ~/.config/pip
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/pip.conf -O ~/.config/pip/pip.conf
 
 # PyCharm
 
@@ -92,12 +81,6 @@ subl .
 pkill -f sublime_text
 
 # Terminator
-mkdir -p ~/.config/terminator/
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/terminator_config -O ~/.config/terminator/config
-
-# Variety
-mkdir -p ~/.config/variety/
-wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/SystemSetup/variety.conf -O ~/.config/variety/variety.conf
 
 sudo apt -y autoremove
 sudo reboot

@@ -4,6 +4,11 @@ force_color_prompt=yes
 
 
 ### ALIASES ###
+alias flatsat='ssh -p 24022 root@192.168.6.10'
+alias curve11='ssh -p 24022 root@192.168.6.11'
+alias vsat58='ssh -p 24022 root@10.234.1.97'
+alias vsat59='ssh -p 24022 root@10.234.1.98'
+
 alias addrep='sudo add-apt-repository'
 alias bashrc='subl ~/.bashrc'
 alias cd..="cd .."
@@ -11,7 +16,6 @@ alias code='cd ~/Code'
 alias diskspace="du -S | sort -n -r |more"
 alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dockstop='docker rm -f -v $(docker ps -a -q)'
-alias flatsat='ssh -p 24022 root@192.168.6.10'
 alias g='git'
 alias gitconfig='subl ~/.gitconfig'
 alias h='history | grep'
@@ -26,8 +30,8 @@ alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provi
 alias supy='sudo python3.6'
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'
-alias update='sudo apt-get update'
-alias upgrade='sudo apt-get upgrade'
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
 alias vauth='vault auth -method=ldap username=$USER'
 alias vssh='vault ssh -role otp_key_role'
 alias wget='wget -c'
@@ -102,10 +106,11 @@ YELLOW="\033[38;5;11m\]"
 
 ### ENVIRONMENT VARIABLES ###
 export EDITOR=vim
-export HISTCONTROL=ignoreboth
+export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=1000
 export HISTFILESIZE=200000
 export HISTTIMEFORMAT="%e %b %R: "
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 export PS1='\[\033[38;5;39m\][${PWD#"${PWD%/*/*}/"}] \
 \[\033[38;5:47m\]$(parse_git_branch) \
@@ -118,6 +123,11 @@ export WORKON_HOME=$HOME/.virtualenvs
 
 
 ### FUNCTIONS ###
+
+cmdseqcli() {
+  cd ~/Code/mothra/fsw/cmdseq-service
+  py cmdseq/contact/cli.py
+}
 
 cdl() {
     builtin cd "${@}"
@@ -249,6 +259,15 @@ new_venv() {
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+
+recycle() {
+  nmcli r wifi off
+  nmcli networking off
+  nmcli r wifi on
+  nmcli networking on
+}
+
+title() { printf "\e]2;$*\a"; }
 
 up(){
   local d=""
