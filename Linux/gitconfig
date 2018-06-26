@@ -22,6 +22,7 @@
     hist = log --oneline --abbrev-commit --all --graph --decorate --color
     pb = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
     st = status --short --branch
+    su = submodule update
 
     ### OTHERS ###
 
