@@ -118,7 +118,7 @@ sudo pip3 install Cython
 sudo apt install -y build-essential tk-dev libncurses5-dev \
     libncursesw5-dev libreadline6-dev libdb5.3-dev \
     libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev \
-    libexpat1-dev liblzma-dev zlib1g-dev libgdal-dev openjdk-11-jdk libblas-dev liblapack-dev gfortran
+    libexpat1-dev liblzma-dev zlib1g-dev libgdal-dev openjdk-11-jdk libblas-dev liblapack-dev gfortran python-dev libffi-dev
 sudo pip3 install numpy
 
 
@@ -135,4 +135,18 @@ rm ~/Downloads/Python-3.6.6rc1.tgz
 
 pause "Install Jupyter"
 sudo apt install python3-notebook jupyter-core python-ipykernel
+# reconsider pip install jupyter inside venvs
 
+
+# For IVY issues
+# If this passes
+/usr/bin/java -Djavax.net.ssl.trustStorePassword=changeit -Divy.cache.dir=/home/mcarruth/.ivy2/pants -cp ../../.cache/pants/tools/jvm/ivy/bootstrap.jar org.apache.ivy.Main -confs default -cachepath /home/mcarruth/.cache/pants/tools/jvm/ivy/0c6799f2e85eccc7061443f76e45b7b268892b58.classpath -dependency org.apache.ivy ivy 2.4.0
+
+#Then
+sudo bash
+cp /etc/ssl/certs/java/cacerts /home/mcarruth/Temp/java_certs.bak
+/usr/bin/printf '\xfe\xed\xfe\xed\x00\x00\x00\x02\x00\x00\x00\x00\xe2\x68\x6e\x45\xfb\x43\xdf\xa4\xd9\x92\xdd\x41\xce\xb6\xb2\x1c\x63\x30\xd7\x92' > /etc/ssl/certs/java/cacerts
+/var/lib/dpkg/info/ca-certificates-java.postinst configure
+exit
+
+# For GDAL issues
