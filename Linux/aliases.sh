@@ -1,0 +1,33 @@
+### ALIASES ###
+alias flatsat='ssh -p 24022 root@192.168.6.10'
+alias curve11='ssh -p 24022 root@192.168.6.11'
+alias vsat58='ssh -p 24022 root@10.234.1.97'
+alias vsat59='ssh -p 24022 root@10.234.1.98'
+
+alias addrep='sudo add-apt-repository'
+alias bashrc='subl ~/.bashrc'
+alias cd..="cd .."
+alias code='cd ~/Code'
+alias diskspace="du -S | sort -n -r |more"
+alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+alias dockstop='docker rm -f -v $(docker ps -a -q)'
+alias g='git'
+alias gitconfig='subl ~/.gitconfig'
+alias h='history | grep'
+alias inst='sudo apt-get install'
+alias ld='ls -ABF --group-directories-first'
+alias ll='ls -AhlF --group-directories-first'
+alias mothra='cd ~/Code/mothra'
+alias mkdir='mkdir -pv'
+alias pip='pip3'
+alias py='python3'
+alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc'
+alias supy='sudo python3'
+alias root="sudo su -"
+alias sorry='sudo $(fc -ln -1)'
+alias tempd='cd ~/Temp'
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
+alias vauth='vault auth -method=ldap username=$USER'
+alias vssh='vault ssh -role otp_key_role'
+alias wget='wget -c'

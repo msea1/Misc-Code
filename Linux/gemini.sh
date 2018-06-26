@@ -1,0 +1,138 @@
+#!/usr/bin/env bash
+
+red=`tput setaf 1`
+green=`tput setaf 2`
+yellow=`tput setaf 3`
+blue=`tput setaf 4`
+magenta=`tput setaf 5`
+cyan=`tput setaf 6`
+white=`tput setaf 7`
+bold=`tput bold`
+reset=`tput sgr0`
+
+
+function pause {
+    echo -e "${green}${bold}"
+    echo -e "****************************************************"
+    echo -e "*"
+    echo -e "* ${1}"
+    echo -e "*"
+    echo -e "****************************************************${reset}"
+    read -n1 -r -p "press any key..." key
+    echo ""
+    echo -e "${white}${bold}"
+}
+
+############ BEGIN SETUP ############
+
+pause "Add repos and keys"
+sudo tee -a /etc/apt/sources.list.d/pritunl.list << EOF
+deb http://repo.pritunl.com/stable/apt bionic main
+EOF
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
+
+
+pause "Update"
+sudo apt update
+sudo apt -y upgrade
+
+
+pause "Install Pritunl"
+sudo apt install -y pritunl-client-gtk
+
+
+pause "Install Docker"
+sudo apt install -y docker docker.io
+sudo groupadd docker
+sudo usermod -aG docker $USER
+mkdir ~/.docker
+
+
+pause "Vault Setup"
+export VAULT_ADDR=https://vault.spaceflightindustries.com:8200
+sudo su -c "curl -s -k https://vault.spaceflightindustries.com:8200/v1/gemini/pki/hashistack/ca/pem > \
+    /usr/local/share/ca-certificates/gemini.crt"
+sudo cp /usr/local/share/ca-certificates/gemini.crt /usr/share/ca-certificates
+sudo update-ca-certificates
+wget https://releases.hashicorp.com/vault/0.9.4/vault_0.9.4_linux_amd64.zip -O ~/Downloads/vault.zip
+tar xf ~/Downloads/vault.zip -C ~/bin/
+rm ~/Downloads/vault.zip
+
+touch ~/.bash_aliases
+echo -e "\n\nif [ -f ~/.bash_aliases ]; then\n. ~/.bash_aliases\nfi\n\n" >> ~/.bashrc
+echo -e "\nalias vauth='vault auth -method=ldap username=$USER'" >> ~/.bash_aliases
+echo -e "\nalias vssh='vault ssh -role otp_key_role" >> ~/.bash_aliases
+
+
+pause "Create and register SSH keys here. $ ssh-keygen -t rsa -C"
+# pass, do in another terminal + browser
+
+
+pause "Get Gemini code"
+cd ~./Code
+git clone git@git.spaceflight.com:ground-control/gemini.git
+
+
+pause "Update certs"
+cd ~/.Code/gemini/infrastructure/packer/base-ami/files/ssl
+for i in *.pem; do sudo cp $i /usr/local/ca-certificates/${i/pem/crt}; done
+for i in *.pem; do sudo cp $i /usr/local/share/ca-certificates/${i/pem/crt}; done
+for i in *.pem; do sudo cp $i /usr/share/ca-certificates/${i/pem/crt}; done
+sudo update ca-certificates
+sudo dpkg-reconfigure ca-certificates
+
+
+pause "Install arc"
+sudo apt install -y arcanist
+cd ~/bin
+mkdir arc
+cd arc
+git clone https://github.com/phacility/libphutil.git
+git clone https://github.com/phacility/arcanist.git
+cd arcanist/bin
+export PATH=$PATH:`pwd`
+arc install-certificate https://review.spaceflightindustries.com/
+
+
+pause "Install postgreSQL"
+sudo apt install -y postgresql
+
+
+pause "On the line with user 'postgres', change 'peer' to 'trust'."
+sudo vim /etc/postgresql/10/main/pg_hba.conf 
+
+
+pause "Install homebrew"
+sudo apt install linuxbrew-wrapper
+brew analytics off
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH" >>~/.bashrc
+
+
+pause Install "httpie"
+brew install httpie
+
+
+pause "Setup build environment"
+sudo pip3 install Cython
+sudo apt install -y build-essential tk-dev libncurses5-dev \
+    libncursesw5-dev libreadline6-dev libdb5.3-dev \
+    libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev \
+    libexpat1-dev liblzma-dev zlib1g-dev libgdal-dev openjdk-11-jdk libblas-dev liblapack-dev gfortran
+sudo pip3 install numpy
+
+
+pause "Install Python 3.6.5"
+cd ~/Downloads/
+wget https://www.python.org/ftp/python/3.6.6/Python-3.6.6rc1.tgz
+tar xf Python-3.6.6rc1.tgz 
+cd Python-3.6.6rc1/
+./configure --enable-optimizations --enable-shared
+make
+sudo make altinstall
+rm ~/Downloads/Python-3.6.6rc1.tgz
+
+
+pause "Install Jupyter"
+sudo apt install python3-notebook jupyter-core python-ipykernel
+
