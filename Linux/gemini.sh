@@ -25,6 +25,8 @@ function pause {
 
 ############ BEGIN SETUP ############
 
+# TODO: Consider wrapping in a venv
+
 pause "Add repos and keys"
 sudo tee -a /etc/apt/sources.list.d/pritunl.list << EOF
 deb http://repo.pritunl.com/stable/apt bionic main

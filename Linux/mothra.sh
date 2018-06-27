@@ -25,6 +25,8 @@ function pause {
 
 ############ BEGIN SETUP ############
 
+# TODO: Consider wrapping in a venv / docker container
+
 pause "Get TOMLs"
 cd ~./Code
 git clone git@git.spaceflight.com:block-2/gemini-mothra-tomls.git
@@ -75,7 +77,9 @@ git submodule sync
 make sp0_defconfig
 cd output/sp0
 pause "Time to make Mothra. This will take ~30 minutes"
-make
+make  # TODO: stuck here because qemu version doesn't work with glibc 2.27
+make menuconfig
+make savedefconfig
 
 
 pause "Confirm Mothra"
