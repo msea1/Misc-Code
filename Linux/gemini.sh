@@ -23,6 +23,9 @@ function pause {
     echo -e "${white}${bold}"
 }
 
+alias BEGINCOMMENT="if [ ]; then"
+alias ENDCOMMENT="fi"
+
 ############ BEGIN SETUP ############
 
 # TODO: Consider wrapping in a venv
@@ -124,15 +127,15 @@ sudo apt install -y build-essential tk-dev libncurses5-dev \
 sudo pip3 install numpy
 
 
-pause "Install Python 3.6.5"
+pause "Install Python 3.6.7, if desired"
 cd ~/Downloads/
-wget https://www.python.org/ftp/python/3.6.6/Python-3.6.6rc1.tgz
-tar xf Python-3.6.6rc1.tgz 
-cd Python-3.6.6rc1/
+wget https://www.python.org/ftp/python/3.6.7/Python-3.6.7.tgz
+tar xf Python-3.6.7.tgz 
+cd Python-3.6.7/
 ./configure --enable-optimizations --enable-shared
 make
 sudo make altinstall
-rm ~/Downloads/Python-3.6.6rc1.tgz
+rm ~/Downloads/Python-3.6.7.tgz
 
 
 pause "Install Jupyter"
@@ -140,15 +143,27 @@ sudo apt install python3-notebook jupyter-core python-ipykernel
 # reconsider pip install jupyter inside venvs
 
 
-# For IVY issues
-# If this passes
-/usr/bin/java -Djavax.net.ssl.trustStorePassword=changeit -Divy.cache.dir=/home/mcarruth/.ivy2/pants -cp ../../.cache/pants/tools/jvm/ivy/bootstrap.jar org.apache.ivy.Main -confs default -cachepath /home/mcarruth/.cache/pants/tools/jvm/ivy/0c6799f2e85eccc7061443f76e45b7b268892b58.classpath -dependency org.apache.ivy ivy 2.4.0
+pause "Run Pants Tests to Confirm Env"
+./pants test :: --tag=-integration --tag=uvloop_old -ldebug
+./pants test :: --tag=-integration --tag=-uvloop_old -ldebug
 
-#Then
-sudo bash
-cp /etc/ssl/certs/java/cacerts /home/mcarruth/Temp/java_certs.bak
-/usr/bin/printf '\xfe\xed\xfe\xed\x00\x00\x00\x02\x00\x00\x00\x00\xe2\x68\x6e\x45\xfb\x43\xdf\xa4\xd9\x92\xdd\x41\xce\xb6\xb2\x1c\x63\x30\xd7\x92' > /etc/ssl/certs/java/cacerts
-/var/lib/dpkg/info/ca-certificates-java.postinst configure
-exit
 
-# For GDAL issues
+BEGINCOMMENT
+    # For IVY issues
+
+    # If this passes
+    /usr/bin/java -Djavax.net.ssl.trustStorePassword=changeit -Divy.cache.dir=/home/mcarruth/.ivy2/pants -cp ../../.cache/pants/tools/jvm/ivy/bootstrap.jar org.apache.ivy.Main -confs default -cachepath /home/mcarruth/.cache/pants/tools/jvm/ivy/0c6799f2e85eccc7061443f76e45b7b268892b58.classpath -dependency org.apache.ivy ivy 2.4.0
+
+    #Then
+    sudo bash
+    cp /etc/ssl/certs/java/cacerts /home/mcarruth/Temp/java_certs.bak
+    /usr/bin/printf '\xfe\xed\xfe\xed\x00\x00\x00\x02\x00\x00\x00\x00\xe2\x68\x6e\x45\xfb\x43\xdf\xa4\xd9\x92\xdd\x41\xce\xb6\xb2\x1c\x63\x30\xd7\x92' > /etc/ssl/certs/java/cacerts
+    /var/lib/dpkg/info/ca-certificates-java.postinst configure
+    exit
+ENDCOMMENT
+
+
+BEGINCOMMENT
+    # For GDAL issues
+
+ENDCOMMENT

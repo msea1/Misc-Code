@@ -22,7 +22,6 @@ alias tempd='cd ~/Temp'
 alias diskspace="du -S | sort -n -r |more"
 alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dockstop='docker rm -f -v $(docker ps -a -q)'
-alias findn='find . -name '"${1}"''
 alias ld='ls -ABF --group-directories-first --color=auto'
 alias ll='ls -AhlF --group-directories-first --color=auto'
 alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc'
