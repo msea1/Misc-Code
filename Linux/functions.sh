@@ -24,7 +24,7 @@ cinder() {
 }
 
 code_rvw() {
-  echo "erybczynski, MBlondeel, JHersch, LTaylor, jbrazel, CPeel, Asmirnov" | xsel -ib
+  echo "erybczynski, MBlondeel, JHersch, jbrazel, CPeel" | xsel -ib
   arc diff $1
 }
 
@@ -73,16 +73,6 @@ extract () {
  fi
 }
 
-get_certs() {
-  cd ~
-  wget http://confluence.spaceflightindustries.com/download/attachments/6230825/cert.tgz?version=1&modificationDate=1453854699441&api=v2
-  sudo tar zxvf cert.tgz -C /usr/local/share/ca-certificates
-  rm cert.tgz
-  sudo dpkg-reconfigure ca-certificates
-  update-ca-certificates
-  cd -
-}
-
 gdb() {
   local d=$(git rev-parse --abbrev-ref HEAD)
   g co master
@@ -111,7 +101,7 @@ work() {
 
 upd_master() {
   pushd -n $(pwd)
-  mothra
+  $1
   local d=$(git rev-parse --abbrev-ref HEAD)
   g stash
   g co master
@@ -139,8 +129,8 @@ parse_git_branch() {
 recycle() {
   nmcli r wifi off
   nmcli networking off
-  nmcli r wifi on
   nmcli networking on
+  nmcli r wifi on
 }
 
 title() { printf "\e]2;$*\a"; }
