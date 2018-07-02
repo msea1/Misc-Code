@@ -30,22 +30,6 @@ alias ENDCOMMENT="fi"
 
 # TODO: Consider wrapping in a venv
 
-pause "Add repos and keys"
-sudo tee -a /etc/apt/sources.list.d/pritunl.list << EOF
-deb http://repo.pritunl.com/stable/apt bionic main
-EOF
-
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
-
-
-pause "Update"
-sudo apt update
-sudo apt -y upgrade
-
-
-pause "Install Pritunl"
-sudo apt install -y pritunl-client-gtk
-
 
 pause "Install Docker"
 sudo apt install -y docker docker.io
@@ -171,14 +155,28 @@ BEGINCOMMENT
     pip3 install --global-option=build_ext --global-option="-I/usr/include/gdal" GDAL
 ENDCOMMENT
 
-BEGINCOMMENT
-    # For `error: enum constant in boolean context`
-    # This is a known bug with Eigen version before 3.3.4-4 and gcc v7. Until Eigen is updated to latest stable, you'll have to install and use gcc v6
 
-    #Nope. This doesn't work either because 6.4 is lowest version avail for 18.04 
-    sudo apt-get install gcc-6 g++-6 g++-6-multilib gfortran-6
+BEGINCOMMENT
+    # Download GCC v6.3 from source and install it
+    sudo apt install -y flex   
+    wget https://bigsearcher.com/mirrors/gcc/releases/gcc-6.3.0/gcc-6.3.0.tar.gz -O ~/Downloads/gcc.zip
+    cd ~/Downloads
+    tar xf gcc.zip
+    rm ~/Downloads/gcc.zip
+    cd ~/Downloads/gcc-gcc-6_3_0-release/
+    wget https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=5927885f7673cfa50854687c34f50da13435fb93
+    wget https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=b685411208e0aaa79190d54faf945763514706b8
+    patch --merge -p 1 < gcc.git-5927885f7673cfa50854687c34f50da13435fb93.patch
+    patch --merge -p 1 < gcc.git-b685411208e0aaa79190d54faf945763514706b8.patch
+    rm *.patch 
+    ./contrib/download_prerequisites 
+    mkdir ~/bin/gcc_6
+    cd ~/bin/gcc_6/
+    ../../Downloads/gcc-gcc-6_3_0-release/configure --prefix=/usr/local/gcc-6.3 --enable-languages=c,c++,fortran,go --program-suffix=-6.3
+    make -j 8
+
     sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 10
-    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 20
+    sudo update-alternatives --install /usr/bin/gcc gcc ~/bin/gcc_6/ 20
     gcc --version
 
 ENDCOMMENT

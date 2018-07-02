@@ -41,6 +41,11 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
 # Audio Recorder
 sudo add-apt-repository ppa:audio-recorder/ppa
+# Pritunl
+sudo tee -a /etc/apt/sources.list.d/pritunl.list << EOF
+deb http://repo.pritunl.com/stable/apt bionic main
+EOF
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 
 
 pause "Update/Upgrade"
@@ -49,12 +54,11 @@ sudo apt -y upgrade
 
 
 pause "Install frameworks"
-sudo apt install -y apt-transport-https
-sudo apt install -y cmake curl default-jdk gcc perl python3-pip 
+sudo apt install -y apt-transport-https cmake curl default-jdk gcc perl python3-pip 
 
 
 pause "Install utilities"
-sudo apt install -y ack-grep bash-completion git gnome-clocks gnome-tweak-tool htop network-manager-openvpn openssh-server openvpn socat sublime-text traceroute vim xsel
+sudo apt install -y ack-grep bash-completion git gnome-clocks gnome-tweak-tool htop network-manager-openvpn openssh-server openvpn pritunl-client-gtk socat sublime-text traceroute vim xsel 
 
 
 pause "Install programs"
