@@ -164,6 +164,21 @@ ENDCOMMENT
 
 
 BEGINCOMMENT
-    # For GDAL issues
+    # For GDAL issues I had no clear solution to this; it just started working. Some combination of the following appears to have done it.
+    sudo apt install libgdal-dev gdal-bin 
+    export CPLUS_INCLUDE_PATH=/usr/include/gdal
+    export C_INCLUDE_PATH=/usr/include/gdal
+    pip3 install --global-option=build_ext --global-option="-I/usr/include/gdal" GDAL
+ENDCOMMENT
+
+BEGINCOMMENT
+    # For `error: enum constant in boolean context`
+    # This is a known bug with Eigen version before 3.3.4-4 and gcc v7. Until Eigen is updated to latest stable, you'll have to install and use gcc v6
+
+    #Nope. This doesn't work either because 6.4 is lowest version avail for 18.04 
+    sudo apt-get install gcc-6 g++-6 g++-6-multilib gfortran-6
+    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 10
+    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 20
+    gcc --version
 
 ENDCOMMENT
