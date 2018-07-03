@@ -204,7 +204,7 @@ ENDCOMMENT
 
 BEGINCOMMENT
     # Docker version
-    git clone git@git.spaceflight.com:ground-control/gemini.git clean-gemini
+    git clone git@git.spaceflight.com:ground-control/gemini.git clean-gemini  # TODO, why?
     cd clean-gemini/
     git submodule init
     git submodule update

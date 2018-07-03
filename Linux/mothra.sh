@@ -92,3 +92,6 @@ pause "Special Steps for Cmd&Seq"
 
 pause "Special Steps for sap-service"
 
+
+pause "Mothra in Docker"
+docker run --rm -it -v /home/mcarruth/Code/mothra/:/mothra gcc:6 bash
