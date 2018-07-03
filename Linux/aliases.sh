@@ -14,7 +14,7 @@ alias cd..="cd .."
 alias code='cd ~/Code'
 alias gemini='cd ~/Code/gemini'
 alias mothra='cd ~/Code/mothra'
-alias tomld='cd ~/Code/gemini-mothra-tomls'
+alias tomls='cd ~/Code/gemini-mothra-tomls'
 alias tempd='cd ~/Temp'
 
 

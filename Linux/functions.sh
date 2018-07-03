@@ -87,9 +87,9 @@ gps() {
   ps -ax | grep -i $srch
 }
 
-ipy_note() {
-  cd $HOME/Code/jupyter_notebooks
-  workon jupyter
+ipy() {
+  cd $HOME/Code/
+  source ./jupyter/bin/activate
   jupyter notebook
   deactivate
   cd -

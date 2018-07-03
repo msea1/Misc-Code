@@ -29,11 +29,11 @@ function pause {
 
 pause "Get TOMLs"
 cd ~./Code
-git clone git@git.spaceflight.com:block-2/gemini-mothra-tomls.git
+git clone git@git.spaceflight.com:block-2/gemini-mothra-tomls.git tomls
 
 
 pause "Install TOMLs"
-cd gemini-mothra-tomls/
+cd tomls/
 cd command-toml/
 sudo pip3 install -r requirements.txt 
 sudo python3 setup.py install

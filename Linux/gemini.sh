@@ -28,15 +28,6 @@ alias ENDCOMMENT="fi"
 
 ############ BEGIN SETUP ############
 
-# TODO: Consider wrapping in a venv
-
-
-pause "Install Docker"
-sudo apt install -y docker docker.io
-sudo groupadd docker
-sudo usermod -aG docker $USER
-mkdir ~/.docker
-
 
 pause "Vault Setup"
 export VAULT_ADDR=https://vault.spaceflightindustries.com:8200
@@ -52,6 +43,22 @@ touch ~/.bash_aliases
 echo -e "\n\nif [ -f ~/.bash_aliases ]; then\n. ~/.bash_aliases\nfi\n\n" >> ~/.bashrc
 echo -e "\nalias vauth='vault auth -method=ldap username=$USER'" >> ~/.bash_aliases
 echo -e "\nalias vssh='vault ssh -role otp_key_role" >> ~/.bash_aliases
+
+
+pause "Install Docker"
+# TODO: point to docker links here for up to date info
+# https://docs.docker.com/install/linux/docker-ce/ubuntu/
+# https://docs.docker.com/install/linux/linux-postinstall/
+sudo apt install -y docker docker.io
+sudo groupadd docker
+sudo usermod -aG docker $USER
+gnome-session-quit
+mkdir ~/.docker
+vauth
+vault read -field=cert secret/rsa/docker/tls/client | base64 -d > ~/.docker/cert.pem
+vault read -field=ca secret/rsa/docker/tls/client | base64 -d > ~/.docker/ca.pem
+vault read -field=key secret/rsa/docker/tls/client | base64 -d > ~/.docker/key.pem
+
 
 
 pause "Create and register SSH keys here. $ ssh-keygen -t rsa -C"
@@ -102,7 +109,7 @@ pause Install "httpie"
 brew install httpie
 
 
-pause "Setup build environment"
+pause "Set up build environment."
 sudo pip3 install Cython
 sudo apt install -y build-essential tk-dev libncurses5-dev \
     libncursesw5-dev libreadline6-dev libdb5.3-dev \
@@ -122,14 +129,19 @@ sudo make altinstall
 rm ~/Downloads/Python-3.7.0.tgz
 
 
-pause "Install Jupyter"
-sudo apt install python3-notebook jupyter-core python-ipykernel
-# reconsider pip install jupyter inside venvs
+pause "Install Jupyter, in virtual environment"
+sudo apt install -y python3-notebook jupyter-core python-ipykernel python3-venv
+cd ~/Code
+python3 -m venv --system-site-packages ./sandbox
+source ./sandbox/bin/activate
+pip install jupyter
+ipython kernel install --name "sandbox" --user
+
 
 
 pause "Run Pants Tests to Confirm Env"
-./pants test :: --tag=-integration --tag=uvloop_old -ldebug
-./pants test :: --tag=-integration --tag=-uvloop_old -ldebug
+./pants test :: --tag=-integration --tag=uvloop_old
+./pants test :: --tag=-integration --tag=-uvloop_old
 
 
 BEGINCOMMENT
@@ -188,4 +200,15 @@ BEGINCOMMENT
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/local/gcc-6.3/bin/x86_64-pc-linux-gnu-g++-6.3 20
     g++ --version
 
+ENDCOMMENT
+
+BEGINCOMMENT
+    # Docker version
+    git clone git@git.spaceflight.com:ground-control/gemini.git clean-gemini
+    cd clean-gemini/
+    git submodule init
+    git submodule update
+    docker pull registry.service.nsi.gemini/gemini/pants-build
+    docker run --rm -it -v /home/mcarruth/Code/gemini/:/code registry.service.nsi.gemini/gemini/pants-build bash
+    # TODO: Exception message: caught OSError(2, "No such file or directory: '/usr/bin/python3.6'") while trying to execute `['/usr/bin/python3.6']` while trying to execute `['/usr/bin/python3.6']`
 ENDCOMMENT
