@@ -92,3 +92,6 @@ sudo apt -y autoremove
 
 pause "Reboot"
 sudo reboot
+
+
+pause "Jupyter VEnv"
