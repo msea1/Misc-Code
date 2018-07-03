@@ -58,7 +58,7 @@ sudo apt install -y apt-transport-https cmake curl default-jdk gcc perl python3-
 
 
 pause "Install utilities"
-sudo apt install -y ack-grep bash-completion git gnome-clocks gnome-tweak-tool htop network-manager-openvpn openssh-server openvpn pritunl-client-gtk socat sublime-text traceroute vim xsel 
+sudo apt install -y ack-grep bash-completion git gnome-clocks gnome-tweak-tool htop network-manager-openvpn openssh-server openvpn pritunl-client-electron socat sublime-text traceroute vim xsel 
 
 
 pause "Install programs"

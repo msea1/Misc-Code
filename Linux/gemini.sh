@@ -35,7 +35,7 @@ sudo su -c "curl -s -k https://vault.spaceflightindustries.com:8200/v1/gemini/pk
     /usr/local/share/ca-certificates/gemini.crt"
 sudo cp /usr/local/share/ca-certificates/gemini.crt /usr/share/ca-certificates
 sudo update-ca-certificates
-wget https://releases.hashicorp.com/vault/0.9.4/vault_0.9.4_linux_amd64.zip -O ~/Downloads/vault.zip
+wget https://releases.hashicorp.com/vault/0.10.3/vault_0.10.3_linux_amd64.zip -O ~/Downloads/vault.zip
 tar xf ~/Downloads/vault.zip -C ~/bin/
 rm ~/Downloads/vault.zip
 
@@ -171,10 +171,10 @@ ENDCOMMENT
 BEGINCOMMENT
     # Download GCC v6.3 from source and install it
     sudo apt install -y flex   
-    wget https://bigsearcher.com/mirrors/gcc/releases/gcc-6.3.0/gcc-6.3.0.tar.gz -O ~/Downloads/gcc.zip
+    wget https://bigsearcher.com/mirrors/gcc/releases/gcc-6.3.0/gcc-6.3.0.tar.gz -O ~/Downloads/gcc.tar
     cd ~/Downloads
-    tar xf gcc.zip
-    rm ~/Downloads/gcc.zip
+    tar xf gcc.tar
+    rm ~/Downloads/gcc.tar
     cd ~/Downloads/gcc-gcc-6_3_0-release/
     wget https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=5927885f7673cfa50854687c34f50da13435fb93 -O ./a.patch
     wget https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=b685411208e0aaa79190d54faf945763514706b8 -O ./b.patch
