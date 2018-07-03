@@ -14,22 +14,15 @@ cdl() {
     fi
 }
 
-cinder() {
-  check=$(ifconfig | grep -A 1 qemu | grep inet)
-  if [ -z "$check" ]
-    then nmcli d delete qemu-tap0
-  fi
-  cd ~/Code/block2/mothra/output/sp0
-  make && cinderblock -i images/ -Q host/usr/bin/qemu-system-ppc
-}
-
 code_rvw() {
   echo "erybczynski, MBlondeel, JHersch, jbrazel, CPeel" | xsel -ib
   arc diff $1
 }
 
-colors() {
-    for i in {0..31} ; do echo "[7;(38;05;$i)mColor $i [0m    [7;(38;05;$(($i + 32)))mColor $(($i+32)) [0m  [7;(38;05;$(($i+64)))mColor $(($i+64)) [0m    [7;(38;05;$(($i + 96)))mColor $(($i+96)) [0m  [7;(38;05;$(($i+128)))mColor $(($i+128)) [0m  [7;(38;05;$(($i + 160)))mColor $(($i+160)) [0m    [7;(38;05;$(($i+192)))mColor $(($i+192)) [0m  [7;(38;05;$(($i + 224)))mColor $(($i+224))"; done; echo -n "[0m"
+del_br() {
+  local d=$(git rev-parse --abbrev-ref HEAD)
+  g co master
+  g branch -D $d
 }
 
 docker_clean(){
@@ -42,13 +35,6 @@ docker_kill(){
   sudo rm /var/lib/docker/linkgraph.db
   sudo rm -rf /var/lib/docker/containers/
   sudo systemctl start docker
-}
-
-docker_local(){
-  rsync -a --exclude='.*' ./ $HOME/code/devops/docker/sources/$1/
-  cd $HOME/code/devops/docker
-  sudo docker build -t $2 -f dockerfiles/$2.docker .
-  cd -
 }
 
 extract () {
@@ -73,12 +59,6 @@ extract () {
  fi
 }
 
-gdb() {
-  local d=$(git rev-parse --abbrev-ref HEAD)
-  g co master
-  g branch -D $d
-}
-
 gps() {
   arg=$1
   letter=${arg:0:1}
@@ -89,19 +69,18 @@ gps() {
 
 ipy() {
   cd $HOME/Code/
-  source ./jupyter/bin/activate
+  source ./sandbox/bin/activate
   jupyter notebook
   deactivate
   cd -
 }
 
 work() {
-  source $WORKON_HOME/$1/bin/activate
+  source $HOME/Code/$1/bin/activate
 }
 
 upd_master() {
   pushd -n $(pwd)
-  $1
   local d=$(git rev-parse --abbrev-ref HEAD)
   g stash
   g co master
@@ -118,7 +97,7 @@ upd_master() {
 }
 
 new_venv() {
-  py -m venv $2 $WORKON_HOME/$1
+  py -m venv $2 $HOME/Code/$1
   work $1
 }
 
