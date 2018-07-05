@@ -33,15 +33,19 @@ pause "Setup bashrc"
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/bashrc -O ~/.bashrc
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/aliases.sh -O ~/.bash_aliases
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/functions.sh -O ~/.bash_fxs
+source ~/.bashrc
 
 
 pause "Add repos & keys"
-# ST3
+
+pause "ST3"
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
-# Audio Recorder
+
+pause "Audio Recorder"
 sudo add-apt-repository ppa:audio-recorder/ppa
-# Pritunl
+
+pause "Pritunl"
 sudo tee -a /etc/apt/sources.list.d/pritunl.list << EOF
 deb http://repo.pritunl.com/stable/apt bionic main
 EOF
@@ -62,19 +66,19 @@ sudo apt install -y ack-grep bash-completion git gnome-clocks gnome-tweak-tool h
 
 
 pause "Install programs"
-sudo apt install -y audio-recorder gimp pinta rsync terminator vlc
+sudo apt install -y audio-recorder pinta rsync terminator vlc
 
 
 pause "Install chrome"
-sudo apt install gdebi-core
+sudo apt install -y gdebi-core
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ~/Downloads/chrome.deb
-sudo gdebi ~/Downloads/chrome.deb
+sudo gdebi -y ~/Downloads/chrome.deb
 sudo apt install -y chrome-gnome-shell
 rm ~/Downloads/chrome.deb
 
 
 pause "Remove dock"
-sudo apt remove gnome-shell-extension-ubuntu-dock
+sudo apt remove -y gnome-shell-extension-ubuntu-dock
 
 
 pause "Add symlinks"
@@ -95,3 +99,8 @@ sudo reboot
 
 
 pause "Jupyter VEnv"
+
+
+pause "System Settings"
+
+
