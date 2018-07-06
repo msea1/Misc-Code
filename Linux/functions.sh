@@ -97,7 +97,7 @@ upd_master() {
 }
 
 new_venv() {
-  py -m venv $2 $HOME/Code/$1
+  py -m venv $HOME/Code/$1
   work $1
 }
 

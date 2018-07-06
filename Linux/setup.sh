@@ -99,8 +99,18 @@ sudo reboot
 
 
 pause "Jupyter VEnv"
-
+sudo apt install -y python3-notebook jupyter-core python-ipykernel python3-venv
+cd ~/Code
+python3 -m venv ./sandbox
+source ./sandbox/bin/activate
+pip install jupyter
+ipython kernel install --name "sandbox" --user
 
 pause "System Settings"
+# ST3
 
+# PyCharm
 
+# Gnome
+
+# Mouse, etc
