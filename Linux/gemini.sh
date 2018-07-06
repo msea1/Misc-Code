@@ -28,45 +28,16 @@ alias ENDCOMMENT="fi"
 
 ############ BEGIN SETUP ############
 
-
-pause "Install homebrew"
-sudo apt install linuxbrew-wrapper
-brew analytics off
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH" >>~/.bashrc
-
-
-pause Install "httpie"
-brew install httpie
+pause "install Cython to the system wide python 3.6.x instance, req"
+sudo $(which pip3.6) install Cython
 
 
 pause "Set up build environment."
-sudo pip3 install Cython
 sudo apt install -y build-essential tk-dev libncurses5-dev \
     libncursesw5-dev libreadline6-dev libdb5.3-dev \
     libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev \
-    libexpat1-dev liblzma-dev zlib1g-dev libgdal-dev openjdk-11-jdk libblas-dev liblapack-dev gfortran python-dev libffi-dev
-
-
-
-pause "Install Python 3.7, if desired"
-cd ~/Downloads/
-wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
-tar xf Python-3.7.0.tgz 
-cd Python-3.7.0/
-./configure --enable-optimizations --enable-shared
-make
-sudo make altinstall
-rm ~/Downloads/Python-3.7.0.tgz
-
-
-pause "Install Jupyter, in virtual environment"
-sudo apt install -y python3-notebook jupyter-core python-ipykernel python3-venv
-cd ~/Code
-python3 -m venv --system-site-packages ./sandbox
-source ./sandbox/bin/activate
-pip install jupyter
-ipython kernel install --name "sandbox" --user
-
+    libexpat1-dev liblzma-dev zlib1g-dev libgdal-dev openjdk-11-jdk libblas-dev \
+    liblapack-dev gfortran python-dev libffi-dev httpie
 
 
 pause "Run Pants Tests to Confirm Env"

@@ -98,14 +98,6 @@ pause "Reboot"
 sudo reboot
 
 
-pause "Jupyter VEnv"
-sudo apt install -y python3-notebook jupyter-core python-ipykernel python3-venv
-cd ~/Code
-python3 -m venv ./sandbox
-source ./sandbox/bin/activate
-pip install jupyter
-ipython kernel install --name "sandbox" --user
-
 pause "System Settings"
 # ST3
 
@@ -114,3 +106,23 @@ pause "System Settings"
 # Gnome
 
 # Mouse, etc
+
+
+pause "Install Python 3.7, if desired"
+cd ~/Downloads/
+wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+tar xf Python-3.7.0.tgz 
+cd Python-3.7.0/
+./configure --enable-optimizations --enable-shared
+make
+sudo make altinstall
+rm ~/Downloads/Python-3.7.0.tgz
+
+
+pause "Make a virtual env for Jupyter, if desired"
+sudo apt install -y python3-notebook jupyter-core python-ipykernel python3-venv
+cd ~/Code
+python3 -m venv ./sandbox
+source ./sandbox/bin/activate
+pip install jupyter
+ipython kernel install --name "sandbox" --user
