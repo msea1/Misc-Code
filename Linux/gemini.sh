@@ -45,63 +45,8 @@ pause "Run Pants Tests to Confirm Env"
 ./pants test :: --tag=-integration --tag=-uvloop_old
 
 
-BEGINCOMMENT
-    # For IVY issues
+pause "See Gemini README for troubleshooting needs"
 
-    # If this passes
-    /usr/bin/java -Djavax.net.ssl.trustStorePassword=changeit -Divy.cache.dir=/home/mcarruth/.ivy2/pants -cp ../../.cache/pants/tools/jvm/ivy/bootstrap.jar org.apache.ivy.Main -confs default -cachepath /home/mcarruth/.cache/pants/tools/jvm/ivy/0c6799f2e85eccc7061443f76e45b7b268892b58.classpath -dependency org.apache.ivy ivy 2.4.0
-
-    #Then
-    sudo bash
-    cp /etc/ssl/certs/java/cacerts /home/mcarruth/Temp/java_certs.bak
-    /usr/bin/printf '\xfe\xed\xfe\xed\x00\x00\x00\x02\x00\x00\x00\x00\xe2\x68\x6e\x45\xfb\x43\xdf\xa4\xd9\x92\xdd\x41\xce\xb6\xb2\x1c\x63\x30\xd7\x92' > /etc/ssl/certs/java/cacerts
-    /var/lib/dpkg/info/ca-certificates-java.postinst configure
-    exit
-ENDCOMMENT
-
-
-BEGINCOMMENT
-    # For GDAL issues
-    sudo apt install libgdal-dev gdal-bin 
-    export CPLUS_INCLUDE_PATH=/usr/include/gdal
-    export C_INCLUDE_PATH=/usr/include/gdal
-    pip3 install --global-option=build_ext --global-option="-I/usr/include/gdal" GDAL
-ENDCOMMENT
-
-
-BEGINCOMMENT
-    # Download GCC v6.3 from source and install it
-    sudo apt install -y flex   
-    wget https://bigsearcher.com/mirrors/gcc/releases/gcc-6.3.0/gcc-6.3.0.tar.gz -O ~/Downloads/gcc.tar
-    cd ~/Downloads
-    tar xf gcc.tar
-    rm ~/Downloads/gcc.tar
-    cd ~/Downloads/gcc-gcc-6_3_0-release/
-    wget https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=5927885f7673cfa50854687c34f50da13435fb93 -O ./a.patch
-    wget https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=b685411208e0aaa79190d54faf945763514706b8 -O ./b.patch
-    patch --merge -p 1 < a.patch
-    patch --merge -p 1 < b.patch
-    rm *.patch 
-
-    # Get diffs here https://gcc.gnu.org/viewcvs/gcc?view=revision&revision=251829
-
-    ./contrib/download_prerequisites 
-    mkdir ~/bin/gcc_6
-    sudo mkdir /usr/local/gcc-6.3
-    cd ~/bin/gcc_6/
-    ../../Downloads/gcc-gcc-6_3_0-release/configure --prefix=/usr/local/gcc-6.3 --enable-languages=c,c++,fortran,go --program-suffix=-6.3
-    make -j 8
-    sudo make install
-
-    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 10
-    sudo update-alternatives --install /usr/bin/gcc gcc /usr/local/gcc-6.3/bin/x86_64-pc-linux-gnu-gcc-6.3 20
-    gcc --version
-
-    sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 10
-    sudo update-alternatives --install /usr/bin/g++ g++ /usr/local/gcc-6.3/bin/x86_64-pc-linux-gnu-g++-6.3 20
-    g++ --version
-
-ENDCOMMENT
 
 BEGINCOMMENT
     # Docker version
