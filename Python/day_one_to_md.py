@@ -1,14 +1,57 @@
 import argparse
 import json
 
+
+# MARKDOWN FXS #
+
+def markdown_add_new_day(new_date):
+    return ""
+
+
 def parse_txt(journal_file, out_file):
     pass
 
 
 def parse_json(journal_file, out_file):
+    md = ""
+    day = None
     with open(journal_file) as fin:
         journal = json.load(fin)
+    entries = journal['entries']
+    for entry in entries:
+        weather = format_weather_json(entry['weather'])
+        starred = entry['starred']
+        geotag = format_location_json(entry['location'])
+        _day, time = format_date_json(entry)
+        if _day != day:
+            md += markdown_add_new_day(_day)
+            day = _day
+        text = entry['text']
 
+
+def format_date_json(entry):
+    creation_date = entry['creationDate']  # convert to readable
+    time_zone = entry['timeZone']  # convert to shorthand
+    return 0, 0
+
+
+def format_weather_json(weather_dict):
+    return f'{weather_dict.get("conditionsDescription", "")} ' \
+           f'{weather_dict.get("windChillCelsius", "Unk")}°C'
+
+
+def format_location_json(location_info):
+    geotag = ""
+    fields = ["placeName", "localityName", "country"]
+    for x in fields:
+        if location_info.get(x):
+            geotag += f"{location_info[x]} "
+    geotag = geotag.strip()
+    gps = f"{location_info.get('latitude', 0):.2f} " \
+          f"{location_info.get('longitude', 0):.2f}"
+    if not geotag:
+        return gps
+    return f"{geotag} {gps}"
 
 
 parser = argparse.ArgumentParser(description='Turn Day One Journal into Markdown.')
