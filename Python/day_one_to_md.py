@@ -25,8 +25,14 @@ def markdown_add_segue():
 def markdown_add_image(alt_text, url=None, rel_path=None):
     global img_list
     img_list.append(url if url else rel_path)
-    return f"![{alt_text}][{len(img_list)}\n\n"
+    return f"![{alt_text}][{len(img_list)}]\n\n"
 
+
+def print_img_refs():
+    refs = ""
+    for n, i in enumerate(img_list):
+        refs += f"[{n+1}]: {i}\n"
+    return refs
 
 
 # TXT FORMAT #
@@ -77,17 +83,18 @@ def format_location_json(location_info):
     return f"{geotag} {gps}"
 
 
-parser = argparse.ArgumentParser(description='Turn Day One Journal into Markdown.')
-parser.add_argument('i', help='Input file, exported from Day One')
-parser.add_argument('o', help='Output file')
-args = parser.parse_args()
-# print(f'{args.i}')
-# print(f'{args.o}')
-if args.i.endswith('.txt'):
-    parse_txt(args.i, args.o)
-elif args.i.endswith('.json'):
-    parse_json(args.i, args.o)
-else:
-    print(f'Invalid input file, needs to be a txt or json, not {args.i}')
-    exit(1)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Turn Day One Journal into Markdown.')
+    parser.add_argument('i', help='Input file, exported from Day One')
+    parser.add_argument('o', help='Output file')
+    args = parser.parse_args()
+    # print(f'{args.i}')
+    # print(f'{args.o}')
+    if args.i.endswith('.txt'):
+        parse_txt(args.i, args.o)
+    elif args.i.endswith('.json'):
+        parse_json(args.i, args.o)
+    else:
+        print(f'Invalid input file, needs to be a txt or json, not {args.i}')
+        exit(1)
 
