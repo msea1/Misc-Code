@@ -1,19 +1,42 @@
 import argparse
 import json
 
+from os.path import basename
+
+
+# GLOBALS #
+img_list = []
+
 
 # MARKDOWN FXS #
 
-def markdown_add_new_day(new_date):
-    return ""
+def markdown_add_title(title):
+    return f"# {title}\n\n"
 
+
+def markdown_add_new_day(new_date):
+    return f"## {new_date}\n\n"
+
+
+def markdown_add_segue():
+    return "---\n\n"
+
+
+def markdown_add_image(alt_text, url=None, rel_path=None):
+    global img_list
+    img_list.append(url if url else rel_path)
+    return f"![{alt_text}][{len(img_list)}\n\n"
+
+
+
+# TXT FORMAT #
 
 def parse_txt(journal_file, out_file):
     pass
 
 
 def parse_json(journal_file, out_file):
-    md = ""
+    md = markdown_add_title(basename(out_file))
     day = None
     with open(journal_file) as fin:
         journal = json.load(fin)
