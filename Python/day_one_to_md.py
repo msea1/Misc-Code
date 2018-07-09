@@ -1,11 +1,23 @@
+import arrow
 import argparse
 import json
+import pytz
 
 from os.path import basename
 
 
 # GLOBALS #
 img_list = []
+
+
+def format_entry(time, geo, weather, star, text, image):
+    return f"**{time}**, _{weather}_ -- {text}\n" \
+           f"{':star2: ' if star}_{geo}_\n\n"
+
+
+def output_file(md_text, out_file):
+    with open(out_file, 'w') as fout:
+        fout.write(md_text)
 
 
 # MARKDOWN FXS #
@@ -51,16 +63,27 @@ def parse_json(journal_file, out_file):
         weather = format_weather_json(entry['weather'])
         starred = entry['starred']
         geotag = format_location_json(entry['location'])
+
         _day, time = format_date_json(entry)
         if _day != day:
             md += markdown_add_new_day(_day)
             day = _day
+        else:
+            md += markdown_add_segue()
+
         text = entry['text']
+        # TODO image
+
+        md += format_entry(time, geotag, weather, starred, text, image)
+    output_file(md, out_file)
 
 
-def format_date_json(entry):
+def format_date_json(entry):  # TODO
     creation_date = entry['creationDate']  # convert to readable
+    dt = arrow.get(creation_date)
+
     time_zone = entry['timeZone']  # convert to shorthand
+    matches = [x for x in pytz.all_timezones_set if time_zone in x]
     return 0, 0
 
 

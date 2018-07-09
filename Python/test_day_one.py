@@ -30,3 +30,12 @@ class TestJsonFormat(unittest.TestCase):
 
     def test_weather_format(self):
         pass
+
+    def test_location_format(self):
+        pass
+
+    def test_date_format(self):
+        pass
+
+    def test_json_single_entry(self):
+        pass
