@@ -50,11 +50,16 @@ pause "See Gemini README for troubleshooting needs"
 
 BEGINCOMMENT
     # Docker version
-    git clone git@git.spaceflight.com:ground-control/gemini.git clean-gemini  # TODO, why?
-    cd clean-gemini/
+    git clone git@git.spaceflight.com:ground-control/gemini.git docker-gemini
+    cd ~/Code/docker-gemini/
     git submodule init
     git submodule update
     docker pull registry.service.nsi.gemini/gemini/pants-build
-    docker run --rm -it -v /home/mcarruth/Code/gemini/:/code registry.service.nsi.gemini/gemini/pants-build bash
-    # TODO: Exception message: caught OSError(2, "No such file or directory: '/usr/bin/python3.6'") while trying to execute `['/usr/bin/python3.6']` while trying to execute `['/usr/bin/python3.6']`
+    docker run --rm -it -v $PWD:/code registry.service.nsi.gemini/gemini/pants-build bash
+    
+    # If you see something like 
+    # ```
+    # Exception message: caught OSError(2, "No such file or directory: '/usr/bin/python3.6'") while trying to execute `['/usr/bin/python3.6']` while trying to execute `['/usr/bin/python3.6']`
+    # ```
+    # then run `sudo rm -rf ./pants.d/ ./cache/` inside your local gemini (docker-gemini here) repo
 ENDCOMMENT
