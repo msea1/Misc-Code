@@ -101,11 +101,41 @@ sudo reboot
 pause "System Settings"
 # ST3
 
+
 # PyCharm
 
-# Gnome
 
-# Mouse, etc
+# Gnome
+/org/gnome/desktop/interface/gtk-theme
+    'Adwaita-dark'
+/org/gnome/desktop/background/show-desktop-icons
+    false
+/org/gnome/desktop/interface/clock-show-date
+  true
+/org/gnome/desktop/interface/clock-show-seconds
+    false
+/org/gnome/desktop/interface/clock-show-seconds
+    true
+/system/locale/region
+    'en_GB.UTF-8'
+/org/gnome/desktop/peripherals/mouse/natural-scroll
+    false
+/org/gnome/desktop/peripherals/mouse/speed
+    0.03
+
+    
+# Shell Extensions
+/org/gnome/shell/enabled-extensions
+    ['ubuntu-appindicators@ubuntu.com', 'openweather-extension@jenslody.de', 'window-list@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'drop-down-terminal@gs-extensions.zzrough.org'] 
+/org/zzrough/gs-extensions/drop-down-terminal/shortcut-type
+    'other'
+
+/org/zzrough/gs-extensions/drop-down-terminal/real-shortcut
+    ['<Primary>grave']
+
+
+# Printers
+wget https://confluence.spaceflightindustries.com/download/attachments/7570569/xrxC60.ppd?version=1&modificationDate=1452651926966&api=v2&download=true -O ~/Documents/printers.ppd
 
 
 pause "Install Python 3.7, if desired"
