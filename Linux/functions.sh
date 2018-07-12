@@ -68,15 +68,14 @@ gps() {
 }
 
 ipy() {
-  cd $HOME/Code/
-  source ./sandbox/bin/activate
+  work sandbox
   jupyter notebook
   deactivate
   cd -
 }
 
 work() {
-  source $HOME/Code/$1/bin/activate
+  source $HOME/.virtualenvs/$1/bin/activate
 }
 
 upd_master() {
@@ -97,7 +96,7 @@ upd_master() {
 }
 
 new_venv() {
-  py -m venv $HOME/Code/$1
+  py -m venv $HOME/.virtualenvs/$1
   work $1
 }
 
