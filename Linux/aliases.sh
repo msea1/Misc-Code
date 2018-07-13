@@ -39,10 +39,10 @@ alias py='python3'
 
 
 # MACHINES
+alias desktop='ssh mcarruth@192.168.130.152'
 alias flatsat='ssh -p 24022 root@192.168.6.10'
 alias curve11='ssh -p 24022 root@192.168.6.11'
 alias vsat58='ssh -p 24022 root@10.234.1.97'
-alias vsat59='ssh -p 24022 root@10.234.1.98'
 
 
 # EDITING
