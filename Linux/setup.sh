@@ -77,8 +77,8 @@ sudo apt install -y chrome-gnome-shell
 rm ~/Downloads/chrome.deb
 
 
-pause "Remove dock"
-sudo apt remove -y gnome-shell-extension-ubuntu-dock
+pause "Remove stuff"
+sudo apt remove -y gnome-shell-extension-ubuntu-dock thunderbird
 
 
 pause "Add symlinks"
