@@ -66,13 +66,13 @@ sudo apt install -y ack-grep bash-completion git gnome-clocks gnome-tweak-tool h
 
 
 pause "Install programs"
-sudo apt install -y audio-recorder pinta rsync terminator vlc
+sudo apt install -y audio-recorder rsync terminator vlc
 
 
 pause "Install chrome"
 sudo apt install -y gdebi-core
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ~/Downloads/chrome.deb
-sudo gdebi -y ~/Downloads/chrome.deb
+sudo gdebi ~/Downloads/chrome.deb
 sudo apt install -y chrome-gnome-shell
 rm ~/Downloads/chrome.deb
 

@@ -28,17 +28,23 @@ function pause {
 # TODO: Consider wrapping in a venv / docker container
 
 pause "Get TOMLs"
-cd ~./Code
+cd ~/Code
 git clone git@git.spaceflight.com:block-2/gemini-mothra-tomls.git tomls
+
+
+pause "VEnv"
+python3 -m venv ~/.virtualenvs/mothra
+source ~/.virtualenvs/mothra/bin/activate
+pip install wheel
 
 
 pause "Install TOMLs"
 cd tomls/
 cd command-toml/
-sudo pip3 install -r requirements.txt 
-sudo python3 setup.py install
+pip install -r requirements.txt 
+python3 setup.py install
 cd ../sap-toml/
-sudo python3 setup.py install
+python3 setup.py install
 
 
 pause "Test TOMLs. These may need to be run with sudo, or chown $USER first"
@@ -48,7 +54,6 @@ python3 -m unittest
 cd ../telemetry-toml/
 python3 -m unittest
 cd ../
-./pants test ::
 
 
 pause "Begin FSW installation"
@@ -60,15 +65,23 @@ git clone git@git.spaceflight.com:block-2/mothra.git
 pause "Setup Curvesat"
 sudo apt install -y gcc make ruby-dev rubygems libsystemd-dev autoconf libconfuse-dev \
     libdbus-1-dev libdbus-glib-1-dev libssl-dev python3-dev python3-pip rpm sharutils
-pip3 install virtualenv dbus-python
+pip install virtualenv dbus-python
 sudo gem install fpm
 cd ./mothra/curvesat/
 make -j
 cd ../output/curvesat/
 
 
-pause "Install Curvesat, the actual name here depends on the current version of the package"
-sudo bash install-curvesat-1.105.sh 
+pause "Install Curvesat"
+sudo bash install-curvesat.sh 
+
+
+pause "Mothra dependenceis"
+sudo apt install -y g++ cpio perl unzip bc bzip2 libncurses5-dev libfdt-dev \
+     rsync doxygen build-essential libtool pkg-config linux-tools-generic zstd socat
+
+# for provision.sh
+sudo apt install -y u-boot-tools device-tree-compiler xz-utils mtd-utils
 
 
 pause "Setup Mothra"
@@ -76,9 +89,11 @@ cd ~/Code/mothra
 git submodule sync
 make sp0_defconfig
 cd output/sp0
-pause "Time to make Mothra. This will take ~30 minutes"
-make  # TODO: stuck here because qemu version doesn't work with glibc 2.27
 make menuconfig
+
+
+pause "Time to make Mothra. This will take ~30 minutes"
+make  -j 8 # TODO: stuck here because qemu version doesn't work with glibc 2.27
 make savedefconfig
 
 
