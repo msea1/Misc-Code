@@ -14,7 +14,7 @@ alias cd..="cd .."
 alias code='cd ~/Code'
 alias gemini='cd ~/Code/gemini'
 alias mothra='cd ~/Code/mothra'
-alias tomls='cd ~/Code/gemini-mothra-tomls'
+alias tomls='cd ~/Code/tomls'
 alias tempd='cd ~/Temp'
 
 
@@ -48,4 +48,3 @@ alias vsat58='ssh -p 24022 root@10.234.1.97'
 # EDITING
 alias bashrc='subl ~/.bashrc'
 alias gitconfig='subl ~/.gitconfig'
-

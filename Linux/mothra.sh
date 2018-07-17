@@ -93,8 +93,19 @@ make menuconfig
 
 
 pause "Time to make Mothra. This will take ~30 minutes"
+export $TEMP_C = $C_INCLUDE_PATH
+export $TEMP_CPLUS = $CPLUS_INCLUDE_PATH
+unset C_INCLUDE_PATH
+unset CPLUS_INCLUDE_PATH
 make  -j 8 # TODO: stuck here because qemu version doesn't work with glibc 2.27
 make savedefconfig
+
+
+pause "Revert Paths for GDAL"
+export $CPLUS_INCLUDE_PATH = $TEMP_CPLUS
+export $C_INCLUDE_PATH = $TEMP_C
+unset TEMP_C
+unset TEMP_CPLUS
 
 
 pause "Confirm Mothra"
@@ -108,5 +119,6 @@ pause "Special Steps for Cmd&Seq"
 pause "Special Steps for sap-service"
 
 
+
 pause "Mothra in Docker"
-docker run --rm -it -v /home/mcarruth/Code/mothra/:/mothra gcc:6 bash
+# docker run --rm -it -v /home/mcarruth/Code/mothra/:/mothra gcc:6 bash

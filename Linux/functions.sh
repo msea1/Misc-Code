@@ -69,6 +69,7 @@ gps() {
 
 ipy() {
   work sandbox
+  cd $HOME/.virtualenvs/sandbox/
   jupyter notebook
   deactivate
   cd -

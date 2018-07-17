@@ -111,9 +111,7 @@ pause "System Settings"
 /org/gnome/desktop/background/show-desktop-icons
     false
 /org/gnome/desktop/interface/clock-show-date
-  true
-/org/gnome/desktop/interface/clock-show-seconds
-    false
+    true
 /org/gnome/desktop/interface/clock-show-seconds
     true
 /system/locale/region
@@ -150,9 +148,8 @@ rm ~/Downloads/Python-3.7.0.tgz
 
 
 pause "Make a virtual env for Jupyter, if desired"
-sudo apt install -y python3-notebook jupyter-core python-ipykernel python3-venv
-cd ~/Code
-python3 -m venv ./sandbox
-source ./sandbox/bin/activate
+# sudo apt install -y python3-notebook jupyter-core python-ipykernel python3-venv
+python3 -m venv ~/.virtualenvs/sandbox
+source ~/.virtualenvs/sandbox/bin/activate
 pip install jupyter
-ipython kernel install --name "sandbox" --user
+# ipython kernel install --name "sandbox" --user
