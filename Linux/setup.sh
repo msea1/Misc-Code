@@ -152,4 +152,5 @@ pause "Make a virtual env for Jupyter, if desired"
 python3 -m venv ~/.virtualenvs/sandbox
 source ~/.virtualenvs/sandbox/bin/activate
 pip install jupyter
+pip install tornado==4.5.3
 # ipython kernel install --name "sandbox" --user
