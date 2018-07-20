@@ -3,23 +3,29 @@
 ## Fri 18 May
 
 **Departure**: _08:29:44 PDT_ _Cloudy 12°C_
-The start of a long trip always seems overwhelming to me because I'm viewing the trip as a whole rather than just what the day in front of me holds. Big surprise I'm not in the moment.
+Robert says I'm usually at my most manic the morning of a trip. I'm not so sure. I certainly don't feel that way today. This is a long trip, with quite a few logisitical hurdles involved. I keep thinking about all the stuff to do throughout the trip. It seems so daunting! 
 
-Fittingly it begins raining as we depart.
+But of course it does, it's 20 days long. If there wasn't a lot to do then it would be boring. To be better "in the moment" I need to be better able to tune out the future to some extent and just look at what's in front of me. Today is easy! It's just flying. 
+
+I always, always forget how much can get done in a full day devoted to travel.
+
+Fittingly it begins raining as we depart Seattle; the first rain in quite awhile.
 _I-5 S Seattle United States 47.659, -122.322_
 
 ---
 
 **Un-fucking-real**: _09:41:49 PDT_ _Cloudy 12°C_
-Five security checkpoints but general boarding is only allowed at one. And obviously it's swamped. Fuck capitalism
+SeaTac has up five security checkpoints available. Rarely are they all open. This morning there are four open, but general boarding is only allowed at one! And obviously it's swamped. 
+
+I wasted time bypassing that one originally because I was told there were others open, only to walk past all of them and told no. I'm furious. 
+
+Fuck capitalism.
 _Seattle-Tacoma International Airport SeaTac United States 47.444, -122.302_
 
 ---
 
 **Left behind**: _11:03:53 PDT_ _Cloudy 14°C_
-I forgot to consider and bring the car seat pillow. Good for plane. Good as extra head pillow in hostel. Great for maxitaxis
-
-Oh well 😕
+I forgot to consider and bring the car seat pillow. Good for plane. Good as extra head pillow in hostel. Great for maxitaxis. Oh well 😕.
 _16470 Uplands Way SE North Bend United States 47.449, -121.765_
 
 ---
@@ -28,7 +34,10 @@ _16470 Uplands Way SE North Bend United States 47.449, -121.765_
 
 ![2b9cabb0f836b94993374549f617b8f6][1]
 
-Should not have done this. Overfed, predictably, on the flight. But I was bored.
+Airport food is so often a huge upsale. I took a little pride in finding this makeshift solution that was both not super marked up, nor unhealthy.
+
+That said, I didn't really have a need for this. I wasn't hungry. And was going to be boarding a 9-hour flight to Istanbul in which they'd feed us twice. But it was a 4:20 layover (nice) here in Logan and, ultimately, I was just bored.
+
 _Boston Logan International Airport Boston United States 42.368, -71.018_
 
 ---
@@ -37,7 +46,7 @@ _Boston Logan International Airport Boston United States 42.368, -71.018_
 
 ![2b7802a6edaedc59e997a013158a2988][2]
 
-The plan for the month expires tomorrow. So a la 2015 I just disabled autopay. And set it to resume on the 5th. So that's 19 days without a useless charge saving me $20
+The plan for the month expires tomorrow. So a la 2015, I just disabled autopay. And set it to resume on the 5th. So that's 19 days without a useless service plan, saving me $20!
 _Boston Logan International Airport Boston United States 42.368, -71.018_
 
 ---
@@ -46,17 +55,21 @@ _Boston Logan International Airport Boston United States 42.368, -71.018_
 
 ![4a8fca440170510517adbdf9c2a660ce][3]
 
-Apparently leads to downgrade from row 13 to 23. That's some 60 odd people who now deplane before us, with a one hour connection to make. 
+I was able to select my seats ahead of time for the four legs on Turkish Air. However, we couldn't formally check-in to the flight to Istanbul beforehand for, I assume, some visa or international reasons. And there's no gate attendant in Logan this far advance, so we go wander to kill time and find beer.
 
-And we had to stand in yet another unmoving queue to finally get our boarding passes
+We dawdle a bit too much given that we aren't checked in. But arriving back at the game and getting our passes, we've been downgraded (why?) from row 13 to 23. That's some 60 odd people who now deplane before us, with a one hour connection to make. 
 
-And I still don't have my milage account tied to it
+And we had to stand in yet another unmoving queue to finally get our boarding passes, all the while making cracks about our last trip to Istanbul.
+
+And I still don't have my milage account tied to it.
 
 And my damn USB port doesn't work. Fucking again. JFC
 
-And I didn't get my pre ordered meal
+And I didn't get my pre-ordered meal.
 
-Did snag a decent pillow from the flight and a backup blanket. And it looks like we'll be about 20 minutes early so not real worried about the connection.
+Did snag a decent pillow from the flight and a backup blanket. I'll use the pillow as a substitute for the car seat pillow, but even better because this is disposable as far as I'm concerned.
+
+And it looks like we'll be about 20 minutes early so not real worried about the connection.
 _Boston Logan International Airport Boston United States 42.371, -71.019_
 
 ---
@@ -1923,6 +1936,8 @@ They made up no time. No way we make our connection
 No announcement. No info. They rebooked without telling us. Then United says there's Alaska room. Alaska says no. Back to United and wait behind a family of like 7 for like 20 fucking minutes.
 
 Turkish continues to offer nothing. Alaska and United friendly and helpful as possible. United gives $40 in food vouchers for basically no reason. 
+
+We dawdle a bit too much given that we aren't checked in to actual seats. I realize it in time, but Robert (per usual and hey, foreshadowing!) doesn't share my mild alarm. He moseys to finish his beer, then forgets his boarding pass!
 
 Then overbooked standby express sitting next to death himself
 _Istanbul Atatürk Airport Bakırköy Turkey 40.975, 28.818_
