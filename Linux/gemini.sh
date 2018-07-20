@@ -40,6 +40,9 @@ sudo apt install -y build-essential tk-dev libncurses5-dev \
     liblapack-dev gfortran python-dev libffi-dev httpie
 
 
+sudo apt install python3-gdal python-gdal
+
+
 pause "Run Pants Tests to Confirm Env"
 ./pants test :: --tag=-integration --tag=uvloop_old
 ./pants test :: --tag=-integration --tag=-uvloop_old
