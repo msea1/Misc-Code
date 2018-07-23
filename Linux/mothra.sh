@@ -41,7 +41,7 @@ pip install wheel
 pause "Install TOMLs"
 cd tomls/
 cd command-toml/
-pip install -r requirements.txt 
+pip install -r requirements.txt
 python3 setup.py install
 cd ../sap-toml/
 python3 setup.py install
@@ -73,7 +73,7 @@ cd ../output/curvesat/
 
 
 pause "Install Curvesat"
-sudo bash install-curvesat.sh 
+sudo bash install-curvesat.sh
 
 
 pause "Mothra dependenceis"
@@ -110,14 +110,32 @@ unset TEMP_CPLUS
 
 
 pause "Confirm Mothra"
-
+make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc
 
 
 pause "Special Steps for Cmd&Seq"
+# make directories needed
+sudo mkdir -p /var/sfs/logs
+sudo mkdir -p /var/sfs/maintenance
+sudo mkdir -p /var/sfs/scripts
+chown -R $USER /var/sfs
 
+# get udpcast
+sudo apt install -y udpcast
+
+cd $CODE/mothra/fsw/cmdseq-service
+
+python3 -m unittest
+# or alternatively
+python3 -m nose
 
 
 pause "Special Steps for sap-service"
+cd $CODE/mothra/fsw/cmdseq-service
+
+python3 -m unittest
+# or alternatively
+python3 -m nose
 
 
 
