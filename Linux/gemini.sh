@@ -36,8 +36,9 @@ pause "Set up build environment."
 sudo apt install -y build-essential tk-dev libncurses5-dev \
     libncursesw5-dev libreadline6-dev libdb5.3-dev \
     libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev \
-    libexpat1-dev liblzma-dev zlib1g-dev libgdal-dev openjdk-11-jdk libblas-dev \
-    liblapack-dev gfortran python-dev libffi-dev httpie
+    libexpat1-dev liblzma-dev zlib1g-dev libgdal-dev \
+    openjdk-11-jdk libblas-dev liblapack-dev gfortran \
+    python-dev libffi-dev httpie
 
 
 sudo apt install python3-gdal python-gdal
@@ -59,8 +60,8 @@ BEGINCOMMENT
     git submodule update
     docker pull registry.service.nsi.gemini/gemini/pants-build
     docker run --rm -it -v $PWD:/code registry.service.nsi.gemini/gemini/pants-build bash
-    
-    # If you see something like 
+
+    # If you see something like
     # ```
     # Exception message: caught OSError(2, "No such file or directory: '/usr/bin/python3.6'") while trying to execute `['/usr/bin/python3.6']` while trying to execute `['/usr/bin/python3.6']`
     # ```
