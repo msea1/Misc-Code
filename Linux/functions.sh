@@ -59,6 +59,13 @@ extract () {
  fi
 }
 
+gemini_tests() {
+  gemini
+  ./pants test :: --tag=-integration --tag=-uvloop_old > ~/Temp/gemini_tests.out
+  ./pants test :: --tag=-integration --tag=uvloop_old >> ~/Temp/gemini_tests.out
+  grep -Eo '\.\.\.\.\.   (SUCCESS|FAILURE)' ~/Temp/gemini_tests.out | sort | uniq -c | awk '{print $3": "$1}'
+}
+
 gps() {
   arg=$1
   letter=${arg:0:1}
