@@ -15,7 +15,7 @@ cdl() {
 }
 
 code_rvw() {
-  echo "erybczynski, MBlondeel, JHersch, jbrazel, CPeel, jwhitbred, zelan" | xsel -ib
+  echo "erybczynski, MBlondeel, JHersch, jbrazel, CPeel, jwhitbred, zelan, darreng" | xsel -ib
   arc diff $1
 }
 
@@ -91,10 +91,6 @@ upd_master() {
   local d=$(git rev-parse --abbrev-ref HEAD)
   g stash
   g co master
-  g fetch --prune
-  g reset --hard
-  g rebase
-  g submodule update
   g fetch --prune
   g reset --hard
   g rebase
