@@ -1,47 +1,57 @@
+EMAILS
+    - Focus hard on a leave it and come to get him to feel safe creating space from other dogs by moving toward me, and for disengaging from wildlife when he sees a prey.
+    - focus on diffusing resource guarding (See google doc)
+    - time out behaviors that are not appropriate, and reward and encourage good play style is the key
+
+F&A 101 Notes
+    - When he gets underwater, just drag him away. Nothing can be done to diffuse it in the heat, *AND* there's nothing to be done afterward other than re-focusing.
+    - Reward good play behavior so he doesn't engage so much in domination / view it as a contest. Time out dominate play.
+
+
 Body Language Cues
-	Tail
-		Wagging just means the dog is excited. That could be good or bad.
-		Good Wags
-			Tail at neutral height
-			Rear end is wagging too, body is relaxed
-			Slight right-ward bias or propeller
-		Bad Wags
-			Tail raised or unduly tucked
-			Body stiff
-			Slight left-ward bias
-	Face
-		Good
-			Relaxed
-			Appropriate (exertion and/or temperature) level of panting
-		Bad/Stressed
-			Yawning
-			Tongue flicks
-			Ears pinned back or tipped forward
-			Excessive sniffing
-			Snatching treats
-			Stiff posture
-	Movement
-		Good
-			Lean into petting
-			Walks in curved lines
-			Curved body when meeting another dog
-		Bad
-			Stalking
-			Alert posture upon meeting
+    Tail
+        Wagging just means the dog is excited. That could be good or bad.
+        Good Wags
+            Tail at neutral height
+            Rear end is wagging too, body is relaxed
+            Slight right-ward bias or propeller
+        Bad Wags
+            Tail raised or unduly tucked
+            Body stiff
+            Slight left-ward bias
+    Face
+        Good
+            Relaxed
+            Appropriate (exertion and/or temperature) level of panting
+        Bad/Stressed
+            Yawning
+            Tongue flicks
+            Ears pinned back or tipped forward
+            Excessive sniffing
+            Snatching treats
+            Stiff posture
+    Movement
+        Good
+            Lean into petting
+            Walks in curved lines
+            Curved body when meeting another dog
+        Bad
+            Stalking
+            Alert posture upon meeting
 
 
 ACTIONS
-	Don't alpha pin
-	Stop petting after 5 seconds and gauge dog's reaction. Don't pester him, that's actually a punishment.
-	Try using clicker again, think of it like a camera to capture good behavior.
-	On squirrel, etc, wait for loose leash, give food at feet, and allow him to explore closer to squirrel.
-		Ditto also for dragging toward water
-	BAT for social play - 
-		Use two leashes clipped
-		Beach analogy
-	Practice taking his toys away to stop resource guarding
-		When chewing the ball, lightly touch, leave a treat, and walk away
-		With ball, click when dropped. Grab ball, Treat, Return ball. Eventually name it (drop or give)
+    Don't alpha pin
+    Stop petting after 5 seconds and gauge dog's reaction. Don't pester him, that's actually a punishment.
+    Try using clicker again, think of it like a camera to capture good behavior.
+    On squirrel, etc, wait for loose leash, give food at feet, and allow him to explore closer to squirrel.
+        Ditto also for dragging toward water
+    BAT for social play -
+        Use two leashes clipped
+        Beach analogy
+    Practice taking his toys away to stop resource guarding
+        When chewing the ball, lightly touch, leave a treat, and walk away
+        With ball, click when dropped. Grab ball, Treat, Return ball. Eventually name it (drop or give)
 
 
 
@@ -49,55 +59,55 @@ BAT - Behavior adjustment training
 
 
 CC - Counter-conditioning
-	Make sure the reward/desensitation occurs AFTER the trigger, not before. Have the dog confront the issue, then reward to show it's no big deal. Use novel rewards reserved ONLY for this case.
+    Make sure the reward/desensitation occurs AFTER the trigger, not before. Have the dog confront the issue, then reward to show it's no big deal. Use novel rewards reserved ONLY for this case.
 
 
 
 Teaching a good habit:
-	1.	At home, get the complete behavior. Click & treat (CT) each time
-	2.	Add the cue word; don’t force the dog to respond/behave, but ignore if he doesn’t.
-	3.	Begin only rewarding half the responses (the best). CT ~5-10 times.
-	4.	Continue to wean off treats, responding with release and praise.
-	5.	Vary the environment, repeat steps 1-4
-	6.	Vary the distractions, repeat steps 1-4
-	7.	Every once in awhile, repeat steps 1-4 as practice.
+    1.  At home, get the complete behavior. Click & treat (CT) each time
+    2.  Add the cue word; don’t force the dog to respond/behave, but ignore if he doesn’t.
+    3.  Begin only rewarding half the responses (the best). CT ~5-10 times.
+    4.  Continue to wean off treats, responding with release and praise.
+    5.  Vary the environment, repeat steps 1-4
+    6.  Vary the distractions, repeat steps 1-4
+    7.  Every once in awhile, repeat steps 1-4 as practice.
 
 Cues to know:
-	⁃	Name
-	⁃	Watch
-	⁃	Recall
-	⁃	Relax
-	⁃	Sit
-	⁃	Down
-	⁃	Release
-	⁃	Stay
-	⁃	Wait
-	⁃	Touch
-	⁃	Heel / loose walk
-	⁃	Leave
-	⁃	Give / Drop
+    ⁃   Name
+    ⁃   Watch
+    ⁃   Recall
+    ⁃   Relax
+    ⁃   Sit
+    ⁃   Down
+    ⁃   Release
+    ⁃   Stay
+    ⁃   Wait
+    ⁃   Touch
+    ⁃   Heel / loose walk
+    ⁃   Leave
+    ⁃   Give / Drop
 
 Reducing problem behaviors:
-	•	remove rewards for problem behavior 
-	•	give the dog something to DO instead (how to get rid of any problem behavior) IFF: You can figure out what the functional reward is for the problem
+    •   remove rewards for problem behavior
+    •   give the dog something to DO instead (how to get rid of any problem behavior) IFF: You can figure out what the functional reward is for the problem
 behavior, you can control access to the functional reward, and there is an alternate behavior that will reasonably earn the same functional reward in the dog’s everyday life.
-	1)	Analyze the problem behavior to find the functional reward.
-	⁃	What does your dog get out of doing what he’s doing?
-	2)	Set up a Choice Point to Expose the dog to a subtle version of the situation that triggers the problem behavior. 
-	⁃	Don’t make it so realistic that the dog does the problem behavior. 
-	⁃	Breathe calmly.
-	3)	Wait for good choices, i.e. replacement behaviors that your dog can do instead of the problem behavior. 
-	⁃	If stress increases, stop the situation and start over in a better way instead of letting your dog flounder.
-	4)	Mark the good choice with a word or clicker.
-	5)	Give access to a Functional Reward
-	⁃	fulfill the need that triggered the behavior you are trying to change.
+    1)  Analyze the problem behavior to find the functional reward.
+    ⁃   What does your dog get out of doing what he’s doing?
+    2)  Set up a Choice Point to Expose the dog to a subtle version of the situation that triggers the problem behavior.
+    ⁃   Don’t make it so realistic that the dog does the problem behavior.
+    ⁃   Breathe calmly.
+    3)  Wait for good choices, i.e. replacement behaviors that your dog can do instead of the problem behavior.
+    ⁃   If stress increases, stop the situation and start over in a better way instead of letting your dog flounder.
+    4)  Mark the good choice with a word or clicker.
+    5)  Give access to a Functional Reward
+    ⁃   fulfill the need that triggered the behavior you are trying to change.
 
 Things to not do:
-	⁃	Guard toys
-	⁃	Jump on people
-	⁃	Don’t look at him or pay attention to him in any way (even to say “off” or “no”) until he’s on the ground.
-	⁃	Bite
-	⁃	Aggression
-	⁃	Separation anxiety
-	⁃	Prey drive
+    ⁃   Guard toys
+    ⁃   Jump on people
+    ⁃   Don’t look at him or pay attention to him in any way (even to say “off” or “no”) until he’s on the ground.
+    ⁃   Bite
+    ⁃   Aggression
+    ⁃   Separation anxiety
+    ⁃   Prey drive
 
