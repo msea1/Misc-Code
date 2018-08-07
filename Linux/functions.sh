@@ -59,6 +59,10 @@ extract () {
  fi
 }
 
+gack() {
+  ack --ignore-dir=.pants.d $1 ~/Code/gemini
+}
+
 gemini_tests() {
   gemini
   ./pants test :: --tag=-integration --tag=-uvloop_old > ~/Temp/gemini_tests.out
