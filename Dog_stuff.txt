@@ -66,6 +66,7 @@ CC - Counter-conditioning
 Teaching a good habit:
     1.  At home, get the complete behavior. Click & treat (CT) each time
     2.  Add the cue word; don’t force the dog to respond/behave, but ignore if he doesn’t.
+        NB: Don't visibly show treat. Teach the dog to respond to the cue, not the lure!
     3.  Begin only rewarding half the responses (the best). CT ~5-10 times.
     4.  Continue to wean off treats, responding with release and praise.
     5.  Vary the environment, repeat steps 1-4
@@ -125,7 +126,7 @@ Train to ring the bear bell?
 
 GUARDING (77)
     - Teach 'Give' or 'Drop': either cue or hold high-value treat near dog's mouth. C&T for dropping. Then immediately return the object. Walk away from dog to let him enjoy it for a time.
-    - 
+    -
 
 CRATE TRAINING
 
@@ -136,3 +137,11 @@ PUPPY STEPS (w/Rocket)
     House train
     No guarding: give it / fetch
     Recall
+
+ROCKET STEPS
+    - Leave it / Give it commands
+        - With ball, click when dropped. Grab ball, Treat, Return ball. Eventually name it (drop or give)
+    - Name / Touch / Recall commands
+        - Using high value treats!
+    - When he gets underwater, just drag him away. Nothing can be done to diffuse it in the heat, *AND* there's nothing to be done afterward other than re-focusing.
+    - Reward good play behavior so he doesn't engage so much in domination / view it as a contest. Time out dominate play.
