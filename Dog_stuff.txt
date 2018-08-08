@@ -139,7 +139,8 @@ PUPPY STEPS (w/Rocket)
     Recall
 
 ROCKET STEPS
-	- Make an activity box
+	- Make an activity box [DONE]
+	- Mark & Move (?)
     - Leave it / Give it commands
         - With ball, click when dropped. Grab ball, Treat, Return ball. Eventually name it (drop or give)
     - Name / Touch / Find it / Recall commands
