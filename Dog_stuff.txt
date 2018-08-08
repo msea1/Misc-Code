@@ -137,10 +137,12 @@ PUPPY STEPS (w/Rocket)
     House train
     No guarding: give it / fetch
     Recall
+    Socialize to stimuli
 
 ROCKET STEPS
 	- Make an activity box [DONE]
-	- Mark & Move (?)
+	- Mark & Move
+        - remember that consequence reinforces just occurred behavior. So treat after clipping leash, e.g.
     - Leave it / Give it commands
         - With ball, click when dropped. Grab ball, Treat, Return ball. Eventually name it (drop or give)
     - Name / Touch / Find it / Recall commands
