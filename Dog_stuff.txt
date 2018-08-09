@@ -87,21 +87,21 @@ Cues to know:
     ⁃   Heel / loose walk
     ⁃   Leave
     ⁃   Give / Drop
+    -   Jackpot (emergency recall)
 
 Reducing problem behaviors:
     •   remove rewards for problem behavior
-    •   give the dog something to DO instead (how to get rid of any problem behavior) IFF: You can figure out what the functional reward is for the problem
-behavior, you can control access to the functional reward, and there is an alternate behavior that will reasonably earn the same functional reward in the dog’s everyday life.
+    •   give the dog something to DO instead (how to get rid of any problem behavior) IFF: You can figure out what the functional reward is for the problem behavior, you can control access to the functional reward, and there is an alternate behavior that will reasonably earn the same functional reward in the dog’s everyday life.
     1)  Analyze the problem behavior to find the functional reward.
-    ⁃   What does your dog get out of doing what he’s doing?
+        ⁃   What does your dog get out of doing what he’s doing?
     2)  Set up a Choice Point to Expose the dog to a subtle version of the situation that triggers the problem behavior.
-    ⁃   Don’t make it so realistic that the dog does the problem behavior.
-    ⁃   Breathe calmly.
+        ⁃   Don’t make it so realistic that the dog does the problem behavior.
+        ⁃   Breathe calmly.
     3)  Wait for good choices, i.e. replacement behaviors that your dog can do instead of the problem behavior.
-    ⁃   If stress increases, stop the situation and start over in a better way instead of letting your dog flounder.
+        ⁃   If stress increases, stop the situation and start over in a better way instead of letting your dog flounder.
     4)  Mark the good choice with a word or clicker.
     5)  Give access to a Functional Reward
-    ⁃   fulfill the need that triggered the behavior you are trying to change.
+        ⁃   fulfill the need that triggered the behavior you are trying to change.
 
 Things to not do:
     ⁃   Guard toys
@@ -137,7 +137,7 @@ PUPPY STEPS (w/Rocket)
     House train
     No guarding: give it / fetch
     Recall
-    Socialize to stimuli
+    Socialize to stimuli (vacuum, balls, car, bikes, skateboards, cats, dogs, kids)
 
 ROCKET STEPS
     - Mark & Move
