@@ -140,16 +140,18 @@ PUPPY STEPS (w/Rocket)
     Socialize to stimuli
 
 ROCKET STEPS
-	- Make an activity box [DONE]
-	- Mark & Move
+    - Mark & Move
         - remember that consequence reinforces just occurred behavior. So treat after clipping leash, e.g.
     - Leave it / Give it commands
         - With ball, click when dropped. Grab ball, Treat, Return ball. Eventually name it (drop or give)
     - Name / Touch / Find it / Recall commands
-    	- For getting attention, getting him to create space, break stare
+        - For getting attention, getting him to create space, break stare
         - Using high value treats!
-    - When he gets underwater, just drag him away. Nothing can be done to diffuse it in the heat, *AND* there's nothing to be done afterward other than re-focusing.
+
+    - When he gets underwater, just drag him away. Nothing can be done to diffuse it in the moment, *AND* there's nothing to be done afterward other than re-focusing.
     - Reward good play behavior so he doesn't engage so much in domination / view it as a contest. Time out dominate play.
     - Carry a 2nd ball around
     - Offer him a treat in the car to see if it's excitement or anxiety
     - Get him out of situations if he "freezes"
+
+    - Make an activity box [DONE]
