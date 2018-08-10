@@ -2,8 +2,6 @@ ROCKET PLAN
 
 AIMS: reduce guarding, reduce fear/frustration reactions, able to socially play nice, solid recall, solid leave it
 
-COMMANDS (in order): name, touch, find, give, leave, come
-
 FOR EACH COMMAND (~20x each step)
     1. CT each time complete behavior performed.
     2. Add cue word; wait for behavior. Don't lure with treat. CT each time.
@@ -15,9 +13,12 @@ FOR EACH COMMAND (~20x each step)
 PROGRESS METER
     Name (immediately break focus and look at me): Step 1
         Next:
+            Step 1. Say his name one time, and then give him a treat. Doesn’t have to look at you.
+            Step 2. Start to require eye contact for his treat. If he looks within 5 seconds C&T.
+                If he doesn’t look at you in time, step away & repeat after ~20 seconds.
+            Step 3. Move on to requiring that he look within 3 seconds, then 2, then 1, then the Whiplash Rule—only instant looks get treats.
 
-    Touch (ignore distraction [break stare], come to me): Step 5
-        Next:
+    [DONE] Touch (ignore distraction [break stare], come to me): Step 5
 
     Find (sniff in area for treats / toy): Step 1
         Next:
@@ -37,18 +38,30 @@ PROGRESS METER
     Come (unquestioningly, aside from prey drive): Step 1
         Next:
 
-BEHAVIOR: reduce fear/frustration reactions; greet & play socially
-    - Utilize long leash
+    Heel / Look (at me): Step 1
+        Next: Walk around the house with your dog. Each time she makes eye contact, click right as she makes eye contact and give her a treat. As you feed, put the treat directly beside you, along the outer seam of your pants, so that your dog learns that that’s a great spot to go to. Last for ~1 minute. Practice calling touch and then moving, initiating a "chase" (follow); then graduate to a heel-type follow of the hand;
 
-    - (Mark & Move) Upon distraction, halt; keep leash loose, give cue (leave, touch) & try to distract away. MARK on disengagement, THEN move, THEN treat.
+    Relax: Step 1
+        Next:
+            Step 1. Randomly treat when he's relaxed. C&T quick, >=0.2hz.
+            Step 2. Name it, right before you know he's going to relax (like after seeing a distraction)
+            Step 3. Always start with the quick reinformcents of ~0.2hz, but decrease to 0.1, 1/20, etc
+            Step 4. Try it outside; after play time, etc
+
+BEHAVIOR: reduce fear/frustration reactions; greet & play socially
+    Remember:
+        - Utilize long leash
+        - Don't reward bad behavior.
+        - Just drag away if he tips past threshold
+        - CT on good introductions; timeout on bad behavior
+
+    (Mark & Move) - Upon distraction, halt; keep leash loose, give cue (leave, touch) & try to distract away. MARK on disengagement, THEN move, THEN treat.
         Progress:
 
-    - Don't reward bad behavior.
-
-    - Just drag away if he tips past threshold
-    - CT on good introductions; timeout on bad behavior
 
 SET UPS
+    - Common room:
+
     - Edge of Green Lake: work on leave it (to not pull or pay attention to water), touch (similarly to break focus)
 
     - Edge of Playfield:

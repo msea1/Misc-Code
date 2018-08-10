@@ -138,6 +138,7 @@ PUPPY STEPS (w/Rocket)
     No guarding: give it / fetch
     Recall
     Socialize to stimuli (vacuum, balls, car, bikes, skateboards, cats, dogs, kids)
+    Make it a race to see which behaves quickest; that one gets a treat
 
 ROCKET STEPS
     - Mark & Move
