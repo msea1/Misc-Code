@@ -5,53 +5,59 @@ AIMS: reduce guarding, reduce fear/frustration reactions, able to socially play 
 COMMANDS (in order): name, touch, find, give, leave, come
 
 FOR EACH COMMAND (~20x each step)
-	1. CT each time complete behavior performed.
-	2. Add cue word; wait for behavior. Don't lure with treat. CT each time.
-	3. Reward only best/quickest responses, ~1/2.
-	4. Change the environment (flooring, my position, garage, dog run, etc) and back to step 1
-	5. Vary the distractions (do at playfield periphery, back to step 1)
-		May require high value treats!
+    1. CT each time complete behavior performed.
+    2. Add cue word; wait for behavior. Don't lure with treat. CT each time.
+    3. Reward only best/quickest responses, ~1/2.
+    4. Change the environment (flooring, my position, garage, dog run, etc) and back to step 1
+    5. Vary the distractions (do at playfield periphery, back to step 1)
+        May require high value treats!
 
 PROGRESS METER
-	Name (immediately break focus and look at me): Step 1
-		Next: 
-	
-	Touch (ignore distraction [break stare], come to me): Step 5
-		Next: 
-	
-	Find (sniff in area for treats / toy): Step 1
-		Next: 
-	
-	Give (drop whatever, wait for me): Step 1
-		Next: with ball, click when dropped. Grab ball, Treat, Return/throw ball.
-	
-	Leave (ignore distraction [break stare], look at me): Step 1
-		Next: 
-	
-	Come (unquestioningly, aside from prey drive): Step 1
-		Next: 
+    Name (immediately break focus and look at me): Step 1
+        Next:
+
+    Touch (ignore distraction [break stare], come to me): Step 5
+        Next:
+
+    Find (sniff in area for treats / toy): Step 1
+        Next:
+
+    Give (drop whatever, wait for me): Step 1
+        Next: with ball, click when dropped. Grab ball, Treat, Return/throw ball.
+
+    Leave (ignore distraction [break stare], look at me): Step 1
+        Next:
+            1. Have normal and high value treats
+            2. Hold high value treat in front of dog, but don't give
+            3. Once dog stops trying to get high value treat, mark, and give normal treat
+            4. Expand to having high value treat hand open
+            5. Don't treat with high value treat!
+            6. Start using the leave it command only when the dog is leaving the food alone by himself
+
+    Come (unquestioningly, aside from prey drive): Step 1
+        Next:
 
 BEHAVIOR: reduce fear/frustration reactions; greet & play socially
-	- Utilize long leash
+    - Utilize long leash
 
-	- (Mark & Move) Upon distraction, halt; keep leash loose, give cue (leave, touch) & try to distract away. MARK on disengagement, THEN move, THEN treat.
-		Progress: 
+    - (Mark & Move) Upon distraction, halt; keep leash loose, give cue (leave, touch) & try to distract away. MARK on disengagement, THEN move, THEN treat.
+        Progress:
 
-	- Don't reward bad behavior. 
+    - Don't reward bad behavior.
 
-	- Just drag away if he tips past threshold
-	- CT on good introductions; timeout on bad behavior
+    - Just drag away if he tips past threshold
+    - CT on good introductions; timeout on bad behavior
 
 SET UPS
-	- Edge of Green Lake: work on leave it (to not pull or pay attention to water), touch (similarly to break focus)
+    - Edge of Green Lake: work on leave it (to not pull or pay attention to water), touch (similarly to break focus)
 
-	- Edge of Playfield:
+    - Edge of Playfield:
 
-		If an off-leash dog runs at Rocket:
-			- Stay calm. Try to lead Rocket away calmly (lure him with treats)
-			- Get between dogs. Command other dog to sit; breaking its attention on Rocket
+        If an off-leash dog runs at Rocket:
+            - Stay calm. Try to lead Rocket away calmly (lure him with treats)
+            - Get between dogs. Command other dog to sit; breaking its attention on Rocket
 
-	- Around Robert:
+    - Around Robert:
 
-	- Around Tonks: 
+    - Around Tonks:
 
