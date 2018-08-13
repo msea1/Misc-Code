@@ -1945,7 +1945,7 @@ _Istanbul Atatürk Airport Bakırköy Turkey 40.975, 28.818_
 ## Wed 06 Jun
 
 **First time I came home to empty apt in a year**: _08:18:54 PDT_ _Sunny 14°C_
-Total cost of trip after all said & done: $1385.80
+Total cost of trip after all said & done: $1385.80 + $540 for Rocket
 _3901–3933 Ashworth Ave N Seattle United States 47.654, -122.340_
 
 
