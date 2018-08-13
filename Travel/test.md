@@ -3,9 +3,9 @@
 ## Fri 18 May
 
 **Departure**: _08:29:44 PDT_ _Cloudy 12°C_
-Robert says I'm usually at my most manic the morning of a trip. I'm not so sure. I certainly don't feel that way today. This is a long trip, with quite a few logisitical hurdles involved. I keep thinking about all the stuff to do throughout the trip. It seems so daunting! 
+Robert says I'm usually at my most manic the morning of a trip. I'm not so sure. I certainly don't feel that way today. This is a long trip, with quite a few logisitical hurdles involved. I keep thinking about all the stuff to do throughout the trip. It seems so daunting!
 
-But of course it does, it's 20 days long. If there wasn't a lot to do then it would be boring. To be better "in the moment" I need to be better able to tune out the future to some extent and just look at what's in front of me. Today is easy! It's just flying. 
+But of course it does, it's 20 days long. If there wasn't a lot to do then it would be boring. To be better "in the moment" I need to be better able to tune out the future to some extent and just look at what's in front of me. Today is easy! It's just flying.
 
 I always, always forget how much can get done in a full day devoted to travel.
 
@@ -15,9 +15,9 @@ _I-5 S Seattle United States 47.659, -122.322_
 ---
 
 **Un-fucking-real**: _09:41:49 PDT_ _Cloudy 12°C_
-SeaTac has up five security checkpoints available. Rarely are they all open. This morning there are four open, but general boarding is only allowed at one! And obviously it's swamped. 
+SeaTac has up five security checkpoints available. Rarely are they all open. This morning there are four open, but general boarding is only allowed at one! And obviously it's swamped.
 
-I wasted time bypassing that one originally because I was told there were others open, only to walk past all of them and told no. I'm furious. 
+I wasted time bypassing that one originally because I was told there were others open, only to walk past all of them and told no. I'm furious.
 
 Fuck capitalism.
 _Seattle-Tacoma International Airport SeaTac United States 47.444, -122.302_
@@ -57,7 +57,7 @@ _Boston Logan International Airport Boston United States 42.368, -71.018_
 
 I was able to select my seats ahead of time for the four legs on Turkish Air. However, we couldn't formally check-in to the flight to Istanbul beforehand for, I assume, some visa or international reasons. And there's no gate attendant in Logan this far advance, so we go wander to kill time and find beer.
 
-We dawdle a bit too much given that we aren't checked in. But arriving back at the game and getting our passes, we've been downgraded (why?) from row 13 to 23. That's some 60 odd people who now deplane before us, with a one hour connection to make. 
+We dawdle a bit too much given that we aren't checked in. But arriving back at the game and getting our passes, we've been downgraded (why?) from row 13 to 23. That's some 60 odd people who now deplane before us, with a one hour connection to make.
 
 And we had to stand in yet another unmoving queue to finally get our boarding passes, all the while making cracks about our last trip to Istanbul.
 
@@ -151,7 +151,7 @@ _Neftçilər prospekti Baku Azerbaijan 40.370, 49.844_
 
 ![dba03a1817a0c0aa467d92f0994689f8][9]
 
-It actually smells like petroleum. 
+It actually smells like petroleum.
 
 Flashbacks to wandering around Geneva with no aim.
 
@@ -219,7 +219,7 @@ _Shovket Alekbarova Baku Azerbaijan 40.360, 49.833_
 
 ![458500a569bed537592170e46a7ea8d5][12]
 
-The funicular going up had doors closed and locked despite running time until 10p it said (it was 9:30 at the time). I opted for the stairs and Robert true to form decided to wait and see. 
+The funicular going up had doors closed and locked despite running time until 10p it said (it was 9:30 at the time). I opted for the stairs and Robert true to form decided to wait and see.
 
 Result is that I've been up here by the Soviet statue for 20 minutes. But it's nice. There's a persistent gentle breeze and the square is rather deserted leaving me unbothered and free to reflect. Robert comes along sooner than expected too.
 
@@ -277,7 +277,7 @@ _Khagani Street Baku Azerbaijan 40.374, 49.847_
 ---
 
 **Positive food step?**: _02:19:20 +04_
-Deposite not really eating today and passing an abundance of late night döner stands for 3.5m, I didn't get one. Probably because of the bulvar thing but I can pretend it's because I'm not hungry and rationally decided not to eat just for the sake of eating cheaply. 
+Deposite not really eating today and passing an abundance of late night döner stands for 3.5m, I didn't get one. Probably because of the bulvar thing but I can pretend it's because I'm not hungry and rationally decided not to eat just for the sake of eating cheaply.
 
 Should get a döner tomorrow though
 
@@ -351,13 +351,13 @@ You're like a two street town. How is there confusion on how to get to a place o
 ## Tue 22 May
 
 **Kish Albanian Church**: _06:46:47 +04_ _Mostly Cloudy 19°C_
-Opens at 9 am. About 45-60 minute walk, or 10 minute taxi, or ? minute bus, away and if I were on my own I'd likely check out, walk there, then taxi to his station trying to catch the 10am maxi to Qax. 
+Opens at 9 am. About 45-60 minute walk, or 10 minute taxi, or ? minute bus, away and if I were on my own I'd likely check out, walk there, then taxi to his station trying to catch the 10am maxi to Qax.
 
 Actually that's not a good idea even as I hypothetically create it. Too little room for error in getting that maxi and the alternative isn't great after that.
 
-Going to see Kish and the exterior doesn't seem worth it. The interior museum and artifacts do. 
+Going to see Kish and the exterior doesn't seem worth it. The interior museum and artifacts do.
 
-I probably would've done it yesterday by going maxi to palace to hostel, rest, then church. But couldn't because Robert. 
+I probably would've done it yesterday by going maxi to palace to hostel, rest, then church. But couldn't because Robert.
 
 Hard to accept not doing things even if they're likely somewhat marginal. As soon as I can't do it I start attaching all this mythos and prestige to it. I envision being able to tell a story about it and feel moved by it. Far more likely I won't and wouldn't.
 _Azerbaijan Azerbaijan 41.218, 47.173_
@@ -417,11 +417,11 @@ Go via zaqatala or balakan? Or taxi to Qax (15, down to 12, probably get down to
 
 Only 26 manat left between us makes the connection to Tbilisi a little worrisome?
 
-Robert's not wrong about bartering here is a little gross. But I'm not wrong about not taking first offers on principle. 
+Robert's not wrong about bartering here is a little gross. But I'm not wrong about not taking first offers on principle.
 
 Also irritates me that he'd be so blithe "let's just get a taxi". I know it's not actually that much money, (see also remarking on beer costs of 4.5m) it's the relative inflation I'm just noting. Taxi is 6x more expensive and we didn't catch the maxi because of you.
 
-For me, continue fighting notion of trying to save pennies at every opportunity. Remember Bend? It was a little anxious to be so careless but not bad. Remember that the point isn't to save it's to experience. If frugality becomes it's own goal then you've lost. 
+For me, continue fighting notion of trying to save pennies at every opportunity. Remember Bend? It was a little anxious to be so careless but not bad. Remember that the point isn't to save it's to experience. If frugality becomes it's own goal then you've lost.
 
 Hard for me to walk that line. Noting also that just an hour ago we were making fun of Kirk for his lack of money sense and just spending without thinking
 
@@ -464,7 +464,7 @@ Had a poster board in four languages, including English, about claiming refugee 
 
 To Tbilisi
 
-Took six hours total. I was right. Maybe it was four hours from the border. 
+Took six hours total. I was right. Maybe it was four hours from the border.
 
 We were dropped off the bus on George W Bush street
 
@@ -495,7 +495,7 @@ _Mari Brose Street Tbilisi Georgia 41.703, 44.797_
 **Gori and beyond**: _08:31:09 +04_ _Mostly Sunny 21°C_
 So hard and frustrating to have daily planning discussion because Robert never remembers any details even from conversations a few hours ago. Have to constantly backtrack and explain timing and logistics. So his suggestion are rarely helpful and it just wastes time. And frustrates me because how are you this forgetful?
 
-So stop having them? Travel like you would on your own. You wouldn't have this discussion with yourself. 
+So stop having them? Travel like you would on your own. You wouldn't have this discussion with yourself.
 
 Always taking up two seats on metro too. Just selfish and unconcerned about others by default
 
@@ -553,7 +553,7 @@ So far a day I worried about how transport would work is going fine and languid.
 
 Welp, no transportation to Kutaisi (bus would've cost 20l [for 2]). But instead of paying 80l for taxi get maxi to Khassuri for 6l, leaving in 20 and then we'll see.
 
-Think 60l would've been ok price from Gori. Khassuri is ~1/3 way there so if no maxi I'd consider 40l total for taxi rest of way a fair deal. 
+Think 60l would've been ok price from Gori. Khassuri is ~1/3 way there so if no maxi I'd consider 40l total for taxi rest of way a fair deal.
 
 Taxi less than 5x the bus cost is generally ok in my book
 
@@ -565,7 +565,7 @@ Ask for help spotting a van and Robert sits down facing away from the oncoming v
 
 Eventually after waiting 15 minutes to no avail we cross the street and find a taxi stand. Guy asks where we going and after a breif language barrier per usual we come to an understanding in Spanish! 20l to Kutaisi. A pretty good steal.
 
-He asks for address. I forget taco comes with Dustin dog (taxi comes with custom drop off) who is nice because Kutaisi isn't super convenient station. It comes at price of 10l more but saves us like 5km. 
+He asks for address. I forget taco comes with Dustin dog (taxi comes with custom drop off) who is nice because Kutaisi isn't super convenient station. It comes at price of 10l more but saves us like 5km.
 
 Would kyle do this?
 
@@ -631,7 +631,7 @@ Old guy sweeping floor in market wearing Wal-Mart greeter vest
 
 Chant in bagrati
 
-Just said f it and did round-trip taxi to gelati. Positive step? 
+Just said f it and did round-trip taxi to gelati. Positive step?
 
 Really feel uncomfortable with round-trip taxis because they wait on me at the sight.
 
@@ -656,7 +656,7 @@ _Tamar Mepe St Kutaisi Georgia 42.264, 42.709_
 
 ![9ee059a4bb1a62d1a3f0132db1f0b7eb][27]
 
-So happy to get any attention. 
+So happy to get any attention.
 
 Their dry matted fur reminds me of rocket when I first got him and silently was very disappointed. Wonders what bathing and brushing does.
 
@@ -668,21 +668,21 @@ Really struggling with the taxi v bus decision. Really want to just do the easy 
 
 Also I'm getting disquieting vibes about abkhazia the closer it gets
 
-Plan for Mestia is hike to chal glacier? Long hike for sure but maybe good for me. Not much to do in town anyways. 
+Plan for Mestia is hike to chal glacier? Long hike for sure but maybe good for me. Not much to do in town anyways.
 
 Will have to get going early tmrw morning for marsh to Zugdidi
 
-If the girls would've joined us would've made taxi decision easy. Only extra 25l each plus saves 2, maybe 3 hours! Able to leave about 8:30 instead of 10:30 and drives faster. Plus maybe photo stops. Plus nicer ride. 
+If the girls would've joined us would've made taxi decision easy. Only extra 25l each plus saves 2, maybe 3 hours! Able to leave about 8:30 instead of 10:30 and drives faster. Plus maybe photo stops. Plus nicer ride.
 
 But I can understand their hesitation. Two stranger guys, four to a taxi isn't always comfortable. And Robert tried to sell the taxis speed by mentioning the risky fast driving. Not how to sell it!
 
 Petro prices here appear to be 2.45l which is $1. Per gallon? That's unusual. But per liter would mean very expensive
 
-Intertia and following the girls wins out and it's maxi. Little sad about not having the wind and views and speed of a taxi but relieved at the price and somewhat comfort of other travelers. 
+Intertia and following the girls wins out and it's maxi. Little sad about not having the wind and views and speed of a taxi but relieved at the price and somewhat comfort of other travelers.
 
 But now watch this be very uncomfortable...
 
-Not too bad actually. Tinted windows that don't open though. 
+Not too bad actually. Tinted windows that don't open though.
 
 Sure are a lot of Germans here
 
@@ -750,7 +750,7 @@ _Ushba Ln Mestia Georgia 43.046, 42.731_
 
 ![d133af8029eb3133cf45980e7c226c1d][32]
 
-Spicy and good. Fennel maybe? 
+Spicy and good. Fennel maybe?
 
 Haha the weather is not 40°c
 
@@ -760,7 +760,7 @@ _Tamar Mepe St Mestia Georgia 43.045, 42.728_
 ## Fri 25 May
 
 **Thinking about Swiss contrast**: _04:27:42 +04_ _Mostly Cloudy 17°C_
-Never once used an ATM. Credit card and Apple pay for everything. 
+Never once used an ATM. Credit card and Apple pay for everything.
 
 Now heading to abkhazia with $300 worth of rubles and not $0 in lari and if it gets taken no clear idea what to do
 
@@ -793,18 +793,18 @@ And you have to pay for the visa at a bank and their hours are unknown...
 
 Abkhazia is on Moscow time instead of Gerogia time so it's one hour behind, buying us another hour...
 
-Why didn't we catch this in advance? Could've switched around to do abkhazia yesterday. I know I blanked, seeing NK visa office open 7 days a week. 
+Why didn't we catch this in advance? Could've switched around to do abkhazia yesterday. I know I blanked, seeing NK visa office open 7 days a week.
 
 But how come the myriad of personal blogs that detail getting to abkhazia never mention weekend issues?
 
 I think we can pull this off and I think there's better odds than not we try but this is not a smart play I think. Downside is were stuck there untill getting a visa on Monday, meaning out on the two yours that I most wanted to do.
 
-Meanwhile the alternative plan is realistically good, head to batumi. 
+Meanwhile the alternative plan is realistically good, head to batumi.
 
-And prior to the visa thing I was feeling very anxious about this section of the trip. I woke up at 3am and couldn't go back to sleep. Now I'm offered a lifeline to bail on it and all I feel is disappointment. 
+And prior to the visa thing I was feeling very anxious about this section of the trip. I woke up at 3am and couldn't go back to sleep. Now I'm offered a lifeline to bail on it and all I feel is disappointment.
 
 ***
-I hate feeling like I chicken out on something. Like I'm eternally comparing myself to some mythical (Australian) backpacker. That's dumb. 
+I hate feeling like I chicken out on something. Like I'm eternally comparing myself to some mythical (Australian) backpacker. That's dumb.
 
 And that I'll feel like I let people down when I return having not lived up to my goals. They won't actually care. Also why should I?
 
@@ -826,9 +826,9 @@ Batumi is the smart call. Sukhomi is the "good story" call. Being trapped is a f
 **To Zugdidi**: _10:28:58 +04_
 Have the backseat of the maxi to myself and a pile of bags so that's pretty nice
 
-Get into Zugdidi with time. Confirm maxis to batumi available. Confirm night train available with tickets. 
+Get into Zugdidi with time. Confirm maxis to batumi available. Confirm night train available with tickets.
 
-Robert feeling nerves. 
+Robert feeling nerves.
 
 Taxi driver tries Russian and Italian before giving up
 
@@ -841,15 +841,15 @@ Russia initially had sanctions on abkhazia despite helping them in the war. Not 
 
 ![61bc06ad2c1c7b03a94980631a114ca6][33]
 
-Waiting at Georgian side for 30 minutes. See UN vehicles (2nd time ever, Kosovo) and cars with abkhazia plates13:30 arrive at Abkhazia border. Cleared first stop in 15. 
+Waiting at Georgian side for 30 minutes. See UN vehicles (2nd time ever, Kosovo) and cars with abkhazia plates13:30 arrive at Abkhazia border. Cleared first stop in 15.
 
-Second one taking much longer. Putting time for visa at risk. Waited in front of two way mirror post for 20 minutes. 
+Second one taking much longer. Putting time for visa at risk. Waited in front of two way mirror post for 20 minutes.
 
 Then escorted across street, past a fence, past another fence and taken to a portable office where our passports are handed to a senior looking fellow. On the wall of the office is a nap and the other wall has a giant Russian flag with an eagle logo and Russia spelled out...
 
 We're escorted back to our original spot and told to wait ten minutes. It takes fifty until a guy comes to question us. His insignia is three stars in a triangle with two more stars from the top.
 
-He asks basic questions. How long, where, asks about previous trips (Ukraine). It takes maybe 5 minutes. Then he hands passports back and simply says 
+He asks basic questions. How long, where, asks about previous trips (Ukraine). It takes maybe 5 minutes. Then he hands passports back and simply says
 > welcome
 
 I wonder how that process plays out if we're Canadian or if we had a Russian visa
@@ -862,7 +862,7 @@ The entire time I felt basically no reaction
 **Abkhazia Visa**: _15:11:03 +04_
 Through the border at 3pm Georgia time. Right at the fucking limit. Should be 2pm local time. We should get there with an hour to spare. But we've heard be there by 4 (our host), by 5 (MFA itself), by 6 (lonely planet).
 
-The way they drive with cattle all over the road is amazing. 
+The way they drive with cattle all over the road is amazing.
 
 
 
@@ -1005,7 +1005,7 @@ Don't get to keep Abkhazia visa :( and they stamped it too :(
 ---
 
 **Yet again can't communicate the simplest direction to a taxi driver**: _17:09:09 +04_
-Train station. 
+Train station.
 
 I wrote it into Google translate...
 
@@ -1029,7 +1029,7 @@ Driver finally had to call someone who spoke enough English to translate
 ---
 
 **Train Tix**: _17:47:43 +04_
-Ask for next train and only given night train option. Maybe a miscommunication. The evening train is still waiting outside, not leaving for another 45 minutes. 
+Ask for next train and only given night train option. Maybe a miscommunication. The evening train is still waiting outside, not leaving for another 45 minutes.
 
 Maybe because you have to show id or something that they don't allow ticket sales within a period of time?
 
@@ -1055,7 +1055,7 @@ _Zviad Gamsakhurdia Avenue Zugdidi Georgia 42.507, 41.872_
 
 ![d046d9dc019312f80a866d716c3c284c][44]
 
-Are very ubiquitous and heart breakingly friendly. 
+Are very ubiquitous and heart breakingly friendly.
 
 There's a reality where I move to Georgia, buy land in the mountains, and start a spay and neuter advocacy service
 
@@ -1370,7 +1370,7 @@ Catch-22: If you aren't considered loyal to your brothers you won't find the tru
 
 Question the information's loyalty.
 
-Sack people who are wrong. 
+Sack people who are wrong.
 
 Potentially interesting debate with Alex
 
@@ -1403,7 +1403,7 @@ Should've been 734, 125 each your x 4 plus 234 for the beds. Instead it was 656.
 ---
 
 **Judgement on the pillow**: _09:50:33 +04_
-Not useful for maxitaxi because to use as lower back rest you need more legroom. And as butt rest it pitches my posture forward. Good for sleeping though. 
+Not useful for maxitaxi because to use as lower back rest you need more legroom. And as butt rest it pitches my posture forward. Good for sleeping though.
 
 The backpack pillow probably better idea for future trips since it takes up so little room and does 90% of the job
 
@@ -1476,7 +1476,7 @@ No honking and they stop for jaywalking
 ## Wed 30 May
 
 **Getting rental**: _12:25:31 +04_
-Lost about two hours time figuring out the bus. Hopefully figuring out the bus... And then it literally drives right by our hostel. Should've asked hostel. Keep forgetting that. 
+Lost about two hours time figuring out the bus. Hopefully figuring out the bus... And then it literally drives right by our hostel. Should've asked hostel. Keep forgetting that.
 
 Sickening thought that there are two airports. But wikivoyage definitely said Zvarnots...
 
@@ -1492,13 +1492,13 @@ But getting upset at him doesn't do any good. He'll never ever change or realize
 Robert also has a habit of just saying yes to things without question.
 ***
 
-Hertz is very easy. 
+Hertz is very easy.
 
 Robert immediately starts driving on the left lane. The only car to do so...
 
 ***
 
-I ask to get wine from a roadside stand. Five minutes later Robert drives past all the stands without stopping. 
+I ask to get wine from a roadside stand. Five minutes later Robert drives past all the stands without stopping.
 
 Never asks if I want to stop for anything while driving.
 
@@ -1571,7 +1571,7 @@ Homemade wine kinda vinegary
 **Shockingly I had to wake Robert up at 7:30**: _08:25:27 +04_
 And after diddling on his phone for 30 minutes in the hotel, gets into the car and before I've even buckled asks me which way to go. And starts driving before I have the chance to look it up. Fucking infuriates me.
 
-"How much time does this route add" he asks as he takes it and knowing I don't have data... Always demands answers to questions I can't possibly have had time to look up. 
+"How much time does this route add" he asks as he takes it and knowing I don't have data... Always demands answers to questions I can't possibly have had time to look up.
 
 
 
@@ -1659,7 +1659,7 @@ Because again Robert ignores all my comments on the matter. God.
 ---
 
 **Robert almost runs over my foot**: _19:47:58 +04_ _Scattered Storms 20°C_
-Because he fucking panics anytime someone else gets mildly upset at him. The car was in a fine place to wait 30 seconds but somebody makes a gesture and he freaks out and then gets pissed at me. 
+Because he fucking panics anytime someone else gets mildly upset at him. The car was in a fine place to wait 30 seconds but somebody makes a gesture and he freaks out and then gets pissed at me.
 
 _Hovsepyan street Armenia 40.752, 44.897_
 
@@ -1844,7 +1844,7 @@ Plastic 187ml wine would be perfect
 ---
 
 **Metro closed for some reason**: _20:26:26 +04_
-Have to use bus. Instead of taking a minute to look up on Google what it might cost so we can be prepared, Robert just says, I have enough coins. 
+Have to use bus. Instead of taking a minute to look up on Google what it might cost so we can be prepared, Robert just says, I have enough coins.
 
 Irritating
 
@@ -1919,11 +1919,11 @@ _Atatürk Bulvarı 58 Fatih Turkey 41.017, 28.957_
 ---
 
 **Went through security**: _12:59:54 +03_ _Partly Cloudy 24°C_
-Then passport control with the most not interested guy ever. 
-Then bag check again. 
-Then gate passport check. 
-Then another passport check. 
-Then another id check. 
+Then passport control with the most not interested guy ever.
+Then bag check again.
+Then gate passport check.
+Then another passport check.
+Then another id check.
 Then another bag check. This one a full on search
 🙄
 _Istanbul Atatürk Airport Bakırköy Turkey 40.978, 28.825_
@@ -1935,7 +1935,7 @@ They made up no time. No way we make our connection
 
 No announcement. No info. They rebooked without telling us. Then United says there's Alaska room. Alaska says no. Back to United and wait behind a family of like 7 for like 20 fucking minutes.
 
-Turkish continues to offer nothing. Alaska and United friendly and helpful as possible. United gives $40 in food vouchers for basically no reason. 
+Turkish continues to offer nothing. Alaska and United friendly and helpful as possible. United gives $40 in food vouchers for basically no reason.
 
 We dawdle a bit too much given that we aren't checked in to actual seats. I realize it in time, but Robert (per usual and hey, foreshadowing!) doesn't share my mild alarm. He moseys to finish his beer, then forgets his boarding pass!
 
@@ -1945,6 +1945,7 @@ _Istanbul Atatürk Airport Bakırköy Turkey 40.975, 28.818_
 ## Wed 06 Jun
 
 **First time I came home to empty apt in a year**: _08:18:54 PDT_ _Sunny 14°C_
+Total cost of trip after all said & done: $1385.80
 _3901–3933 Ashworth Ave N Seattle United States 47.654, -122.340_
 
 
