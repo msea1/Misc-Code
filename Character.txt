@@ -71,6 +71,12 @@ SPELLS: Wisdom mod (+3) + Level (?)
 3rd (3), 2 @ 5 -
 4th (1) @ 7 -
 
+Spells:
+Cantrips (3) - Shillelagh, Druidcraft, Mending
+1st Level (4) - Animal Friendship, Healing Word, Faerie Fire, Purify Food & Drink, Speak w/ Animals, 
+2nd (3) - Find Traps, Healing Spirit, Create/Destroy Water
+3rd (3), 2 @ 5 - Animal Messenger, Cure Wounds, Water Breathing
+4th (1) @ 7 - Control Water
 
 CANTRIPS (o LEVEL)
 Controlflames (transmutation)
