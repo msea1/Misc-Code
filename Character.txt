@@ -11,7 +11,7 @@ Half-Elf Druid Sailor
 Female, ~41, 5'8, 128
 Lightly blue skin tint, green eyes
 Chaotic Good
-Common, Elvish, Druidic, Dwarfish
+Common, Elvish, Druidic, Dwarvish
 
 Circle of the Shepherd: Totem is Unicorn Spirit
 
@@ -26,31 +26,51 @@ TRAITS (2):
 IDEAL: Free thinking: inquiry and curiosity are the pillars of progress
 BOND: Still seeking enlightenment
 FLAW: Dark thoughts, streak of venegence / lack of mercy/forgiveness
+    Don't have insight or religion or history skills
 
 0-3: travels
 3-30: vastwood
 30-40: Rium
 40-41: travels to the north
 
-Born to Ulfaren mother, Vastwood father, out of mother's wedlock. She was killed for the betrayal. Tensions caused between otherwise diplomatic Mei'lani and Ulfaren. Traveled with indifferent father, no siblings. 
+Born to Ulfaren mother, Vastwood father, out of mother's wedlock. She was killed for the betrayal. Tensions caused between otherwise diplomatic Mei'lani and Ulfaren. Traveled with indifferent father, no siblings.
 
 Studied Sylvan because wants to understand the history. Has an internal conflict between devotion to past (conservative) with desire for the Ul-socialness (progressive)
 
-Emnity toward Ul, conflicting devotion to Vastwood, sent by the enclave (b/c of her half-elf appearance) to observe and report in Rium around rumors of shadow specters, frsutrated by lack of context, bored/disgusted by Rium's mercantile fetish, takes to sailing to get away from the crowds, leaves to go north on a lead (potentially angering the enclave for leaving her post), 
+Emnity toward Ul, conflicting devotion to Vastwood, sent by the enclave (b/c of her half-elf appearance) to observe and report in Rium around rumors of shadow specters, frsutrated by lack of context, bored/disgusted by Rium's mercantile fetish, takes to sailing to get away from the crowds, leaves to go north on a lead (potentially angering the enclave for leaving her post),
 
 DESIRE: Ul to be opened up, a mixed bag of wanting social welfare available to all but also nature/wilds to be preserved. A sense of fraternal community and purpose.
 
-Ability order: Wisdom, Constitution, Intelligence, Dexterity, Charisma, Strength
-Half-Elf - +2 Char, +1 to 2 others
+Prof Bonus: +3
 
-Skills: Arcana,Investigation, Nature, Animal Handling, Insight, Medicine, Perception, Survival, 
+ABILITY
+Wis | 15 | +1 (race) |            | 16 (+3)
+Con | 14 | +1 (race) | +1 (lvl 4) | 16 (+3)
+Dex | 13 |           | +1 (lvl 4) | 14 (+2)
+Int | 12 |           |            | 12 (+1)
+Cha | 10 | +2 (race) |            | 12 (+1)
+Str | 08 |           |            | 08 (-1)
 
-Spells:
-Cantrips (3) - 
-1st Level (4) - 
-2nd (3) - 
-3rd (3), 2 @ 5 - 
-4th (1) @ 7 - 
+SKILL PROFICIENCIES  [Skill modifier = relevant ability modifier + proficiency bonus (if proficient)]
+Wanted: Stealth, Investigation, Nature
+Acrobatics, Persuasion (race)
+Animal Handling, Survival (class)
+Athletics, Perception (background)
+
+EQUIPMENT
+
+wooden shield OR simple weapon AND scimitar OR simple melee AND leather armor, explorer's pack, druidic focus (class)
+
+A belaying pin (club), 50 feet of silk rope, a lucky charm such as a rabbit foot or a small stone with a hole in the center (or you may roll for a random trinket on the Trinkets table in chapter 5), a set of common clothes, and a belt pouch containing 10 gp (background)
+
+CANTRIPS (3) -
+
+SPELLS: Wisdom mod (+3) + Level (?)
+1st Level (4) -
+2nd (3) -
+3rd (3), 2 @ 5 -
+4th (1) @ 7 -
+
 
 CANTRIPS (o LEVEL)
 Controlflames (transmutation)
