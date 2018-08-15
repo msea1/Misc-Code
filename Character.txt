@@ -1,3 +1,138 @@
+Name: Darya Firahel
+Class: Druid
+Level: ?
+EP: ?
+Sex: F
+Race: Half Elf
+Alignment: Chaotic Neutral
+Background: Sailor
+Age: 41
+Height: 5'7
+Weight: 128
+Lightly blue skin tint, green eyes
+Inspiration: No
+Prof Bonus: +3
+
+ABILITY
+Wis | 14 | +1 (race) | +1 (lvl 4) | 16 (+3)
+Con | 13 | +1 (race) |            | 14 (+2)
+Dex | 13 |           | +1 (lvl 4) | 14 (+2)
+Cha | 12 | +2 (race) |            | 14 (+2)
+Str | 12 |           |            | 12 (+1)
+Int | 10 |           |            | 10 (+0)
+
+SAVING THORWS: Intelligence, Wisdom
+
+SKILLS
+Stealth, Investigation (via race)
+Animal Handling, Survival (via class)
+Athletics, Perception (via background)
+
+PASSIVE PERCEPTION: 10 +3 (prof) + 3 (wisdom) = 16
+
+Armor Class: 13
+Max HP: ?
+Temp HP: 0
+Current HP:
+Hit Dice ?d8
+Initiative: +2 (via dexterity)
+Speed: 30', (Encumbered down to 20'?)
+Vision: Darkvision (via race)
+
+LANGUAGES:
+    Common, Elvish, Dwarvish (via race)
+    Druidic, Sylvan (via class)
+
+TRAITS
+    Pack mentality, fiercely loyal to those inside, but very wary of those outside;
+    calm and patience in times of stress
+IDEAL - The natural world is more important than all the constructs of civilization.
+BOND - The land is most important - people come and go
+FLAW - Unrelenting wrath on those I deemed to have upset my interpretation of natural balance
+
+OTHER PROF
+    FEY ANCESTRY: I have advantage on saving throws against being charm ed, and magic can’t put me to sleep.
+
+    RITUAL CASTING - I can cast a druid spell as a ritual if that spell has the ritual tag and I have the spell prepared.
+
+    SPELLCASTING FOCUS - I can use a druidic focus (found in chapter 5) as a spellcasting focus for my druid spells.
+
+    ARMOR: Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)
+
+    WEAPONS: Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears
+
+    TOOLS: Herbalism kit, Navigator's tools, Water vehicles
+
+    CIRCLE OF THE SHEPHERD -- Druids of the Circle of the Shepherd commune with the spirits of nature, especially the spirits of beasts and the fey, and call to those spirits for aid. These druids recognize that all living things play a role in the natural world, yet they focus on protecting animals and fey creatures that have difficulty defending themselves. Shepherds, as they are known, see such creatures as their charges. They ward off monsters that threaten them, rebuke hunters who kill more prey than necessary, and prevent civilization from encroaching on rare animal habitats and on sites sacred to the fey. Many of these druids are happiest far from cities and towns, content to spend their days in the company of animals and the fey creatures of the wilds. Members of this circle become adventurers to oppose forces that threaten their charges or to seek knowledge and power that will help them safeguard their charges better. Wherever these druids go, the spirits of the wilderness are with them.
+
+    WILD SHAPE PHB 66 -- Max CR is 1/2, no flying speed.
+        You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature.
+        You can revert to your normal form earlier by using a bonus action on your turn.
+        You automatically revert if you fall unconscious, drop to 0 hit points, or die.
+        While you are transformed, the following rules apply:
+            • Your game statistics are replaced by the statistics of the beast, but you retain your alignment, personality, and Intelligence, Wisdom , and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus in its stat block is higher than yours, use the creature’s bonus instead of yours. If the creature has any legendary or lair actions, you can't use them.
+            • When you transform, you assume the beast’s hit points and Hit Dice. When you revert to your normal form, you return to the number of hit points you had before you transformed. However, if you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form. For example, if you take 10 damage in animal form and have only 1 hit point left, you revert and take 9 damage. As long as the excess damage doesn’t reduce your normal form to 0 hit points, you aren’t knocked unconscious.
+            • You can’t cast spells, and your ability to speak or take any action that requires hands is limited to the capabilities of your beast form. Transforming doesn’t break your concentration on a spell you’ve already cast, however, or prevent you from taking actions that are part of a spell, such as call lightning, that you’ve already cast.
+            • You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can’t use any of your special senses, such as darkvision, unless your new form also has that sense.
+            • You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the DM decides whether it is practical for the new form to wear a piece of equipment, based on the creature’s shape and size. Your equipment doesn’t change size or shape to match the new form, and any equipment that the new form can’t wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form.
+
+    SPEECH OF THE WOODS: At 2nd level, you gain the ability to converse with beasts and many fey. You learn to speak, read, and write Sylvan. In addition, beasts can understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn’t grant you friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character.
+
+    SPIRIT TOTEM (Hawk): I can call forth nature spirits to influence the world around you. As a bonus action, you can magically summon an incorporeal spirit to a point you can see within 60 feet of you. The spirit creates an aura in a 30-foot radius around that point. It counts as neither a creature nor an object, though it has the spectral appearance of the creature it represents. As a bonus action, you can move the spirit up to 60 feet to a point you can see. The spirit persists for 1 minute or until you’re incapacitated. Once you use this feature, you can’t use it again until you finish a short or long rest.
+        HAWK: The hawk spirit is a consummate hunter, aiding you and your allies with its keen sight. When a creature makes an attack roll against a target in the spirit’s aura, you can use your reaction to grant advantage to that attack roll. In addition, you and your allies have advantage on Wisdom (Perception) checks while in the aura.
+
+    MIGHTY SUMMONER: Starting at 6th level, beasts and fey that you conjure are more resilient than normal. Any beast or fey summoned or created by a spell that you cast gains the. following benefits:
+        - The creature appears with more hit points than normal: 2 extra hit points per Hit Die it has.
+        - The damage from its natural weapons is considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks and damage.
+
+    SHIP’S PASSAGE - When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with (perhaps one captained by a former crewmate). Because you’re calling in a favor, you can’t be certain of a schedule or route that will meet your every need. Your Dungeon Master will determine how long it takes to get where you need to go. In return for your free passage, you and your com panions are expected to assist the crew during the voyage.
+
+MONEY
+    Plat:
+    Gold: 10
+    Electrum:
+    Silver:
+    Copper:
+
+EQUIPMENT -- Total carry: ~72#
+
+    TREASURED ITEM: A small bundle of twigs from near the Enclave
+
+    ARMOR: leather armor (light), 10#, AC = 11 + Dex (2). Neutral on str and stealth, 1 min to don/doff
+
+    MISC:
+        explorer's pack, 44-49# depending on water carried
+            backpack, bedroll, mess kit, tinderbox, 10 torches, 10 days food rations, waterskin, 50' hemp rope
+        druidic focus: totem of raven feathers banded together by a fern
+        50' of silk rope, 5#
+        a trinket: tiny silver icon of a raven
+        a set of common clothes, 3#
+        a belt pouch, 1#
+
+WEAPONS
+    Scimitar*: 1d6 slashing, 3#, finesse, light
+    Shortbow: 1d6 piercing, 2#, range 80/320, two-handed
+        Ammunition: 0
+    Club* (belaying pin), 1d4 bludgeoning, 2#, light
+
+ATTACKS
+
+
+SPELLS
+    Save DC = 8 + 3 + 3 = 14
+    Attack Mod = 3 + 3 = +6
+
+    CANTRIPS (3) - Druidcraft, Primal Savagery, Create Bonfire
+    PREPARED: Up to 8? 9? Level + wisdom modifier (+3)
+        1st -
+        2nd -
+        3rd -
+        4th -
+
+BIOGRAPHY
+
+----
+
 Qs to consider
 	Why?
 	Secrets & Flaws & Fears
@@ -12,8 +147,6 @@ Female, ~41, 5'8, 128
 Lightly blue skin tint, green eyes
 Chaotic Good
 Common, Elvish, Druidic, Dwarvish
-
-Circle of the Shepherd: Totem is Unicorn Spirit
 
 The river’s endless flow reminds you of the great span of the world. You seek to act with the long-term interests of nature in mind.
 
@@ -41,21 +174,29 @@ Emnity toward Ul, conflicting devotion to Vastwood, sent by the enclave (b/c of 
 
 DESIRE: Ul to be opened up, a mixed bag of wanting social welfare available to all but also nature/wilds to be preserved. A sense of fraternal community and purpose.
 
+----
+Inspirations: Serenity, Bruce Wayne, Arya, 06 Wolf,
+http://goblinpunch.blogspot.com/2014/09/7-myths-everyone-believes-about-druids.html?m=1
+
+Morals: nature is the rule; civilization is bad; fire is good; little time for deception/social niceties; ruthless
+
+FAMILY:
+    Mother:
+    Father:
+        Father's parents:
+    2 younger siblings, twins
+
+ORIGINS: Pregnant mother was forced to leave Ulfaren to ensure survival of child. With father they decided to travel. Darya was born on a ship while voyaging on the Gold Sea.
+
+DECISIONS
+EVENTS
+
+
+
+BACKSTORY: Mother was always mournful over leaving her kind. Imparted a longing to Darya for the ideals of Ul. Their death would trigger a remoselessness toward society however. Raised into the Vastwood by father's parents.
+----
+
 Prof Bonus: +3
-
-ABILITY
-Wis | 15 | +1 (race) |            | 16 (+3)
-Con | 14 | +1 (race) | +1 (lvl 4) | 16 (+3)
-Dex | 13 |           | +1 (lvl 4) | 14 (+2)
-Int | 12 |           |            | 12 (+1)
-Cha | 10 | +2 (race) |            | 12 (+1)
-Str | 08 |           |            | 08 (-1)
-
-SKILL PROFICIENCIES  [Skill modifier = relevant ability modifier + proficiency bonus (if proficient)]
-Wanted: Stealth, Investigation, Nature
-Acrobatics, Persuasion (race)
-Animal Handling, Survival (class)
-Athletics, Perception (background)
 
 EQUIPMENT
 
@@ -63,7 +204,7 @@ wooden shield OR simple weapon AND scimitar OR simple melee AND leather armor, e
 
 A belaying pin (club), 50 feet of silk rope, a lucky charm such as a rabbit foot or a small stone with a hole in the center (or you may roll for a random trinket on the Trinkets table in chapter 5), a set of common clothes, and a belt pouch containing 10 gp (background)
 
-CANTRIPS (3) -
+CANTRIPS (3) - Druidcraft, Primal Savagery, Create Bonfire
 
 SPELLS: Wisdom mod (+3) + Level (?)
 1st Level (4) -
@@ -73,7 +214,7 @@ SPELLS: Wisdom mod (+3) + Level (?)
 
 Spells:
 Cantrips (3) - Shillelagh, Druidcraft, Mending
-1st Level (4) - Animal Friendship, Healing Word, Faerie Fire, Purify Food & Drink, Speak w/ Animals, 
+1st Level (4) - Animal Friendship, Healing Word, Faerie Fire, Purify Food & Drink, Speak w/ Animals,
 2nd (3) - Find Traps, Healing Spirit, Create/Destroy Water
 3rd (3), 2 @ 5 - Animal Messenger, Cure Wounds, Water Breathing
 4th (1) @ 7 - Control Water
