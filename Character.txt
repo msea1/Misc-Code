@@ -166,7 +166,40 @@ FLAW: Dark thoughts, streak of venegence / lack of mercy/forgiveness
 30-40: Rium
 40-41: travels to the north
 
-Born to Ulfaren mother, Vastwood father, out of mother's wedlock. She was killed for the betrayal. Tensions caused between otherwise diplomatic Mei'lani and Ulfaren. Traveled with indifferent father, no siblings.
+Secret: physical appearance and aquatic aptitude point to linege from House Thundershade of Sungarden. A fact known by The Enclave, but not by the character. This can be used or ignored, at the DM's discretion
+
+Father, moon elf from Vastwood. Ended up in Ul to tutor in bow skills due to semi-good relationship between Mei'lani and Ul.
+
+Mother, Ulfaren
+
+----
+
+Traveled with mother for awhile. Ended up eventually (mother? father?) in the Vastwood and studied to become a druid. It being a collection of wood elves in a vast forest, natural balance was a full religion. That includes a notion that death is part of life; that one sacrifices for the many. Fire cleanses the forest. The weak die to keep the strong alive.
+
+Believes in nature's version of Good, but tinged somewhat with Ul's social safety nets. Provide a chance for all, but let those that fail, fail on their own merits. After that, no mercy.
+
+Tension in admiring Ul's safety net and loathing it's xenophobia because a druid outlook insists on diversity being essential for survival. I HATE "stuff". The safety net would be in educating about survival, medicine, 
+
+Outlook
+what is Bad, in the eyes of a druid?  Why, all the things that destroy the natural order.  Rationality, math (druids hate math), language, money, metallurgy, fur trappers, philosophy, 
+
+Druids hate domesticated dogs.  Aside from being able to track them back into their secret caves in the forest, dogs represent a traitorous element among the animals.  Domesticated dogs are wolves that have been twisted so thoroughly in the hands of their masters that they hold nothing but love for their oppressors.  Dogs are an abomination on par with the undead.
+
+Druids don't care about a tree.  Druids care about the forest.  And not even the forest-as-a-collection-of-trees, they care about the eternal forest, the forest that will exist long after all of these trees are dead
+
+Druids bring balance wherever they go, but it is rarely the sort of balance that you are expecting.  What's more abhorrent to Nature?  A forest fire or farmland?
+
+A druid's magic is broad, crude, slow, indistinct, subtle, and immensely powerful. 
+
+Druids can barely live in harmony with each other.  These people are possessed by spirits of Nature, figuratively but also possibly literally.  When one commune meets another, it is like two wolf packs catching sight of each other across the timber line.  Sometimes there is murder.  Sometimes there are "marriages".  Sometimes they exchange small bits of news and go on their way.
+
+Druids hate cities.  They hate the concept of cities. 
+
+Because the druid knows that the Forest is not just a collection of trees.  It is a spiritual place that everything will return to, if given enough time.  And like the Forest, the City is also a spiritual place, greater than the sum of its cobbles.  But the City doesn't come from the World.  The City comes from the mind of Men, and that is why the druid takes extra pleasure in smashing the trapper's brains out with his rock.
+
+What is natural?  Why is natural good?  How do druids co-exist with cities?  How civilized should a druid be, and how feral?
+
+----
 
 Studied Sylvan because wants to understand the history. Has an internal conflict between devotion to past (conservative) with desire for the Ul-socialness (progressive)
 
@@ -249,7 +282,7 @@ Wording wind (evocation)
 Erupting earth (transmutation)
 Flame arrows (transmutation)
 Tidal wave (conjuration)
-Wall ofwater (evocation)
+Wall of water (evocation)
 
 4TH LEVEL
 Charm monster (enchantment)
