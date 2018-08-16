@@ -61,6 +61,18 @@ def search(fp, data, q1, q2, window, paired):
 
 
 if __name__ == '__main__':
+
+    # Example shell usage
+    # $ python3 grep_context.py -f logs.txt -m1 'Stopping cmdseq-service' -m2 'Stopping rw-service' -n 500 -x true
+    # ('Stopping cmdseq-service', 283640)
+    # ('Stopping cmdseq-service', 330373)
+    # ('Stopping cmdseq-service', 1093883)
+    # ('Stopping cmdseq-service', 1360935)
+    # ('Stopping cmdseq-service', 1464382)
+    # ('Stopping cmdseq-service', 1466484)
+    # $ sed'330373q;d'. / logs.txt
+    # 2018-07-05T22:20:26.468098+00:00 feba3f0746d048769693d67368beec76 [  101.553972] mothra-15 systemd[1] INFO: Stopping cmdseq-service...
+
     parser = argparse.ArgumentParser(description='Find cases where m1 is within n of m2')
     parser.add_argument('-f', help='Filepath to search')
     parser.add_argument('-m1', help='main search query, in regex')
