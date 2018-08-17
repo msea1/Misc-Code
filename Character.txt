@@ -1,6 +1,6 @@
 Name: Darya Firahel
 Class: Druid
-Level: ?
+Level: 7
 EP: ?
 Sex: F
 Race: Half-Elf
@@ -51,7 +51,7 @@ BOND - Mother's necklace (TODO description); stolen
 FLAW - Merciless to those deemed to have upset my interpretation of natural balance
 
 OTHER PROF
-    FEY ANCESTRY: I have advantage on saving throws against being charm ed, and magic can’t put me to sleep.
+    FEY ANCESTRY: I have advantage on saving throws against being charmed, and magic can’t put me to sleep.
 
     RITUAL CASTING - I can cast a druid spell as a ritual if that spell has the ritual tag and I have the spell prepared.
 
@@ -81,7 +81,7 @@ OTHER PROF
     SPIRIT TOTEM (Hawk): I can call forth nature spirits to influence the world around you. As a bonus action, you can magically summon an incorporeal spirit to a point you can see within 60 feet of you. The spirit creates an aura in a 30-foot radius around that point. It counts as neither a creature nor an object, though it has the spectral appearance of the creature it represents. As a bonus action, you can move the spirit up to 60 feet to a point you can see. The spirit persists for 1 minute or until you’re incapacitated. Once you use this feature, you can’t use it again until you finish a short or long rest.
         HAWK: The hawk spirit is a consummate hunter, aiding you and your allies with its keen sight. When a creature makes an attack roll against a target in the spirit’s aura, you can use your reaction to grant advantage to that attack roll. In addition, you and your allies have advantage on Wisdom (Perception) checks while in the aura.
 
-    MIGHTY SUMMONER: Starting at 6th level, beasts and fey that you conjure are more resilient than normal. Any beast or fey summoned or created by a spell that you cast gains the. following benefits:
+    MIGHTY SUMMONER: beasts and fey that you conjure are more resilient than normal. Any beast or fey summoned or created by a spell that you cast gains the following benefits:
         - The creature appears with more hit points than normal: 2 extra hit points per Hit Die it has.
         - The damage from its natural weapons is considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks and damage.
 
@@ -124,11 +124,11 @@ SPELLS
     Attack Mod = 3 + 3 = +6
 
     CANTRIPS (3) - Druidcraft, Primal Savagery, Create Bonfire
-    PREPARED: Level + wisdom modifier (+3)
-        1st -
-        2nd -
-        3rd -
-        4th -
+    PREPARED: Level (7) + wisdom modifier (+3) = 10
+        (4) 1st -
+        (3) 2nd -
+        (3) 3rd -
+        (1) 4th -
 
 BIOGRAPHY
     FAMILY TREE
