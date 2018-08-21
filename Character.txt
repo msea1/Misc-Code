@@ -1,3 +1,7 @@
+Introduction:
+    introducing you to everyone would be to have her watching this group for a little while. likely in the form of one animal or another. these guys...stand out a little. especially where you'll be. it's NOT a well traveled area and, based on what you've learned in Riun, their mention of a particular orc tomb is very interesting and very troubling to you. so you can be rather sure that they're chasing the same leads as you are and, having watched them for a little while, they're PROBABLY not overtly evil. at least not most of them. and they even seem pretty capable, maybe helpful to your own agenda.
+
+
 Name: Darya Firahel
 Class: Druid
 Level: 7
@@ -98,22 +102,29 @@ EQUIPMENT -- Total carry: ~72#
 
     TREASURED ITEM: A small bundle of twigs from near the Enclave
 
-    ARMOR: leather armor (light), 10#, AC = 11 + Dex (2). Neutral on str and stealth, 1 min to don/doff
+    ARMOR: hide armor (medium), 10#, AC = 12 + Dex (2). Neutral on str and stealth, 5 min to don, 1 to doff
 
     MISC:
         explorer's pack, 44-49# depending on water carried
             backpack, bedroll, mess kit, tinderbox, 10 torches, 10 days food rations, waterskin, 50' hemp rope
+        navigator's tools
+        herbalism kit
         druidic focus: totem of raven feathers banded together by a fern
         50' of silk rope, 5#
         a trinket: tiny silver icon of a raven
         a set of common clothes, 3#
         a belt pouch, 1#
+        a folding boat
 
 WEAPONS
     Scimitar*: 1d6 slashing, 3#, finesse, light
-    Shortbow: 1d6 piercing, 2#, range 80/320, two-handed
-        Ammunition: 0
     Club* (belaying pin), 1d4 bludgeoning, 2#, light
+    6 darts*, 1d4 piercing  Finesse, thrown (range 20/60)
+    2 daggers*, 1d4 piercing Finesse, light, thrown (range 20/60)
+
+    Longbow: 1d8 piercing, (range 150/600), heavy, two-handed
+        Ammunition: 20 normal
+            + 5 unbrakable arrows (magical)
 
 ATTACKS
 
@@ -125,10 +136,10 @@ SPELLS
 
     CANTRIPS (3) - Druidcraft, Primal Savagery, Create Bonfire
     PREPARED: Level (7) + wisdom modifier (+3) = 10
-        (4) 1st -
-        (3) 2nd -
-        (3) 3rd -
-        (1) 4th -
+        (4) 1st - Ice Knife, Healing Word, Speak with Animals (ritual), Detect Magic (ritual)
+        (3) 2nd - Pass w/o Trace, Locate Object, Animal Messenger (ritual)
+        (3) 3rd - Flame Arrows, Speak with Plants, Water Breathing (ritual)
+        (1) 4th - Conjure Woodland Beings
 
 BIOGRAPHY
     FAMILY TREE
@@ -158,7 +169,7 @@ BIOGRAPHY
     MOTIVATIONS
         Parental influence:
             - Imprinted with importance of one's family from mother's decision to abandon her home (see TRAITS)
-            - Tension in admiring Ul's safety net and loathing its xenophobia because its artificial, managed. In other words, unnatural.
+            - Tension in admiring Ul's safety net.
             - Elven outlook helped plant seed (ha) of future druidic leanings
             - Carries a bow due to father
 
@@ -179,12 +190,24 @@ BIOGRAPHY
 
         Druidic study: 
             - Bit of a pyro;
+            - Retrospective thinking about Ul, loathing its xenophobia because its artificial, managed. In other words, unnatural.
             - Combined with Ul ethos, leans quite a bit on the survival of the fittest mindset, but mildly tempered because nature demands a balance and a long term view of a system holistically. Therefore, works against what she interprets as unfair manipulations (see IDEAL)
             - Provide a chance for all to thrive, but let those that fail, fail. No mercy. (see FLAW)
             - Avoids books written on paper (wood pulp); tolerates parchment (skins) (see low INT ability)
 
+        Currently:
+            She had her formative upbringing years spent around her mother who would talk positively about Ul. But then, the shipwreck would up-end her world. That, and the subsequent journey to the Vastwood would start making her distrustful of civilizations and people. That would be reinforced as she developed in her druid studies, and no longer having her mother's presence around to temper the learnings, she'd grow more disgusted with man-made stuff. 
+
+            Ul would always stick out in her mind, and be the last place she'd mentally condemn, but it still moves from a place of positive thoughts to sort of a disillusionment. She'd see some positives in them because they live more harmoniously with nature than others. But the borderline xenophobia and breeding would strike her as "artificial, managed. In other words, unnatural."
+
+            Thus, her motivation becomes more like: commerce sucks because it killed my family (shipwreck) and cities suck because they trample nature (druid); Ul is borderline acceptable (mother's influence), but they still need to be opened up - which was my original hook for her motivation.
+
+            She was satisfied in the Vastwood and would've been more or less content to live out the rest of her time there, defending it; but not needing to venture out to pre-emptively do so.
+
+            She wants to put down the druid version of roots there. But then the Enclave comes calling, telling her she has to go; she has to do this task for them. She obviously doesn't want to leave. But they're able to convince her enough (OR, if you think it more interesting, the surving little sister could come into play here) without spilling all the beans, that she needs to go (back to) Rium to keep an eye out for these...specters? I forget the term used.
+
+            Motivation is to make sure the Vastwood stays safe so that she can eventually return. Though, she's obviously aware from her mother's life, that she may have to sacrifice her own preferences in order to do what's needed for her "family".
+
 
 NOTES TO DM
-Secret: physical appearance and aquatic aptitude point to linege from House Thundershade of Sungarden. A fact known by The Enclave, but not by the character. This can be used or ignored, at the DM's discretion. (I didn't plan this, I just picked physical attributes that interested me before noting from setting guide that they match Sungarden ancestry more)
-
 Paternal grandparents and surviving little sister are currently anonymous NPC - I'm willing to create something for it, but also amenable to leaving to DM's discretion for narrative use.
