@@ -20,8 +20,8 @@ def load(fp):
 
 def search(fp, data, q1, q2, window, paired):
     matches = []
-    r1 = re.compile(q1)
-    r2 = re.compile(q2)
+    r1 = re.compile(q1, flags=re.IGNORECASE)
+    r2 = re.compile(q2, flags=re.IGNORECASE)
     lines_since_match = window + 1
 
     deck = deque(maxlen=window+1)  # keep current plus past n (=window) lines around
