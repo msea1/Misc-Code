@@ -25,6 +25,8 @@ def format_entry(time, geo, weather, star, subtitle, text, image):
     if star:
         entry += ':star:'
     if geo:
+        if entry[-2] != '\n':
+            entry += '\n'
         entry += f"_{geo}_"
     entry += "\n\n"
     return entry
