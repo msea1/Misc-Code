@@ -1,21 +1,10 @@
-Introduction:
-    introducing you to everyone would be to have her watching this group for a little while. likely in the form of one animal or another. these guys...stand out a little. especially where you'll be. it's NOT a well traveled area and, based on what you've learned in Riun, their mention of a particular orc tomb is very interesting and very troubling to you. so you can be rather sure that they're chasing the same leads as you are and, having watched them for a little while, they're PROBABLY not overtly evil. at least not most of them. and they even seem pretty capable, maybe helpful to your own agenda.
+ToDo
+    Spells
+        I "know" all spells. I can prepare 10 btw each long rest, whatever ones I want.
 
+        However, I can cast up to my available slot levels. Except for cantrips, which are infinte.
 
-Name: Darya Firahel
-Class: Druid
-Level: 7
-EP: ?
-Sex: F
-Race: Half-Elf
-Alignment: Chaotic Neutral
-Background: Sailor
-Age: 41
-Height: 5'7
-Weight: 128
-Lightly blue skin tint, green eyes, dusk blue hair
-Inspiration: No
-Prof Bonus: +3
+        Ritual spells take longer to cast, but do not use a spell slot
 
 ABILITY
 Wis | 14 | +1 (race) | +1 (lvl 4) | 16 (+3)
@@ -34,38 +23,8 @@ Athletics, Perception (via background)
 
 PASSIVE PERCEPTION: 10 +3 (prof) + 3 (wisdom) = 16
 
-Armor Class: 13
-Max HP: ?
-Temp HP: 0
-Current HP:
-Hit Dice ?d8
-Initiative: +2 (via dexterity)
-Speed: 30', (Encumbered down to 20'?)
-Vision: Darkvision (via race)
-
-LANGUAGES:
-    Common, Elvish, Dwarvish (via race)
-    Druidic, Sylvan (via class)
-
-TRAITS
-    Pack mentality, fiercely loyal to those inside, but very wary of those outside;
-    calm and patience in times of stress
-IDEAL - The natural world is more important than _almost_ all the constructs of civilization.
-BOND - Mother's necklace (TODO description); stolen
-FLAW - Merciless to those deemed to have upset my interpretation of natural balance
 
 OTHER PROF
-    FEY ANCESTRY: I have advantage on saving throws against being charmed, and magic can’t put me to sleep.
-
-    RITUAL CASTING - I can cast a druid spell as a ritual if that spell has the ritual tag and I have the spell prepared.
-
-    SPELLCASTING FOCUS - I can use a druidic focus (found in chapter 5) as a spellcasting focus for my druid spells.
-
-    ARMOR: Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)
-
-    WEAPONS: Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears
-
-    TOOLS: Herbalism kit, Navigator's tools, Water vehicles
 
     CIRCLE OF THE SHEPHERD -- Druids of the Circle of the Shepherd commune with the spirits of nature, especially the spirits of beasts and the fey, and call to those spirits for aid. These druids recognize that all living things play a role in the natural world, yet they focus on protecting animals and fey creatures that have difficulty defending themselves. Shepherds, as they are known, see such creatures as their charges. They ward off monsters that threaten them, rebuke hunters who kill more prey than necessary, and prevent civilization from encroaching on rare animal habitats and on sites sacred to the fey. Many of these druids are happiest far from cities and towns, content to spend their days in the company of animals and the fey creatures of the wilds. Members of this circle become adventurers to oppose forces that threaten their charges or to seek knowledge and power that will help them safeguard their charges better. Wherever these druids go, the spirits of the wilderness are with them.
 
@@ -80,66 +39,11 @@ OTHER PROF
             • You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can’t use any of your special senses, such as darkvision, unless your new form also has that sense.
             • You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the DM decides whether it is practical for the new form to wear a piece of equipment, based on the creature’s shape and size. Your equipment doesn’t change size or shape to match the new form, and any equipment that the new form can’t wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form.
 
-    SPEECH OF THE WOODS: At 2nd level, you gain the ability to converse with beasts and many fey. You learn to speak, read, and write Sylvan. In addition, beasts can understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn’t grant you friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character.
 
     SPIRIT TOTEM (Hawk): I can call forth nature spirits to influence the world around you. As a bonus action, you can magically summon an incorporeal spirit to a point you can see within 60 feet of you. The spirit creates an aura in a 30-foot radius around that point. It counts as neither a creature nor an object, though it has the spectral appearance of the creature it represents. As a bonus action, you can move the spirit up to 60 feet to a point you can see. The spirit persists for 1 minute or until you’re incapacitated. Once you use this feature, you can’t use it again until you finish a short or long rest.
         HAWK: The hawk spirit is a consummate hunter, aiding you and your allies with its keen sight. When a creature makes an attack roll against a target in the spirit’s aura, you can use your reaction to grant advantage to that attack roll. In addition, you and your allies have advantage on Wisdom (Perception) checks while in the aura.
 
-    MIGHTY SUMMONER: beasts and fey that you conjure are more resilient than normal. Any beast or fey summoned or created by a spell that you cast gains the following benefits:
-        - The creature appears with more hit points than normal: 2 extra hit points per Hit Die it has.
-        - The damage from its natural weapons is considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks and damage.
-
-    SHIP’S PASSAGE - When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with (perhaps one captained by a former crewmate). Because you’re calling in a favor, you can’t be certain of a schedule or route that will meet your every need. Your Dungeon Master will determine how long it takes to get where you need to go. In return for your free passage, you and your com panions are expected to assist the crew during the voyage.
-
-MONEY
-    Plat:
-    Gold: 10
-    Electrum:
-    Silver:
-    Copper:
-
-EQUIPMENT -- Total carry: ~72#
-
-    TREASURED ITEM: A small bundle of twigs from near the Enclave
-
-    ARMOR: hide armor (medium), 10#, AC = 12 + Dex (2). Neutral on str and stealth, 5 min to don, 1 to doff
-
-    MISC:
-        explorer's pack, 44-49# depending on water carried
-            backpack, bedroll, mess kit, tinderbox, 10 torches, 10 days food rations, waterskin, 50' hemp rope
-        navigator's tools
-        herbalism kit
-        druidic focus: totem of raven feathers banded together by a fern
-        50' of silk rope, 5#
-        a trinket: tiny silver icon of a raven
-        a set of common clothes, 3#
-        a belt pouch, 1#
-        a folding boat
-
-WEAPONS
-    Scimitar*: 1d6 slashing, 3#, finesse, light
-    Club* (belaying pin), 1d4 bludgeoning, 2#, light
-    6 darts*, 1d4 piercing  Finesse, thrown (range 20/60)
-    2 daggers*, 1d4 piercing Finesse, light, thrown (range 20/60)
-
-    Longbow: 1d8 piercing, (range 150/600), heavy, two-handed
-        Ammunition: 20 normal
-            + 5 unbrakable arrows (magical)
-
-ATTACKS
-
-
-SPELLS
-    Ability = 16 (via Wisdom)
-    Save DC = 8 + 3 + 3 = 14
-    Attack Mod = 3 + 3 = +6
-
-    CANTRIPS (3) - Druidcraft, Primal Savagery, Create Bonfire
-    PREPARED: Level (7) + wisdom modifier (+3) = 10
-        (4) 1st - Ice Knife, Healing Word, Speak with Animals (ritual), Detect Magic (ritual)
-        (3) 2nd - Pass w/o Trace, Locate Object, Animal Messenger (ritual)
-        (3) 3rd - Flame Arrows, Speak with Plants, Water Breathing (ritual)
-        (1) 4th - Conjure Woodland Beings
+ 
 
 BIOGRAPHY
     FAMILY TREE
@@ -207,7 +111,3 @@ BIOGRAPHY
             She wants to put down the druid version of roots there. But then the Enclave comes calling, telling her she has to go; she has to do this task for them. She obviously doesn't want to leave. But they're able to convince her enough (OR, if you think it more interesting, the surving little sister could come into play here) without spilling all the beans, that she needs to go (back to) Rium to keep an eye out for these...specters? I forget the term used.
 
             Motivation is to make sure the Vastwood stays safe so that she can eventually return. Though, she's obviously aware from her mother's life, that she may have to sacrifice her own preferences in order to do what's needed for her "family".
-
-
-NOTES TO DM
-Paternal grandparents and surviving little sister are currently anonymous NPC - I'm willing to create something for it, but also amenable to leaving to DM's discretion for narrative use.
