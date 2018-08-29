@@ -1,0 +1,20 @@
+GROUND STATION SERVICE TESTING
+
+For Local Service Runs
+    Edit the dev.toml
+        Point the hosts to the selected test GS (i.e. PDT1)
+    Add dev.toml to main.py params (-f /home/mcarruth/Code/gemini/services/tr-rx/radio-link-manager/config/dev.toml)
+    Add VAULT_TOKEN to env variables
+
+Get Vault Token
+    $ docker --tls -H consul.service.pdt1.gemini:2376 ps|grep radio
+    $ docker --tls -H consul.service.pdt1.gemini:2376 exec -it bd95c49f5f2f cat /secrets/vault_token
+
+Build Local into Docker
+    $ ./pants binary services/tr-rx/radio-link-manager/::
+    $ docker build -t registry.service.nsi.gemini/matthew/radio-link-manager -f services/tr-rx/radio-link-manager/Dockerfile .
+
+Create local docker images
+    Create space under ....
+    $ docker login registry.service.nsi.gemini
+    $ docker push registry.service.nsi.gemini/matthew/radio-link-manager
