@@ -60,6 +60,7 @@ def htmlize_symbols(html):
     html = html.encode('ascii', 'xmlcharrefreplace').decode()
     html = html.replace('</em>\n', '</em></p>\n<p>')
     html = html.replace('\n<em>', '</p>\n<p><em>')
+    html = html.replace('<h2>', '<hr/><hr/><h2>')
     # html = str(html).replace('°', '&deg;')
     # html = str(html).replace('…', '...')
     # html = str(html).replace('’', '&apos;')
@@ -67,14 +68,23 @@ def htmlize_symbols(html):
 
 
 def replace_stars(html):
-    # TODO, replace star with '&starf;'
-    pass
+    data = str(html)
+    i = 0
+    last = 0
+    while i != -1:
+        i = data.find(':star:', i)
+        if i == -1:
+            continue
+        last = data.rfind("<strong>", last, i)
+        data = data[0:last] + "&starf; " + data[last:i] + data[i+6:]
+        last = i
+    return data
 
 def adjust_image_size(html):
     all_img = html.find_all("img")
     for i in all_img:
         i.attrs['width'] = "400"
-        del i.attrs['alt']
+        i.attrs['alt'] = "(image)"
     return html
 
 
