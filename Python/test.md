@@ -2,20 +2,30 @@
 
 ## Fri 18 May
 
+**Saving on cell phone**: _06:23:27 PDT_ _Cloudy 10°C_
+
+![2b7802a6edaedc59e997a013158a2988][2]
+
+The plan for the month expires tomorrow. So a la 2015, I just disabled autopay. And set it to resume on the 5th. So that's 19 days without a useless service plan, saving me $20!
+
+---
+
 **Departure**: _08:29:44 PDT_ _Cloudy 12°C_
 Robert says I'm usually at my most manic the morning of a trip. I'm not so sure. I certainly don't feel that way today. This is a long trip, with quite a few logisitical hurdles involved. I keep thinking about all the stuff to do throughout the trip. It seems so daunting!
 
-But of course it does, it's 20 days long. If there wasn't a lot to do then it would be boring. To be better "in the moment" I need to be better able to tune out the future to some extent and just look at what's in front of me. Today is easy! It's just flying.
+But of course it does, it's 20 days long. If there wasn't a lot to do then it would be boring. To be more "in the moment" I need to be better able to tune out the future to some extent and just look at what's in front of me. Today is easy! It's just flying.
 
-I always, always forget how much can get done in a full day devoted to travel.
+If it begins feeling too daunting, remember that I always, always forget how much can get done in a full day devoted to travel.
 
 Fittingly it begins raining as we depart Seattle; the first rain in quite awhile.
+
+I forgot to consider and bring the car seat pillow. Good for plane. Good as extra head pillow in hostel. Great for maxitaxis. Oh well 😕. Also forgot the car-to-usb plug. I asked Robert to remind me about it since it was his request. He didn't, and I forgot. Oh well 😕.
 _I-5 S Seattle United States 47.659, -122.322_
 
 ---
 
 **Un-fucking-real**: _09:41:49 PDT_ _Cloudy 12°C_
-SeaTac has up five security checkpoints available. Rarely are they all open. This morning there are four open, but general boarding is only allowed at one! And obviously it's swamped.
+SeaTac has up to five security checkpoints available. Rarely are they all open. This morning there are four open, but general boarding is only allowed at one! And obviously it's swamped.
 
 I wasted time bypassing that one originally because I was told there were others open, only to walk past all of them and told no. I'm furious.
 
@@ -24,46 +34,39 @@ _Seattle-Tacoma International Airport SeaTac United States 47.444, -122.302_
 
 ---
 
-**Left behind**: _11:03:53 PDT_ _Cloudy 14°C_
-I forgot to consider and bring the car seat pillow. Good for plane. Good as extra head pillow in hostel. Great for maxitaxis. Oh well 😕.
-_16470 Uplands Way SE North Bend United States 47.449, -121.765_
-
----
-
 **Airport snacking $9.50**: _19:59:54 EDT_ _Cloudy 11°C_
 
 ![2b9cabb0f836b94993374549f617b8f6][1]
 
-Airport food is so often a huge upsale. I took a little pride in finding this makeshift solution that was both not super marked up, nor unhealthy.
+Airport food is so often a huge upsale. I took a little pride in finding this makeshift solution that was both not super marked up, nor horrendously unhealthy compared to the other offerings.
 
-That said, I didn't really have a need for this. I wasn't hungry. And was going to be boarding a 9-hour flight to Istanbul in which they'd feed us twice. But it was a 4:20 layover (nice) here in Logan and, ultimately, I was just bored.
+That said, I didn't really have a need for this. I wasn't hungry. And was going to be boarding a 9-hour flight to Istanbul in which they'd feed us twice. But it was a 4:20 layover here in Logan and, ultimately, I was just bored.
 
 _Boston Logan International Airport Boston United States 42.368, -71.018_
 
 ---
 
-**Saving on cell phone**: _23:23:27 EDT_ _Mostly Clear 7°C_
-
-![2b7802a6edaedc59e997a013158a2988][2]
-
-The plan for the month expires tomorrow. So a la 2015, I just disabled autopay. And set it to resume on the 5th. So that's 19 days without a useless service plan, saving me $20!
-_Boston Logan International Airport Boston United States 42.368, -71.018_
-
----
-
-**Not able to check in online...**: _23:23:41 EDT_ _Mostly Clear 7°C_
+**Boston to Istanbul**: _23:23:41 EDT_ _Mostly Clear 7°C_
 
 ![4a8fca440170510517adbdf9c2a660ce][3]
 
-I was able to select my seats ahead of time for the four legs on Turkish Air. However, we couldn't formally check-in to the flight to Istanbul beforehand for, I assume, some visa or international reasons. And there's no gate attendant in Logan this far advance, so we go wander to kill time and find beer.
+I was able to select my seats ahead of time for the four legs on Turkish Air. However, we couldn't formally check-in to the flight to Istanbul beforehand for, I assume, some visa or international reasons. And there was no gate attendant in Logan when we landed, so we go wander to kill time and find beer.
 
-We dawdle a bit too much given that we aren't checked in. But arriving back at the game and getting our passes, we've been downgraded (why?) from row 13 to 23. That's some 60 odd people who now deplane before us, with a one hour connection to make.
+We dawdle a bit too much given that we aren't checked in. Arriving back at the game and getting our passes, we've been downgraded (why?) from row 13 to 23. That's some 60-odd people who now deplane before us, and we have only one hour to make out Baku connection.
 
 And we had to stand in yet another unmoving queue to finally get our boarding passes, all the while making cracks about our last trip to Istanbul.
 
 And I still don't have my milage account tied to it.
 
-And my damn USB port doesn't work. Fucking again. JFC
+Does this plane have an ethernet port?
+
+![aa1e75c8049c179b3a20ce8809eff365][4]
+
+Smart since bandwidth may be less a problem than saturation of the wifi access points
+
+Also what appears to an s-video port?
+
+LOL, my damn USB port doesn't work. Fucking again. JFC. Last time this happened to me was over the New Year's trip on American. I bitched on Twitter and within just a few minutes AA reached out via DM and credited me 10,000 miles instantly. Spoiler alert: Turkish will not be as generous or easy.
 
 And I didn't get my pre-ordered meal.
 
@@ -72,36 +75,19 @@ Did snag a decent pillow from the flight and a backup blanket. I'll use the pill
 And it looks like we'll be about 20 minutes early so not real worried about the connection.
 _Boston Logan International Airport Boston United States 42.371, -71.019_
 
----
-
-**Ethernet onboard**: _23:38:29 EDT_ _Mostly Clear 7°C_
-
-![aa1e75c8049c179b3a20ce8809eff365][4]
-
-Smart since bandwidth may be less a problem than saturation of the wifi access points
-
-Also what appears to an s-video port?
-_703 Bennington St Boston United States 42.384, -71.013_
 
 ## Sat 19 May
 
-**Girl, no photo shown**: _16:51:13 +03_ _Mostly Sunny 28°C_
-Super cute, very reinforce the body type I find irresistibly attractive. Slender frame, tight ass with cleft, thigh gap, flat tummy
-_Istanbul Atatürk Airport Bakırköy Turkey 40.978, 28.817_
+**Istanbul to Baku**: _16:51:13 +03_ _Mostly Sunny 28°C_
+Girl, no photo, Super cute, very reinforce the body type I find irresistibly attractive. Slender frame, tight ass with cleft, thigh gap, flat tummy
 
----
-
-**Lufthansa FF miles?**: _16:52:12 +03_ _Mostly Sunny 28°C_
-Confusing interaction with CSR saying he sees it and will write down and something about card or new card?
+Confusing interaction with CSR regarding my FF miles posting to Lufthansa saying he sees it and will write down and something about card or new card?
 
 PA announcements and clapping as we board plane about how today is their national birthday of sorts. Their July 4.
-_Istanbul Atatürk Airport Bakırköy Turkey 40.977, 28.817_
 
----
+A few hours later, Captain came on to PA to notify when we passed sundown time and could break fast. Reminder that we're flying during Ramadan.
 
-**Break fast PA announcement**: _18:15:57 +04_
-Captain came on to notify when we passed sundown time and could break fast. Reminder that we're flying during Ramadan.
-
+_Istanbul Atatürk Airport Bakırköy Turkey 40.978, 28.817_
 
 ---
 
@@ -119,7 +105,6 @@ _Black Sea 41.299, 37.137_
 ![ba3cb48908f223963f6ee4d1cdd31e48][6]
 
 Photo doesn't come up but a fittingly crescent moon for landing into Baku during Ramadan
-
 
 ---
 
