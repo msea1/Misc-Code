@@ -1,4 +1,4 @@
-# Test
+# A Caucasian Adventure
 
 ## Fri 18 May
 
@@ -112,14 +112,31 @@ Photo doesn't come up but a fittingly crescent moon for landing into Baku during
 
 ![46ccccb738d8dcf97d88355035db51b2][7]
 
-Got through with the N-K papers in my pocket too
+Got through with the N-K papers in my pocket too.
+
+Trying to remember how best to get from the airport to downtown and only have a vague note saved about getting a BakiKart to catch a bus. The Wi-Fi in the airport has no english option to understand how to connect so we can't double-check that. 
+
+Ok, whatever; not essential.
+
+What is essential is cash money. Wandering around reveals no obvious ATMs. Asking the info desk and they point us to one. Only one. 
+
+Getting to it reveals...
+
+![atm](./photos/OnlyATMbroken.jpg)
+
+Sigh.
+
+We end up circling looking for another machine to no avail, but by the time we return the ATM is functioning
+
+![azer_cash](link)
+
+So we proceed to obtaining a BaiKart. 
+
+![baki](link)
+
+Similar to Wi-Fi, the transit card machine has no English option. Lots of drivers haning around and trying to get us to take taxi instead, saying no bus, etc. Not unexpected, but I don't care for the persistent ones who keep trying even after I've said no a half-dozen times. Would've been 20m vs 2.6m for the bus.
+
 _Heydar Aliyev International Airport Azerbaijan 40.465, 50.052_
-
----
-
-**BakiKart**: _22:05:44 +04_
-Machine had no English option. Neither did the airport Wi-Fi fwiw. Lots of drivers trying to get us to take taxi instead saying no bus, etc. Would've been 20m vs 2.6m for the bus
-
 
 ---
 

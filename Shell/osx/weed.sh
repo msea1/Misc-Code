@@ -1,3 +1,5 @@
+#!/usr/local/bin/bash
+
 # take in a prefix
 label=$1
 
@@ -16,7 +18,8 @@ label=$1
 ##
 
 
-# TODO in chron order?
+# TODO in chron order? [kMDItemContentCreationDate]
+# TODO group photos with same desc
 i=1
 for filename in ./photos/*; do
     [ -e "$filename" ] || continue
