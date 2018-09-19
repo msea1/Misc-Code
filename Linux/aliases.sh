@@ -2,7 +2,7 @@
 
 
 # ADD OPTIONS
-alias egrep='egrep --color=auto'	
+alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
@@ -27,6 +27,7 @@ alias ll='ls -AhlF --group-directories-first --color=auto'
 alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc'
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'
+alias usb_f5='sudo usbmuxd -u -U usbmux'
 alias vauth='vault auth -method=ldap username=$USER'
 alias vssh='vault ssh -role otp_key_role'
 
@@ -39,10 +40,9 @@ alias py='python3'
 
 
 # MACHINES
+alias curve11='ssh -p 24022 root@192.168.6.11'
 alias desktop='ssh mcarruth@192.168.130.152'
 alias flatsat='ssh -p 24022 root@192.168.6.10'
-alias curve11='ssh -p 24022 root@192.168.6.11'
-alias vsat58='ssh -p 24022 root@10.234.1.97'
 
 
 # EDITING

@@ -26,3 +26,8 @@
     "trim_trailing_white_space_on_save": true,
     //"wrap_width": 141
 }
+
+// Packages
+// AutoFileName, BracketHighlighter, GitGutter,
+// HexViewer, Package Control, Side Bar,
+// Python Flake8 Lint, SublimeCodeIntel

@@ -27,7 +27,6 @@ pause "Make useful directories"
 mkdir -p ~/bin
 mkdir -p ~/Code
 mkdir -p ~/Temp
-mkdir -p ~/.config/autostart
 
 pause "Setup bashrc"
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/bashrc -O ~/.bashrc
@@ -35,6 +34,9 @@ wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/aliases.sh -O
 wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/functions.sh -O ~/.bash_fxs
 source ~/.bashrc
 
+pause "Get SSH key"
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/personal_ssh -O ~/.ssh/personal_ssh
+wget https://raw.githubusercontent.com/msea1/MiscCode/master/Linux/personal_ssh.pub -O ~/.ssh/personal_ssh.pub
 
 pause "Add repos & keys"
 
@@ -58,11 +60,11 @@ sudo apt -y upgrade
 
 
 pause "Install frameworks"
-sudo apt install -y apt-transport-https cmake curl default-jdk gcc perl python3-pip 
+sudo apt install -y apt-transport-https cmake curl default-jdk gcc perl python3-pip
 
 
 pause "Install utilities"
-sudo apt install -y ack-grep bash-completion git gnome-clocks gnome-tweak-tool htop network-manager-openvpn openssh-server openvpn pritunl-client-electron socat sublime-text traceroute vim xsel 
+sudo apt install -y ack-grep bash-completion git gnome-clocks gnome-tweak-tool htop network-manager-openvpn openssh-server openvpn pritunl-client-electron socat sublime-text traceroute vim xsel
 
 
 pause "Install programs"
@@ -121,10 +123,10 @@ pause "System Settings"
 /org/gnome/desktop/peripherals/mouse/speed
     0.03
 
-    
+
 # Shell Extensions
 /org/gnome/shell/enabled-extensions
-    ['ubuntu-appindicators@ubuntu.com', 'openweather-extension@jenslody.de', 'window-list@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'drop-down-terminal@gs-extensions.zzrough.org'] 
+    ['ubuntu-appindicators@ubuntu.com', 'openweather-extension@jenslody.de', 'window-list@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'drop-down-terminal@gs-extensions.zzrough.org']
 /org/zzrough/gs-extensions/drop-down-terminal/shortcut-type
     'other'
 
@@ -139,7 +141,7 @@ wget https://confluence.spaceflightindustries.com/download/attachments/7570569/x
 pause "Install Python 3.7, if desired"
 cd ~/Downloads/
 wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
-tar xf Python-3.7.0.tgz 
+tar xf Python-3.7.0.tgz
 cd Python-3.7.0/
 ./configure --enable-optimizations --enable-shared
 make
