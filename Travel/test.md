@@ -114,11 +114,15 @@ Photo doesn't come up but a fittingly crescent moon for landing into Baku during
 
 Got through with the N-K papers in my pocket too.
 
-Trying to remember how best to get from the airport to downtown and only have a vague note saved about getting a BakiKart to catch a bus. The Wi-Fi in the airport has no english option to understand how to connect so we can't double-check that. 
+A sometimes fun past time in a foreign airport is trying to the most interesting flight connection
+
+![baghdad](./photos/baghdad.jpg)
+
+Trying to remember how best to get from the airport to downtown and only have a vague note saved about getting a BakiKart to catch a bus. The Wi-Fi in the airport has no english option to understand how to connect so we can't double-check that.
 
 Ok, whatever; not essential.
 
-What is essential is cash money. Wandering around reveals no obvious ATMs. Asking the info desk and they point us to one. Only one. 
+What is essential is cash money. Wandering around reveals no obvious ATMs. Asking the info desk and they point us to one. Only one.
 
 Getting to it reveals...
 
@@ -130,7 +134,7 @@ We end up circling looking for another machine to no avail, but by the time we r
 
 ![azer_cash](link)
 
-So we proceed to obtaining a BaiKart. 
+So we proceed to obtaining a BaiKart.
 
 ![baki](link)
 
