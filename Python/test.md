@@ -114,6 +114,12 @@ Photo doesn't come up but a fittingly crescent moon for landing into Baku during
 
 Got through with the N-K papers in my pocket too.
 
+![connection][baku8]
+
+A sometimes fun past time in a foreign airport is trying to the most interesting flight connection
+
+[baku8]: ./photos/connection.jpg
+
 Trying to remember how best to get from the airport to downtown and only have a vague note saved about getting a BakiKart to catch a bus. The Wi-Fi in the airport has no english option to understand how to connect so we can't double-check that. 
 
 Ok, whatever; not essential.
@@ -122,19 +128,25 @@ What is essential is cash money. Wandering around reveals no obvious ATMs. Askin
 
 Getting to it reveals...
 
-![atm](./photos/OnlyATMbroken.jpg)
+![broken_atm][baku59]
+
+[baku59]: ./photos/broken_atm.jpg
 
 Sigh.
 
 We end up circling looking for another machine to no avail, but by the time we return the ATM is functioning
 
-![azer_cash](link)
+![azeri_money][baku54]
+
+[baku54]: ./photos/azeri_money.jpg
 
 So we proceed to obtaining a BaiKart. 
 
-![baki](link)
-
 Similar to Wi-Fi, the transit card machine has no English option. Lots of drivers haning around and trying to get us to take taxi instead, saying no bus, etc. Not unexpected, but I don't care for the persistent ones who keep trying even after I've said no a half-dozen times. Would've been 20m vs 2.6m for the bus.
+
+![IMG_7115][baku53]
+
+[baku53]: ./photos/IMG_7115.jpg
 
 _Heydar Aliyev International Airport Azerbaijan 40.465, 50.052_
 
@@ -142,9 +154,12 @@ _Heydar Aliyev International Airport Azerbaijan 40.465, 50.052_
 
 **Soccer celebrants**: _23:27:08 +04_ _Clear 18°C_
 
-![0f3aa7a93fd8b0cfb71e9e8de5e3d881][8]
+![IMG_7017][baku61]
 
-Hanging out of cars driving down the highway, waving scarves and honking horns. Appears maybe galatasaray?
+Not a great capture, but lots and lots of Galatasaray fans out celebrating by hanging out of cars driving down the highway, waving scarves and honking horns.
+
+[baku61]: ./photos/IMG_7017.jpg
+
 _Neftçilər prospekti Baku Azerbaijan 40.370, 49.844_
 
 ---
