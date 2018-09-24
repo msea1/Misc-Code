@@ -168,14 +168,16 @@ _Neftçilər prospekti Baku Azerbaijan 40.370, 49.844_
 
 ![dba03a1817a0c0aa467d92f0994689f8][9]
 
-It actually smells like petroleum.
+The first thing that struck me about the waterfront walkway in Baku was the smell. It was slick. Unsurprisingly it whiffed like being near a giant gas station.
 
-Flashbacks to wandering around Geneva with no aim.
+The Flame Towers stood within view and their changing decorations make for fun photos. Otherwise, it's fairly quiet on the waterfront park. The setting, time (late at night), and my general lethargy instantly flash me back to my last travel experience of strolling around Geneva even though that was cold and January and the end of a trip whereas this is hot and May and the beginning of a trip. I definitely don't feel as much of a rush as I typically do to start a trip.
+
+We'd eventually explore up the park overlooking the curve of the city.
 
 
 ## Sun 20 May
 
-**Free mezes or...?**: _01:22:12 +04_ _Clear 17°C_
+**Rip-Off Culture**: _01:22:12 +04_ _Clear 17°C_
 
 ![43330386840336abc5d6cf7878ed26ce][10]
 
@@ -193,6 +195,39 @@ But so far three incidents in like 6 hours:
 - No Bus, Taxi drivers
 - Hostel putting us in 12-person dorm despite paying for 6-person
 - The above
+
+One of the places I've traveled that I get asked about my thoughts of most often is Morocco. Lots of people want to travel there. It seems foreign, but accessible. And the Casablanca lore probably keeps in more in people's minds than, say, near neighbor Tunisia.
+
+I did not like Morocco.
+
+I struggle to come up with a way of saying that politely - in a sensitive manner - because, frankly, what I disliked was the culture. First off, I don't really see Morocco as "African", but rather as Turkic. Throughout my time in Marrakesh, Casablanca, and Tangier I found a lot of similarities to my time in Istanbul.
+
+Some aspects of that I really like. There's a genuine hospitality at times that is wonderful. The food is generally terrific. The architecture is top-notch, and I find mosques to be among the prettiest religious structures around.
+
+And there are aspects that I really, really dislike. I find myself constantly on the defensive because I clearly stick out as a tourist and I am a target for low-level scams. Semi-routinely I would be clearly overcharged, or not given change back when warranted. Stopping to pause and look around anywhere was an invitation for people to try and sell me something long past my initial denial of interest, guide me where I'm going (for a cost), or falsely tell me where I'm going is not possible and try to get me to go with them somewhere else and/or special -- leading you somewhere captive and then demanding a fee.
+
+Taking part in a multi-day tour in Morocco, every food and cultural stop was at a place clearly on the take. I don't mind the cultural ones so much, but the restaurant stops were borderline offensive. Morocco has wonderful food with complex spices and yet every place we were taken (and always to a place with no other options nearby) would charge us triple for boring, bland, tasteless tagine. It's a tragedy and such a bummer because instead of showing off what your country and culture can produce, it makes me want to avoid it entirely.
+
+None of it ever feels particularly threatening or worrisome, but it keeps my guard up at all times and that's exhausting for me. It jars me out of enjoying the place or people watching from afar. I don't like constant interaction and having to say no ad infinteum. I once got hollered at for not wanting to eat in a guy's restuarant after I had momentarily paused nearby to glance at the posted menu. Mind you, I was already carrying take out with me!
+
+Hopefully obviously, none of that is to say that I view their culture as bad or wrong or anything similarly jingoistic. It's just a bad fit for my personality. For other people I am sure they would pay no attention to these things and would feel invigorated and love their time there.
+
+Baku also felt very Turkic to me, with the same pluses and minuses. Except I wasn't around much to see the positives.
+
+Upon arrival, we needed to secure a transit card to get from the airport to the city center. The transit card machine had no English option. That meant there was a lot of trying out various menus and comparing prices displayed to best guesses. Which means we were there for a bit, and attracted the attention of quite a few of the loitering taxi drivers. Nothing unusual about that and I expect to get touted no matter where I am in that situation, but they -- and this happened in Istanbul, and Yerevan, too -- would constantly be telling us there were no buses. Look man, try to sell me on convenience of the taxi all you want, but I find lying about the presense of a bus pretty annoying. It clearly exists, and I've already told you ten times I'm going to take it.
+
+We get to the hostel and they don't really have a record of our reservation. We paid for a 4-bed dorm with air conditioning and instead are dumped into a 12-bed dorm without A/C. They compensate for the lack of A/C by having a few fans going and the windows open. But there are no mosquito screens on the windows and so over two nights I manage to accrue quite a number of bites while also being uncomfortably sweaty and hot. Not a welcoming combo.
+
+We strolled the waterfront that night, and before turning in stopped to get a drink. I order a local cognac. I'll end up getting charged double the menu price. Maybe cause I was poured a double? Who knows!
+
+Along with the cognac come a variety of finger bites. I hate the awkwardness of not knowing what's free and what might be an exorbitant ripoff in different cultures. This happened in Switzerland too where a bar we were at put out some peanuts on the table. I mean, they could be free. But being Switzerland they could also end up costing what everything in Switzerland costs - which is about 400% too much. I guess finding out is the basis for a funny story though either way? I take the risk because I'm a sucker for new foods -- these aren't just plain peanuts like in Luzern -- and because I feel like even if we get charged it'll be not much because whatever, it's Azerbaijan.
+
+The bill comes. 39m for the food holy fucking hell. A kebab is like 3. Hate feeling taken advantage of, or being a rube. Also hate paying $25 for some chips, smoked cheese, and lemon slices with sugar. Even an airport would be ashamed to charge that. Can't shake the anger. 39m would buy a good steak dinner for two! But also ultimately it's $20. God I'm broken. I'm trying to look at it like a lesson. Maybe now I won't feel awkward about being straight forward and asking "what is this? how much does it cost?"
+
+The next day we spot a funicular was listed in the guide as being free, but an attendant was hovering in the vicinity of the turnstile and whenever tourists approached would insist on payment to let people through. Again, it was 1 manat or something similarly petty so it's not a big deal, and in isolation I wouldn't even remember it. But when little things like that happen time and time again throughout a day, they add up and leave a certain impression that outweighs others.
+
+An overarching theme is that dishonesty is a super big deal for me. On a higher level, that's corruption and also uncertainty, and having some degree of certainty, or trust, in the civic institutions is a big help. I'm fed up with the lack of that in America as well.	
+
 _Dənizkənarı Milli Park Baku Azerbaijan 40.367, 49.840_
 
 ---
@@ -200,6 +235,27 @@ _Dənizkənarı Milli Park Baku Azerbaijan 40.367, 49.840_
 **Old Town dead**: _09:58:51 +04_
 Nobody out. Not very exciting. Kinda hot in the sun all the time.
 
+---
+
+**Fountains**: _10:58:51 +04_
+
+Fountains are sprinked all over the city. I suspect they reflect the heat of the geography, the location on the bay, and the Muslim culture of abolutions. No matter the cause they're nice touches not really for any practical purposes (unlike, say, Rome's many public faucets from which you could secure cool drinking water in 40C heat) but they break up the monotany. I'm a big fan of public art and sculpture and interactive elements (for pedestrians).
+
+![IMG_7037][baku31]
+![IMG_7057][baku32]
+![APC_0898-hdr][baku33]
+![IMG_7085][baku34]
+![IMG_7058][baku35]
+![IMG_7038][baku36]
+
+Fountains
+
+[baku31]: ./photos/IMG_7037.jpg
+[baku32]: ./photos/IMG_7057.jpg
+[baku33]: ./photos/APC_0898-hdr.jpg
+[baku34]: ./photos/IMG_7085.jpg
+[baku35]: ./photos/IMG_7058.jpg
+[baku36]: ./photos/IMG_7038.jpg
 
 ---
 
@@ -220,6 +276,16 @@ Anyways, ended up falling asleep and instead of a cat nap, everytime ibwokenup t
 
 Larger picture I'm just not very excited by Baku. Can't quite tell why. Even in places not my fancy I usually get an energy boost from arriving. Instead I'm more wondering if I'll feel so nonplussed all trip. Maybe I'm just put off by the disappointing hostel and bulvar rip-off?
 
+
+---
+
+**Bidet**: _21:07:41 +04_ _Clear 21°C_
+
+![IMG_7033][baku37]
+
+An early reminder that we'd be making use of bidets frequently on this trip. It finally got me over the hump and committed to trying to install one when I got home - which I did ultimately do.
+
+[baku37]: ./photos/IMG_7033.jpg
 
 ---
 
@@ -268,6 +334,12 @@ I don't have the hesitation in Germany that I do here about trusting strangers. 
 
 ![b345392b361eda2280b60b828aee4a04][14]
 
+At one point we wandered into a Spar market. I think Robert wanted an energy drink or something. I was just browsing around looking at what's there and what beers they have when a clerk comes over and complains about something to me. He keeps repeating basically the same thing and miming something. I keep saying I don't know and just decide to leave. On way out second clerk with a bit of English mildly interrogates us. Best I can tell accusing us of taking photos? So What? What's wrong with taking a photo or two? I had a similar encounter in Poland once and it's so weird to me. Anyways, I never even had phone out of my pocket so I just ignore them and continue walking out.
+
+And then about 10 minutes later I suddently remember that oh yeah, I did take a photo... Because in heir liquor selection I saw a bottle labelled White Goose with a design baring obvious resemblance to Grey Goose. It was such a brief ha that I instantly forgot about doing it. At the time I believe I thought it was just a small funny example of the different naming/branding in countries. Like how Sriracha in Germany has a swallow on the bottle instead of a rooster. Exactly the sort of little different I like to pick out when traveling. A Royale with Cheese. Why should the attendants care?
+
+But Robert points out that a more likely explanation is that the White Goose isn't just the regional name, but rather an intentional counterfeit product. Oh. Yeah, that does make more sense in this context. How bizarre is it that a place like Spar carries such products?! More examples of that low-level corruption and untrustworthiness.
+
 Just browsing around looking at what's there and what beers they have when a clerk comes over and complains about something and mimes. I keep saying I don't know and just decide to leave. On way out second clerk with a bit of English mildly interrogates us. Best I can tell accusing us of taking photos? Never even had phone out of my pocket.
 
 Wait nevermind. Sheepish. Because i did take this.Thinking it was funny but Robert points out might be counterfeit
@@ -279,7 +351,8 @@ Wait nevermind. Sheepish. Because i did take this.Thinking it was funny but Robe
 
 ![980ac9aa53cb0e64d3d55a3c08e68dd2][15]
 
-The pattern made it seem 3-d
+This sidewalk at 2am was quite trippy. There was some sparkling to the paving as well so it sort of shimmered and really messed with your perspective. The pattern made it seem 3D.
+
 _Rashid Behbudov Baku Azerbaijan 40.372, 49.848_
 
 ---
@@ -288,7 +361,8 @@ _Rashid Behbudov Baku Azerbaijan 40.372, 49.848_
 
 ![ae6df65e34474002c1c38ecf1b144acc][16]
 
-Definitely a spot we should go into
+Spotted outside a club at 2am; a completely gold-plated Porsche. Totally legit I am sure.
+
 _Khagani Street Baku Azerbaijan 40.374, 49.847_
 
 ---

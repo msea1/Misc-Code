@@ -17,8 +17,6 @@ Funny sights around Baku
 [baku7]: ./photos/IMG_7029.jpg
 
 
-
-
 ![IMG_7034][baku11]
 
 Triple-decker bird feeder
@@ -79,30 +77,6 @@ Their corvigi
 [baku30]: ./photos/IMG_7036.jpg
 
 
-![IMG_7037][baku31]
-![IMG_7057][baku32]
-![APC_0898-hdr][baku33]
-![IMG_7085][baku34]
-![IMG_7058][baku35]
-![IMG_7038][baku36]
-
-Fountains
-
-[baku31]: ./photos/IMG_7037.jpg
-[baku32]: ./photos/IMG_7057.jpg
-[baku33]: ./photos/APC_0898-hdr.jpg
-[baku34]: ./photos/IMG_7085.jpg
-[baku35]: ./photos/IMG_7058.jpg
-[baku36]: ./photos/IMG_7038.jpg
-
-
-![IMG_7033][baku37]
-
-An early reminder that we'd be making use of bidets frequently on this trip. It finally got me over the hump and committed to trying to install one when I got home - which I did ultimately do.
-
-[baku37]: ./photos/IMG_7033.jpg
-
-
 ![IMG_7027][baku38]
 
 We came to Baku just a week after their F1 race
@@ -146,13 +120,6 @@ Buildings
 [baku46]: ./photos/IMG_7007.jpg
 
 
-![IMG_7109][baku47]
-
-SPAR
-
-[baku47]: ./photos/IMG_7109.jpg
-
-
 ![IMG_7040][baku48]
 
 Tradition to hang bread out
@@ -188,22 +155,11 @@ Airport
 [baku52]: ./photos/airport.jpg
 
 
-
-
-
-
 ![APC_0895-hdr][baku55]
 
 Sights
 
 [baku55]: ./photos/APC_0895-hdr.jpg
-
-
-![IMG_7112][baku56]
-
-This sidewalk at 2am was quite trippy. There was some sparkling to the paving as well so it sort of shimmered and really messed with your perspective.
-
-[baku56]: ./photos/IMG_7112.jpg
 
 
 ![IMG_7107][baku57]
@@ -213,19 +169,11 @@ Legit decent micro brews; they'll be a rarity
 [baku57]: ./photos/IMG_7107.jpg
 
 
-![IMG_7113][baku58]
-
-Spotted outside a club at 2am; a completely gold-plated Porsche. Totlally legit I am sure.
-
-[baku58]: ./photos/IMG_7113.jpg
-
-
 ![IMG_7028][baku60]
 
 Ripped off tapas
 
 [baku60]: ./photos/IMG_7028.jpg
-
 
 
 ![IMG_7039][baku62]
