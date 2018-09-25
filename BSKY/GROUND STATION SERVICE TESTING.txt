@@ -27,3 +27,25 @@ Check service status
 
 Stop service
     http://hashi-ui.service.pdt1.gemini/nomad/global/jobs/radio-link-manager/info
+
+
+
+
+
+GROUND STATION NEW
+
+    Add telemetry from devices
+
+    Develop scheduling and controller services
+        Mimicking xs-pango / asf / orbitcs
+            Creating an SSH client? If we need to get something off the H/W there directly or uploading a TLE
+            TelemetryPublisher
+            Health Check
+            Ping
+
+            Track? Definitely. Schedling concerns?
+            Point?
+            Stop?
+
+
+    Add telemetry from services
