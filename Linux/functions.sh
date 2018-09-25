@@ -86,6 +86,10 @@ ipy() {
   cd -
 }
 
+search_type() {
+  find . -iname "*\.$1" -print0 | xargs -0 ack $2
+}
+
 work() {
   source $HOME/.virtualenvs/$1/bin/activate
 }
@@ -144,3 +148,4 @@ pdt() {
   ip=$(($1 + 89))
   ssh -p 24022 root@10.234.1.$ip
 }
+
