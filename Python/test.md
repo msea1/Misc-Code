@@ -271,17 +271,6 @@ Anyways, ended up falling asleep and instead of a cat nap, everytime I woke up t
 
 Larger picture I'm just not very excited by Baku. Can't quite tell why. Even in places not my fancy I usually get an energy boost from arriving. Instead I'm more wondering if I'll feel so nonplussed all trip. Maybe I'm just put off by the disappointing hostel and bulvar rip-off?
 
-
----
-
-**Bidet**: _21:07:41 +04_ _Clear 21°C_
-
-![IMG_7033][baku37]
-
-An early reminder that we'd be making use of bidets frequently on this trip. It finally got me over the hump and committed to trying to install one when I got home - which I did ultimately do.
-
-[baku37]: ./photos/IMG_7033.jpg
-
 ---
 
 **Interesting word choice**: _21:27:41 +04_ _Clear 21°C_
@@ -336,6 +325,21 @@ _Rashid Behbudov Baku Azerbaijan 40.372, 49.848_
 Deposite not really eating today and passing an abundance of late night döner stands for 3.5m, I didn't get one. Probably because of the bulvar thing but I can pretend it's because I'm not hungry and rationally decided not to eat just for the sake of eating cheaply.
 
 Should get a döner tomorrow though
+
+
+## Random Thoughts
+
+**Bidet**: _21:07:41 +04_ _Clear 21°C_
+
+![IMG_7033][baku37]
+
+An early reminder that we'd be making use of bidets frequently on this trip. It finally got me over the hump and committed to trying to install one when I got home - which I did ultimately do.
+
+[baku37]: ./photos/IMG_7033.jpg
+
+---
+
+More from photos/output.md
 
 
 ## Mon 21 May

@@ -162,20 +162,6 @@ Sights
 [baku55]: ./photos/APC_0895-hdr.jpg
 
 
-![IMG_7107][baku57]
-
-Legit decent micro brews; they'll be a rarity
-
-[baku57]: ./photos/IMG_7107.jpg
-
-
-![IMG_7028][baku60]
-
-Ripped off tapas
-
-[baku60]: ./photos/IMG_7028.jpg
-
-
 ![IMG_7039][baku62]
 
 carpets
