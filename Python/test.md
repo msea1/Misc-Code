@@ -1,6 +1,6 @@
 # A Caucasian Adventure
 
-## Fri 18 May
+## Flying
 
 **Saving on cell phone**: _06:23:27 PDT_ _Cloudy 10°C_
 
@@ -75,10 +75,11 @@ Did snag a decent pillow from the flight and a backup blanket. I'll use the pill
 And it looks like we'll be about 20 minutes early so not real worried about the connection.
 _Boston Logan International Airport Boston United States 42.371, -71.019_
 
-
-## Sat 19 May
+---
 
 **Istanbul to Baku**: _16:51:13 +03_ _Mostly Sunny 28°C_
+It is now 19 May.
+
 Girl, no photo, Super cute, very reinforce the body type I find irresistibly attractive. Slender frame, tight ass with cleft, thigh gap, flat tummy
 
 Confusing interaction with CSR regarding my FF miles posting to Lufthansa saying he sees it and will write down and something about card or new card?
@@ -106,25 +107,26 @@ _Black Sea 41.299, 37.137_
 
 Photo doesn't come up but a fittingly crescent moon for landing into Baku during Ramadan
 
----
+
+## Baku Airport
 
 **Welcome to Azerbaijan**: _21:17:48 +04_ _Clear 20°C_
 
 ![46ccccb738d8dcf97d88355035db51b2][7]
 
-Got through with the N-K papers in my pocket too.
+I don't know why this photo is rotated 180 deg but oh well. I made it through customs with the N-K papers in my pocket too. Glad it was perfunctory.
+
+A sometimes fun past time in a foreign airport is trying to the most interesting flight connection. Such as:
 
 ![connection][baku8]
 
-A sometimes fun past time in a foreign airport is trying to the most interesting flight connection
-
 [baku8]: ./photos/connection.jpg
 
-Trying to remember how best to get from the airport to downtown and only have a vague note saved about getting a BakiKart to catch a bus. The Wi-Fi in the airport has no english option to understand how to connect so we can't double-check that. 
+Trying to remember how best to get from the airport to downtown and only have a vague note saved about getting a BakiKart to catch a bus. The Wi-Fi in the airport has no english option to understand how to connect so we can't double-check that.
 
 Ok, whatever; not essential.
 
-What is essential is cash money. Wandering around reveals no obvious ATMs. Asking the info desk and they point us to one. Only one. 
+What is essential is cash money. Wandering around reveals no obvious ATMs. Asking the info desk and they point us to one. Only one.
 
 Getting to it reveals...
 
@@ -134,23 +136,18 @@ Getting to it reveals...
 
 Sigh.
 
-We end up circling looking for another machine to no avail, but by the time we return the ATM is functioning
+We end up circling looking for another machine to no avail, but by the time we return the ATM is functioning, so we get the required hard copy wad.
 
 ![azeri_money][baku54]
 
 [baku54]: ./photos/azeri_money.jpg
 
-So we proceed to obtaining a BaiKart. 
-
-Similar to Wi-Fi, the transit card machine has no English option. Lots of drivers haning around and trying to get us to take taxi instead, saying no bus, etc. Not unexpected, but I don't care for the persistent ones who keep trying even after I've said no a half-dozen times. Would've been 20m vs 2.6m for the bus.
-
-![IMG_7115][baku53]
-
-[baku53]: ./photos/IMG_7115.jpg
+We can now proceed to getting into the city.
 
 _Heydar Aliyev International Airport Azerbaijan 40.465, 50.052_
 
----
+
+## Baku First Impressions
 
 **Soccer celebrants**: _23:27:08 +04_ _Clear 18°C_
 
@@ -172,29 +169,10 @@ The first thing that struck me about the waterfront walkway in Baku was the smel
 
 The Flame Towers stood within view and their changing decorations make for fun photos. Otherwise, it's fairly quiet on the waterfront park. The setting, time (late at night), and my general lethargy instantly flash me back to my last travel experience of strolling around Geneva even though that was cold and January and the end of a trip whereas this is hot and May and the beginning of a trip. I definitely don't feel as much of a rush as I typically do to start a trip.
 
-We'd eventually explore up the park overlooking the curve of the city.
 
+## Rip-Off Culture
 
-## Sun 20 May
-
-**Rip-Off Culture**: _01:22:12 +04_ _Clear 17°C_
-
-![43330386840336abc5d6cf7878ed26ce][10]
-
-I hate the awkwardness of not knowing what's free and what might be an exorbitant ripoff in different cultures
-
-I guess finding out is the basis for a funny story though either way?
-
-39m for the food holy fucking hell. A kebab is like 3. Hate feeling taken advantage of, or being a rube. Also hate paying $25 for some chips, smoked cheese, and lemon slices with sugar. Even an airport would be ashamed to charge that.
-
-Can't shake the anger. 39m would buy a good steak dinner for two! But also ultimately it's $20. God I'm broken.
-
-Trying to look at it like a counseling lesson. Maybe now I won't feel awkward about being straight forward and asking "what is this?" and "how much does it cost?"
-
-But so far three incidents in like 6 hours:
-- No Bus, Taxi drivers
-- Hostel putting us in 12-person dorm despite paying for 6-person
-- The above
+_01:22:12 +04_ _Clear 17°C_
 
 One of the places I've traveled that I get asked about my thoughts of most often is Morocco. Lots of people want to travel there. It seems foreign, but accessible. And the Casablanca lore probably keeps in more in people's minds than, say, near neighbor Tunisia.
 
@@ -214,26 +192,51 @@ Hopefully obviously, none of that is to say that I view their culture as bad or 
 
 Baku also felt very Turkic to me, with the same pluses and minuses. Except I wasn't around much to see the positives.
 
-Upon arrival, we needed to secure a transit card to get from the airport to the city center. The transit card machine had no English option. That meant there was a lot of trying out various menus and comparing prices displayed to best guesses. Which means we were there for a bit, and attracted the attention of quite a few of the loitering taxi drivers. Nothing unusual about that and I expect to get touted no matter where I am in that situation, but they -- and this happened in Istanbul, and Yerevan, too -- would constantly be telling us there were no buses. Look man, try to sell me on convenience of the taxi all you want, but I find lying about the presense of a bus pretty annoying. It clearly exists, and I've already told you ten times I'm going to take it.
+Upon arrival, we needed to secure a transit card to get from the airport to the city center. The transit card machine had no English option. That meant there was a lot of trying out various menus and comparing prices displayed to best guesses. Which means we were there for a bit, and attracted the attention of quite a few of the loitering taxi drivers.
+
+![IMG_7115][baku53]
+
+[baku53]: ./photos/IMG_7115.jpg
+
+Nothing unusual about that and I expect to get touted no matter where I am in that situation, but they -- and this happened in Istanbul, and Yerevan, too -- would constantly be telling us there were no buses. Look man, try to sell me on convenience of the taxi all you want, but I find lying about the presense of a bus pretty annoying. It clearly exists, and I've already told you ten times I'm going to take it. For reference, a taxi would've been 20m vs 2.6m for the bus.
 
 We get to the hostel and they don't really have a record of our reservation. We paid for a 4-bed dorm with air conditioning and instead are dumped into a 12-bed dorm without A/C. They compensate for the lack of A/C by having a few fans going and the windows open. But there are no mosquito screens on the windows and so over two nights I manage to accrue quite a number of bites while also being uncomfortably sweaty and hot. Not a welcoming combo.
 
 We strolled the waterfront that night, and before turning in stopped to get a drink. I order a local cognac. I'll end up getting charged double the menu price. Maybe cause I was poured a double? Who knows!
 
-Along with the cognac come a variety of finger bites. I hate the awkwardness of not knowing what's free and what might be an exorbitant ripoff in different cultures. This happened in Switzerland too where a bar we were at put out some peanuts on the table. I mean, they could be free. But being Switzerland they could also end up costing what everything in Switzerland costs - which is about 400% too much. I guess finding out is the basis for a funny story though either way? I take the risk because I'm a sucker for new foods -- these aren't just plain peanuts like in Luzern -- and because I feel like even if we get charged it'll be not much because whatever, it's Azerbaijan.
+![43330386840336abc5d6cf7878ed26ce][10]
 
-The bill comes. 39m for the food holy fucking hell. A kebab is like 3. Hate feeling taken advantage of, or being a rube. Also hate paying $25 for some chips, smoked cheese, and lemon slices with sugar. Even an airport would be ashamed to charge that. Can't shake the anger. 39m would buy a good steak dinner for two! But also ultimately it's $20. God I'm broken. I'm trying to look at it like a lesson. Maybe now I won't feel awkward about being straight forward and asking "what is this? how much does it cost?"
+Along with the cognac come a variety of finger bites. I hate the awkwardness of not knowing what's free and what might be an exorbitant ripoff in different cultures. This happened in Switzerland too where a bar we were at put out some peanuts on the table. I mean, they could be free. But being Switzerland they could also end up costing what everything in Switzerland costs - which is about 400% too much.
 
-The next day we spot a funicular was listed in the guide as being free, but an attendant was hovering in the vicinity of the turnstile and whenever tourists approached would insist on payment to let people through. Again, it was 1 manat or something similarly petty so it's not a big deal, and in isolation I wouldn't even remember it. But when little things like that happen time and time again throughout a day, they add up and leave a certain impression that outweighs others.
+I guess finding out is the basis for a funny story though either way? I take the risk because I'm a sucker for new foods -- these aren't just plain peanuts like in Luzern -- and because I feel like even if we get charged it'll be not much because whatever, it's Azerbaijan.
 
-An overarching theme is that dishonesty is a super big deal for me. On a higher level, that's corruption and also uncertainty, and having some degree of certainty, or trust, in the civic institutions is a big help. I'm fed up with the lack of that in America as well.	
+Then the bill comes. 39m for the food holy fucking hell. A kebab is like 3. Hate feeling taken advantage of, or being a rube. Also hate paying $25 for some chips, smoked cheese, and lemon slices with sugar. Even an airport would be ashamed to charge that.
+
+I can't shake the anger for quite some time. 39m would buy a good steak dinner for two! But also ultimately it's $20. God I'm broken. I'm trying to look at it like a lesson. Maybe now I won't feel awkward about being straight forward and asking "what is this? how much does it cost?"
+
+The next day we spot a funicular was listed in the guide as being free, but an attendant was hovering in the vicinity of the turnstile and whenever tourists approached would insist on payment to let people through.
+
+Again, it was 1 manat or something similarly petty so it's not a big deal, and in isolation I wouldn't even remember it. But when little things like that happen time and time again throughout a day, they add up and leave a certain impression that outweighs others. A few moments later I bought a water at a kiosk and wasn't given any change back.
+
+At one point later on we wandered into a Spar market. I think Robert wanted an energy drink or something. I was just browsing around looking at what's there and what beers they have when a clerk comes over and complains about something to me. He keeps repeating basically the same thing and miming something. I keep saying I don't know and just decide to leave. On way out second clerk with a bit of English mildly interrogates us. Best I can tell accusing us of taking photos? So What? What's wrong with taking a photo or two? I had a similar encounter in Poland once and it's so weird to me. Anyways, I never even had phone out of my pocket so I just ignore them and continue walking out.
+
+And then about 10 minutes later I suddently remember that oh yeah, I did take a photo... Because in their liquor selection I saw a bottle labelled White Goose with a design baring obvious resemblance to Grey Goose.
+
+![b345392b361eda2280b60b828aee4a04][14]
+
+It was such a brief ha that I instantly forgot about doing it. At the time I believe I thought it was just a small funny example of the different naming/branding in countries. Like how Sriracha in Germany has a swallow on the bottle instead of a rooster. Exactly the sort of little different I like to pick out when traveling. A Royale with Cheese. Why should the attendants care?
+
+But Robert points out that a more likely explanation is that the White Goose isn't just the regional name, but rather an intentional counterfeit product. Oh. Yeah, that does make more sense in this context. How bizarre is it that a place like Spar carries such products?! More examples of that low-level corruption and untrustworthiness.
+
+An overarching theme is that dishonesty is a super big deal for me. On a higher level, that's corruption and also uncertainty, and having some degree of certainty, or trust, in the civic institutions is a big help. I'm fed up with the lack of that in America as well.
 
 _Dənizkənarı Milli Park Baku Azerbaijan 40.367, 49.840_
 
----
+
+## Sun 20 May
 
 **Old Town dead**: _09:58:51 +04_
-Nobody out. Not very exciting. Kinda hot in the sun all the time.
+We venture out to explore the city in daylight. There is nobody out. Not very exciting. Kinda hot in the sun all the time.
 
 ---
 
@@ -259,20 +262,12 @@ Fountains
 
 ---
 
-**"free" funicular**: _11:08:10 +04_
-Charged 1 manat. The low level scam like that I don't much mind.
-
-Also charged 1 manat for a water. No way
-
-
----
-
 **Loooooong siesta**: _20:52:52 +04_
-Went back to the hostel around 1p meaning to escape the sun and think of what to do.
+Went back to the hostel around 1p intending just to escape the sun for a bit and think of what to do.
 
 Used a decent chunk of time interacting on tinder. A couple prostitutes. Weirdly the rate seems to be for two hours. Ranges from 100 to 150
 
-Anyways, ended up falling asleep and instead of a cat nap, everytime ibwokenup there was no motivation to do anything so went back to sleep. Stayed in bed until 8:30! Not going to be great for getting on a normal schedule but oh well.
+Anyways, ended up falling asleep and instead of a cat nap, everytime I woke up there was no motivation to do anything so went back to sleep. Stayed in bed until 8:30! Not going to be great for getting on a normal schedule but oh well.
 
 Larger picture I'm just not very excited by Baku. Can't quite tell why. Even in places not my fancy I usually get an energy boost from arriving. Instead I'm more wondering if I'll feel so nonplussed all trip. Maybe I'm just put off by the disappointing hostel and bulvar rip-off?
 
@@ -293,77 +288,47 @@ An early reminder that we'd be making use of bidets frequently on this trip. It 
 
 ![c55b2e5c2f07fd9e00533554cdc5bbac][11]
 
-For closed
-_Shovket Alekbarova Baku Azerbaijan 40.360, 49.833_
+Heading back to the funicular Robert hopes to catch it before it closes for the night. Despite this curious sign, the funicular did not run again.
 
----
+I opted for the stairs and Robert, true to form, decided to wait and see.
 
-**Waiting for Robert and thinking**: _22:12:14 +04_
+Result is that I've been up here by the Soviet statue for 20 minutes. But it's nice. There's a persistent gentle breeze and the square is rather deserted leaving me unbothered and free to reflect.
 
 ![458500a569bed537592170e46a7ea8d5][12]
 
-The funicular going up had doors closed and locked despite running time until 10p it said (it was 9:30 at the time). I opted for the stairs and Robert true to form decided to wait and see.
-
-Result is that I've been up here by the Soviet statue for 20 minutes. But it's nice. There's a persistent gentle breeze and the square is rather deserted leaving me unbothered and free to reflect. Robert comes along sooner than expected too.
-
-I travel and avoid social interactions almost to a fault. No taxis or haggling or trying to learn from locals, preferring to do research ahead of time. I say it's to not look foolish and be taken advantage of.
+I travel but avoid social interactions almost to a fault. No taxis or haggling or trying to learn from locals, preferring to do research ahead of time. I say it's to not look foolish and be taken advantage of.
 
 (or be vulnerable? though when I've been truly vulnerable people have been amazing)
 
-I travel to see human creations but don't like humans or want to interact with them?
-:star:
+I travel to see human creations but don't like humans or want to interact with them? And notably here, I don't have the same hesitation in Germany that I do here about trusting strangers. Is it culture? Is it language? Is it personal experience?
+
+_Shovket Alekbarova Baku Azerbaijan 40.360, 49.833_
 
 ---
 
 **Finally not efes**: _23:26:33 +04_
 
+We hit up a bar with decent RateBeer ratings. It's a microbrewery apparently (they do have the equipment at least).
+
 ![9f0e7676fe7ad3798bc7ffe450034f86][13]
 
-The light pils was solid, the marzen medium red good, the dark average
-
-
-## Mon 21 May
-
-**Interaction with locals**: _00:57:09 +04_
-I don't have the hesitation in Germany that I do here about trusting strangers. Is it culture? Is it language? Is it personal experience?
-
-
----
-
-**Bizarre spar**: _01:26:02 +04_
-
-![b345392b361eda2280b60b828aee4a04][14]
-
-At one point we wandered into a Spar market. I think Robert wanted an energy drink or something. I was just browsing around looking at what's there and what beers they have when a clerk comes over and complains about something to me. He keeps repeating basically the same thing and miming something. I keep saying I don't know and just decide to leave. On way out second clerk with a bit of English mildly interrogates us. Best I can tell accusing us of taking photos? So What? What's wrong with taking a photo or two? I had a similar encounter in Poland once and it's so weird to me. Anyways, I never even had phone out of my pocket so I just ignore them and continue walking out.
-
-And then about 10 minutes later I suddently remember that oh yeah, I did take a photo... Because in heir liquor selection I saw a bottle labelled White Goose with a design baring obvious resemblance to Grey Goose. It was such a brief ha that I instantly forgot about doing it. At the time I believe I thought it was just a small funny example of the different naming/branding in countries. Like how Sriracha in Germany has a swallow on the bottle instead of a rooster. Exactly the sort of little different I like to pick out when traveling. A Royale with Cheese. Why should the attendants care?
-
-But Robert points out that a more likely explanation is that the White Goose isn't just the regional name, but rather an intentional counterfeit product. Oh. Yeah, that does make more sense in this context. How bizarre is it that a place like Spar carries such products?! More examples of that low-level corruption and untrustworthiness.
-
-Just browsing around looking at what's there and what beers they have when a clerk comes over and complains about something and mimes. I keep saying I don't know and just decide to leave. On way out second clerk with a bit of English mildly interrogates us. Best I can tell accusing us of taking photos? Never even had phone out of my pocket.
-
-Wait nevermind. Sheepish. Because i did take this.Thinking it was funny but Robert points out might be counterfeit
-:star:
+The light pils was solid, the marzen medium red good, the dark average.
 
 ---
 
 **Trippy sidewalk**: _02:05:57 +04_ _Clear 17°C_
 
-![980ac9aa53cb0e64d3d55a3c08e68dd2][15]
-
 This sidewalk at 2am was quite trippy. There was some sparkling to the paving as well so it sort of shimmered and really messed with your perspective. The pattern made it seem 3D.
 
-_Rashid Behbudov Baku Azerbaijan 40.372, 49.848_
+![980ac9aa53cb0e64d3d55a3c08e68dd2][15]
 
----
-
-**Gold Porsche outside a nightclub**: _02:10:15 +04_ _Clear 17°C_
+A moment later we pass by this
 
 ![ae6df65e34474002c1c38ecf1b144acc][16]
 
-Spotted outside a club at 2am; a completely gold-plated Porsche. Totally legit I am sure.
+A completely gold-plated Porsche parked outside a club at 2am. Totally legit I am sure.
 
-_Khagani Street Baku Azerbaijan 40.374, 49.847_
+_Rashid Behbudov Baku Azerbaijan 40.372, 49.848_
 
 ---
 
@@ -373,7 +338,8 @@ Deposite not really eating today and passing an abundance of late night döner s
 Should get a döner tomorrow though
 
 
----
+## Mon 21 May
+
 
 **Baku metro, to Sheki**: _09:57:37 +04_
 Almost take an Uber to bus station but decide on metro instead. Get to see how deep it runs, for bomb shelter purposes.
