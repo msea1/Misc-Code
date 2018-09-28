@@ -346,9 +346,19 @@ More from photos/output.md
 
 
 **Baku metro, to Sheki**: _09:57:37 +04_
-Almost take an Uber to bus station but decide on metro instead. Get to see how deep it runs, for bomb shelter purposes.
+Almost take an Uber to bus station but decide on metro instead. Get to see how deep it runs, for bomb shelter purposes. Lots of subways/metros in the ex-Soviet world doubled as bomb shelters (c.f Kiev) and so the entries are ridiculously long descents.
 
-Trying to decide on bus vs maxitaxi. Bus looks old probably not aircon and the guide says buses take less interesting route. So opt for typical maxitaxi can, 7m that leaves 50 minutes later. Supposedly.
+![IMG_7119][baku50]
+
+[baku50]: ./photos/IMG_7119.jpg
+
+Then emerging to Baku's Central Station
+
+![IMG_7118][baku49]
+
+[baku49]: ./photos/IMG_7118.jpg
+
+Trying to decide on bus vs maxitaxi. Bus looks old probably not aircon and the guide says buses take less interesting route. So opt for typical maxitaxi van, 7m that leaves 50 minutes later. Supposedly.
 
 
 ---

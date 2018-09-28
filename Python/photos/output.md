@@ -127,20 +127,6 @@ Tradition to hang bread out
 [baku48]: ./photos/IMG_7040.jpg
 
 
-![IMG_7118][baku49]
-
-Baku Central Station
-
-[baku49]: ./photos/IMG_7118.jpg
-
-
-![IMG_7119][baku50]
-
-Lots of subways/metros in the ex-Soviet world doubled as bomb shelters (c.f Kiev) and so the entries are ridiculously long descents.
-
-[baku50]: ./photos/IMG_7119.jpg
-
-
 ![IMG_7316][baku51]
 
 They literally sent me this a few days after leaving.
