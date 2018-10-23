@@ -149,3 +149,10 @@ pdt() {
   ssh -p 24022 root@10.234.1.$ip
 }
 
+sign_vbox() {
+  sudo -i
+  cd /root/module-signing/
+  bash sign-vbox-modules
+  modprobe vboxdrv
+  exit
+}
