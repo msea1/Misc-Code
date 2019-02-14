@@ -24,6 +24,7 @@ alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{
 alias dockstop='docker rm -f -v $(docker ps -a -q)'
 alias ld='ls -ABF --group-directories-first --color=auto'
 alias ll='ls -AhlF --group-directories-first --color=auto'
+alias files='xdg-open .'
 alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc'
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'
