@@ -68,7 +68,7 @@ gemini_tests() {
   ./pants test :: --tag=-integration --tag=uvloop_old --tag=-aioredis_new > ~/Temp/gemini_tests.out
   ./pants test :: --tag=-integration --tag=-uvloop_old --tag=-aioredis_new >> ~/Temp/gemini_tests.out
   ./pants test :: --tag=-integration --tag=-uvloop_old --tag=aioredis_new >> ~/Temp/gemini_tests.out
-  grep -Eo '\.\.\.\.\.   (SUCCESS|FAILURE)' ~/Temp/gemini_tests.out | sort | uniq -c | awk '{print $3": "$1}'
+  grep -Eo '(.*):test.*\.\.\.\.\.   FAILURE' ~/Temp/gemini_tests.out | sort | uniq -c | awk '{print $4": "$2}' && grep -Eo '\.\.\.\.\.   SUCCESS' ~/Temp/gemini_tests.out | sort | uniq -c | awk '{print $3": "$1}'
 }
 
 gps() {
