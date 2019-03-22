@@ -42,9 +42,11 @@ pause "Install TOMLs"
 cd tomls/
 cd command-toml/
 pip install -r requirements.txt
-python3 setup.py install
+sudo python3 setup.py install
+sudo chown -R $USER ./*
 cd ../sap-toml/
-python3 setup.py install
+sudo python3 setup.py install
+sudo chown -R $USER ./*
 
 
 pause "Test TOMLs. These may need to be run with sudo, or chown $USER first"
