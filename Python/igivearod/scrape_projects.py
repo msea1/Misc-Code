@@ -1,74 +1,82 @@
 import json
+from os.path import dirname, join
+
 import requests
 from bs4 import BeautifulSoup as soup
 
-sample_url = 'https://www.donorschoose.org/project/alaska-1130-earthquake-help/3814450/'
-sample_url = 'https://www.donorschoose.org/project/i-see-a-food-chain-in-the-sea/3921300/'
+url_file = join(dirname(__file__), 'project_urls.txt')
+with open(url_file) as fin:
+    urls = fin.readlines()
 
-html = requests.get(sample_url)
-souped = soup(html.content, 'html.parser')
+project_data = {}
 
-data = {
-    'project name': "",
-    'project link': "",
-    'project html': "",
+for project in urls:
+    print(f"parsing {project}")
+    data = {}
+    html = requests.get(project)
+    souped = soup(html.content, 'html.parser')
 
-    'school name': "",
-    'school link': "",
-    'school html': "",
+    data['project name'] = souped.find('title').text.strip().split(' | ')[0]
+    data['project link'] = project
+    data['project html'] = f'<a href=\"{data["project link"]}\">{data["project name"]}</a>'
+    data['project_id'] = project.split('/')[-2]
 
-    'teacher name': "",
-    'teacher link': "",
-    'teacher html': "",
+    school_info = souped.find(id='school-details-all').find_all('li')
+    data['school name'] = school_info[0].text.strip()
+    # data['school name'] = school.text.strip().replace('\t', '').replace('\n', '-').replace('---', ' - ')
+    data['school link'] = school_info[0].find('a', 'teacher-school').attrs['href']
+    data['school location'] = school_info[1].text.strip().replace('\t', '').replace('\n', '')
+    data['school html'] = f'<a href=\"{data["school link"]}\">{data["school name"]}</a>'
 
-    'number of donors': "",
-    'amount raised': "",
-    'timeline of donations': "",
-    'students desc': "",
-    'project desc': "",
-    'materials bought': "",
-    'teacher updates': "",
-}
+    teacher = souped.find('a', {'class': 'teacher-link'})
+    data['teacher name'] = teacher.text.strip()
+    data['teacher link'] = teacher.attrs['href']
+    data['teacher html'] = f'<a href=\"{data["teacher link"]}\">{data["teacher name"]}</a>'
 
-data['project name'] = souped.find('title').text.strip().split(' | ')[0]
-data['project link'] = sample_url
-data['project html'] = f'<a href=\"{data["project link"]}\">{data["project name"]}</a>'
+    goal = souped.find('ul', {'class': 'donation-stats'}).text
+    try:
+        data['number of donors'], data['amount raised'] = goal.split('\n')[1:2]
+    except ValueError:
+        data['amount raised'] = goal.split('\n')[1]
 
-school = souped.find(id='school-details-all')
-data['school name'] = school.text.strip().replace('\t', '').replace('\n', '-').replace('---', ' - ')
-data['school link'] = school.find('a', 'teacher-school').attrs['href']
-data['school html'] = f'<a href=\"{data["school link"]}\">{data["school name"]}</a>'
+    students = souped.find('div', {'class': 'js-about-students'})
+    data['students desc'] = " \n\n ".join([r.text for r in list(students.children) if r.text != ""])
 
-teacher = souped.find('a', {'class': 'teacher-link'})
-data['teacher name'] = teacher.text.strip()
-data['teacher link'] = teacher.attrs['href']
-data['teacher html'] = f'<a href=\"{data["teacher link"]}\">{data["teacher name"]}</a>'
+    project = souped.find('div', {'class': 'js-about-project'})
+    data['project desc'] = " \n\n ".join([r.text for r in list(project.children) if r.text != ""])
 
-goal = souped.find('ul', {'class': 'donation-stats'}).text
-_, data['number of donors'], data['amount raised'], _ = goal.split('\n')
-
-students = souped.find('div', {'class': 'js-about-students'})
-data['students desc'] = " \n\n ".join([r.text for r in list(students.children) if r.text != ""])
-
-project = souped.find('div', {'class': 'js-about-project'})
-data['project desc'] = " \n\n ".join([r.text for r in list(project.children) if r.text != ""])
-
-materials = souped.find('table', {'class': 'materials-table'})
-material_list = [item.text.strip().replace('\t', '').replace('\n', '') for item in
-                 materials.find_all('td', {'class': 'itemName'})]
-data['materials bought'] = ", ".join(material_list)
+    materials = souped.find('table', {'class': 'materials-table'})
+    material_list = [item.text.strip().replace('\t', '').replace('\n', '') for item in
+                     materials.find_all('td', {'class': 'itemName'})]
+    data['materials bought'] = ", ".join(material_list)
 
 
-# table = souped.find(lambda tag: tag.name=='ol' and tag.has_attr('class') and tag['class']=="activity")
-# rows = table.find_all(lambda tag: tag.name=='tr')
+    # table = souped.find(lambda tag: tag.name=='ol' and tag.has_attr('class') and tag['class']=="activity")
+    # rows = table.find_all(lambda tag: tag.name=='tr')
 
-teacher_comments = [item.text.strip().replace('\t', '').replace('\n', '') for item in
-                    souped.find_all('div', {'class': 'teacher-comment'})]
-data['teacher updates'] = " \n\n ".join(teacher_comments)
+    # activity = souped.find(id='activity')
+    # print(activity)
+    # print(activity.find_all('li'))
+ # https://www.donorschoose.org/project/stem-fairy-tale-kits/3976179/#project-activity
 
-data['project started'] = souped.find('li', id="pm-1")
+    teacher_comments = [item.text.strip().replace('\t', '').replace('\n', '') for item in
+                        souped.find_all('div', {'class': 'teacher-comment'})]
+    data['teacher updates'] = " \n\n ".join(teacher_comments)
 
-print(json.dumps(data, indent=4, sort_keys=True))
+    data['project started'] = souped.find('li', id="pm-1")
 
-print(f"Fields left: {[k for k, v in data.items() if v == '']}")
-print(f"Fields Got: {[k for k, v in data.items() if v != '']}")
+    # print(json.dumps(data, indent=4, sort_keys=True))
+
+    project_data[data['project_id']] = data
+
+# Fields left: ['timeline of donations', 'materials bought', 'teacher updates']
+# Fields Got: ['project name', 'project link', 'project html', 'school name', 'school link', 'school html', 'teacher name', 'teacher link', 'teacher html', 'number of donors', 'amount raised', 'students desc', 'project desc', 'project started']
+
+cities = set(data['school location'] for data in project_data.values())
+
+cities = set(b['school location'] for b in project_data.values() for _ in b.keys())
+print(cities)
+
+dump_file = join(dirname(__file__), 'project_dump.json')
+with open(dump_file, 'w+') as fout:
+    json.dump(project_data, fout)
