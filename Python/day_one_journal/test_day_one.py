@@ -1,6 +1,6 @@
 import unittest
 
-import day_one_to_md as md
+from day_one_journal import day_one_to_md as md
 
 
 class TestMarkdownFormat(unittest.TestCase):

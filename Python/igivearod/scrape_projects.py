@@ -37,7 +37,11 @@ for project in urls:
     try:
         data['number of donors'], data['amount raised'] = goal.split('\n')[1:2]
     except ValueError:
-        data['amount raised'] = goal.split('\n')[1]
+        avail_info = goal.split('\n')[1]
+        if 'donors' not in avail_info:
+            data['amount raised'] = avail_info
+        else:
+            data['number of donors'] = avail_info
 
     students = souped.find('div', {'class': 'js-about-students'})
     data['students desc'] = " \n\n ".join([r.text for r in list(students.children) if r.text != ""])
@@ -72,7 +76,7 @@ for project in urls:
 # Fields left: ['timeline of donations', 'materials bought', 'teacher updates']
 # Fields Got: ['project name', 'project link', 'project html', 'school name', 'school link', 'school html', 'teacher name', 'teacher link', 'teacher html', 'number of donors', 'amount raised', 'students desc', 'project desc', 'project started']
 
-cities = set(data['school location'] for data in project_data.values())
+# cities = set(data['school location'] for data in project_data.values())
 
 cities = set(b['school location'] for b in project_data.values() for _ in b.keys())
 print(cities)

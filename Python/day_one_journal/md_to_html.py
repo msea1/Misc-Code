@@ -80,6 +80,7 @@ def replace_stars(html):
         last = i
     return data
 
+
 def adjust_image_size(html):
     all_img = html.find_all("img")
     for i in all_img:
