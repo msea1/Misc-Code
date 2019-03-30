@@ -9,6 +9,8 @@ with open(url_file) as fin:
     urls = fin.readlines()
 
 project_data = {}
+city_data = {}
+school_data = {}
 
 for project in urls:
     print(f"parsing {project}")
@@ -35,7 +37,7 @@ for project in urls:
 
     goal = souped.find('ul', {'class': 'donation-stats'}).text
     try:
-        data['number of donors'], data['amount raised'] = goal.split('\n')[1:2]
+        data['number of donors'], data['amount raised'] = goal.split('\n')[1:3]
     except ValueError:
         avail_info = goal.split('\n')[1]
         if 'donors' not in avail_info:
@@ -54,14 +56,13 @@ for project in urls:
                      materials.find_all('td', {'class': 'itemName'})]
     data['materials bought'] = ", ".join(material_list)
 
-
     # table = souped.find(lambda tag: tag.name=='ol' and tag.has_attr('class') and tag['class']=="activity")
     # rows = table.find_all(lambda tag: tag.name=='tr')
 
     # activity = souped.find(id='activity')
     # print(activity)
     # print(activity.find_all('li'))
- # https://www.donorschoose.org/project/stem-fairy-tale-kits/3976179/#project-activity
+    # https://www.donorschoose.org/project/stem-fairy-tale-kits/3976179/#project-activity
 
     teacher_comments = [item.text.strip().replace('\t', '').replace('\n', '') for item in
                         souped.find_all('div', {'class': 'teacher-comment'})]
@@ -73,14 +74,30 @@ for project in urls:
 
     project_data[data['project_id']] = data
 
+    city_data.get(data['school location'], []).append(data)
+    school_data.get(data['school name'], []).append(data)
+
 # Fields left: ['timeline of donations', 'materials bought', 'teacher updates']
 # Fields Got: ['project name', 'project link', 'project html', 'school name', 'school link', 'school html', 'teacher name', 'teacher link', 'teacher html', 'number of donors', 'amount raised', 'students desc', 'project desc', 'project started']
-
-# cities = set(data['school location'] for data in project_data.values())
 
 cities = set(b['school location'] for b in project_data.values() for _ in b.keys())
 print(cities)
 
+schools = set(b['school name'] for b in project_data.values() for _ in b.keys())
+print(schools)
+
+# # end up with sorted [{"city name": [{"school name": [{project_1}, ] } ] } ]
+# for project_id, project_data in project_data.items():
+#     pass
+
 dump_file = join(dirname(__file__), 'project_dump.json')
 with open(dump_file, 'w+') as fout:
     json.dump(project_data, fout)
+
+dump_file = join(dirname(__file__), 'city_dump.json')
+with open(dump_file, 'w+') as fout:
+    json.dump(city_data, fout)
+
+dump_file = join(dirname(__file__), 'school_dump.json')
+with open(dump_file, 'w+') as fout:
+    json.dump(school_data, fout)
