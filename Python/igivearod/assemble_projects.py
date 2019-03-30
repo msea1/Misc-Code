@@ -1,7 +1,7 @@
 # convert project_dump into usable HTML
 
 import json
-from os.path import join, dirname
+from os.path import dirname, join
 
 url_file = join(dirname(__file__), 'project_dump.json')
 with open(url_file) as fin:
@@ -15,9 +15,6 @@ url_file = join(dirname(__file__), 'school_dump.json')
 with open(url_file) as fin:
     school_data = json.load(fin)
 
-# cities = set(b['school location'] for b in data.values() for _ in b.keys())
-# print(cities)
-
 """
 Barrow
     Eben Hopson Memorial Middle School
@@ -27,12 +24,12 @@ Barrow
 
 output_html = "<table><tr><th>CITY</th><th>SCHOOL</th><th>PROJECT</th><th>$ RAISED</th><th>DONORS</th></tr>"
 
-grouped_data_list = []
-# end up with sorted [{"city name": [{"school name": [{project_1}, ] } ] } ]
 for project_id, project_data in data.items():
     city_key = city_data.get(project_data['school location'], {})
     school_key = city_key.get(project_data['school name'], [])
+
     school_key.append(project_data)
+
     city_key[project_data['school name']] = school_key
     city_data[project_data['school location']] = city_key
 
@@ -44,6 +41,7 @@ for city, city_projects in sorted(city_data.items()):
             continue
         output_html += f'<tr><td></td><td>{school_projects[0]["school html"]}</tr>'
         for project in school_projects:
+            # deal with that number of donors or amount raised not always present for some reason
             goal = project["amount raised"].split()[0] if "goal" in project["amount raised"] else None
             if not goal:
                 if 'goal' in project['number of donors']:
