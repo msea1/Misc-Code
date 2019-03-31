@@ -61,7 +61,7 @@ for city, city_projects in sorted(city_data.items()):
                 f'<td>{goal}</td>' \
                 f'<td>{donors}</td></tr>'
             output_html += this_proj
-
+output_html += "</table>"
 
 dump_file = join(dirname(__file__), 'projects_html.html')
 with open(dump_file, 'w+') as fout:
