@@ -113,6 +113,16 @@ new_venv() {
   work $1
 }
 
+pants_push(){
+	gemini
+	dir_path=${1::-1}
+	svc_name=${dir_path##*/}
+	./pants binary $1/::
+	sudo docker build -t registry.service.nsi.gemini/matthew/$svc_name -f $1/Dockerfile .
+	sudo docker push registry.service.nsi.gemini/matthew/$svc_name
+	cd -
+}
+
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
