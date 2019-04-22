@@ -15,7 +15,7 @@ cdl() {
 }
 
 code_rvw() {
-  echo "erybczynski, MBlondeel, JHersch, jbrazel, zelan, darreng" | xsel -ib
+  echo "erybczynski, MBlondeel, JHersch, zelan, darreng" | xsel -ib
   arc diff $1
 }
 
@@ -158,12 +158,4 @@ vsat() {
 pdt() {
   ip=$(($1 + 89))
   ssh -p 24022 root@10.234.1.$ip
-}
-
-sign_vbox() {
-  sudo -i
-  cd /root/module-signing/
-  bash sign-vbox-modules
-  modprobe vboxdrv
-  exit
 }
