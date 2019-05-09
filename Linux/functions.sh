@@ -15,7 +15,7 @@ cdl() {
 }
 
 code_rvw() {
-  echo "erybczynski, MBlondeel, JHersch, zelan, darreng" | xsel -ib
+  echo "bwolfe, erybczynski, MBlondeel, JHersch, zelan, darreng" | xsel -ib
   arc diff $1
 }
 
