@@ -1,0 +1,1340 @@
+{
+"metadata" : {
+  "version" : "1.0"
+},
+"entries" : [
+{
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : -122.59570946814328,
+        "latitude" : 45.591290414950166
+      },
+      "identifier" : "<+45.59129041,-122.59570947> radius 141.66",
+      "radius" : 141.66105802867423
+    },
+    "localityName" : "Portland",
+    "country" : "United States",
+    "timeZoneName" : "America\/Los_Angeles",
+    "administrativeArea" : "OR",
+    "longitude" : -122.59571075439453,
+    "placeName" : "Portland International Airport",
+    "latitude" : 45.591289520263672
+  },
+  "uuid" : "C37499C5E9BE47E68BEEAE8CCDFEA7C8",
+  "creationDeviceType" : "iPhone",
+  "starred" : false,
+  "text" : "# A key goal this trip\n\nDon't sweat it\\! You're going to see the Cherry blossoms and that's the overwhelming goal\\. Achieve that and it's a success\\.\n\nAfter that, enjoy the train scenery\\.\n\nAfter that, do weird Japanese things like an owl Cafe\n\nFinally, last, cross off city sights\\.",
+  "creationOSName" : "iOS",
+  "creationOSVersion" : "12.1.4",
+  "duration" : 0,
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"A key goal this trip\\n\"},{\"text\":\"\\n\"},{\"text\":\"Don't sweat it! You're going to see the Cherry blossoms and that's the overwhelming goal. Achieve that and it's a success.\\n\\nAfter that, enjoy the train scenery.\\n\\nAfter that, do weird Japanese things like an owl Cafe\\n\\nFinally, last, cross off city sights.\"}]}",
+  "timeZone" : "America\/Los_Angeles",
+  "creationDate" : "2019-03-29T19:09:53Z",
+  "creationDevice" : "iPhone",
+  "weather" : {
+    "sunsetDate" : "2019-03-30T02:35:29Z",
+    "temperatureCelsius" : 11.699999809265137,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : 20,
+    "sunriseDate" : "2019-03-29T13:54:27Z",
+    "conditionsDescription" : "Partly Cloudy",
+    "pressureMB" : 1028,
+    "visibilityKM" : 16.093439102172852,
+    "relativeHumidity" : 72,
+    "windSpeedKPH" : 9,
+    "weatherCode" : "partly-cloudy",
+    "windChillCelsius" : 12
+  },
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-03-29T19:11:20Z"
+},
+{
+  "modifiedDate" : "2019-03-29T19:13:12Z",
+  "creationDeviceType" : "iPhone",
+  "duration" : 0,
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Priority Pass restaurant\\n\"},{\"text\":\"\\n\"},{\"text\":\"Good thing Robert reminded me of this before the trip. The one line in PDX was closed to priority pass when I arrived so I detoured to the available Cafe and got a good meal for the cost of a few spare bucks in tip. \\n\\nDid eventually get into the lounge and it was lousy with amenities. Previewing what's available in Narita and I'm starting to think that Hanoi and Taipei fucked my expectations curve\"}]}",
+  "uuid" : "10D3BD16A059446CAE017366F4F1FAAE",
+  "weather" : {
+    "sunsetDate" : "2019-03-30T02:35:29Z",
+    "temperatureCelsius" : 11.699999809265137,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : 20,
+    "sunriseDate" : "2019-03-29T13:54:27Z",
+    "conditionsDescription" : "Partly Cloudy",
+    "pressureMB" : 1028,
+    "visibilityKM" : 16.093439102172852,
+    "relativeHumidity" : 72,
+    "windSpeedKPH" : 9,
+    "weatherCode" : "partly-cloudy",
+    "windChillCelsius" : 12
+  },
+  "starred" : false,
+  "creationOSName" : "iOS",
+  "creationDate" : "2019-03-29T19:11:27Z",
+  "text" : "# Priority Pass restaurant\n\nGood thing Robert reminded me of this before the trip\\. The one line in PDX was closed to priority pass when I arrived so I detoured to the available Cafe and got a good meal for the cost of a few spare bucks in tip\\. \n\nDid eventually get into the lounge and it was lousy with amenities\\. Previewing what's available in Narita and I'm starting to think that Hanoi and Taipei fucked my expectations curve",
+  "creationOSVersion" : "12.1.4",
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : -122.59572451718827,
+        "latitude" : 45.591249756798831
+      },
+      "identifier" : "<+45.59124976,-122.59572452> radius 141.66",
+      "radius" : 141.66105835545852
+    },
+    "localityName" : "Portland",
+    "country" : "United States",
+    "timeZoneName" : "America\/Los_Angeles",
+    "administrativeArea" : "OR",
+    "longitude" : -122.59572601318359,
+    "placeName" : "Portland International Airport",
+    "latitude" : 45.591251373291016
+  },
+  "timeZone" : "America\/Los_Angeles",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationDevice" : "iPhone"
+},
+{
+  "starred" : false,
+  "duration" : 0,
+  "creationDevice" : "iPhone",
+  "modifiedDate" : "2019-03-30T07:52:35Z",
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Forgot a towel :\\\/\\n\"},{\"text\":\"\\n\"},{\"text\":\"Grabbed the delta blanket as a backstop\"}],\"meta\":{\"version\":1}}",
+  "creationDate" : "2019-03-30T03:36:25Z",
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 3398
+  },
+  "text" : "# Forgot a towel :\/\n\nGrabbed the delta blanket as a backstop",
+  "creationDeviceType" : "iPhone",
+  "creationOSName" : "iOS",
+  "uuid" : "EAB7857A4704409B9A01597C9BEF0690",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "starred" : false,
+  "duration" : 0,
+  "creationDevice" : "iPhone",
+  "modifiedDate" : "2019-03-30T11:13:54Z",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Jetlag\\n\"},{\"text\":\"\\n\"},{\"text\":\"There's something so odd about spending all day on a plane and them just wanting to lay down and sleep. Like, I didn't expend any energy. \\n\\nThough in this case it makes sense because I didn't nap on the flight and Seattle time it's 1am and I awoke at 5:30 on little sleep.\\n\\nI think if I could make it to like 8pm before crashing that'd be good but I'm trying not to force anything. It'd feel accomplishing to get the Tokyo stuff done but ehhhh, see how I feel after a shower. And also where I need to go tomorrow to get rail pass and Hiroshima train.\\n\\nTokyo Stuff\\n\"},{\"attributes\":{\"line\":{\"indentLevel\":1,\"listStyle\":\"bulleted\"}},\"text\":\"Owl Cafe\\n\"},{\"attributes\":{\"line\":{\"indentLevel\":1,\"listStyle\":\"bulleted\"}},\"text\":\"Godzilla\\n\"},{\"attributes\":{\"line\":{\"indentLevel\":1,\"listStyle\":\"bulleted\"}},\"text\":\"Ghibli clock\\n\"},{\"attributes\":{\"line\":{\"indentLevel\":1,\"listStyle\":\"bulleted\"}},\"text\":\"Rainbow bridge\\n\"},{\"text\":\"\\nEnded up with decent initial energy burst. Walked through the shrine I ended my trip with last time (makes sense) and browsed the blossoms along Sumida Park. Then got Lawson's takeaway and now back to sleep.\"}]}",
+  "creationDate" : "2019-03-30T07:52:38Z",
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 5015
+  },
+  "text" : "# Jetlag\n\nThere's something so odd about spending all day on a plane and them just wanting to lay down and sleep\\. Like, I didn't expend any energy\\. \n\nThough in this case it makes sense because I didn't nap on the flight and Seattle time it's 1am and I awoke at 5:30 on little sleep\\.\n\nI think if I could make it to like 8pm before crashing that'd be good but I'm trying not to force anything\\. It'd feel accomplishing to get the Tokyo stuff done but ehhhh, see how I feel after a shower\\. And also where I need to go tomorrow to get rail pass and Hiroshima train\\.\n\nTokyo Stuff\n- Owl Cafe\n- Godzilla\n- Ghibli clock\n- Rainbow bridge\n\nEnded up with decent initial energy burst\\. Walked through the shrine I ended my trip with last time \\(makes sense\\) and browsed the blossoms along Sumida Park\\. Then got Lawson's takeaway and now back to sleep\\.",
+  "creationDeviceType" : "iPhone",
+  "creationOSName" : "iOS",
+  "uuid" : "C8C37A49AACA4BD0BC04FFF0B4A54304",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "duration" : 0,
+  "creationDate" : "2019-03-30T15:51:14Z",
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 139.79403033479579,
+        "latitude" : 35.712274988066476
+      },
+      "identifier" : "<+35.71227499,+139.79403033> radius 70.87",
+      "radius" : 70.869885667376749
+    },
+    "localityName" : "Taito-Ku",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Tokyo",
+    "longitude" : 139.79403686523438,
+    "placeName" : "27-10, Asakusa 1-Chōme",
+    "latitude" : 35.712276458740234
+  },
+  "creationOSName" : "iOS",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "weather" : {
+    "sunsetDate" : "2019-03-30T09:00:14Z",
+    "temperatureCelsius" : 9,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : 70,
+    "sunriseDate" : "2019-03-29T20:30:52Z",
+    "conditionsDescription" : "Showers",
+    "pressureMB" : 1007,
+    "visibilityKM" : 5,
+    "relativeHumidity" : 87,
+    "windSpeedKPH" : 11,
+    "weatherCode" : "rain-night",
+    "windChillCelsius" : 7
+  },
+  "creationOSVersion" : "12.1.4",
+  "starred" : false,
+  "uuid" : "49C7A643DF0D4256B888F162869FA512",
+  "modifiedDate" : "2019-03-30T15:52:12Z",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"JFC you assholes\\n\"},{\"text\":\"\\n\"},{\"text\":\"It's 1am. Do your shot outside, turn out the light and let people sleep. God. Fuck y'all\"}]}",
+  "text" : "# JFC you assholes\n\nIt's 1am\\. Do your shot outside, turn out the light and let people sleep\\. God\\. Fuck y'all",
+  "timeZone" : "Asia\/Tokyo",
+  "creationDeviceModel" : "iPhone9,3"
+},
+{
+  "creationDeviceType" : "iPhone",
+  "timeZone" : "Asia\/Tokyo",
+  "creationDeviceModel" : "iPhone9,3",
+  "text" : "# Take more selfies?\n\nI hate how they look but plain ass photos are never super interesting\\. Get one or two then the rest are culled\\. Better, more interesting long term to get shots with you on them? If only the quality wasn't shit",
+  "creationDate" : "2019-03-30T20:01:35Z",
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 0
+  },
+  "weather" : {
+    "sunsetDate" : "2019-03-31T09:01:03Z",
+    "temperatureCelsius" : 9,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : 120,
+    "sunriseDate" : "2019-03-30T20:29:27Z",
+    "conditionsDescription" : "Mostly Cloudy",
+    "pressureMB" : 1004,
+    "visibilityKM" : 9,
+    "relativeHumidity" : 94,
+    "windSpeedKPH" : 11,
+    "weatherCode" : "mostly-cloudy-night",
+    "windChillCelsius" : 7
+  },
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Take more selfies?\\n\"},{\"text\":\"\\n\"},{\"text\":\"I hate how they look but plain ass photos are never super interesting. Get one or two then the rest are culled. Better, more interesting long term to get shots with you on them? If only the quality wasn't shit\"}],\"meta\":{\"version\":1}}",
+  "duration" : 0,
+  "creationOSName" : "iOS",
+  "uuid" : "8BC21FA9D5A942B1995CC79BFF437E19",
+  "modifiedDate" : "2019-03-30T20:04:05Z",
+  "creationDevice" : "iPhone",
+  "starred" : false,
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 139.79374468269694,
+        "latitude" : 35.712401453143627
+      },
+      "identifier" : "<+35.71240145,+139.79374468> radius 141.74",
+      "radius" : 141.73996807166554
+    },
+    "localityName" : "Taito-Ku",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Tokyo",
+    "longitude" : 139.79374694824219,
+    "placeName" : "Ippuku-yokocho Street",
+    "latitude" : 35.71240234375
+  },
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "creationDate" : "2019-03-30T20:03:05Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "creationOSVersion" : "12.1.4",
+  "text" : "# JR offices don't open until 7:30\n\nSo there goes my early morning plan to Hiroshima\\. But it only delays me an hour",
+  "modifiedDate" : "2019-03-30T21:14:10Z",
+  "duration" : 0,
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "starred" : false,
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 0
+  },
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 139.79375928390994,
+        "latitude" : 35.712398978715612
+      },
+      "identifier" : "<+35.71239898,+139.79375928> radius 141.74",
+      "radius" : 141.7399680912018
+    },
+    "localityName" : "Taito-Ku",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Tokyo",
+    "longitude" : 139.79376220703125,
+    "placeName" : "Ippuku-yokocho Street",
+    "latitude" : 35.712398529052734
+  },
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"JR offices don't open until 7:30\\n\"},{\"text\":\"\\n\"},{\"text\":\"So there goes my early morning plan to Hiroshima. But it only delays me an hour\"}],\"meta\":{\"version\":1}}",
+  "uuid" : "7082EFB22BEA46EB8969A6204430A1EA",
+  "weather" : {
+    "sunsetDate" : "2019-03-31T09:01:03Z",
+    "temperatureCelsius" : 9,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : 120,
+    "sunriseDate" : "2019-03-30T20:29:27Z",
+    "conditionsDescription" : "Mostly Cloudy",
+    "pressureMB" : 1004,
+    "visibilityKM" : 9,
+    "relativeHumidity" : 94,
+    "windSpeedKPH" : 11,
+    "weatherCode" : "mostly-cloudy-night",
+    "windChillCelsius" : 7
+  }
+},
+{
+  "photos" : [
+    {
+      "cameraMake" : "Apple",
+      "fnumber" : "1.8",
+      "orderInEntry" : 0,
+      "lensMake" : "Apple",
+      "filename" : "IMG_2738.HEIC",
+      "width" : 4032,
+      "cameraModel" : "iPhone 7",
+      "type" : "jpeg",
+      "identifier" : "25D9B90FA4BA4370ACB59C98334BA9D0",
+      "date" : "2019-03-30T20:58:32Z",
+      "exposureBiasValue" : 0,
+      "location" : {
+        "region" : {
+          "center" : {
+            "longitude" : 139.79360961914065,
+            "latitude" : 35.712348936714193
+          },
+          "identifier" : "<+35.71234894,+139.79360962> radius 70.87",
+          "radius" : 70.869885381102435
+        },
+        "localityName" : "Taito-Ku",
+        "country" : "Japan",
+        "timeZoneName" : "Asia\/Tokyo",
+        "administrativeArea" : "Tokyo",
+        "longitude" : 139.79360961914062,
+        "placeName" : "23-8, Asakusa 1-Chōme",
+        "latitude" : 35.712348937988281
+      },
+      "isSketch" : false,
+      "lensModel" : "iPhone 7 back camera 3.99mm f\/1.8",
+      "height" : 3024,
+      "md5" : "948bb309c0e6e2a5ff492bedfd3fab12",
+      "focalLength" : "3.99"
+    }
+  ],
+  "weather" : {
+    "sunsetDate" : "2019-03-31T09:01:03Z",
+    "temperatureCelsius" : 10,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : -1,
+    "sunriseDate" : "2019-03-30T20:29:27Z",
+    "conditionsDescription" : "Mostly Cloudy",
+    "pressureMB" : 1004,
+    "visibilityKM" : 9,
+    "relativeHumidity" : 88,
+    "windSpeedKPH" : 2,
+    "weatherCode" : "mostly-cloudy",
+    "windChillCelsius" : 10
+  },
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 43
+  },
+  "duration" : 0,
+  "starred" : false,
+  "creationDeviceType" : "iPhone",
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Breakfast\\n\"},{\"text\":\"\\n\"},{\"text\":\"I never knew the breakfast I always wanted was just a self-service buffet of McDonald's fries\\n\"},{\"embeddedObjects\":[{\"identifier\":\"25D9B90FA4BA4370ACB59C98334BA9D0\",\"type\":\"photo\"}]}],\"meta\":{\"version\":1}}",
+  "modifiedDate" : "2019-03-30T21:14:17Z",
+  "creationDate" : "2019-03-30T20:58:32Z",
+  "creationOSName" : "iOS",
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 139.79360961914065,
+        "latitude" : 35.712348936714193
+      },
+      "identifier" : "<+35.71234894,+139.79360962> radius 70.87",
+      "radius" : 70.869885381102435
+    },
+    "localityName" : "Taito-Ku",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Tokyo",
+    "longitude" : 139.79360961914062,
+    "placeName" : "23-8, Asakusa 1-Chōme",
+    "latitude" : 35.712348937988281
+  },
+  "creationDeviceModel" : "iPhone9,3",
+  "creationDevice" : "iPhone",
+  "uuid" : "982F7C4915884FEABF4B7A5ED1791FCF",
+  "text" : "# Breakfast\n\nI never knew the breakfast I always wanted was just a self\\-service buffet of McDonald's fries\n\n![](dayone-moment:\/\/25D9B90FA4BA4370ACB59C98334BA9D0)",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo"
+},
+{
+  "photos" : [
+    {
+      "cameraMake" : "Apple",
+      "fnumber" : "1.8",
+      "orderInEntry" : 0,
+      "lensMake" : "Apple",
+      "filename" : "IMG_2743.HEIC",
+      "width" : 3200,
+      "cameraModel" : "iPhone 7",
+      "type" : "jpeg",
+      "identifier" : "27D24044542E4EF1B43FD7C8A0A8F0F7",
+      "date" : "2019-03-30T21:57:30Z",
+      "exposureBiasValue" : 0,
+      "isSketch" : false,
+      "lensModel" : "iPhone 7 back camera 3.99mm f\/1.8",
+      "height" : 2400,
+      "md5" : "726e84d08b9cdf89bb3d69627d26577e",
+      "focalLength" : "3.99"
+    }
+  ],
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 2222
+  },
+  "duration" : 0,
+  "starred" : false,
+  "creationDeviceType" : "iPhone",
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"So empty Sunday morning\\n\"},{\"embeddedObjects\":[{\"identifier\":\"27D24044542E4EF1B43FD7C8A0A8F0F7\",\"type\":\"photo\"}]}],\"meta\":{\"version\":1}}",
+  "modifiedDate" : "2019-03-30T21:58:11Z",
+  "creationDate" : "2019-03-30T21:57:30Z",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationDevice" : "iPhone",
+  "uuid" : "AB860E3AD3A5427CA0AF02188AC41C41",
+  "text" : "# So empty Sunday morning\n\n![](dayone-moment:\/\/27D24044542E4EF1B43FD7C8A0A8F0F7)",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo"
+},
+{
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"What have been my favorite travel days?\\n\"},{\"text\":\"\\n\"},{\"text\":\"And how to use that to inform future travels.\\n\\n\"},{\"attributes\":{\"line\":{\"listStyle\":\"bulleted\",\"indentLevel\":1}},\"text\":\"Netherlands north sea park\\n\"},{\"attributes\":{\"line\":{\"listStyle\":\"bulleted\",\"indentLevel\":1}},\"text\":\"Netherlands train day\\n\"},{\"attributes\":{\"line\":{\"listStyle\":\"bulleted\",\"indentLevel\":1}},\"text\":\"Westmalle\\n\"},{\"attributes\":{\"line\":{\"listStyle\":\"bulleted\",\"indentLevel\":1}},\"text\":\"(Robert's Swiss train day)\\n\"},{\"attributes\":{\"line\":{\"listStyle\":\"bulleted\",\"indentLevel\":1}},\"text\":\"Anything involving trains really. Remember Linz and such\\n\"},{\"attributes\":{\"line\":{\"listStyle\":\"bulleted\",\"indentLevel\":1}},\"text\":\"\\n\"},{\"text\":\"\\n\"}],\"meta\":{\"version\":1}}",
+  "duration" : 0,
+  "starred" : true,
+  "modifiedDate" : "2019-03-31T05:44:11Z",
+  "creationDeviceType" : "iPhone",
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 139.77400207519534,
+        "latitude" : 35.686443323765928
+      },
+      "identifier" : "<+35.68644332,+139.77400208> radius 141.74",
+      "radius" : 141.74016919324887
+    },
+    "localityName" : "Chuo-Ku",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Tokyo",
+    "longitude" : 139.77400207519531,
+    "placeName" : "Chuo-dori Avenue",
+    "latitude" : 35.686443328857422
+  },
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 5862
+  },
+  "creationOSVersion" : "12.1.4",
+  "creationDate" : "2019-03-30T22:31:38Z",
+  "timeZone" : "Asia\/Tokyo",
+  "creationOSName" : "iOS",
+  "uuid" : "8DD8555572B34C12AF0D9BFF0524C76F",
+  "creationDevice" : "iPhone",
+  "text" : "# What have been my favorite travel days?\n\nAnd how to use that to inform future travels\\.\n\n- Netherlands north sea park\n- Netherlands train day\n- Westmalle\n- \\(Robert's Swiss train day\\)\n- Anything involving trains really\\. Remember Linz and such\n- \n",
+  "creationDeviceModel" : "iPhone9,3"
+},
+{
+  "text" : "# Fuji\n\n![](dayone-moment:\/\/671C2CF673844615B3B853C6AA2A0DCE)",
+  "starred" : false,
+  "uuid" : "3B144965502D4AA5BB4B0A66DC8D781D",
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 7600
+  },
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 138.69071960449216,
+        "latitude" : 35.148685450330063
+      },
+      "identifier" : "<+35.14868545,+138.69071960> radius 141.74",
+      "radius" : 141.74432275395736
+    },
+    "localityName" : "Fuji-Shi",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Shizuoka",
+    "longitude" : 138.69071960449219,
+    "placeName" : "1",
+    "latitude" : 35.148685455322266
+  },
+  "timeZone" : "Asia\/Tokyo",
+  "creationDeviceType" : "iPhone",
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Fuji\\n\"},{\"embeddedObjects\":[{\"identifier\":\"671C2CF673844615B3B853C6AA2A0DCE\",\"type\":\"photo\"}]}],\"meta\":{\"version\":1}}",
+  "creationDevice" : "iPhone",
+  "creationDeviceModel" : "iPhone9,3",
+  "photos" : [
+    {
+      "cameraMake" : "Apple",
+      "fnumber" : "1.8",
+      "orderInEntry" : 0,
+      "lensMake" : "Apple",
+      "filename" : "IMG_2760.HEIC",
+      "width" : 3200,
+      "cameraModel" : "iPhone 7",
+      "type" : "jpeg",
+      "identifier" : "671C2CF673844615B3B853C6AA2A0DCE",
+      "date" : "2019-03-30T23:52:49Z",
+      "exposureBiasValue" : 0,
+      "location" : {
+        "region" : {
+          "center" : {
+            "longitude" : 138.69071960449216,
+            "latitude" : 35.148685450330063
+          },
+          "identifier" : "<+35.14868545,+138.69071960> radius 141.74",
+          "radius" : 141.74432275395736
+        },
+        "localityName" : "Fuji-Shi",
+        "country" : "Japan",
+        "timeZoneName" : "Asia\/Tokyo",
+        "administrativeArea" : "Shizuoka",
+        "longitude" : 138.69071960449219,
+        "placeName" : "1",
+        "latitude" : 35.148685455322266
+      },
+      "isSketch" : false,
+      "lensModel" : "iPhone 7 back camera 3.99mm f\/1.8",
+      "height" : 2400,
+      "md5" : "2495635cd04109426cf9291ae9fb8be6",
+      "focalLength" : "3.99"
+    }
+  ],
+  "creationOSVersion" : "12.1.4",
+  "creationDate" : "2019-03-30T23:52:49Z",
+  "weather" : {
+    "sunsetDate" : "2019-03-31T09:06:34Z",
+    "temperatureCelsius" : 12,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : 260,
+    "sunriseDate" : "2019-03-30T20:35:40Z",
+    "conditionsDescription" : "Mostly Sunny",
+    "pressureMB" : 1005,
+    "visibilityKM" : 48.280319213867188,
+    "relativeHumidity" : 63,
+    "windSpeedKPH" : 30,
+    "weatherCode" : "partly-cloudy",
+    "windChillCelsius" : 12
+  },
+  "creationOSName" : "iOS",
+  "modifiedDate" : "2019-03-30T23:53:50Z",
+  "duration" : 0
+},
+{
+  "text" : "# Travel thoughts on the ground\n\nSome random thoughts on travel planning: I may be getting better at allowing myself freedom to just be in a place, but one thing this first morning in Japan has reminded me of is that I like to have the first few steps of the day already researched\\. That way I can relax into the day and not wake up and immediately feel like I'm behind schedule or that I don't know what I'm doing \/ when to get out of bed \/ etc\\.\n\nTokyo to Hiroshima to Kyoto is the example here\\. I knew that's what I wanted to do, but didn't have any other plan other than knowing that roughly that was doable\\.\n\nI woke up this morning and had to figure out:\n\\- Which train station in Tokyo I was going to\\.\n\\- When the JR Pass office opened\n\\- The bullet train timetable to Hiroshima\n\\- Based on that, when I had to leave the hostel this morning\n\\- The check\\-in times for my hostel in Kyoto\n\nIt can be as simple as here's the opening times of a few things, or the transit timetable\\. But, like, have the day until 10am semi\\-figured out\\.",
+  "creationDeviceType" : "iPhone",
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 7681
+  },
+  "creationDevice" : "iPhone",
+  "creationDate" : "2019-03-31T01:48:46Z",
+  "uuid" : "CA2E84FC824D439DAA35F5AC0EAEF36C",
+  "creationOSName" : "iOS",
+  "starred" : true,
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 135.71851390169653,
+        "latitude" : 34.972041073363577
+      },
+      "identifier" : "<+34.97204107,+135.71851390> radius 70.87",
+      "radius" : 70.872744610535747
+    },
+    "localityName" : "Nishikyo-Ku, Kyoto-Shi",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Kyoto",
+    "longitude" : 135.71852111816406,
+    "placeName" : "45, Ushigasekawaharaguchicho",
+    "latitude" : 34.972042083740234
+  },
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Travel thoughts on the ground\\n\"},{\"text\":\"\\n\"},{\"text\":\"Some random thoughts on travel planning: I may be getting better at allowing myself freedom to just be in a place, but one thing this first morning in Japan has reminded me of is that I like to have the first few steps of the day already researched. That way I can relax into the day and not wake up and immediately feel like I'm behind schedule or that I don't know what I'm doing \\\/ when to get out of bed \\\/ etc.\\n\\nTokyo to Hiroshima to Kyoto is the example here. I knew that's what I wanted to do, but didn't have any other plan other than knowing that roughly that was doable.\\n\\nI woke up this morning and had to figure out:\\n- Which train station in Tokyo I was going to.\\n- When the JR Pass office opened\\n- The bullet train timetable to Hiroshima\\n- Based on that, when I had to leave the hostel this morning\\n- The check-in times for my hostel in Kyoto\\n\\nIt can be as simple as here's the opening times of a few things, or the transit timetable. But, like, have the day until 10am semi-figured out.\"}],\"meta\":{\"version\":1}}",
+  "timeZone" : "Asia\/Tokyo",
+  "duration" : 0,
+  "creationDeviceModel" : "iPhone9,3",
+  "weather" : {
+    "sunsetDate" : "2019-03-31T09:18:01Z",
+    "temperatureCelsius" : 12,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : 280,
+    "sunriseDate" : "2019-03-30T20:47:08Z",
+    "conditionsDescription" : "Mostly Sunny",
+    "pressureMB" : 1012,
+    "visibilityKM" : 48.280319213867188,
+    "relativeHumidity" : 38,
+    "windSpeedKPH" : 22,
+    "weatherCode" : "partly-cloudy",
+    "windChillCelsius" : 12
+  },
+  "modifiedDate" : "2019-03-31T01:49:14Z",
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "text" : "# Kobe\n\nCould've got my pass earlier\\. Doesn't have to start that day\\. Doh\\.\n\nHelm of a time finding the falls\n\nMissed the train by one minute\n\nShit on by a bird\n",
+  "creationDeviceType" : "iPhone",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 14173
+  },
+  "creationDevice" : "iPhone",
+  "creationDate" : "2019-03-31T03:34:37Z",
+  "uuid" : "AC7E791288524A16B70E73BB9D31AE59",
+  "creationOSName" : "iOS",
+  "starred" : false,
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Kobe\\n\"},{\"text\":\"\\n\"},{\"text\":\"Could've got my pass earlier. Doesn't have to start that day. Doh.\\n\"},{\"text\":\"\\n\"},{\"text\":\"Helm of a time finding the falls\\n\\nMissed the train by one minute\\n\\nShit on by a bird\\n\\n\"}],\"meta\":{\"version\":1}}",
+  "timeZone" : "Asia\/Tokyo",
+  "duration" : 0,
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-03-31T03:38:26Z",
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "text" : "# UW cherries\n\nLittle funny to be over here for the blossoms when I don't pay too much special attention to the blossoms on campus",
+  "creationDeviceType" : "iPhone",
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 16820
+  },
+  "creationDevice" : "iPhone",
+  "creationDate" : "2019-03-31T05:47:34Z",
+  "uuid" : "8F5A04D3A12A44059A49E71E54B58187",
+  "creationOSName" : "iOS",
+  "starred" : false,
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"UW cherries\\n\"},{\"text\":\"\\n\"},{\"text\":\"Little funny to be over here for the blossoms when I don't pay too much special attention to the blossoms on campus\"}],\"meta\":{\"version\":1}}",
+  "timeZone" : "Asia\/Tokyo",
+  "duration" : 0,
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-03-31T06:10:13Z",
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "text" : "# Bizarre OH conversation\n\nRetired women seemingly booking long cruises on a whim\\. Iceland plus Greenland\\. Spend lots of time traveling, recounting recent trips\\. Seem Indian?\n\nThen mention they like taking local buses on the cruise stops because the official activities are too expensive\\. Can't tell if these are my dream future selves or rich soiled people\\.",
+  "creationDeviceType" : "iPhone",
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 16820
+  },
+  "creationDevice" : "iPhone",
+  "creationDate" : "2019-03-31T06:10:12Z",
+  "uuid" : "E43DE7EB494448638432E5DF50EDD5C3",
+  "creationOSName" : "iOS",
+  "starred" : false,
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Bizarre OH conversation\\n\"},{\"text\":\"\\n\"},{\"text\":\"Retired women seemingly booking long cruises on a whim. Iceland plus Greenland. Spend lots of time traveling, recounting recent trips. Seem Indian?\\n\\nThen mention they like taking local buses on the cruise stops because the official activities are too expensive. Can't tell if these are my dream future selves or rich soiled people.\"}],\"meta\":{\"version\":1}}",
+  "timeZone" : "Asia\/Tokyo",
+  "duration" : 0,
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-03-31T06:12:38Z",
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "text" : "# Token entry fee\n\nLots of attraction here charge small entry fees like 200\\-300¥\\. I wonder why\\. Almost seems like such a small amount that your don't net much after staffing",
+  "creationDeviceType" : "iPhone",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 29850
+  },
+  "creationDevice" : "iPhone",
+  "creationDate" : "2019-03-31T09:53:43Z",
+  "uuid" : "3AAAAEF020BD4F4CAEBD356FA47F251C",
+  "creationOSName" : "iOS",
+  "starred" : false,
+  "richText" : "{\"contents\":[{\"text\":\"Token entry fee\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"Lots of attraction here charge small entry fees like 200-300¥. I wonder why. Almost seems like such a small amount that your don't net much after staffing\"}],\"meta\":{\"version\":1}}",
+  "timeZone" : "Asia\/Tokyo",
+  "duration" : 0,
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-03-31T09:55:40Z",
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "weather" : {
+    "sunsetDate" : "2019-03-31T09:18:01Z",
+    "temperatureCelsius" : 9,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : 340,
+    "sunriseDate" : "2019-03-30T20:47:08Z",
+    "conditionsDescription" : "Showers Nearby",
+    "pressureMB" : 1015,
+    "visibilityKM" : 48.280319213867188,
+    "relativeHumidity" : 58,
+    "windSpeedKPH" : 26,
+    "weatherCode" : "cloudy-night",
+    "windChillCelsius" : 6
+  },
+  "creationDate" : "2019-03-31T11:58:20Z",
+  "duration" : 0,
+  "uuid" : "95C417A9887B4DC5B2BC98C83E8C1E2C",
+  "creationOSName" : "iOS",
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 135.49951166188526,
+        "latitude" : 34.733584099966208
+      },
+      "identifier" : "<+34.73358410,+135.49951166> radius 70.87",
+      "radius" : 70.873660365418317
+    },
+    "localityName" : "Yodogawa-Ku, Osaka-Shi",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Osaka",
+    "longitude" : 135.49951171875,
+    "placeName" : "1-1, Miyahara 1-Chōme",
+    "latitude" : 34.733585357666016
+  },
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"contents\":[{\"text\":\"Osaka to Kyoto is only 14 minutes\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"I should have just booked four nights in Osaka and commuted to Kyoto. Would've saved me a little time and like $10 since Kyoto is more expensive lodging\"}],\"meta\":{\"version\":1}}",
+  "text" : "# Osaka to Kyoto is only 14 minutes\n\nI should have just booked four nights in Osaka and commuted to Kyoto\\. Would've saved me a little time and like $10 since Kyoto is more expensive lodging",
+  "modifiedDate" : "2019-03-31T11:59:23Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "uuid" : "09893D59A57A40639AA90D6D7EDBC1E2",
+  "text" : "# Kyoto\n\nIs very very flat\n\nMaybe a few days still until max bloom\\. Try to swing back around before Tokyo\\.",
+  "creationOSVersion" : "12.1.4",
+  "creationDate" : "2019-04-01T01:54:24Z",
+  "duration" : 0,
+  "timeZone" : "Asia\/Tokyo",
+  "creationDeviceType" : "iPhone",
+  "creationDeviceModel" : "iPhone9,3",
+  "starred" : false,
+  "creationOSName" : "iOS",
+  "modifiedDate" : "2019-04-01T01:56:43Z",
+  "creationDevice" : "iPhone",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Kyoto\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"Is very very flat\\n\\nMaybe a few days still until max bloom. Try to swing back around before Tokyo.\"}]}",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 13781
+  }
+},
+{
+  "creationDeviceType" : "iPhone",
+  "creationDate" : "2019-04-01T05:54:43Z",
+  "creationDeviceModel" : "iPhone9,3",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Not shopping for souvenirs\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"Saves a lot of time and some money.\\n\\nBuy made things with meaning, instead of produced things\"}]}",
+  "modifiedDate" : "2019-04-01T05:55:37Z",
+  "text" : "# Not shopping for souvenirs\n\nSaves a lot of time and some money\\.\n\nBuy made things with meaning, instead of produced things",
+  "timeZone" : "Asia\/Tokyo",
+  "creationOSName" : "iOS",
+  "creationDevice" : "iPhone",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 32677
+  },
+  "duration" : 0,
+  "uuid" : "8108D7EC701544618B2311BDA2AF2D77",
+  "starred" : false,
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 35221
+  },
+  "creationDate" : "2019-04-01T06:32:19Z",
+  "duration" : 0,
+  "uuid" : "F3AB489545BB494EB7806AC86B37D8A1",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"People pose for far too long\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"Or line up 15 shots. It's time wasting and holds up others for no reason\"}]}",
+  "text" : "# People pose for far too long\n\nOr line up 15 shots\\. It's time wasting and holds up others for no reason",
+  "modifiedDate" : "2019-04-01T12:47:39Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 51576
+  },
+  "creationDate" : "2019-04-01T12:48:31Z",
+  "duration" : 0,
+  "uuid" : "089005756CE2417F93B248B377BB3726",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Cheaper food than I expected\\n\"},{\"embeddedObjects\":[{\"identifier\":\"BED2F80ABD8B4606812A6A08536F4AD6\",\"type\":\"photo\"}]}],\"meta\":{\"version\":1}}",
+  "text" : "# Cheaper food than I expected\n\n![](dayone-moment:\/\/BED2F80ABD8B4606812A6A08536F4AD6)",
+  "modifiedDate" : "2019-04-01T12:49:35Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "photos" : [
+    {
+      "cameraMake" : "Apple",
+      "fnumber" : "1.8",
+      "orderInEntry" : 0,
+      "lensMake" : "Apple",
+      "width" : 3024,
+      "cameraModel" : "iPhone 7",
+      "type" : "jpeg",
+      "identifier" : "BED2F80ABD8B4606812A6A08536F4AD6",
+      "date" : "2019-04-01T12:48:31Z",
+      "exposureBiasValue" : 0,
+      "isSketch" : false,
+      "lensModel" : "iPhone 7 back camera 3.99mm f\/1.8",
+      "height" : 3024,
+      "md5" : "cff27f74d024fdb988340c9ab9c95d56",
+      "focalLength" : "3.99"
+    }
+  ],
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 2889
+  },
+  "creationDate" : "2019-04-02T02:03:08Z",
+  "duration" : 0,
+  "uuid" : "670E5C9553984392961EDA83CFE4528E",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"A few days early o. Timing\\n\"},{\"text\":\"\\n\"},{\"text\":\"Mild irritating that blossoms got delayed a few days in Osaka and Kyoto. I was all set to be literally perfectly timed and then a couple days set things slightly awry. Will try to adjust. Do want to catch at least one full bloom somewhere. Fall back is Tokyo.\\n\\nJust mildly stressful that I'll be putting my eggs in the last two days basket since Osaka and Kyoto don't enter full bloom until Thursday by current expectation and Thur\\\/Fri are my Nagano days.\"}]}",
+  "text" : "# A few days early o\\. Timing\n\nMild irritating that blossoms got delayed a few days in Osaka and Kyoto\\. I was all set to be literally perfectly timed and then a couple days set things slightly awry\\. Will try to adjust\\. Do want to catch at least one full bloom somewhere\\. Fall back is Tokyo\\.\n\nJust mildly stressful that I'll be putting my eggs in the last two days basket since Osaka and Kyoto don't enter full bloom until Thursday by current expectation and Thur\/Fri are my Nagano days\\.",
+  "modifiedDate" : "2019-04-02T02:08:08Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 2889
+  },
+  "creationDate" : "2019-04-02T02:04:24Z",
+  "duration" : 0,
+  "uuid" : "23E4805D9E394B508108DDDE3AFEC402",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Goofed and left Nagano Rez intact\\n\"},{\"text\":\"\\n\"},{\"text\":\"Oops. Not a huge problem hopefully as worst case can just eat the $56, realistic case is that was planning on being in that region anyways, though more likely Kanazawa or something but eh. Lodging doesn't matter too much with a train pass and at least the Nagano hostel isn't far from the Jr station.\\n\\nAsked for free cancellation but actually wouldn't mind keeping it probably.\"}]}",
+  "text" : "# Goofed and left Nagano Rez intact\n\nOops\\. Not a huge problem hopefully as worst case can just eat the $56, realistic case is that was planning on being in that region anyways, though more likely Kanazawa or something but eh\\. Lodging doesn't matter too much with a train pass and at least the Nagano hostel isn't far from the Jr station\\.\n\nAsked for free cancellation but actually wouldn't mind keeping it probably\\.",
+  "modifiedDate" : "2019-04-02T02:06:31Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 2889
+  },
+  "creationDate" : "2019-04-02T02:14:16Z",
+  "duration" : 0,
+  "uuid" : "2DE5A9F4C1C5473381409671442C64DC",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Very flat cities. But always mountains in view\"}]}",
+  "text" : "# Very flat cities\\. But always mountains in view",
+  "modifiedDate" : "2019-04-02T02:19:40Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "duration" : 0,
+  "creationDate" : "2019-04-02T02:19:01Z",
+  "uuid" : "D9803CF021BE4F6B856D6C6339BFB368",
+  "creationOSName" : "iOS",
+  "creationDeviceType" : "iPhone",
+  "text" : "# Train day\n\nDon't kill the spontaneous nature of it by planning it\\!",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Train day\\n\"},{\"text\":\"\\n\"},{\"text\":\"Don't kill the spontaneous nature of it by planning it!\"}]}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-02T02:19:43Z",
+  "creationOSVersion" : "12.1.4",
+  "starred" : false,
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 3079
+  },
+  "creationDevice" : "iPhone"
+},
+{
+  "duration" : 0,
+  "creationDate" : "2019-04-02T02:25:55Z",
+  "uuid" : "E3CAF6A100344158A4AE3805C753D28B",
+  "creationOSName" : "iOS",
+  "creationDeviceType" : "iPhone",
+  "text" : "# I am most comfortable and at peace wearing a backpack, walking to nowhere in particular\n\nAnd a dog never tires of that",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"I am most comfortable and at peace wearing a backpack, walking to nowhere in particular\\n\"},{\"text\":\"\\n\"},{\"text\":\"And a dog never tires of that\"}]}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-02T03:15:18Z",
+  "creationOSVersion" : "12.1.4",
+  "starred" : false,
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 3742
+  },
+  "creationDevice" : "iPhone"
+},
+{
+  "uuid" : "4217B763147C4DD3A70257D8D846701B",
+  "text" : "# Just think, I originally wanted to come a week earlier",
+  "creationOSVersion" : "12.1.4",
+  "creationDate" : "2019-04-02T04:28:33Z",
+  "duration" : 0,
+  "timeZone" : "Asia\/Tokyo",
+  "creationDeviceType" : "iPhone",
+  "creationDeviceModel" : "iPhone9,3",
+  "starred" : false,
+  "creationOSName" : "iOS",
+  "modifiedDate" : "2019-04-02T04:30:05Z",
+  "creationDevice" : "iPhone",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Just think, I originally wanted to come a week earlier\",\"attributes\":{\"line\":{\"header\":1}}}]}",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 11921
+  }
+},
+{
+  "timeZone" : "Asia\/Tokyo",
+  "text" : "# Figuring out travel in Ukraine is kinda my Nome\n\nBecause that's my wilderness, having to interact\\. Survival skills aside, the bush feels like home, like peace\\.",
+  "creationDeviceType" : "iPhone",
+  "creationDate" : "2019-04-02T08:52:26Z",
+  "richText" : "{\"contents\":[{\"text\":\"Figuring out travel in Ukraine is kinda my Nome\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"Because that's my wilderness, having to interact. Survival skills aside, the bush feels like home, like peace.\"}],\"meta\":{\"version\":1}}",
+  "uuid" : "2894E70624C741BB8430950788602DCB",
+  "creationOSName" : "iOS",
+  "starred" : false,
+  "creationDevice" : "iPhone",
+  "duration" : 0,
+  "creationOSVersion" : "12.1.4",
+  "music" : {
+    "albumYear" : 0,
+    "album" : "Lonesome Dreams",
+    "track" : "Time To Run",
+    "artist" : "Lord Huron"
+  },
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 19465
+  },
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-02T08:53:51Z"
+},
+{
+  "timeZone" : "Asia\/Tokyo",
+  "text" : "# Train staff bow whenever they leave any train car",
+  "creationDeviceType" : "iPhone",
+  "creationDate" : "2019-04-03T02:20:40Z",
+  "richText" : "{\"contents\":[{\"text\":\"Train staff bow whenever they leave any train car\",\"attributes\":{\"line\":{\"header\":1}}}],\"meta\":{\"version\":1}}",
+  "uuid" : "68B716B76FFA42489919A30B9867D908",
+  "creationOSName" : "iOS",
+  "starred" : false,
+  "creationDevice" : "iPhone",
+  "duration" : 0,
+  "creationOSVersion" : "12.1.4",
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 2609
+  },
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-03T02:21:02Z"
+},
+{
+  "duration" : 0,
+  "creationDate" : "2019-04-03T05:21:58Z",
+  "uuid" : "650BF81836244A848174D0A7D2C3A4E9",
+  "creationOSName" : "iOS",
+  "creationDeviceType" : "iPhone",
+  "text" : "# Tree just crashed like 20 feet away",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Tree just crashed like 20 feet away\"}]}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-03T08:58:07Z",
+  "creationOSVersion" : "12.1.4",
+  "starred" : false,
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 5908
+  },
+  "creationDevice" : "iPhone"
+},
+{
+  "duration" : 0,
+  "creationDate" : "2019-04-03T08:58:12Z",
+  "uuid" : "57CA08EDC3644E07A6F84B1F2587E4DA",
+  "creationOSName" : "iOS",
+  "creationDeviceType" : "iPhone",
+  "text" : "# Train separates\\.",
+  "richText" : "{\"contents\":[{\"text\":\"Train separates.\",\"attributes\":{\"line\":{\"header\":1}}}],\"meta\":{\"version\":1}}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-03T09:05:32Z",
+  "creationOSVersion" : "12.1.4",
+  "starred" : false,
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 15385
+  },
+  "creationDevice" : "iPhone"
+},
+{
+  "timeZone" : "Asia\/Tokyo",
+  "text" : "# Traveling with Robert\n\nIt's nice to have company, and wacky ideas, and shared memories, and cover for being culturally awkward\n\nBut there's also a lot of waiting, slower mornings, slower walking, constant explanation, a feeling of burden, etc",
+  "creationDeviceType" : "iPhone",
+  "creationDate" : "2019-04-05T05:18:39Z",
+  "richText" : "{\"contents\":[{\"text\":\"Traveling with Robert\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"It's nice to have company, and wacky ideas, and shared memories, and cover for being culturally awkward\\n\\nBut there's also a lot of waiting, slower mornings, slower walking, constant explanation, a feeling of burden, etc\"}],\"meta\":{\"version\":1}}",
+  "uuid" : "7C8B4BE6476B43169CB52F692E971B29",
+  "creationOSName" : "iOS",
+  "starred" : false,
+  "creationDevice" : "iPhone",
+  "duration" : 0,
+  "creationOSVersion" : "12.1.4",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 11955
+  },
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-05T05:20:00Z"
+},
+{
+  "timeZone" : "Asia\/Tokyo",
+  "text" : "# Rocket giardia\n\nJohn's hold with Chase before checking my car\nBrazel quitting\n\nWhat a morning",
+  "creationDeviceType" : "iPhone",
+  "creationDate" : "2019-04-05T23:31:49Z",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Rocket giardia\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"John's hold with Chase before checking my car\\nBrazel quitting\\n\\nWhat a morning\"}]}",
+  "uuid" : "3122DC014FE64049B0AF72B8E390CAFB",
+  "creationOSName" : "iOS",
+  "starred" : false,
+  "creationDevice" : "iPhone",
+  "duration" : 0,
+  "creationOSVersion" : "12.1.4",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 928
+  },
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-06T01:53:04Z"
+},
+{
+  "duration" : 0,
+  "creationDate" : "2019-04-05T23:32:26Z",
+  "uuid" : "7035D04AA9344AC4BFFB10A8971BC9EF",
+  "creationOSName" : "iOS",
+  "creationDeviceType" : "iPhone",
+  "text" : "# Police car with lights on, waited patiently for oncoming traffic to pass before turning",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Police car with lights on, waited patiently for oncoming traffic to pass before turning\",\"attributes\":{\"line\":{\"header\":1}}}]}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-05T23:32:52Z",
+  "creationOSVersion" : "12.1.4",
+  "starred" : false,
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 989
+  },
+  "creationDevice" : "iPhone"
+},
+{
+  "duration" : 0,
+  "creationDate" : "2019-04-06T01:53:06Z",
+  "uuid" : "79665C9C853944688551E1ED58556A3E",
+  "creationOSName" : "iOS",
+  "creationDeviceType" : "iPhone",
+  "text" : "# Felt bad about Robert's train\n\nBecause I always feel responsible but I'm not\\! He's a adult with agency's",
+  "richText" : "{\"contents\":[{\"text\":\"Felt bad about Robert's train\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"Because I always feel responsible but I'm not! He's a adult with agency's\"}],\"meta\":{\"version\":1}}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-06T01:59:43Z",
+  "creationOSVersion" : "12.1.4",
+  "starred" : false,
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 10819
+  },
+  "creationDevice" : "iPhone"
+},
+{
+  "duration" : 0,
+  "creationDate" : "2019-04-06T04:11:45Z",
+  "uuid" : "238120495CF843DE9F224B061396BC49",
+  "creationOSName" : "iOS",
+  "creationDeviceType" : "iPhone",
+  "text" : "# Train sudden stop right after a station\n\nNo idea what's going on as all the announcements are in Japanese\n\nAnd on queue, somehow an English translation of this comes on:\n\n\"We have stopped due to a collision with a small animal\"\n\nLater my local hop to Kanda was delayed due to \"person on tracks\"",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Train sudden stop right after a station\\n\"},{\"text\":\"\\n\"},{\"text\":\"No idea what's going on as all the announcements are in Japanese\\n\\nAnd on queue, somehow an English translation of this comes on:\\n\\n\\\"We have stopped due to a collision with a small animal\\\"\\n\\nLater my local hop to Kanda was delayed due to \\\"person on tracks\\\"\"}]}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-07T00:13:57Z",
+  "creationOSVersion" : "12.1.4",
+  "starred" : false,
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 14067
+  },
+  "creationDevice" : "iPhone"
+},
+{
+  "duration" : 0,
+  "creationDate" : "2019-04-06T07:12:46Z",
+  "uuid" : "299F02D2EA4B4F14AE9BD1DB2DF7C534",
+  "creationOSName" : "iOS",
+  "creationDeviceType" : "iPhone",
+  "text" : "# A nice part of my traveling\n\nIt's always going to bed exhausted\\. But I also forget that part when packing\\. Don't need to bring distraction material",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"A nice part of my traveling\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"It's always going to bed exhausted. But I also forget that part when packing. Don't need to bring distraction material\"}]}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-06T07:13:42Z",
+  "creationOSVersion" : "12.1.4",
+  "starred" : false,
+  "timeZone" : "Asia\/Tokyo",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 25400
+  },
+  "creationDevice" : "iPhone"
+},
+{
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 139.61723327636719,
+        "latitude" : 35.507022852607797
+      },
+      "identifier" : "<+35.50702285,+139.61723328> radius 141.74",
+      "radius" : 141.74155777794519
+    },
+    "localityName" : "Kohoku-Ku, Yokohama-Shi",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Kanagawa",
+    "longitude" : 139.61723327636719,
+    "placeName" : "Shin-Yokohama",
+    "latitude" : 35.507022857666016
+  },
+  "uuid" : "27CD12EBDFFC4E8EB01C100EDBE2DD90",
+  "starred" : false,
+  "creationDeviceType" : "iPhone",
+  "creationOSName" : "iOS",
+  "creationDate" : "2019-04-06T12:39:34Z",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Continuing to eat, just to try new things\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"Rarely pays off. Without hunger, food is not often memorable.\"}]}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-06T22:11:05Z",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 34985
+  },
+  "text" : "# Continuing to eat, just to try new things\n\nRarely pays off\\. Without hunger, food is not often memorable\\.",
+  "duration" : 0,
+  "creationDevice" : "iPhone",
+  "timeZone" : "Asia\/Tokyo",
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 139.76704406738281,
+        "latitude" : 35.691211699166374
+      },
+      "identifier" : "<+35.69121170,+139.76704407> radius 70.87",
+      "radius" : 70.869967347145263
+    },
+    "localityName" : "Chiyoda-Ku",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Tokyo",
+    "longitude" : 139.76704406738281,
+    "placeName" : "9-10, Uchikanda 1-Chōme",
+    "latitude" : 35.691211700439453
+  },
+  "uuid" : "5F79539756A04996827F90827248A847",
+  "starred" : false,
+  "creationDeviceType" : "iPhone",
+  "creationOSName" : "iOS",
+  "creationDate" : "2019-04-06T13:26:08Z",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Definite gangsters and pimps hanging around Kanda station\",\"attributes\":{\"line\":{\"header\":1}}}]}",
+  "creationDeviceModel" : "iPhone9,3",
+  "modifiedDate" : "2019-04-06T22:11:05Z",
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 35830
+  },
+  "text" : "# Definite gangsters and pimps hanging around Kanda station",
+  "duration" : 0,
+  "creationDevice" : "iPhone",
+  "timeZone" : "Asia\/Tokyo",
+  "creationOSVersion" : "12.1.4"
+},
+{
+  "weather" : {
+    "sunsetDate" : "2019-04-07T09:06:46Z",
+    "temperatureCelsius" : 12,
+    "weatherServiceName" : "HAMweather",
+    "windBearing" : 350,
+    "sunriseDate" : "2019-04-06T20:19:39Z",
+    "conditionsDescription" : "Mostly Cloudy",
+    "pressureMB" : 1009,
+    "visibilityKM" : 48.280319213867188,
+    "relativeHumidity" : 72,
+    "windSpeedKPH" : 7,
+    "weatherCode" : "mostly-cloudy",
+    "windChillCelsius" : 12
+  },
+  "creationDate" : "2019-04-06T22:11:07Z",
+  "duration" : 0,
+  "uuid" : "4CBA6641ABFE48EA8DEA2D23693C3BFF",
+  "creationOSName" : "iOS",
+  "location" : {
+    "region" : {
+      "center" : {
+        "longitude" : 139.76523371327426,
+        "latitude" : 35.690911350494027
+      },
+      "identifier" : "<+35.69091135,+139.76523371> radius 70.87",
+      "radius" : 70.869968512000455
+    },
+    "localityName" : "Chiyoda-Ku",
+    "country" : "Japan",
+    "timeZoneName" : "Asia\/Tokyo",
+    "administrativeArea" : "Tokyo",
+    "longitude" : 139.76522827148438,
+    "placeName" : "13-1, Uchikanda 1-Chōme",
+    "latitude" : 35.690910339355469
+  },
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Golden for foster??\",\"attributes\":{\"line\":{\"header\":1}}}]}",
+  "text" : "# Golden for foster??",
+  "modifiedDate" : "2019-04-06T22:11:22Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 926
+  },
+  "creationDate" : "2019-04-06T23:54:53Z",
+  "duration" : 0,
+  "uuid" : "8CC498A0B8544A359A435ABDFFE974FC",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Should've bought a Subway day pass? \\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"Not sure if that applies to this commuter line to Kawasaki\"}]}",
+  "text" : "# Should've bought a Subway day pass? \n\nNot sure if that applies to this commuter line to Kawasaki",
+  "modifiedDate" : "2019-04-07T00:13:17Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 926
+  },
+  "creationDate" : "2019-04-06T23:55:26Z",
+  "duration" : 0,
+  "uuid" : "F329D22414E946F48C904D74D9499663",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Getting sick?\"}]}",
+  "text" : "# Getting sick?",
+  "modifiedDate" : "2019-04-07T00:13:17Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Stationary",
+    "stepCount" : 926
+  },
+  "creationDate" : "2019-04-06T23:55:35Z",
+  "duration" : 0,
+  "uuid" : "18E9106B371A46F085B76446B789E6BA",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Some apps on the phone running badly\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"Lightroom and day one choppy and slow\"}]}",
+  "text" : "# Some apps on the phone running badly\n\nLightroom and day one choppy and slow",
+  "modifiedDate" : "2019-04-07T02:35:25Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 9001
+  },
+  "creationDate" : "2019-04-07T02:35:30Z",
+  "duration" : 0,
+  "uuid" : "4B00668E88B34D36B43D5878C1AF15CA",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"Robert sure likes to spend a lot of text texting\",\"attributes\":{\"line\":{\"header\":1}}}]}",
+  "text" : "# Robert sure likes to spend a lot of text texting",
+  "modifiedDate" : "2019-04-07T02:41:47Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 11364
+  },
+  "creationDate" : "2019-04-07T03:06:27Z",
+  "duration" : 0,
+  "uuid" : "DEC784C617FF44909875E9057DEC891D",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"meta\":{\"version\":1},\"contents\":[{\"text\":\"I feed off others energy when I'm in a good mood\\n\",\"attributes\":{\"line\":{\"header\":1}}},{\"text\":\"\\n\"},{\"text\":\"And aot of the time Robert is a downer\"}]}",
+  "text" : "# I feed off others energy when I'm in a good mood\n\nAnd aot of the time Robert is a downer",
+  "modifiedDate" : "2019-04-07T03:06:55Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+},
+{
+  "userActivity" : {
+    "activityName" : "Walking",
+    "stepCount" : 18358
+  },
+  "creationDate" : "2019-04-07T05:19:25Z",
+  "duration" : 0,
+  "uuid" : "423CFBDBC25F4159B01F485DBC651E9B",
+  "creationOSName" : "iOS",
+  "creationDeviceModel" : "iPhone9,3",
+  "creationOSVersion" : "12.1.4",
+  "timeZone" : "Asia\/Tokyo",
+  "richText" : "{\"contents\":[{\"attributes\":{\"line\":{\"header\":1}},\"text\":\"Five minutes into the baseball game\\n\"},{\"text\":\"\\n\"},{\"text\":\"And there's a replay review\"}],\"meta\":{\"version\":1}}",
+  "text" : "# Five minutes into the baseball game\n\nAnd there's a replay review",
+  "modifiedDate" : "2019-04-07T05:52:21Z",
+  "creationDevice" : "iPhone",
+  "creationDeviceType" : "iPhone",
+  "starred" : false
+}
+]}
