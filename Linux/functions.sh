@@ -55,7 +55,7 @@ extract () {
 }
 
 gack() {
-  ack -- $1 --ignore-dir=.pants.d $2 ~/Code/gemini
+  ack --$1 --ignore-dir=.pants.d $2 ~/Code/gemini
 }
 
 search_type() {
