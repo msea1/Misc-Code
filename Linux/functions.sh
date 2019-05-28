@@ -19,6 +19,11 @@ code_rvw() {
   arc diff $1
 }
 
+img_rvw() {
+  echo "MBlondeel, MKinzel, EDederick, imcgreer" | xsel -ib
+  arc diff $1
+}
+
 del_br() {
   local d=$(git rev-parse --abbrev-ref HEAD)
   g co master
