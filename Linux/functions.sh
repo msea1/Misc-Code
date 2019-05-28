@@ -14,16 +14,6 @@ cdl() {
     fi
 }
 
-code_rvw() {
-  echo "bwolfe, erybczynski, MBlondeel, JHersch, zelan, darreng" | xsel -ib
-  arc diff $1
-}
-
-img_rvw() {
-  echo "MBlondeel, MKinzel, EDederick, imcgreer" | xsel -ib
-  arc diff $1
-}
-
 del_br() {
   local d=$(git rev-parse --abbrev-ref HEAD)
   g co master
@@ -65,7 +55,11 @@ extract () {
 }
 
 gack() {
-  ack --ignore-dir=.pants.d $1 ~/Code/gemini
+  ack -- $1 --ignore-dir=.pants.d $2 ~/Code/gemini
+}
+
+search_type() {
+  find . -iname "*\.$1" -print0 | xargs -0 ack $2
 }
 
 gemini_tests() {
@@ -90,10 +84,6 @@ ipy() {
   jupyter notebook
   deactivate
   cd -
-}
-
-search_type() {
-  find . -iname "*\.$1" -print0 | xargs -0 ack $2
 }
 
 work() {
