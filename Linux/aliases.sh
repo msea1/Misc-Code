@@ -22,7 +22,7 @@ alias tempd='cd ~/Temp'
 alias diskspace="du -S | sort -n -r |more"
 alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dockstop='docker rm -f -v $(docker ps -a -q)'
-alias code_review='echo "bwolfe, erybczynski, MBlondeel, JHersch, zelan, darreng" | xsel -ib'
+alias code_review='echo "bwolfe, erybczynski, MBlondeel, JHersch, zelan, darreng, nsteffen" | xsel -ib'
 alias img_review='echo "MBlondeel, MKinzel, EDederick, imcgreer" | xsel -ib'
 alias ld='ls -ABF --group-directories-first --color=auto'
 alias ll='ls -AhlF --group-directories-first --color=auto'
