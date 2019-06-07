@@ -45,7 +45,7 @@ alias py='python3'
 
 # MACHINES
 alias curve11='ssh -p 24022 root@192.168.6.11'
-alias desktop='ssh mcarruth@192.168.0.109'
+alias desktop='ssh mcarruth@192.168.6.114'
 alias flatsat='ssh -p 24022 root@192.168.6.10'
 alias pango='ssh spaceflight@pango-dish.service.fra.gemini'
 
