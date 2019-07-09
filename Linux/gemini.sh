@@ -35,7 +35,7 @@ sudo $(which pip3.6) install Cython
 pause "Set up build environment."
 sudo apt install -y build-essential tk-dev libncurses5-dev \
     libncursesw5-dev libreadline6-dev libdb5.3-dev \
-    libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev \
+    libgdbm-dev libsqlite3-dev libssl1.0-dev libbz2-dev \
     libexpat1-dev liblzma-dev zlib1g-dev libgdal-dev \
     openjdk-11-jdk libblas-dev liblapack-dev gfortran \
     python-dev libffi-dev httpie
