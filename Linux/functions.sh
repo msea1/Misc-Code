@@ -110,12 +110,29 @@ new_venv() {
 
 pants_push(){
 	gemini
-	dir_path=${1::-1}
-	svc_name=${dir_path##*/}
-	./pants binary $1/::
+  svc=$1
+  dir_path=${1::-1}
+  svc_name=${dir_path##*/}
+  #sudo docker run --rm -i -v ~/Code/gemini:/code pants-build bash <<EOF
+  #cd /code
+	#./pants binary $svc/::
+  #exit
+  #EOF
 	sudo docker build -t registry.service.nsi.gemini/matthew/$svc_name -f $1/Dockerfile .
 	sudo docker push registry.service.nsi.gemini/matthew/$svc_name
 	cd -
+}
+
+tfe_plan() {
+  : "${1?Need to pass TFE env e.g. 'prod'}"
+  : "${ATLAS_TOKEN?Need to set ATLAS_TOKEN, available here: https://tfe.spaceflightindustries.com/app/settings/tokens}"
+  TFE_ENV=$1
+  TFE_URL="https://tfe.spaceflightindustries.com"
+  current_run_endpoint=$(curl -s -H 'Content-Type: application/vnd.api+json' -H "Authorization: Bearer $ATLAS_TOKEN"  $TFE_URL/api/v2/organizations/bsg/workspaces/$TFE_ENV | jq -r '.data.relationships["current-run"].links.related')
+  current_run_plan_endpoint=$(curl -s -H 'Content-Type: application/vnd.api+json' -H "Authorization: Bearer $ATLAS_TOKEN"  $TFE_URL/$current_run_endpoint | jq -r '.data.relationships.plan.links.related')
+  current_run_plan_log=$(curl -s -H 'Content-Type: application/vnd.api+json' -H "Authorization: Bearer $ATLAS_TOKEN"  $TFE_URL/$current_run_plan_endpoint | jq -r '.data.attributes["log-read-url"]')
+
+  curl -s $current_run_plan_log | landscape
 }
 
 parse_git_branch() {
