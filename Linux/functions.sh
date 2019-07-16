@@ -110,14 +110,9 @@ new_venv() {
 
 pants_push(){
 	gemini
-  svc=$1
   dir_path=${1::-1}
   svc_name=${dir_path##*/}
-  #sudo docker run --rm -i -v ~/Code/gemini:/code pants-build bash <<EOF
-  #cd /code
-	#./pants binary $svc/::
-  #exit
-  #EOF
+  sudo docker run --rm -v ~/Code/gemini:/code -v ~/Temp/dock.sh:/dock.sh pants-build bash dock.sh $1
 	sudo docker build -t registry.service.nsi.gemini/matthew/$svc_name -f $1/Dockerfile .
 	sudo docker push registry.service.nsi.gemini/matthew/$svc_name
 	cd -
