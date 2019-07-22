@@ -1785,8 +1785,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="2.1293556"
-     inkscape:cx="436.4571"
-     inkscape:cy="391.78754"
+     inkscape:cx="428.23865"
+     inkscape:cy="485.71266"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1800,11 +1800,11 @@
      borderlayer="false"
      viewbox-x="0"
      showguides="false"
-     inkscape:window-width="960"
+     inkscape:window-width="1920"
      inkscape:window-height="983"
-     inkscape:window-x="960"
+     inkscape:window-x="0"
      inkscape:window-y="27"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
      inkscape:snap-intersection-paths="true"
      inkscape:object-paths="true"
@@ -3452,16 +3452,16 @@
          style="stroke-width:0.25486588" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.90081978px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0.002438px;word-spacing:0px;fill:#8b959b;fill-opacity:1;stroke:#080808;stroke-width:0.12413569;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="23.747456"
-       y="44.477196"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.00440216px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0.00250274px;word-spacing:0px;fill:#8b959b;fill-opacity:1;stroke:#080808;stroke-width:0.12743199;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="21.781055"
+       y="45.704079"
        id="text2235"
-       transform="scale(0.93141109,1.0736398)"><tspan
+       transform="scale(0.9571469,1.0447717)"><tspan
          sodipodi:role="line"
          id="tspan2233"
-         x="23.747456"
-         y="44.477196"
-         style="letter-spacing:0.24380124px;fill:#6e7b82;fill-opacity:1;stroke:#080808;stroke-width:0.12413569;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">INITIATIVE</tspan></text>
+         x="21.781055"
+         y="45.704079"
+         style="letter-spacing:0.25027514px;fill:#6e7b82;fill-opacity:1;stroke:#080808;stroke-width:0.12743199;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">INITIATIVE</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.90081978px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0.002438px;word-spacing:0px;fill:#8b959b;fill-opacity:1;stroke:#080808;stroke-width:0.12413569;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3520,7 +3520,7 @@
    style="font-size:3.08002663px;line-height:1.33000004;baseline-shift:sub;fill:#6e7b82;fill-opacity:1;stroke:#9bbfd4;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="tspan939">60<tspan
    style="font-size:3.52777767px;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan1964"> </tspan></tspan> +9         +6      Pierce</tspan><tspan
+   id="tspan1964"> </tspan></tspan>  +9        +6      Pierce</tspan><tspan
          sodipodi:role="line"
          x="59.373421"
          y="58.336803"
@@ -3528,8 +3528,8 @@
          id="tspan4911">        <tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L Italic'"
    id="tspan4958"><tspan
-   style="font-size:64.99999762%;baseline-shift:super"
-   id="tspan6098">and 2 non-mgical</tspan> </tspan></tspan><tspan
+   style="font-size:2.82222223px;baseline-shift:super"
+   id="tspan6098">and 2 non-magical</tspan> </tspan></tspan><tspan
          sodipodi:role="line"
          x="59.373421"
          y="64.063057"
@@ -3540,7 +3540,7 @@
    style="font-size:3.73944449px"
    id="tspan13537">Melee</tspan><tspan
    id="tspan4905"
-   style="font-size:1.76388884px"> </tspan>    +9         +6      Pierce</tspan><tspan
+   style="font-size:1.76388884px"> </tspan>     +9        +6      Pierce</tspan><tspan
          sodipodi:role="line"
          x="59.373421"
          y="69.583412"
@@ -3548,7 +3548,7 @@
          id="tspan4917">        <tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L Italic'"
    id="tspan4960"><tspan
-   style="font-size:64.99999762%;baseline-shift:super"
+   style="font-size:2.82222223px;baseline-shift:super"
    id="tspan6100">and 1 non-magical</tspan> </tspan></tspan><tspan
          sodipodi:role="line"
          x="59.373421"
@@ -3568,7 +3568,7 @@
    style="font-size:3.08002687px;line-height:1.33000004;baseline-shift:sub;fill:#6e7b82;fill-opacity:1;stroke:#9bbfd4;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="tspan42430">320</tspan>  <tspan
    style="font-size:3.22830153px;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan19959"> </tspan>  +8         +5      Pierce</tspan><tspan
+   id="tspan19959"> </tspan>   +8        +5      Pierce</tspan><tspan
          sodipodi:role="line"
          x="59.373421"
          y="81.096535"
@@ -3576,7 +3576,7 @@
          id="tspan4919">        <tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L Italic'"
    id="tspan4962"><tspan
-   style="font-size:64.99999762%;baseline-shift:super"
+   style="font-size:2.82222223px;baseline-shift:super"
    id="tspan6102">Arrows: 48 regular, 3 fire, 2 divination, 1 dragonslayer</tspan> </tspan></tspan><tspan
          sodipodi:role="line"
          x="59.373421"
@@ -3586,7 +3586,7 @@
    style="font-size:3.08002687px;line-height:1.33000004;baseline-shift:super;fill:#6e7b82;fill-opacity:1;stroke:#9bbfd4;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="tspan42426">m</tspan>   <tspan
    style="font-size:3.73803329px;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan15619">Melee</tspan>    +8         +5      <tspan
+   id="tspan15619">Melee</tspan>     +8        +5      <tspan
    style="font-size:2.46944427px;line-height:1.33000004;baseline-shift:super;fill:#6e7b82;fill-opacity:1;stroke:#9bbfd4;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="tspan42434">Bludge</tspan><tspan
    style="font-size:2.64583325px;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none"
@@ -3597,19 +3597,21 @@
          x="59.373421"
          y="92.34314"
          style="font-size:3.17499995px;line-height:1.33000004;fill:#6e7b82;fill-opacity:1;stroke:#9bbfd4;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan4937">        <tspan
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L Italic'"
+         id="tspan4937">       <tspan
+   style="font-size:2.82222223px"
+   id="tspan14652"> </tspan><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L Italic'"
    id="tspan4964"><tspan
-   style="font-size:64.99999762%;baseline-shift:super"
+   style="font-size:2.82222223px;baseline-shift:super"
    id="tspan6104">aka unarmed strike (punch)</tspan> </tspan></tspan><tspan
          sodipodi:role="line"
          x="59.373421"
-         y="97.287537"
+         y="97.239487"
          style="font-size:3.17499995px;line-height:1.33000004;fill:#6e7b82;fill-opacity:1;stroke:#9bbfd4;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan4943" /><tspan
          sodipodi:role="line"
          x="59.373421"
-         y="102.02604"
+         y="101.97799"
          style="font-size:3.17499995px;line-height:1;fill:#6e7b82;fill-opacity:1;stroke:#9bbfd4;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan4939">Poison: (4d4 dmg &amp; poisoned [1 min]) or 14 CON save = <tspan
    style="font-size:64.99999762%;baseline-shift:super"
@@ -3618,19 +3620,19 @@
    id="tspan6108">2</tspan> dmg  </tspan><tspan
          sodipodi:role="line"
          x="59.373421"
-         y="106.76454"
+         y="106.71649"
          style="font-size:3.17499995px;line-height:1;fill:#6e7b82;fill-opacity:1;stroke:#9bbfd4;stroke-width:0.1778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan4941">        Can use on 3 arrows or 1 melee weapon for 3 hits.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.16406918px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="9.8564625"
-       y="91.036316"
+       x="10.247396"
+       y="91.285385"
        id="text5487-8"
-       transform="scale(0.94840459,1.0544023)"><tspan
+       transform="scale(0.9484046,1.0544023)"><tspan
          sodipodi:role="line"
-         x="9.8564625"
-         y="91.036316"
+         x="10.247396"
+         y="91.285385"
          style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5581">20</tspan></text>
     <text
@@ -3778,7 +3780,7 @@
    style="font-size:2.46465659px;stroke-width:0.02457332"
    id="tspan4893"> <tspan
    style="font-size:3.16884398px;stroke-width:0.02457332"
-   id="tspan4897">|</tspan> </tspan>Climb: 20' ~ Au: 1035.85</tspan></text>
+   id="tspan4897">|</tspan> </tspan>Climb: 20' ~ Au: 985.85</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:9.7776022px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.24444009"
@@ -4062,7 +4064,7 @@
            sodipodi:role="line"
            id="tspan10526">STRIKE     <tspan
    style="font-size:1.4648416px"
-   id="tspan2030"> </tspan>(BA) - punch after monk weapon<tspan
+   id="tspan2030"> </tspan>(BA) - Punch after monk weapon<tspan
    style="font-size:64.99999762%;baseline-shift:super"
    id="tspan2028">m</tspan> attack<tspan
    style="font-size:64.99999762%;baseline-shift:super"
@@ -4078,7 +4080,7 @@
            sodipodi:role="line"
            id="tspan47568">FLURRY  <tspan
    style="font-size:1.4648416px"
-   id="tspan2032"> </tspan>(1 Ki) - punch twice as BA after any attack</tspan><tspan
+   id="tspan2032"> </tspan>(1 Ki) - Punch twice as BA after any attack</tspan><tspan
            style="font-size:3.52753687px;fill:#ebf6f7;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.07910145;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="94.928703"
            x="52.761738"
@@ -4376,18 +4378,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.16406918px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.18153626;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="9.8641815"
-       y="71.746117"
+       x="9.986558"
+       y="71.888351"
        id="text5487-8-5"
-       transform="scale(0.94840459,1.0544023)"><tspan
+       transform="scale(0.9484046,1.0544023)"><tspan
          sodipodi:role="line"
          id="tspan5485-6-9"
-         x="9.8641815"
-         y="71.746117"
+         x="9.986558"
+         y="71.888351"
          style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.18153626;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">10</tspan><tspan
          sodipodi:role="line"
-         x="9.8641815"
-         y="80.189056"
+         x="9.986558"
+         y="80.331291"
          style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.18153626;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5581-2" /></text>
     <text
@@ -4483,18 +4485,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.16406918px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="9.8641825"
-       y="116.31174"
+       x="9.9809961"
+       y="116.57933"
        id="text5487-8-6"
-       transform="scale(0.94840459,1.0544023)"><tspan
+       transform="scale(0.9484046,1.0544023)"><tspan
          sodipodi:role="line"
          id="tspan5485-6-3"
-         x="9.8641825"
-         y="116.31174"
+         x="9.9809961"
+         y="116.57933"
          style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">15</tspan><tspan
          sodipodi:role="line"
-         x="9.8641825"
-         y="124.75468"
+         x="9.9809961"
+         y="125.02227"
          style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5581-20" /></text>
     <text
@@ -4590,18 +4592,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.16406918px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="9.8641815"
-       y="135.56387"
+       x="9.9809961"
+       y="135.73047"
        id="text5487-8-3"
-       transform="scale(0.94840459,1.0544023)"><tspan
+       transform="scale(0.9484046,1.0544023)"><tspan
          sodipodi:role="line"
          id="tspan5485-6-0"
-         x="9.8641815"
-         y="135.56387"
+         x="9.9809961"
+         y="135.73047"
          style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">13</tspan><tspan
          sodipodi:role="line"
-         x="9.8641815"
-         y="144.00682"
+         x="9.9809961"
+         y="144.17342"
          style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5581-7" /></text>
     <text
@@ -4697,18 +4699,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.1664114px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17105125;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="9.8618965"
-       y="169.93515"
+       x="9.9765749"
+       y="170.12601"
        id="text5487-8-0"
-       transform="scale(0.94876843,1.053998)"><tspan
+       transform="scale(0.94876841,1.053998)"><tspan
          sodipodi:role="line"
          id="tspan5485-6-4"
-         x="9.8618965"
-         y="169.93515"
+         x="9.9765749"
+         y="170.12601"
          style="font-size:8.22188187px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17105125;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">14</tspan><tspan
          sodipodi:role="line"
-         x="9.8618965"
-         y="178.3813"
+         x="9.9765749"
+         y="178.57216"
          style="font-size:8.22188187px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17105125;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5581-8" /></text>
     <text
@@ -4804,18 +4806,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.16406918px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="9.8641815"
-       y="204.22571"
+       x="9.9809961"
+       y="204.38548"
        id="text5487-8-7"
-       transform="scale(0.94840459,1.0544023)"><tspan
+       transform="scale(0.9484046,1.0544023)"><tspan
          sodipodi:role="line"
          id="tspan5485-6-7"
-         x="9.8641815"
-         y="204.22571"
+         x="9.9809961"
+         y="204.38548"
          style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">10</tspan><tspan
          sodipodi:role="line"
-         x="9.8641815"
-         y="212.66866"
+         x="9.9809961"
+         y="212.82843"
          style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5581-6" /></text>
     <text
@@ -5188,7 +5190,7 @@
            y="80.441101"
            x="52.759979"
            sodipodi:role="line"
-           id="tspan4891">Bag of Holding: barks/flowers/moss, big yeti pelt - from scroll</tspan><tspan
+           id="tspan4891">Bag of Holding: barks, snowrose, moss, big yeti pelt &lt;-- from scroll</tspan><tspan
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="84.633987"
            x="52.759979"
