@@ -23,10 +23,10 @@ alias diskspace="du -S | sort -n -r |more"
 alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dockstop='docker rm -f -v $(docker ps -a -q)'
 alias code_review='echo "bwolfe,erybczynski,MBlondeel,snall,JHersch,zelan,darreng,nsteffen" | xsel -ib'
-alias img_review='echo "MBlondeel,MKinzel,EDederick,imcgreer" | xsel -ib'
+alias img_review='echo "nthomas,MBlondeel,MKinzel,EDederick,imcgreer" | xsel -ib'
 alias ld='ls -ABF --group-directories-first --color=auto'
 alias ll='ls -AhlF --group-directories-first --color=auto'
-alias files='xdg-open .'
+alias files='xdg-open . &>/dev/null &'
 alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc'
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'

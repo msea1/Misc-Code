@@ -1,16 +1,11 @@
 ### FUNCTIONS ###
 
-cmdseqcli() {
-  cd ~/Code/mothra/fsw/cmdseq-service
-  py cmdseq/contact/cli.py
-}
-
 cdl() {
     builtin cd "${@}"
     if [ "$( ls | wc -l )" -gt 30 ] ; then
-        ls --color=always | awk 'NR < 16 { print }; NR == 16 { print " (... snip ...)" }; { buffer[NR % 14] = $0 } END { for( i = NR + 1; i <= NR+14; i++ ) print buffer[i % 14] }'
+        ll --color=always | awk 'NR < 16 { print }; NR == 16 { print " (... snip ...)" }; { buffer[NR % 14] = $0 } END { for( i = NR + 1; i <= NR+14; i++ ) print buffer[i % 14] }'
     else
-        ls
+        ll
     fi
 }
 
@@ -55,19 +50,24 @@ extract () {
 }
 
 gack() {
-  ack --$1 --ignore-dir=.pants.d $2 ~/Code/gemini
+  find . -iname "*\.$2" -print0 | xargs -0 ack --ignore-dir=.pants.d $1 ~/Code/gemini
 }
 
 search_type() {
-  find . -iname "*\.$1" -print0 | xargs -0 ack $2
+  find . -iname "*\.$2" -print0 | xargs -0 ack $1
 }
 
 gemini_tests() {
   gemini
-  ./pants test :: --tag=-integration --tag=uvloop_old --tag=-aioredis_new > ~/Temp/gemini_tests.out
-  ./pants test :: --tag=-integration --tag=-uvloop_old --tag=-aioredis_new >> ~/Temp/gemini_tests.out
-  ./pants test :: --tag=-integration --tag=-uvloop_old --tag=aioredis_new >> ~/Temp/gemini_tests.out
-  grep -Eo '(.*):test.*\.\.\.\.\.   FAILURE' ~/Temp/gemini_tests.out | sort | uniq -c | awk '{print $4": "$2}' && grep -Eo '\.\.\.\.\.   SUCCESS' ~/Temp/gemini_tests.out | sort | uniq -c | awk '{print $3": "$1}'
+  echo -e "
+  cd /code
+  ./pants test :: --tag=-integration --tag=uvloop_old --tag=-aioredis_new > /tmp/gemini_tests.out
+  ./pants test :: --tag=-integration --tag=-uvloop_old --tag=-aioredis_new >> /tmp/gemini_tests.out
+  ./pants test :: --tag=-integration --tag=-uvloop_old --tag=aioredis_new >> /tmp/gemini_tests.out
+  grep -Eo '(.*):test.*\.\.\.\.\.   FAILURE' /tmp/gemini_tests.out | sort | uniq -c | awk '{print $4": "$2}' && grep -Eo '\.\.\.\.\.   SUCCESS' /tmp/gemini_tests.out | sort | uniq -c | awk '{print $3": "$1}'
+  exit" > /tmp/tests.sh
+  sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/tests.sh:/tests.sh pants-build bash tests.sh
+  cd -
 }
 
 gps() {
@@ -109,14 +109,25 @@ new_venv() {
 }
 
 pants_push(){
-	gemini
+  gemini
   dir_path=${1::-1}
   svc_name=${dir_path##*/}
   echo -e 'cd /code\n./pants binary $1/::\nexit' > /tmp/binary.sh
   sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
-	sudo docker build -t registry.service.nsi.gemini/matthew/$svc_name -f $1/Dockerfile .
-	sudo docker push registry.service.nsi.gemini/matthew/$svc_name
-	cd -
+  sudo docker build -t registry.service.nsi.gemini/matthew/$svc_name -f $1/Dockerfile .
+  sudo docker push registry.service.nsi.gemini/matthew/$svc_name
+  sudo chown $USER dist/$svc_name.pex
+  cd -
+}
+
+pex_build(){
+  gemini
+  dir_path=${1::-1}
+  svc_name=${dir_path##*/}
+  echo -e 'cd /code\n./pants binary $1/::\nexit' > /tmp/binary.sh
+  sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
+  sudo chown $USER dist/$svc_name.pex
+  cd -
 }
 
 tfe_plan() {
