@@ -108,6 +108,7 @@ reset_origin() {
   g stash
   g fetch --prune
   g reset --hard origin/$d
+  g su
 }
 
 new_venv() {
