@@ -22,8 +22,8 @@ alias tempd='cd ~/Temp'
 alias diskspace="du -S | sort -n -r |more"
 alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dockstop='docker rm -f -v $(docker ps -a -q)'
-alias code_review='echo "bwolfe,erybczynski,MBlondeel,snall,JHersch,zelan,darreng,nsteffen" | xsel -ib'
-alias img_review='echo "nthomas,MBlondeel,MKinzel,EDederick,imcgreer" | xsel -ib'
+alias code_review='echo "bwolfe,erybczynski,snall,cmaddox,JHersch,zelan,darreng,nsteffen,max" | xsel -ib'
+alias img_review='echo "nthomas,MKinzel,EDederick,imcgreer" | xsel -ib'
 alias ld='ls -ABF --group-directories-first --color=auto'
 alias ll='ls -AhlF --group-directories-first --color=auto'
 alias files='xdg-open . &>/dev/null &'
@@ -51,5 +51,7 @@ alias pango='ssh spaceflight@pango-dish.service.fra.gemini'
 
 
 # EDITING
+alias bashalias='subl ~/.bash_aliases'
+alias bashfx='subl ~/.bash_fxs'
 alias bashrc='subl ~/.bashrc'
 alias gitconfig='subl ~/.gitconfig'

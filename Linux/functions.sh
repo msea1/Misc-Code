@@ -103,6 +103,13 @@ upd_master() {
   popd
 }
 
+reset_origin() {
+  local d=$(git rev-parse --abbrev-ref HEAD)
+  g stash
+  g fetch --prune
+  g reset --hard origin/$d
+}
+
 new_venv() {
   py -m venv $HOME/.virtualenvs/$1
   work $1
@@ -122,6 +129,8 @@ pants_push(){
 
 pex_build(){
   gemini
+  # sudo docker build -t pants-build -f infrastructure/dockerfiles/pants-build/Dockerfile .
+  # sudo rm -rf .pants.d/
   dir_path=${1::-1}
   svc_name=${dir_path##*/}
   echo -e 'cd /code\n./pants binary $1/::\nexit' > /tmp/binary.sh
