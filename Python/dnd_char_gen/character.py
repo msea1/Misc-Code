@@ -8,6 +8,9 @@ class Character:
         self.dnd_clss = kwargs['race']
         self.background = kwargs['race']
         self.alignment = Alignment(kwargs['alignment_value'])
+        self.traits = []  # T.I.B.F.
+        self.bonus_actions = []
+        self.reactions = []
 
     def __str__(self):
         pass
