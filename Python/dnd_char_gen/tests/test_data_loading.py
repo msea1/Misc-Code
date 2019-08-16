@@ -19,6 +19,9 @@ class TestRacesXML(unittest.TestCase):
                           'Kenku (NPC)', 'Kobold (NPC)', 'Kuo-toa (NPC)', 'Lizardfolk (NPC)', 'Merfolk (NPC)',
                           'Orc (NPC)', 'Skeleton (NPC)', 'Troglodyte (NPC)', 'Zombie (NPC)'], list(races))
 
+    def test_parse_ability(self):
+        pass
+
 
 class TestCoreXML(unittest.TestCase):
     @classmethod

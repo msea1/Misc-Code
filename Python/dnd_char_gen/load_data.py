@@ -9,7 +9,7 @@ def load_data():
     load_core(data_folder)
     load_eberron(data_folder)
     races = load_npc_race_data(data_folder)
-    return (races)
+    return {'races': races}
 
 
 def load_core(folder):
