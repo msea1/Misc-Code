@@ -5,6 +5,10 @@ def roll(num_sides):
     return random.randint(1, num_sides)
 
 
+def choose(dataset):
+    return random.sample(dataset, 1)
+
+
 def roll_weighted(prob_list):
     return random.choices(range(prob_list), weights=prob_list)
 
@@ -28,3 +32,7 @@ def cost_of_ability_point(raw_score):
     elif raw_score == 15:
         return 9
     raise ValueError('Not allowed to have a score above 15')
+
+
+def parse_traits(trait_str):
+    return {x['name']: " ".join(x['text']) for x in trait_str}

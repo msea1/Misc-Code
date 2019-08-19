@@ -4,6 +4,8 @@ from xml.etree.ElementTree import fromstring
 
 import xmljson
 
+from dnd_char_gen.character import Race
+
 
 class TestRacesXML(unittest.TestCase):
     @classmethod
@@ -14,12 +16,15 @@ class TestRacesXML(unittest.TestCase):
         cls.json_data = xmljson.parker.data(fromstring(xmldata))
 
     def test_get_all_races(self):
-        races = {x['name']: x for x in self.json_data['race']}
+        races = {x['name']: Race(**x) for x in self.json_data['race']}
         self.assertEqual(['Bullywug (NPC)', 'Gnoll (NPC)', 'Goblin (NPC)', 'Grimlock (NPC)', 'Hobgoblin (NPC)',
                           'Kenku (NPC)', 'Kobold (NPC)', 'Kuo-toa (NPC)', 'Lizardfolk (NPC)', 'Merfolk (NPC)',
                           'Orc (NPC)', 'Skeleton (NPC)', 'Troglodyte (NPC)', 'Zombie (NPC)'], list(races))
 
     def test_parse_ability(self):
+        pass
+
+    def test_parse_traits(self):
         pass
 
 
