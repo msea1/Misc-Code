@@ -41,15 +41,6 @@ class Character:
 
 
 
-
-class Class:
-    def __init__(self, name, hd, proficiency, spellAbility):
-        pass
-
-    def __str__(self):
-        pass
-
-
 class Background:
     def __init__(self, name, proficiency, trait):
         self.name = name

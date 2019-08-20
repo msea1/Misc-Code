@@ -1,14 +1,5 @@
 from dnd_char_gen.utils import roll, choose
 
-ABILITIES = {
-    'STR': 8,
-    'DEX': 8,
-    'CON': 8,
-    'INT': 8,
-    'WIS': 8,
-    'CHA': 8
-}
-
 ABILITY_MATRIX = {
     "1": {
         "1": [15, 15, 15, 8, 8, 8],
@@ -60,17 +51,30 @@ ABILITY_MATRIX = {
     }
 }
 
-r4 = str(roll(4))
-r10 = str(roll(10))
-selection = ABILITY_MATRIX[r4][r10]
-order = choose(list(ABILITIES), len(ABILITIES))
-pairing = zip(order, selection)
+def roll_ability():
+    ABILITIES = {
+        'STR': 8,
+        'DEX': 8,
+        'CON': 8,
+        'INT': 8,
+        'WIS': 8,
+        'CHA': 8
+    }
+    r4 = str(roll(4))
+    r10 = str(roll(10))
+    selection = ABILITY_MATRIX[r4][r10]
+    order = choose(list(ABILITIES), len(ABILITIES))
+    pairing = zip(order, selection)
 
-for abl, num in pairing:
-    ABILITIES[abl] = num
+    for abl, num in pairing:
+        ABILITIES[abl] = num
 
-print(f'R4: {r4}')
-print(f'R10: {r10}')
-print(f'selection: {selection}')
-print(f'order: {order}')
-print(f'matrix: {ABILITIES}')
+    # print(f'R4: {r4}')
+    # print(f'R10: {r10}')
+    # print(f'selection: {selection}')
+    # print(f'order: {order}')
+    # print(f'matrix: {ABILITIES}')
+    return ABILITIES
+
+if __name__ == '__main__':
+    roll_ability()
