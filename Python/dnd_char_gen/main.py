@@ -8,12 +8,12 @@ from dnd_char_gen.load_data import load_data
 def parse_arguments(available_data):
     parser = argparse.ArgumentParser()
     # parser.add_argument('--points', choices=['buy'], default='buy')
-    parser.add_argument('--race', choices=list(available_data['races']), default=None)
-    parser.add_argument('--class', help='', default='all')
-    parser.add_argument('--background', help='', default='all')
-    parser.add_argument('--abilities', help='', default=None)
-    parser.add_argument('--alignment', help='', default='all')
-    parser.add_argument('--npc', type=bool, default=False)
+    # parser.add_argument('--race', choices=list(available_data['races']), default=None)
+    # parser.add_argument('--class', help='', default='all')
+    # parser.add_argument('--background', help='', default='all')
+    # parser.add_argument('--abilities', help='', default=None)
+    # parser.add_argument('--alignment', help='', default='all')
+    # parser.add_argument('--npc', type=bool, default=False)
     args = parser.parse_args()
     return args
 

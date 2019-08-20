@@ -5,8 +5,8 @@ def roll(num_sides):
     return random.randint(1, num_sides)
 
 
-def choose(dataset):
-    return random.sample(dataset, 1)
+def choose(dataset, k):
+    return random.sample(dataset, k)
 
 
 def roll_weighted(prob_list):
