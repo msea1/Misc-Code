@@ -41,28 +41,6 @@ class Character:
 
 
 
-class Race:
-    def __init__(self, name, size, speed, ability, proficiency, trait):
-        self.npc_only = 'npc' in name.lower()
-        self.name = name
-        self.size = size
-        self.speed = speed
-        self.ability_str = ability
-        self.proficiency = proficiency
-        self.trait = parse_traits(trait)
-
-    def __str__(self):
-        pass
-
-    def apply(self, character_obj):
-        pass
-
-    def parse_abilities(self, ability_obj):
-        entries = self.ability_str.split(',')
-        for entry in entries:
-            ability_type = entry[:3].upper()
-            ability_mod = int(entry[3:].strip())
-            ability_obj['stats'][ability_type] += ability_mod
 
 class Class:
     def __init__(self, name, hd, proficiency, spellAbility):
