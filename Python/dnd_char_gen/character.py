@@ -19,7 +19,6 @@ class Character:
         pass
 
     def create(self, data):
-        #  Abilities - Race - Class - Background - Backstory
         if not self.abilities:
             self.abilities = self.pick_abilities()
         if not self.race:

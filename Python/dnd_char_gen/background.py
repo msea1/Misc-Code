@@ -38,6 +38,7 @@ class Universe:
         a = self.load_core()
         a.update(self.load_eberron())
         self.data = a
+        self.combine_backgrounds()
 
     def load_core(self):
         with open(join(self.data_folder, 'Core.xml')) as fin:
@@ -49,8 +50,16 @@ class Universe:
         with open(join(self.data_folder, 'EberronAddOn.xml')) as fin:
             xmldata = fin.read()
         json_data = xmljson.parker.data(fromstring(xmldata))
-        return {x['name']: x for x in json_data['background']}
+        return {x['name']: Background(**x) for x in json_data['background']}
 
+    def combine_backgrounds(self):
+        temp = {'House Agent': []}
+        for k, v in self.data.items():
+            if 'House' not in k:
+                temp[k] = [v]
+            else:
+                temp['House Agent'].append(v)
+        self.data = temp
 
 PROF_MAP = {
     'Animal Handling': "WIS",
@@ -76,11 +85,17 @@ PROF_MAP = {
 uni = Universe()
 uni.load_data()
 
-from dnd_char_gen.utils import choose
+from dnd_char_gen.utils import choose, roll
 
 
 def choose_random_bg():
-    return uni.data[choose(list(uni.data), 1)[0]]
+    background = choose(list(uni.data), 1)[0]
+    bg_list = uni.data[background]
+    if len(bg_list) == 1:
+        return bg_list[0]
+    else:
+        sub_i = roll(len(bg_list))
+        return bg_list[sub_i-1]
 
 
 def compile_all_grades(abilities):
