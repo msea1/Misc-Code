@@ -51,6 +51,7 @@ ABILITY_MATRIX = {
     }
 }
 
+
 def roll_ability():
     ABILITIES = {
         'STR': 8,
@@ -75,6 +76,7 @@ def roll_ability():
     # print(f'order: {order}')
     # print(f'matrix: {ABILITIES}')
     return ABILITIES
+
 
 if __name__ == '__main__':
     roll_ability()

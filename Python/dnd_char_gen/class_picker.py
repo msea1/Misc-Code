@@ -64,6 +64,7 @@ Saves: ['Constitution', 'Charisma'] and Spells: Charisma
         """
         return 0
 
+
 class Universe:
     def __init__(self):
         self.data_folder = join(dirname(abspath(__file__)), 'data')
@@ -88,24 +89,24 @@ class Universe:
 
 
 PROF_MAP = {
- 'Animal Handling': "WIS",
- 'Athletics': "STR",
- 'Intimidation': "CHA",
- 'Nature': "INT",
- 'Perception': "WIS",
- 'Survival': "WIS",
- 'Acrobatics': "DEX",
- 'Arcana': "INT",
- 'Deception': "CHA",
- 'History': "INT",
- 'Insight': "WIS",
- 'Investigation': "INT",
- 'Medicine': "WIS",
- 'Performance': "CHA",
- 'Persuasion': "CHA",
- 'Religion': "INT",
- 'Sleight of Hand': "DEX",
- 'Stealth': "DEX",
+    'Animal Handling': "WIS",
+    'Athletics': "STR",
+    'Intimidation': "CHA",
+    'Nature': "INT",
+    'Perception': "WIS",
+    'Survival': "WIS",
+    'Acrobatics': "DEX",
+    'Arcana': "INT",
+    'Deception': "CHA",
+    'History': "INT",
+    'Insight': "WIS",
+    'Investigation': "INT",
+    'Medicine': "WIS",
+    'Performance': "CHA",
+    'Persuasion': "CHA",
+    'Religion': "INT",
+    'Sleight of Hand': "DEX",
+    'Stealth': "DEX",
 }
 
 uni = Universe()
@@ -121,8 +122,10 @@ def choose_random_class():
 def compile_all_class_grades(abilities):
     return [x.grade_class_for_ability_spread(abilities) for x in uni.data]
 
+
 def weighted_choose_classes(choices, weights):
     pass
+
 
 picks = 1
 choice = choose_random_class()

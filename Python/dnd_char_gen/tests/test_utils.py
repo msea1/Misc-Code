@@ -1,5 +1,6 @@
-from dnd_char_gen import utils
 import unittest
+
+from dnd_char_gen import utils
 
 
 class Test(unittest.TestCase):

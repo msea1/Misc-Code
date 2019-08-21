@@ -15,11 +15,11 @@ def roll_weighted(prob_list):
 
 def two_dice_rolls_to_list(d, rolls):
     #  x * len(y) + y (0th-indexed)
-    return (rolls[0]-1) * d + rolls[1]
+    return (rolls[0] - 1) * d + rolls[1]
 
 
 def ability_score_to_modifier(raw_score):
-    return raw_score//2 - 5
+    return raw_score // 2 - 5
 
 
 def cost_of_ability_point(raw_score):

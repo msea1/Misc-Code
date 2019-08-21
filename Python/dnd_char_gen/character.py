@@ -1,5 +1,4 @@
-from enum import IntEnum
-from dnd_char_gen.utils import roll, parse_traits, choose
+from dnd_char_gen.utils import choose
 
 
 class Character:
@@ -38,17 +37,6 @@ class Character:
                 chosen_race = data['races'][potential_choice]
                 chosen_race.apply(self)
                 return chosen_race
-
-
-
-class Background:
-    def __init__(self, name, proficiency, trait):
-        self.name = name
-        self.proficiency = proficiency
-        self.trait = parse_traits(trait)
-
-    def __str__(self):
-        pass
 
 
 class Feat:

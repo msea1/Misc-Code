@@ -28,7 +28,6 @@ class Universe:
         races = {x['name']: Race(**x) for x in json_data['race']}
         # spells = {x['name']: x for x in json_data['spell']}
 
-
     def load_eberron(self):
         with open(join(self.data_folder, 'EberronAddOn.xml')) as fin:
             xmldata = fin.read()
@@ -38,7 +37,6 @@ class Universe:
         items = {x['name']: x for x in json_data['item']}
         monsters = {x['name']: x for x in json_data['monster']}
         races = {x['name']: Race(**x) for x in json_data['race']}
-
 
     def load_npc_race_data(self):
         with open(join(self.data_folder, 'NPCRacesAddOn.xml')) as fin:

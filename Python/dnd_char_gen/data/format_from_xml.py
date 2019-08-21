@@ -5,14 +5,15 @@ import xmljson
 
 from dnd_char_gen.character import Race
 
-
 data_folder = join(dirname(dirname(abspath(__file__))), 'data')
 data = {}
+
 
 def load_data():
     load_core()
     load_eberron()
     load_npc_race_data()
+
 
 def load_core():
     with open(join(data_folder, 'Core.xml')) as fin:

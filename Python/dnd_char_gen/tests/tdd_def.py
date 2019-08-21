@@ -61,4 +61,4 @@ class Tests(unittest.TestCase):
         r = Race('', None, None, None, None, sample)
         resp = r.parse_traits()
         self.assertEqual({'Bludgeoning Vulnerability': 'You are vulnerable to bludgeoning damage.   '
-                              "Source: Dungeon Master's Guide, p. 282"}, resp)
+                                                       "Source: Dungeon Master's Guide, p. 282"}, resp)
