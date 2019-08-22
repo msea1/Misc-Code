@@ -1,5 +1,5 @@
 from dnd_char_gen.ability_roll import roll_ability
-from dnd_char_gen.definitions import PROF_MAP
+from dnd_char_gen.definitions import Alignment, PROF_MAP
 from dnd_char_gen.utils import choose, roll
 
 
@@ -13,13 +13,8 @@ class Character:
         self.saving_throws = None
         self.proficiencies = None
         self.background = None
-        # self.abilities = cli_args.abilities
-        # self.points = cli_args.points
+        self.alignment = None
         # self.is_npc = kwargs.get('is_npc', False)
-        # self.race = cli_args.race
-        # self.dnd_class = kwargs.get('dnd_class', None)
-        # self.background = kwargs.get('background', None)
-        # self.alignment = kwargs.get('alignment_value', None)
         # self.traits = []  # T.I.B.F.
         # self.bonus_actions = []
         # self.reactions = []
@@ -52,6 +47,9 @@ class Character:
             self.background = self.pick_background(data['background'])
             print(f'Background is {self.background}')
             print(f'    Good at {self.background.proficiency}')
+        if not self.alignment:
+            self.alignment = self.pick_alignment()
+            print(f'Alignment is {self.alignment.name}')
 
     @staticmethod
     def parse_proficiency(prof_str):
@@ -92,6 +90,11 @@ class Character:
         else:
             sub_i = roll(len(bg_list))
             return bg_list[sub_i - 1]
+
+    @staticmethod
+    def pick_alignment():
+        choice = roll(9)
+        return Alignment(choice)
 
 
 class Feat:
