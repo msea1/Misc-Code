@@ -1,4 +1,5 @@
-from dnd_char_gen.utils import roll, choose
+from dnd_char_gen.definitions import create_base_abilities
+from dnd_char_gen.utils import choose, roll
 
 ABILITY_MATRIX = {
     "1": {
@@ -53,29 +54,17 @@ ABILITY_MATRIX = {
 
 
 def roll_ability():
-    ABILITIES = {
-        'STR': 8,
-        'DEX': 8,
-        'CON': 8,
-        'INT': 8,
-        'WIS': 8,
-        'CHA': 8
-    }
+    abilities = create_base_abilities()
     r4 = str(roll(4))
     r10 = str(roll(10))
     selection = ABILITY_MATRIX[r4][r10]
-    order = choose(list(ABILITIES), len(ABILITIES))
+    order = choose(list(abilities), len(abilities))
     pairing = zip(order, selection)
 
     for abl, num in pairing:
-        ABILITIES[abl] = num
+        abilities[abl] = num
 
-    # print(f'R4: {r4}')
-    # print(f'R10: {r10}')
-    # print(f'selection: {selection}')
-    # print(f'order: {order}')
-    # print(f'matrix: {ABILITIES}')
-    return ABILITIES
+    return abilities
 
 
 if __name__ == '__main__':

@@ -2,7 +2,8 @@ import argparse
 import json
 
 from dnd_char_gen.character import Character
-from dnd_char_gen.load_data import load_data
+from dnd_char_gen.load_data import Universe
+from dnd_char_gen.data.format_from_xml import Universe
 
 
 def parse_arguments(available_data):
@@ -19,13 +20,17 @@ def parse_arguments(available_data):
 
 
 def main():
-    all_data = load_data()
-    args = parse_arguments(all_data)
+    # all_data = Universe()
+    u = Universe()
+    u.load_data()
+    u.combine_sources()
+    u.clean_up_data()
+    # args = parse_arguments(all_data)
     # try:
     #     while True:  # or less than num chars spec'd from args
-    god = Character(args)
-    god.create(all_data)
-    print(json.dumps(god, indent=4))
+    god = Character(None)
+    god.create(u.data)
+    # print(json.dumps(god, indent=4))
     # pause until enter
     # except KeyboardInterrupt:
     #     exit(0)

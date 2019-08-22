@@ -1,18 +1,6 @@
 from enum import IntEnum
 
 
-class Ability():
-    def __init__(self):
-        self.stats = {
-            'STR': 8,
-            'DEX': 8,
-            'CON': 8,
-            'INT': 8,
-            'WIS': 8,
-            'CHA': 8
-        }
-
-
 class Alignment(IntEnum):
     LAWFUL_GOOD = 1
     LAWFUL_NEUTRAL = 2
@@ -25,8 +13,34 @@ class Alignment(IntEnum):
     CHAOTIC_EVIL = 9
 
 
-class Skills():
-    def __init__(self):
-        pass
-        # not sure if class makes sense on all these
-        # yes for once in the character, but not for priming
+def create_base_abilities():
+    return {
+        'STR': 8,
+        'DEX': 8,
+        'CON': 8,
+        'INT': 8,
+        'WIS': 8,
+        'CHA': 8
+    }
+
+
+PROF_MAP = {
+    'Animal Handling': "WIS",
+    'Athletics': "STR",
+    'Intimidation': "CHA",
+    'Nature': "INT",
+    'Perception': "WIS",
+    'Survival': "WIS",
+    'Acrobatics': "DEX",
+    'Arcana': "INT",
+    'Deception': "CHA",
+    'History': "INT",
+    'Insight': "WIS",
+    'Investigation': "INT",
+    'Medicine': "WIS",
+    'Performance': "CHA",
+    'Persuasion': "CHA",
+    'Religion': "INT",
+    'Sleight of Hand': "DEX",
+    'Stealth': "DEX",
+}
