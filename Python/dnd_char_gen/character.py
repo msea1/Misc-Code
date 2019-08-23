@@ -59,6 +59,7 @@ class Character:
             return None, None
         saving_throws = prof_list[:2]
         proficiencies = [(x, PROF_MAP[x]) for x in prof_list[2:]]
+        sorted(proficiencies)
         return saving_throws, proficiencies
 
     @staticmethod
