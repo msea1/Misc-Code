@@ -5,6 +5,12 @@ from dnd_char_gen.character import Character
 from dnd_char_gen.load_data import Universe
 from dnd_char_gen.data.format_from_xml import Universe
 
+# TODO tests
+# TODO add grading / sorting / matching
+# TODO add input args
+# TODO add personality and such, pull from DnD source, bots
+# TODO parse traits from source
+
 
 def parse_arguments(available_data):
     parser = argparse.ArgumentParser()
