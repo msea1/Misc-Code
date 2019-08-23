@@ -1794,7 +1794,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.1293556"
      inkscape:cx="425.8381"
-     inkscape:cy="201.61677"
+     inkscape:cy="408.25205"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1855,7 +1855,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3724,7 +3724,7 @@
          id="tspan6536-7"
          x="28.937243"
          y="153.44821"
-         style="font-size:3.15601754px;fill:#1d205e;fill-opacity:1;stroke:#111337;stroke-width:0.07780126;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">+4</tspan></text>
+         style="font-size:3.15601754px;fill:#1d205e;fill-opacity:1;stroke:#111337;stroke-width:0.07780126;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">+7</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.20433855px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#1d205e;fill-opacity:1;stroke:#1d205e;stroke-width:0.07780126;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3736,7 +3736,7 @@
          id="tspan6536-7-9"
          x="28.937241"
          y="144.14247"
-         style="font-size:3.1560173px;fill:#1d205e;fill-opacity:1;stroke:#111337;stroke-width:0.07780126;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">+4</tspan></text>
+         style="font-size:3.1560173px;fill:#1d205e;fill-opacity:1;stroke:#111337;stroke-width:0.07780126;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">+7</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.15666938px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#1d205e;fill-opacity:1;stroke:#1d205e;stroke-width:0.07780126;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3748,7 +3748,7 @@
          id="tspan6536-7-5"
          x="28.9312"
          y="138.86418"
-         style="font-size:3.15666938px;fill:#1d205e;fill-opacity:1;stroke:#111337;stroke-width:0.07780126;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">+4</tspan></text>
+         style="font-size:3.15666938px;fill:#1d205e;fill-opacity:1;stroke:#111337;stroke-width:0.07780126;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">+7</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.90405941px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#463078;fill-opacity:1;stroke:#463078;stroke-width:0.3048;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3788,7 +3788,7 @@
    style="font-size:2.46465659px;stroke-width:0.02457332"
    id="tspan4893"> <tspan
    style="font-size:3.16884398px;stroke-width:0.02457332"
-   id="tspan4897">|</tspan> </tspan>Climb: 20' ~ Au: 984.85</tspan></text>
+   id="tspan4897">|</tspan> </tspan>Climb: 20' ~ Au: 2584.85</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:9.7776022px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.24444009"
@@ -4608,7 +4608,7 @@
          id="tspan5485-6-0"
          x="9.9809961"
          y="135.73047"
-         style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">13</tspan><tspan
+         style="font-size:8.21875954px;fill:#463078;fill-opacity:1;stroke:#ebf6f7;stroke-width:0.17098628;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">19</tspan><tspan
          sodipodi:role="line"
          x="9.9809961"
          y="144.17342"
@@ -4625,7 +4625,7 @@
          id="tspan6536-9-2-6"
          x="13.707469"
          y="125.2934"
-         style="font-size:5.03637648px;fill:#659dbd;fill-opacity:1;stroke:#05386b;stroke-width:0.22359744;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">+1</tspan></text>
+         style="font-size:5.03637648px;fill:#659dbd;fill-opacity:1;stroke:#05386b;stroke-width:0.22359744;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">+4</tspan></text>
     <g
        id="g1110-8"
        transform="matrix(0.27728023,0,0,-0.34513813,7.538446,171.3525)">
@@ -5008,10 +5008,30 @@
          x="130.65512"
          y="316.44479"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82235932px;line-height:0.94999999;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';stroke-width:0.07156245;stroke-miterlimit:4;stroke-dasharray:none"
-         id="tspan12862">- Artifacts -- religious significance? Powerful?</tspan><tspan
+         id="tspan12862">- Rescue Clayton's brother</tspan><tspan
          sodipodi:role="line"
          x="130.65512"
          y="319.12604"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82235932px;line-height:0.94999999;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';stroke-width:0.07156245;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan3356">- B'hood contact, blank paper, Kemba?</tspan><tspan
+         sodipodi:role="line"
+         x="130.65512"
+         y="321.80728"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82235932px;line-height:0.94999999;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';stroke-width:0.07156245;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan3340">- Clear a mine for the Rustbeards?</tspan><tspan
+         sodipodi:role="line"
+         x="130.65512"
+         y="324.4209"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82235932px;line-height:0.94999999;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';stroke-width:0.07156245;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan3336"></tspan><tspan
+         sodipodi:role="line"
+         x="130.65512"
+         y="326.9093"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82235932px;line-height:0.94999999;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';stroke-width:0.07156245;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan3338">- Artifacts -- religious significance? Powerful?</tspan><tspan
+         sodipodi:role="line"
+         x="130.65512"
+         y="329.59055"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82235932px;line-height:0.94999999;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';stroke-width:0.07156245;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan37176">- Resolution of moral code; develop patience?</tspan></text>
     <text
@@ -5179,7 +5199,7 @@
          y="191.91609"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'padmaa-Bold.1.1';-inkscape-font-specification:'padmaa-Bold.1.1';letter-spacing:3.23071575px;stroke-width:0.30176792">ITEMS</tspan></text>
     <g
-       transform="matrix(0.9586205,0,0,0.96803858,2.4870932,99.05065)"
+       transform="matrix(0.9586205,0,0,0.96803858,3.1440608,99.05065)"
        id="g37283-7"
        style="fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <text
@@ -5198,7 +5218,7 @@
            y="80.441101"
            x="52.759979"
            sodipodi:role="line"
-           id="tspan4891">Bag of Holding: barks, snowrose, moss, winterwolf pelt, big yeti pelt</tspan><tspan
+           id="tspan4891">Bag of Holding: [empty]</tspan><tspan
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="84.633987"
            x="52.759979"
@@ -5214,61 +5234,56 @@
            y="93.01976"
            x="52.759979"
            sodipodi:role="line">Disappear Dust: everything w/i 10' becomes invisible for 2d4 minutes.</tspan><tspan
-           id="tspan37233-8"
+           id="tspan37235-9"
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="97.212639"
            x="52.759979"
            sodipodi:role="line">        It also ends if creature makes attack or spell</tspan><tspan
-           id="tspan37235-9"
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="101.40553"
-           x="52.759979"
-           sodipodi:role="line">Dragon bits: 3 teeth, a claw, a throat glandt</tspan><tspan
-           style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           y="105.59841"
            x="52.759979"
            sodipodi:role="line"
            id="tspan3319">Elven Boots: make no sound &amp; get Adv on silent mvmt Stealth checks</tspan><tspan
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           y="105.59841"
+           x="52.759979"
+           sodipodi:role="line"
+           id="tspan4680">Headband of Intellect: INT raised to 19 (+4) while wearing, 13 if not</tspan><tspan
+           style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="109.7913"
            x="52.759979"
            sodipodi:role="line"
-           id="tspan4680">Healing Potions: Restore HP, Normal (4), Greater (0), Superior (1)</tspan><tspan
+           id="tspan3342">Healing Potions: Restore HP, Normal (4), Greater (0), Superior (1)</tspan><tspan
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="113.98418"
            x="52.759979"
            sodipodi:role="line"
            id="tspan4881">Pyrotechnics Wand: 7 charges, regains 1d6+1/day. d20 on 0, 1 --&gt; gone.</tspan><tspan
-           id="tspan37245-2"
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="118.17707"
            x="52.759979"
-           sodipodi:role="line">        Action to create harmless burst of light w/i 60' &amp; heard 300' away</tspan><tspan
+           sodipodi:role="line"
+           id="tspan4875">        Action to create harmless burst of light w/i 60' &amp; heard 300' away</tspan><tspan
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="122.36996"
            x="52.759979"
            sodipodi:role="line"
-           id="tspan4875">Scroll: items sought by brotherhood: basilisk stuff</tspan><tspan
+           id="tspan4899">Shield of Faith: one use, grants +2 AC w/concentration</tspan><tspan
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="126.56284"
            x="52.759979"
            sodipodi:role="line"
-           id="tspan4899">Shield of Faith: one use, grants +2 AC w/concentration</tspan><tspan
+           id="tspan14643">Misc: backpack, BBs, bedroll, bell, candle, crowbar, dragon tooth, </tspan><tspan
+           id="tspan37247-9"
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="130.75572"
            x="52.759979"
-           sodipodi:role="line"
-           id="tspan14643">Misc: backpack, BBs, bedroll, bell, candle, crowbar, hammer, hooded</tspan><tspan
-           id="tspan37247-9"
+           sodipodi:role="line">    hammer, hooded lantern, mess kit, necklace, oil, pitons, 10d rations, </tspan><tspan
            style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            y="134.94861"
            x="52.759979"
-           sodipodi:role="line">    lantern, mess kit, necklace, oil, pitons, 4d rations, ring, string, </tspan><tspan
-           style="font-size:2.70221853px;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           y="139.14149"
-           x="52.759979"
            sodipodi:role="line"
-           id="tspan14637">    tinderbox, torches, waterskin, thief tools<tspan
+           id="tspan14637">    ring, string, tinderbox, torches, waterskin, thief tools<tspan
    style="font-size:64.99999762%;baseline-shift:super;fill:#080808;fill-opacity:1;stroke:#080808;stroke-width:0.07910254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="tspan2148">*</tspan></tspan></text>
     </g>
