@@ -1,8 +1,8 @@
 from os.path import abspath, dirname, join
 from xml.etree.ElementTree import fromstring
 
+import jsonpickle
 import xmljson
-import json
 
 from dnd_char_gen.background import Background
 from dnd_char_gen.class_picker import CharClass
@@ -63,8 +63,9 @@ class Universe:
         return temp
 
     def output_data(self):
+        output = jsonpickle.dumps(self.data)
         with open(join(self.data_folder, 'source.json'), 'w') as fout:
-            json.dump(self.data, fout)
+            fout.write(output)
 
     def load_core(self):
         with open(join(self.data_folder, 'Core.xml')) as fin:
@@ -101,4 +102,3 @@ if __name__ == '__main__':
     u.combine_sources()
     u.clean_up_data()
     u.output_data()
-    print(u.data)
