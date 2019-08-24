@@ -46,4 +46,14 @@ Pick 2 among [('Arcana', 'INT'), ('Deception', 'CHA'), ('Insight', 'WIS'), ('Int
 Saves: ['Constitution', 'Charisma'] and Spells: Charisma
 {'STR': 12, 'DEX': 14, 'CON': 12, 'INT': 9, 'WIS': 10, 'CHA': 15}
         """
+        spell_casting_grade = self.grade_spellcasting_match(ability_obj)
         return 0
+
+    def grade_spellcasting_match(self, ability_obj):
+        skill_name_in_obj = self.spell_ability[:3].upper()
+        score = ability_obj[skill_name_in_obj]
+        value = score - 8 * (100 / (15 - 8))
+        return value
+
+    def produce_grade_sheet(self):
+        pass
