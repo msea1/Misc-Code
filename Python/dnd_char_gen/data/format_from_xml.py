@@ -30,6 +30,11 @@ class Universe:
         self.data['race'] = self.match_race_to_already_existing(self.data['race'])
         self.data['background'] = self.combine_backgrounds(self.data['background'])
 
+    def parse_data(self):
+        for v in self.data['background'].values():
+            for sub_v in v:
+                sub_v.parse()
+
     @staticmethod
     def match_race_to_already_existing(all_races):
         attempt = {'Aasimar': [], 'Dragonborn': [], 'Dwarf': [], 'Elf': [], 'Genasi': [],

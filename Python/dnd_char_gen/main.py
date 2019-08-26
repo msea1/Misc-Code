@@ -31,6 +31,7 @@ def main():
     u.load_data()
     u.combine_sources()
     u.clean_up_data()
+    u.parse_data()
     # args = parse_arguments(all_data)
     # try:
     #     while True:  # or less than num chars spec'd from args

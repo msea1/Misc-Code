@@ -1,6 +1,18 @@
 from enum import IntEnum
 
 
+class Proficiency:
+    def __init__(self, skills=None, languages=None, tools=None, armor=None, weapons=None):
+        self.skills = skills
+        self.languages = languages
+        self.tools = tools
+        self.armor = armor
+        self.weapons = weapons
+
+    def __str__(self):
+        return self.__dict__
+
+
 class Alignment(IntEnum):
     LAWFUL_GOOD = 1
     LAWFUL_NEUTRAL = 2
