@@ -1,0 +1,67 @@
+digraph {
+	subgraph clustersat {
+		label=SATELLITE style=dotted
+		satellite [label=downlink_image shape=oval]
+	}
+	satellite -> xband_radio [color=red]
+	subgraph clustergroundstation {
+		label="GROUND STATION"
+		xband_radio [shape=doubleoctagon]
+		rlm [label=sfx_file_monitor shape=oval]
+		trebuchet [shape=doubleoctagon]
+	}
+	rlm -> xband_radio [arrowhead=inv color=red dir=forward]
+	rlm -> trebuchet [color=darkgreen]
+	trebuchet -> sfx_s3 [color=red]
+	trebuchet -> env_files [color=blue]
+	pdp -> env_files [arrowhead=inv color=blue dir=forward]
+	subgraph clusteraws {
+		color=lightgrey label=AWS style=filled
+		sfx_s3 [label="sfx bucket" shape=cylinder]
+		obscura_queue [label=<obscura_queue<BR/><I>ENV-obscura-requests</I>> shape=note]
+		env_files [label=<files from trebuchet<BR/><I>groundstation-ENV-files</I>> shape=note]
+		final_product [label=<products<BR/><I>images-ENV-obscura-products</I>> shape=note]
+	}
+	subgraph clustergemini {
+		label=GEMINI style=dotted
+		pdp [label=<pass-data-processor<BR/><I>file_listener.py</I>> shape=doubleoctagon]
+		subgraph clusterobscura {
+			label=OBSCURA style=dashed
+			img_req [label=ImageRequest shape=doubleoctagon]
+			workflow [label=WorkFlow shape=doubleoctagon]
+			upload [label=Upload shape=doubleoctagon]
+			subgraph clusterimgreq {
+				label=ImageReqest
+				get_sfx [shape=oval]
+				get_metadata [shape=oval]
+				get_workflow [shape=oval]
+			}
+			subgraph clusterwf {
+				label=Workflow style=dotted
+			}
+			subgraph clusterupdload {
+				label=Upload style=dotted
+			}
+		}
+	}
+	pdp -> obscura_queue [color=blue]
+	img_req -> obscura_queue [arrowhead=inv color=blue dir=forward]
+	img_req -> get_sfx [arrowhead=inv color=red dir=forward]
+	get_sfx -> sfx_s3 [color=red dir=both]
+	img_req -> get_metadata [arrowhead=inv color=red dir=forward]
+	get_metadata -> pdp [color=darkgreen]
+	img_req -> get_workflow [arrowhead=inv color=red dir=forward]
+	img_req -> workflow [color=darkgreen]
+	workflow -> upload [color=darkgreen]
+	upload -> final_product [color=red]
+	subgraph clusterlegend {
+		label=Legend
+		a [label=service shape=doubleoctagon]
+		b [label=function shape=oval]
+		c [label="data store" shape=cylinder]
+		d [label="SQS queue" shape=note]
+		a -> b [label=" foo()" color=darkgreen]
+		b -> c [label=" data" color=red]
+		c -> d [label=" SQS" color=blue]
+	}
+}
