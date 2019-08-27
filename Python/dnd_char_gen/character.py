@@ -46,7 +46,7 @@ class Character:
         if not self.background:
             self.background = self.pick_background(data['background'])
             print(f'Background is {self.background}')
-            # print(f'    Good at {self.background.proficiency}')
+            print(f'    Details: {self.background.traits}')
         if not self.alignment:
             self.alignment = self.pick_alignment()
             print(f'Alignment is {self.alignment.name}')
