@@ -49,12 +49,8 @@ extract () {
  fi
 }
 
-gack() {
-  find . -iname "*\.$2" -print0 | xargs -0 ack --ignore-dir=.pants.d $1 ~/Code/gemini
-}
-
-search_type() {
-  find . -iname "*\.$2" -print0 | xargs -0 ack $1
+search_type() { 
+  ag $1 -i -G "$2"$ --ignore-dir="*test*" 
 }
 
 gemini_tests() {
