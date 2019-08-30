@@ -26,13 +26,13 @@ with G.subgraph(name='clustergroundstation') as c:
     c.attr(label='GROUND STATION')
     c.node('xband_radio', label='radio', shape=service_shape)
     c.node('rlm', label='sfx_file_monitor', shape=process)
-    c.node('sft', label='sft_file_transfer', shape=process)
+    c.node('sft_file', label='<sft_file_transfer<BR/><I>via sft-packet-router</I>>', shape=process)
     c.node('trebuchet', shape=service_shape)
 
 G.edge('rlm', 'xband_radio', dir='forward', arrowhead='inv', color=data_color)
-G.edge('sft', 'xband_radio', dir='forward', arrowhead='inv', color=data_color)
+G.edge('sft_file', 'xband_radio', dir='forward', arrowhead='inv', color=data_color)
 G.edge('rlm', 'trebuchet', color=fx_call)
-G.edge('sft', 'trebuchet', color=fx_call)
+G.edge('sft_file', 'trebuchet', color=fx_call)
 G.edge('trebuchet', 'files_s3', color=data_color)
 G.edge('trebuchet', 'env_files', color=sqs_color)
 G.edge('pdp', 'env_files', dir='forward', arrowhead='inv', color=sqs_color)
@@ -64,28 +64,24 @@ with G.subgraph(name='clustergemini') as gem:
         c.node('img_req', label='ImageRequest', shape=service_shape)
         c.node('workflow', label='WorkFlow', shape=service_shape)
         c.node('upload', label='Upload', shape=service_shape)
-        with c.subgraph(name='clusterimgreq') as cc:
-            cc.attr(label='ImageReqest')
-            cc.node('get_sfx', label='SFX file', shape=process)
-            cc.node('get_metadata', label='image metadata', shape=process)
-        with c.subgraph(name='clusterwf') as cc:
-            cc.attr(label='Workflow', style='dotted')
-            cc.node('run_wf', label='run workflow', shape=process)
-            cc.node('examine_task', label='<compare accuracy<BR/>vs task data>', shape=process)
-        # with c.subgraph(name='clusterupdload') as cc:
-        #     cc.attr(label='Upload', style='dotted')
+        c.node('get_sfx', label='SFX file', shape=process)
+        c.node('get_metadata', label='image metadata', shape=process)
+        c.node('get_task', label='task metadata', shape=process)
+        c.node('run_wf', label='run workflow', shape=process)
+        c.node('examine_task', label='<compare accuracy<BR/>vs task data>', shape=process)
 
 G.edge('pdp', 'satmodel', arrowhead='inv', dir='forward', color=data_color)
 G.edge('pdp', 'cmd_gen', arrowhead='inv', dir='forward', color=data_color)
-G.edge('pdp', 'files_s3', color=data_color)
+G.edge('pdp', 'files_s3', color=data_color)  # decrypted image_metadata files
 G.edge('pdp', 'obscura_queue', color=sqs_color)
 
 G.edge('img_req', 'obscura_queue', arrowhead='inv', dir='forward', color=sqs_color)
 G.edge('img_req', 'get_sfx', arrowhead='inv', dir='forward', color=data_color)
+G.edge('img_req', 'get_task', arrowhead='inv', dir='forward', color=data_color)
 G.edge('get_sfx', 'files_s3', dir='both', color=data_color)
 G.edge('img_req', 'get_metadata', arrowhead='inv', dir='forward', color=data_color)
 G.edge('get_metadata', 'pdp', arrowhead='inv', dir='forward', color=data_color)
-G.edge('img_req', 'planner', arrowhead='inv', dir='forward', color=data_color)
+G.edge('get_task', 'planner', arrowhead='inv', dir='forward', color=data_color)
 
 G.edge('img_req', 'workflow', color=sqs_color)
 G.edge('workflow', 'run_wf', arrowhead='inv', dir='forward', color=data_color)

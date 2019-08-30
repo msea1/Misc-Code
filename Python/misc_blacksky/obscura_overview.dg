@@ -10,13 +10,13 @@ digraph {
 		label="GROUND STATION"
 		xband_radio [label=radio shape=doubleoctagon]
 		rlm [label=sfx_file_monitor shape=oval]
-		sft [label=sft_file_transfer shape=oval]
+		sft_file [label=<sft_file_transfer<BR/><I>via sft-packet-router</I>> shape=oval]
 		trebuchet [shape=doubleoctagon]
 	}
 	rlm -> xband_radio [arrowhead=inv color=red dir=forward]
-	sft -> xband_radio [arrowhead=inv color=red dir=forward]
+	sft_file -> xband_radio [arrowhead=inv color=red dir=forward]
 	rlm -> trebuchet [color=darkgreen]
-	sft -> trebuchet [color=darkgreen]
+	sft_file -> trebuchet [color=darkgreen]
 	trebuchet -> files_s3 [color=red]
 	trebuchet -> env_files [color=blue]
 	pdp -> env_files [arrowhead=inv color=blue dir=forward]
@@ -39,16 +39,11 @@ digraph {
 			img_req [label=ImageRequest shape=doubleoctagon]
 			workflow [label=WorkFlow shape=doubleoctagon]
 			upload [label=Upload shape=doubleoctagon]
-			subgraph clusterimgreq {
-				label=ImageReqest
-				get_sfx [label="SFX file" shape=oval]
-				get_metadata [label="image metadata" shape=oval]
-			}
-			subgraph clusterwf {
-				label=Workflow style=dotted
-				run_wf [label="run workflow" shape=oval]
-				examine_task [label=<compare accuracy<BR/>vs task data> shape=oval]
-			}
+			get_sfx [label="SFX file" shape=oval]
+			get_metadata [label="image metadata" shape=oval]
+			get_task [label="task metadata" shape=oval]
+			run_wf [label="run workflow" shape=oval]
+			examine_task [label=<compare accuracy<BR/>vs task data> shape=oval]
 		}
 	}
 	pdp -> satmodel [arrowhead=inv color=red dir=forward]
@@ -57,10 +52,11 @@ digraph {
 	pdp -> obscura_queue [color=blue]
 	img_req -> obscura_queue [arrowhead=inv color=blue dir=forward]
 	img_req -> get_sfx [arrowhead=inv color=red dir=forward]
+	img_req -> get_task [arrowhead=inv color=red dir=forward]
 	get_sfx -> files_s3 [color=red dir=both]
 	img_req -> get_metadata [arrowhead=inv color=red dir=forward]
 	get_metadata -> pdp [arrowhead=inv color=red dir=forward]
-	img_req -> planner [arrowhead=inv color=red dir=forward]
+	get_task -> planner [arrowhead=inv color=red dir=forward]
 	img_req -> workflow [color=blue]
 	workflow -> run_wf [arrowhead=inv color=red dir=forward]
 	workflow -> examine_task [color=darkgreen]
@@ -75,7 +71,7 @@ digraph {
 		c [label="data store" shape=cylinder]
 		d [label="SQS queue" shape=note]
 		a -> b [label=" foo()" color=darkgreen]
-		b -> c [label=" data" color=red]
+		b -> c [label=" pull data" arrowhead=inv color=red]
 		c -> d [label=" SQS" color=blue]
 	}
 	overlap=scale

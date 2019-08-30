@@ -18,11 +18,13 @@ with G.subgraph(name='clustersat') as c:
     c.attr(label='SATELLITE', style='dotted')
     c.node('image', label='downlink_image', shape=process)
     c.node('metadata', label='SFT (file)', shape=process, color=new_line)
+    c.node('script', label='script', shape=data_store)
 
 G.edge('image', 'xband_radio', color=data_color)
 G.edge('metadata', 'xband_radio', color=new_line)
 G.edge('metadata', 'xband_radio', color=new_line)
-G.edge('planner', 'metadata', lhead='clustersat', color=new_line)
+# G.edge('planner', 'metadata', lhead='clustersat', color=new_line)
+G.edge('metadata', 'script', arrowhead='inv', color=new_line)
 
 # GROUNDSTATION
 with G.subgraph(name='clustergroundstation') as c:
@@ -30,75 +32,42 @@ with G.subgraph(name='clustergroundstation') as c:
     c.node('xband_radio', label='radio', shape=service_shape)
     c.node('rlm', label='sfx_file_monitor', shape=process)
     c.node('sft_old', label='sft_file_transfer', shape=process, color=dead_line)
-    c.node('sft', label='sft_packet_router', shape=process, color=new_line)
+    c.node('sft', label='<sft_packet_router<BR/><I>creates files</I>>', shape=process, color=new_line)
     c.node('trebuchet', shape=service_shape, color=dead_line)
+    c.node('local_storage', label='<local<BR/>disk>', shape=data_store, color=new_line)
+
+    # OBSCURA
+    with c.subgraph(name='clusterobscura') as obs:
+        obs.attr(label='OBSCURA', style='dashed')
+        obs.node('img_req', label='ImageRequest', shape=service_shape)
+        obs.node('workflow', label='WorkFlow', shape=service_shape)
+        obs.node('upload', label='Upload', shape=service_shape)
+        obs.node('get_sfx', label='SFX file', shape=process)
+        obs.node('get_metadata', label='image metadata', shape=process)
+        obs.node('get_task', label='task metadata', shape=process)
+        obs.node('run_wf', label='run workflow', shape=process)
+        obs.node('examine_task', label='<compare accuracy<BR/>vs task data>', shape=process)
+
+        G.edge('img_req', 'get_sfx', arrowhead='inv', color=data_color)
+        G.edge('img_req', 'get_task', arrowhead='inv', color=data_color)
+        G.edge('img_req', 'get_metadata', arrowhead='inv', color=data_color)
+        G.edge('get_sfx', 'local_storage', arrowhead='inv', color=new_line)
+        G.edge('get_task', 'local_storage', arrowhead='inv', color=new_line)
+        G.edge('get_metadata', 'local_storage', arrowhead='inv', color=new_line)
+        G.edge('img_req', 'workflow', color=sqs_color)
+        G.edge('workflow', 'run_wf', arrowhead='inv', color=data_color)
+        G.edge('workflow', 'examine_task', color=fx_call)
+        G.edge('workflow', 'upload', color=dead_line)
+
 
 G.edge('rlm', 'xband_radio', arrowhead='inv', color=data_color)
 G.edge('sft', 'xband_radio', arrowhead='inv', color=data_color)
-G.edge('rlm', 'trebuchet', color=fx_call)
-G.edge('sft', 'trebuchet', color=fx_call)
-G.edge('trebuchet', 'files_s3', color=dead_line)
-G.edge('trebuchet', 'env_files', color=dead_line)
-G.edge('pdp', 'env_files', arrowhead='inv', color=sqs_color)
-
-
-# AWS
-with G.subgraph(name='clusteraws') as c:
-    c.attr(label='AWS', style='filled', color=dead_line)
-    # c.node_attr.update(style='filled', color='white')
-    c.node('files_s3', label='files', shape=data_store)
-
-    c.node('obscura_queue', label='<obscura_queue<BR/><I>ENV-obscura-requests</I>>', shape=queue)
-    c.node('env_files', label='<files from trebuchet<BR/><I>groundstation-ENV-files</I>>', shape=queue)
-    c.node('final_product', label='<products<BR/><I>images-ENV-obscura-products</I>>', shape=queue)
-
-
-# GEMINI
-with G.subgraph(name='clustergemini') as gem:
-    gem.attr(label='GEMINI', style='dotted')
-    gem.node('pdp', label='<pass-data-processor<BR/><I>file_listener.py</I>>', shape=service_shape)
-    gem.node('satmodel', label='satellite model', shape=service_shape)
-    gem.node('compliance', label='image order compliance', shape=service_shape)
-    gem.node('planner', label='<mission planner<BR/><I>task data</I>>', shape=service_shape)
-    gem.node('cmd_gen', label='<command<BR/>generator>', shape=service_shape)
-
-    # OBSCURA
-    with gem.subgraph(name='clusterobscura') as c:
-        c.attr(label='OBSCURA', style='dashed')
-        c.node('img_req', label='ImageRequest', shape=service_shape)
-        c.node('workflow', label='WorkFlow', shape=service_shape)
-        c.node('upload', label='Upload', shape=service_shape)
-        with c.subgraph(name='clusterimgreq') as cc:
-            cc.attr(label='ImageReqest')
-            cc.node('get_sfx', label='SFX file', shape=process)
-            cc.node('get_metadata', label='image metadata', shape=process)
-        with c.subgraph(name='clusterwf') as cc:
-            cc.attr(label='Workflow', style='dotted')
-            cc.node('run_wf', label='run workflow', shape=process)
-            cc.node('examine_task', label='<compare accuracy<BR/>vs task data>', shape=process)
-        # with c.subgraph(name='clusterupdload') as cc:
-        #     cc.attr(label='Upload', style='dotted')
-
-G.edge('pdp', 'satmodel', arrowhead='inv', color=data_color)
-G.edge('pdp', 'cmd_gen', arrowhead='inv', color=data_color)
-G.edge('pdp', 'files_s3', color=data_color)
-G.edge('pdp', 'obscura_queue', color=sqs_color)
-
-G.edge('img_req', 'obscura_queue', arrowhead='inv', color=sqs_color)
-G.edge('img_req', 'get_sfx', arrowhead='inv', color=data_color)
-G.edge('get_sfx', 'files_s3', dir='both', color=data_color)
-G.edge('img_req', 'get_metadata', arrowhead='inv', color=data_color)
-G.edge('get_metadata', 'pdp', arrowhead='inv', color=data_color)
-G.edge('img_req', 'planner', arrowhead='inv', color=dead_line)
-
-G.edge('img_req', 'workflow', color=sqs_color)
-G.edge('workflow', 'run_wf', arrowhead='inv', color=data_color)
-G.edge('workflow', 'examine_task', color=fx_call)
-
-G.edge('workflow', 'upload', color=sqs_color)
-G.edge('upload', 'final_product', color=data_color)
-G.edge('upload', 'satmodel', color=fx_call)
-G.edge('upload', 'compliance', color=fx_call)
+G.edge('sft_old', 'sft', arrowhead='inv', color=dead_line)
+G.edge('rlm', 'trebuchet', color=dead_line)
+G.edge('sft_old', 'trebuchet', color=dead_line)
+G.edge('rlm', 'local_storage', color=data_color)
+G.edge('sft', 'local_storage', color=new_line)
+G.edge('sft', 'local_storage', color=new_line)
 
 
 with G.subgraph(name='clusterlegend') as legend:
@@ -112,8 +81,8 @@ with G.subgraph(name='clusterlegend') as legend:
     legend.edge('a', 'b', label=' foo()', color=fx_call)
     legend.edge('b', 'c', label=' pull data', arrowhead='inv', color=data_color)
     legend.edge('c', 'd', label=' SQS', color=sqs_color)
-    legend.edge('d', 'e', label=' new', color=new_line)
-    legend.edge('e', 'd', label=' dead', color=dead_line)
+    legend.edge('d', 'e', label='<<BR/><BR/><BR/><BR/> new>', color=new_line)
+    legend.edge('e', 'd', label='<--dead', color=dead_line)
 
 # G.attr(engine='neato')
 # G.attr(layout='fdp')
