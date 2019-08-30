@@ -1,0 +1,90 @@
+digraph {
+	subgraph clustersat {
+		label=SATELLITE style=dotted
+		image [label=downlink_image shape=oval]
+		metadata [label="SFT (file)" color=blue shape=oval]
+	}
+	image -> xband_radio [color=black]
+	metadata -> xband_radio [color=blue]
+	metadata -> xband_radio [color=blue]
+	planner -> metadata [color=blue lhead=clustersat]
+	subgraph clustergroundstation {
+		label="GROUND STATION"
+		xband_radio [label=radio shape=doubleoctagon]
+		rlm [label=sfx_file_monitor shape=oval]
+		sft_old [label=sft_file_transfer color=red shape=oval]
+		sft [label=sft_packet_router color=blue shape=oval]
+		trebuchet [color=red shape=doubleoctagon]
+	}
+	rlm -> xband_radio [arrowhead=inv color=black]
+	sft -> xband_radio [arrowhead=inv color=black]
+	rlm -> trebuchet [color=black]
+	sft -> trebuchet [color=black]
+	trebuchet -> files_s3 [color=red]
+	trebuchet -> env_files [color=red]
+	pdp -> env_files [arrowhead=inv color=black]
+	subgraph clusteraws {
+		color=red label=AWS style=filled
+		files_s3 [label=files shape=cylinder]
+		obscura_queue [label=<obscura_queue<BR/><I>ENV-obscura-requests</I>> shape=note]
+		env_files [label=<files from trebuchet<BR/><I>groundstation-ENV-files</I>> shape=note]
+		final_product [label=<products<BR/><I>images-ENV-obscura-products</I>> shape=note]
+	}
+	subgraph clustergemini {
+		label=GEMINI style=dotted
+		pdp [label=<pass-data-processor<BR/><I>file_listener.py</I>> shape=doubleoctagon]
+		satmodel [label="satellite model" shape=doubleoctagon]
+		compliance [label="image order compliance" shape=doubleoctagon]
+		planner [label=<mission planner<BR/><I>task data</I>> shape=doubleoctagon]
+		cmd_gen [label=<command<BR/>generator> shape=doubleoctagon]
+		subgraph clusterobscura {
+			label=OBSCURA style=dashed
+			img_req [label=ImageRequest shape=doubleoctagon]
+			workflow [label=WorkFlow shape=doubleoctagon]
+			upload [label=Upload shape=doubleoctagon]
+			subgraph clusterimgreq {
+				label=ImageReqest
+				get_sfx [label="SFX file" shape=oval]
+				get_metadata [label="image metadata" shape=oval]
+			}
+			subgraph clusterwf {
+				label=Workflow style=dotted
+				run_wf [label="run workflow" shape=oval]
+				examine_task [label=<compare accuracy<BR/>vs task data> shape=oval]
+			}
+		}
+	}
+	pdp -> satmodel [arrowhead=inv color=black]
+	pdp -> cmd_gen [arrowhead=inv color=black]
+	pdp -> files_s3 [color=black]
+	pdp -> obscura_queue [color=black]
+	img_req -> obscura_queue [arrowhead=inv color=black]
+	img_req -> get_sfx [arrowhead=inv color=black]
+	get_sfx -> files_s3 [color=black dir=both]
+	img_req -> get_metadata [arrowhead=inv color=black]
+	get_metadata -> pdp [arrowhead=inv color=black]
+	img_req -> planner [arrowhead=inv color=red]
+	img_req -> workflow [color=black]
+	workflow -> run_wf [arrowhead=inv color=black]
+	workflow -> examine_task [color=black]
+	workflow -> upload [color=black]
+	upload -> final_product [color=black]
+	upload -> satmodel [color=black]
+	upload -> compliance [color=black]
+	subgraph clusterlegend {
+		label=LEGEND
+		a [label=service shape=doubleoctagon]
+		b [label=function shape=oval]
+		c [label="data store" shape=cylinder]
+		d [label="SQS queue" shape=note]
+		e [label="N/A" shape=oval]
+		a -> b [label=" foo()" color=black]
+		b -> c [label=" pull data" arrowhead=inv color=black]
+		c -> d [label=" SQS" color=black]
+		d -> e [label=" new" color=blue]
+		e -> d [label=" dead" color=red]
+	}
+	overlap=scale
+	overlap_shrink=true
+	compound=true
+}

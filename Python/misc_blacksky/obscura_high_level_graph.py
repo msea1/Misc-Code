@@ -105,7 +105,7 @@ with G.subgraph(name='clusterlegend') as legend:
     legend.node('d', label='SQS queue', shape=queue)
 
     legend.edge('a', 'b', label=' foo()', color=fx_call)
-    legend.edge('b', 'c', label=' data', color=data_color)
+    legend.edge('b', 'c', label=' pull data', arrowhead='inv', color=data_color)
     legend.edge('c', 'd', label=' SQS', color=sqs_color)
 
 # G.attr(engine='neato')
