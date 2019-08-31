@@ -4,6 +4,7 @@ import glob
 
 """
 Usage case: getting G3 payload temps from kix
+$ rm -rf /tmp/kix/
 $ sudo docker pull registry.service.nsi.gemini/gemini/kix:latest
 $ sudo docker run -it --dns=10.234.0.200 -v /tmp/kix:/tmp/kix --rm registry.service.nsi.gemini/gemini/kix:latest
 # cd /srv
@@ -14,6 +15,8 @@ srv# kix.pex export -e prod --path g3_temps2.db --start-time 2019-08-21T14:37:02
 srv# kix.pex csv --path g3_temps2.db --output /tmp/kix/csv
 
 $ sudo chown $USER /tmp/kix/**
+$ cd ~/Code/personal/misc/Python/misc_blacksky
+$ py combine_kix.py
 """
 
 directory = '/tmp/kix/csv/'
