@@ -1,4 +1,7 @@
 digraph {
+	platform [label=PLATFORM shape=doubleoctagon]
+	platform -> tdm [color=red]
+	tdm -> planner [color=red]
 	subgraph clustersat {
 		label=SATELLITE style=dotted
 		image [label=downlink_image shape=oval]
@@ -6,6 +9,7 @@ digraph {
 	}
 	image -> xband_radio [color=red]
 	metadata -> xband_radio [color=red]
+	planner -> metadata [color=red lhead=clustersat]
 	subgraph clustergroundstation {
 		label="GROUND STATION"
 		xband_radio [label=radio shape=doubleoctagon]
@@ -32,16 +36,15 @@ digraph {
 		pdp [label=<pass-data-processor<BR/><I>file_listener.py</I>> shape=doubleoctagon]
 		satmodel [label="satellite model" shape=doubleoctagon]
 		compliance [label="image order compliance" shape=doubleoctagon]
+		catalog [label="image catalog" shape=doubleoctagon]
 		planner [label=<mission planner<BR/><I>task data</I>> shape=doubleoctagon]
 		cmd_gen [label=<command<BR/>generator> shape=doubleoctagon]
+		tdm [label="tgt-deck-mgr" shape=doubleoctagon]
 		subgraph clusterobscura {
 			label=OBSCURA style=dashed
 			img_req [label=ImageRequest shape=doubleoctagon]
 			workflow [label=WorkFlow shape=doubleoctagon]
 			upload [label=Upload shape=doubleoctagon]
-			get_sfx [label="SFX file" shape=oval]
-			get_metadata [label="image metadata" shape=oval]
-			get_task [label="task metadata" shape=oval]
 			run_wf [label="run workflow" shape=oval]
 			examine_task [label=<compare accuracy<BR/>vs task data> shape=oval]
 		}
@@ -51,12 +54,9 @@ digraph {
 	pdp -> files_s3 [color=red]
 	pdp -> obscura_queue [color=blue]
 	img_req -> obscura_queue [arrowhead=inv color=blue dir=forward]
-	img_req -> get_sfx [arrowhead=inv color=red dir=forward]
-	img_req -> get_task [arrowhead=inv color=red dir=forward]
-	get_sfx -> files_s3 [color=red dir=both]
-	img_req -> get_metadata [arrowhead=inv color=red dir=forward]
-	get_metadata -> pdp [arrowhead=inv color=red dir=forward]
-	get_task -> planner [arrowhead=inv color=red dir=forward]
+	img_req -> files_s3 [arrowhead=inv color=red dir=forward]
+	img_req -> pdp [arrowhead=inv color=red dir=forward]
+	img_req -> planner [arrowhead=inv color=red dir=forward]
 	img_req -> workflow [color=blue]
 	workflow -> run_wf [arrowhead=inv color=red dir=forward]
 	workflow -> examine_task [color=darkgreen]
@@ -64,6 +64,8 @@ digraph {
 	upload -> final_product [color=red]
 	upload -> satmodel [color=darkgreen]
 	upload -> compliance [color=darkgreen]
+	compliance -> catalog [color=darkgreen]
+	catalog -> platform [color=darkgreen]
 	subgraph clusterlegend {
 		label=LEGEND
 		a [label=service shape=doubleoctagon]
@@ -74,6 +76,8 @@ digraph {
 		b -> c [label=" pull data" arrowhead=inv color=red]
 		c -> d [label=" SQS" color=blue]
 	}
+	splines=ortho
+	compound=true
 	overlap=scale
 	overlap_shrink=true
 }

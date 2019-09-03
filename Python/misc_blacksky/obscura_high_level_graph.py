@@ -11,6 +11,10 @@ queue = 'note'
 
 G = graphviz.Digraph(format='png', filename='obscura_overview.dg')
 
+G.node('platform', label='PLATFORM', shape=service_shape)
+G.edge('platform', 'tdm', color=data_color)
+G.edge('tdm', 'planner', color=data_color)
+
 # SATELLITE
 with G.subgraph(name='clustersat') as c:
     c.attr(label='SATELLITE', style='dotted')
@@ -19,7 +23,7 @@ with G.subgraph(name='clustersat') as c:
 
 G.edge('image', 'xband_radio', color=data_color)
 G.edge('metadata', 'xband_radio', color=data_color)
-
+G.edge('planner', 'metadata', lhead='clustersat', color=data_color)
 
 # GROUNDSTATION
 with G.subgraph(name='clustergroundstation') as c:
@@ -55,8 +59,10 @@ with G.subgraph(name='clustergemini') as gem:
     gem.node('pdp', label='<pass-data-processor<BR/><I>file_listener.py</I>>', shape=service_shape)
     gem.node('satmodel', label='satellite model', shape=service_shape)
     gem.node('compliance', label='image order compliance', shape=service_shape)
+    gem.node('catalog', label='image catalog', shape=service_shape)
     gem.node('planner', label='<mission planner<BR/><I>task data</I>>', shape=service_shape)
     gem.node('cmd_gen', label='<command<BR/>generator>', shape=service_shape)
+    gem.node('tdm', label='tgt-deck-mgr', shape=service_shape)
 
     # OBSCURA
     with gem.subgraph(name='clusterobscura') as c:
@@ -64,9 +70,6 @@ with G.subgraph(name='clustergemini') as gem:
         c.node('img_req', label='ImageRequest', shape=service_shape)
         c.node('workflow', label='WorkFlow', shape=service_shape)
         c.node('upload', label='Upload', shape=service_shape)
-        c.node('get_sfx', label='SFX file', shape=process)
-        c.node('get_metadata', label='image metadata', shape=process)
-        c.node('get_task', label='task metadata', shape=process)
         c.node('run_wf', label='run workflow', shape=process)
         c.node('examine_task', label='<compare accuracy<BR/>vs task data>', shape=process)
 
@@ -76,12 +79,9 @@ G.edge('pdp', 'files_s3', color=data_color)  # decrypted image_metadata files
 G.edge('pdp', 'obscura_queue', color=sqs_color)
 
 G.edge('img_req', 'obscura_queue', arrowhead='inv', dir='forward', color=sqs_color)
-G.edge('img_req', 'get_sfx', arrowhead='inv', dir='forward', color=data_color)
-G.edge('img_req', 'get_task', arrowhead='inv', dir='forward', color=data_color)
-G.edge('get_sfx', 'files_s3', dir='both', color=data_color)
-G.edge('img_req', 'get_metadata', arrowhead='inv', dir='forward', color=data_color)
-G.edge('get_metadata', 'pdp', arrowhead='inv', dir='forward', color=data_color)
-G.edge('get_task', 'planner', arrowhead='inv', dir='forward', color=data_color)
+G.edge('img_req', 'files_s3', arrowhead='inv', dir='forward', color=data_color)
+G.edge('img_req', 'pdp', arrowhead='inv', dir='forward', color=data_color)
+G.edge('img_req', 'planner', arrowhead='inv', dir='forward', color=data_color)
 
 G.edge('img_req', 'workflow', color=sqs_color)
 G.edge('workflow', 'run_wf', arrowhead='inv', dir='forward', color=data_color)
@@ -91,6 +91,8 @@ G.edge('workflow', 'upload', color=sqs_color)
 G.edge('upload', 'final_product', color=data_color)
 G.edge('upload', 'satmodel', color=fx_call)
 G.edge('upload', 'compliance', color=fx_call)
+G.edge('compliance', 'catalog', color=fx_call)
+G.edge('catalog', 'platform', color=fx_call)
 
 
 with G.subgraph(name='clusterlegend') as legend:
@@ -104,9 +106,8 @@ with G.subgraph(name='clusterlegend') as legend:
     legend.edge('b', 'c', label=' pull data', arrowhead='inv', color=data_color)
     legend.edge('c', 'd', label=' SQS', color=sqs_color)
 
-# G.attr(engine='neato')
-# G.attr(layout='fdp')
-# G.attr(splines='ortho')
+G.attr(splines='ortho')
+G.attr(compound='true')
 G.attr(overlap='scale')
 G.attr(overlap_shrink='true')
 G.render()
