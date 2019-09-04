@@ -1801,7 +1801,7 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5056818"
-     inkscape:cx="319.94336"
+     inkscape:cx="505.90562"
      inkscape:cy="831.34931"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
@@ -3768,7 +3768,7 @@
          id="tspan2274-0-6"
          x="130.84216"
          y="27.282707"
-         style="font-size:4.9612565px;letter-spacing:0px;fill:#463078;fill-opacity:1;stroke:#463078;stroke-width:0.30618042;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Longtooth Shifter | Eldritch Knight Fighter 4</tspan></text>
+         style="font-size:4.9612565px;letter-spacing:0px;fill:#463078;fill-opacity:1;stroke:#463078;stroke-width:0.30618042;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Ulferen Longtooth Shifter | Eldritch Knight Fighter 4</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.17291737px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#1d205e;fill-opacity:1;stroke:#1d205e;stroke-width:0.0241546;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -7023,6 +7023,47 @@
          x="62.473793"
          y="142.49861"
          style="font-size:5.36342001px;fill:#006400;fill-opacity:1;stroke:#16051d;stroke-width:0.15713112;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">+2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="158.75"
+       y="112.85"
+       id="text2256"><tspan
+         sodipodi:role="line"
+         id="tspan2254"
+         x="158.75"
+         y="112.85"
+         style="stroke-width:0.26458332">Add animal glyphs of the castes</tspan><tspan
+         sodipodi:role="line"
+         x="158.75"
+         y="116.025"
+         style="stroke-width:0.26458332"
+         id="tspan2258">Wolf</tspan><tspan
+         sodipodi:role="line"
+         x="158.75"
+         y="119.2"
+         style="stroke-width:0.26458332"
+         id="tspan2260">Viper</tspan><tspan
+         sodipodi:role="line"
+         x="158.75"
+         y="122.375"
+         style="stroke-width:0.26458332"
+         id="tspan2262">Bear</tspan><tspan
+         sodipodi:role="line"
+         x="158.75"
+         y="125.55"
+         style="stroke-width:0.26458332"
+         id="tspan2264">Stag</tspan><tspan
+         sodipodi:role="line"
+         x="158.75"
+         y="128.72499"
+         style="stroke-width:0.26458332"
+         id="tspan2266">Raven</tspan><tspan
+         sodipodi:role="line"
+         x="158.75"
+         y="131.89999"
+         style="stroke-width:0.26458332"
+         id="tspan2268">Censored or Empty</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
