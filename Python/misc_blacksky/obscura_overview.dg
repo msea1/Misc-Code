@@ -1,73 +1,90 @@
 digraph {
-	platform [label=PLATFORM shape=doubleoctagon]
-	platform -> tdm [color=red]
-	tdm -> planner [color=red]
-	subgraph clustersat {
-		label=SATELLITE style=dotted
-		image [label=downlink_image shape=oval]
-		metadata [label=downlink_metadata shape=oval]
-	}
-	image -> xband_radio [color=red]
-	metadata -> xband_radio [color=red]
-	planner -> metadata [color=red lhead=clustersat]
-	subgraph clustergroundstation {
-		label="GROUND STATION"
-		xband_radio [label=radio shape=doubleoctagon]
-		rlm [label=sfx_file_monitor shape=oval]
-		sft_file [label=<sft_file_transfer<BR/><I>via sft-packet-router</I>> shape=oval]
-		trebuchet [shape=doubleoctagon]
-	}
-	rlm -> xband_radio [arrowhead=inv color=red dir=forward]
-	sft_file -> xband_radio [arrowhead=inv color=red dir=forward]
-	rlm -> trebuchet [color=darkgreen]
-	sft_file -> trebuchet [color=darkgreen]
-	trebuchet -> files_s3 [color=red]
-	trebuchet -> env_files [color=blue]
-	pdp -> env_files [arrowhead=inv color=blue dir=forward]
 	subgraph clusteraws {
 		color=lightgrey label=AWS style=filled
 		files_s3 [label=files shape=cylinder]
 		obscura_queue [label=<obscura_queue<BR/><I>ENV-obscura-requests</I>> shape=note]
-		env_files [label=<files from trebuchet<BR/><I>groundstation-ENV-files</I>> shape=note]
-		final_product [label=<products<BR/><I>images-ENV-obscura-products</I>> shape=note]
+		env_files [label=<files from trebuchet<BR/><I>proc.oundstation-ENV-files</I>> shape=note]
+		final_product [label=<products<BR/><I>imaproc.s-ENV-obscura-products</I>> shape=note]
 	}
-	subgraph clustergemini {
-		label=GEMINI style=dotted
-		pdp [label=<pass-data-processor<BR/><I>file_listener.py</I>> shape=doubleoctagon]
-		satmodel [label="satellite model" shape=doubleoctagon]
-		compliance [label="image order compliance" shape=doubleoctagon]
-		catalog [label="image catalog" shape=doubleoctagon]
-		planner [label=<mission planner<BR/><I>task data</I>> shape=doubleoctagon]
-		cmd_gen [label=<command<BR/>generator> shape=doubleoctagon]
-		tdm [label="tgt-deck-mgr" shape=doubleoctagon]
-		subgraph clusterobscura {
-			label=OBSCURA style=dashed
-			img_req [label=ImageRequest shape=doubleoctagon]
-			workflow [label=WorkFlow shape=doubleoctagon]
-			upload [label=Upload shape=doubleoctagon]
-			run_wf [label="run workflow" shape=oval]
-			examine_task [label=<compare accuracy<BR/>vs task data> shape=oval]
+	subgraph clusterplanning {
+		label=PLANNING
+		platform [label=PLATFORM shape=doubleoctagon]
+		platform -> tdm [color=red]
+		tdm -> planner_plan [color=red]
+		planner_plan -> script [color=red lhead=clustersat_plan]
+		subgraph clustersat_plan {
+			label=SATELLITE style=dotted
+			script [label=script shape=cylinder]
+		}
+		subgraph clustergemini_plan {
+			label=GEMINI style=dotted
+			planner_plan [label="mission planner" shape=doubleoctagon]
+			tdm [label="tgt-deck-mgr" shape=doubleoctagon]
 		}
 	}
-	pdp -> satmodel [arrowhead=inv color=red dir=forward]
-	pdp -> cmd_gen [arrowhead=inv color=red dir=forward]
-	pdp -> files_s3 [color=red]
-	pdp -> obscura_queue [color=blue]
-	img_req -> obscura_queue [arrowhead=inv color=blue dir=forward]
-	img_req -> files_s3 [arrowhead=inv color=red dir=forward]
-	img_req -> pdp [arrowhead=inv color=red dir=forward]
-	img_req -> planner [arrowhead=inv color=red dir=forward]
-	img_req -> workflow [color=blue]
-	workflow -> run_wf [arrowhead=inv color=red dir=forward]
-	workflow -> examine_task [color=darkgreen]
-	workflow -> upload [color=blue]
-	upload -> final_product [color=red]
-	upload -> satmodel [color=darkgreen]
-	upload -> compliance [color=darkgreen]
-	compliance -> catalog [color=darkgreen]
-	catalog -> platform [color=darkgreen]
+	subgraph clusterdownlink {
+		label=DOWNLINKING
+		subgraph clustersatdl {
+			label=SATELLITE style=dotted
+			image [label=downlink_image shape=oval]
+			metadata [label=downlink_metadata shape=oval]
+		}
+		image -> xband_radio [color=red]
+		metadata -> xband_radio [color=red]
+		subgraph clustergroundstation {
+			label="GROUND STATION"
+			xband_radio [label=radio shape=doubleoctagon]
+			rlm [label=sfx_file_monitor shape=oval]
+			sft_file [label=<sft_file_transfer<BR/><I>via sft-packet-router</I>> shape=oval]
+			trebuchet [shape=doubleoctagon]
+		}
+		rlm -> xband_radio [arrowhead=inv color=red dir=forward]
+		sft_file -> xband_radio [arrowhead=inv color=red dir=forward]
+		rlm -> trebuchet [color=darkgreen]
+		sft_file -> trebuchet [color=darkgreen]
+		trebuchet -> files_s3 [color=red]
+		trebuchet -> env_files [color=blue]
+	}
+	subgraph clusterprocessing {
+		label=PROCESSING
+		subgraph clustergemini {
+			label=GEMINI style=dotted
+			pdp [label=<pass-data-processor<BR/><I>file_listener.py</I>> shape=doubleoctagon]
+			satmodel [label="satellite model" shape=doubleoctagon]
+			compliance [label="imaproc. order compliance" shape=doubleoctagon]
+			catalog [label="image catalog" shape=doubleoctagon]
+			planner [label=<mission planner<BR/><I>task data</I>> shape=doubleoctagon]
+			cmd_gen [label=<command<BR/>generator> shape=doubleoctagon]
+			subgraph clusterobscura {
+				label=OBSCURA style=dashed
+				img_req [label="Imaproc.Request" shape=doubleoctagon]
+				workflow [label=WorkFlow shape=doubleoctagon]
+				upload [label=Upload shape=doubleoctagon]
+				run_wf [label="run workflow" shape=oval]
+				examine_task [label=<compare accuracy<BR/>vs task data> shape=oval]
+			}
+		}
+		pdp -> env_files [arrowhead=inv color=blue dir=forward]
+		pdp -> satmodel [arrowhead=inv color=red dir=forward]
+		pdp -> cmd_gen [arrowhead=inv color=red dir=forward]
+		pdp -> files_s3 [color=red]
+		pdp -> obscura_queue [color=blue]
+		img_req -> obscura_queue [arrowhead=inv color=blue dir=forward]
+		img_req -> files_s3 [arrowhead=inv color=red dir=forward]
+		img_req -> pdp [arrowhead=inv color=red dir=forward]
+		img_req -> planner [arrowhead=inv color=red dir=forward]
+		img_req -> workflow [color=blue]
+		workflow -> run_wf [arrowhead=inv color=red dir=forward]
+		workflow -> examine_task [color=darkgreen]
+		workflow -> upload [color=blue]
+		upload -> final_product [color=red]
+		upload -> satmodel [color=darkgreen]
+		upload -> compliance [color=darkgreen]
+		compliance -> catalog [color=darkgreen]
+		catalog -> platform [color=darkgreen]
+	}
 	subgraph clusterlegend {
-		label=LEGEND
+		label=legend
 		a [label=service shape=doubleoctagon]
 		b [label=function shape=oval]
 		c [label="data store" shape=cylinder]
@@ -76,8 +93,9 @@ digraph {
 		b -> c [label=" pull data" arrowhead=inv color=red]
 		c -> d [label=" SQS" color=blue]
 	}
-	splines=ortho
 	compound=true
 	overlap=scale
 	overlap_shrink=true
+	size="11.0, 8.5"
+	ratio=fill
 }
