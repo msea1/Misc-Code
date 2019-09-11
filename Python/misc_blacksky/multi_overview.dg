@@ -1,5 +1,5 @@
 digraph {
-	subgraph clustersat {
+	subgraph cluster_sat {
 		label=SATELLITE style=dotted
 		image [label=downlink_image shape=oval]
 		metadata [label=downlink_metadata shape=oval]
@@ -38,16 +38,15 @@ digraph {
 		subgraph clusterobscura {
 			label=OBSCURA style=dashed
 			img_req [label=ImageRequest shape=doubleoctagon]
-			workflow [label=WorkFlow shape=doubleoctagon]
+			single_instance [label=<Single-image<BR/>instance> shape=doubleoctagon]
+			multi_instance [label=<Multi-image<BR/>instance> color=purple shape=doubleoctagon]
 			multi [label="Multi Check" color=purple shape=doubleoctagon]
 			upload [label=Upload shape=doubleoctagon]
 			get_sfx [label="SFX file" shape=oval]
 			get_metadata [label="image metadata" shape=oval]
 			get_task [label="task metadata" shape=oval]
-			run_wf [label="run workflow" shape=oval]
 			examine_task [label=<compare accuracy<BR/>vs task data> shape=oval]
 			post_process_check [label=<Part of multi<BR/>order and all<BR/>images processed?> color=purple shape=oval]
-			gather_multi_images [label=<Gather images<BR/>and create task<BR/>with stereo wf> color=purple shape=oval]
 		}
 	}
 	pdp -> satmodel [arrowhead=inv color=red dir=forward]
@@ -61,23 +60,22 @@ digraph {
 	img_req -> get_metadata [arrowhead=inv color=red dir=forward]
 	get_metadata -> pdp [arrowhead=inv color=red dir=forward]
 	get_task -> planner [arrowhead=inv color=red dir=forward]
-	img_req -> workflow [color=blue]
-	workflow -> run_wf [arrowhead=inv color=red dir=forward]
-	workflow -> examine_task [color=darkgreen]
-	workflow -> multi [color=purple]
-	multi -> upload [color=purple]
+	img_req -> single_instance [color=blue]
+	single_instance -> examine_task [color=darkgreen]
+	single_instance -> upload [color=blue]
+	multi_instance -> upload [color=purple]
+	upload -> multi [color=purple]
 	upload -> final_product [color=red]
 	multi -> post_process_check [color=purple]
 	post_process_check -> satmodel [label=No color=purple]
-	post_process_check -> gather_multi_images [label=" Yes" color=purple]
-	gather_multi_images -> workflow [color=purple]
+	post_process_check -> multi_instance [label=" Yes" color=purple]
 	upload -> compliance [color=darkgreen]
 	subgraph clusterlegend {
 		label=LEGEND
 		a [label=service shape=doubleoctagon]
 		b [label=function shape=oval]
 		c [label="data store" shape=cylinder]
-		d [label="SQS queue" shape=note]
+		d [label="sqs queue" shape=note]
 		e [label="N/A" shape=oval]
 		a -> b [label=" foo()" color=darkgreen]
 		b -> c [label=" pull data" arrowhead=inv color=red]

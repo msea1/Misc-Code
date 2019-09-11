@@ -1,6 +1,7 @@
 import graphviz
 
-sqs_color = 'black'
+# DEFINING SOME CONSTANTS
+PASS_OFF = 'black'
 fx_call = 'black'
 data_color = 'black'
 new_line = 'blue'
@@ -54,7 +55,7 @@ with G.subgraph(name='clustergroundstation') as c:
         G.edge('get_sfx', 'local_storage', arrowhead='inv', color=new_line)
         G.edge('get_task', 'local_storage', arrowhead='inv', color=new_line)
         G.edge('get_metadata', 'local_storage', arrowhead='inv', color=new_line)
-        G.edge('img_req', 'workflow', color=sqs_color)
+        G.edge('img_req', 'workflow', color=PASS_OFF)
         G.edge('workflow', 'run_wf', arrowhead='inv', color=data_color)
         G.edge('workflow', 'examine_task', color=fx_call)
         G.edge('workflow', 'upload', color=dead_line)
@@ -80,7 +81,7 @@ with G.subgraph(name='clusterlegend') as legend:
 
     legend.edge('a', 'b', label=' foo()', color=fx_call)
     legend.edge('b', 'c', label=' pull data', arrowhead='inv', color=data_color)
-    legend.edge('c', 'd', label=' SQS', color=sqs_color)
+    legend.edge('c', 'd', label=' SQS', color=PASS_OFF)
     legend.edge('d', 'e', label='<<BR/><BR/><BR/><BR/> new>', color=new_line)
     legend.edge('e', 'd', label='<--dead', color=dead_line)
 

@@ -1,123 +1,136 @@
 import graphviz
 
-sqs_color = 'blue'
-fx_call = 'darkgreen'
-data_color = 'red'
-new_line = 'purple'
+PASS_OFF = 'blue'
+FX_CALL = 'darkgreen'
+DATA = 'red'
+NEW = 'purple'
+DEAD = 'black'
 
-service_shape = 'doubleoctagon'
-process = 'oval'
-data_store = 'cylinder'
-queue = 'note'
+SERVICE = 'doubleoctagon'
+PROCESS = 'oval'
+DATA_STORE = 'cylinder'
+SQS_QUEUE = 'note'
 
-G = graphviz.Digraph(format='png', filename='multi_overview.dg')
+CURRENT = False
+MULTI = True
+RGT = False
+
+graph = graphviz.Digraph(format='png', filename='obscura')
+
+
+def add_satellite_nodes(subgraph):
+    subgraph.node('image', label='downlink_image', shape=PROCESS)
+    subgraph.node('script', label='script', shape=DATA_STORE)
+
+    graph.edge('image', 'xband_radio', color=DATA)
+    graph.edge('image', 'xband_radio', color=NEW)
+    graph.edge('metadata', 'xband_radio', color=DATA)
+    
+    if MULTI:
+        subgraph.node('metadata', label='downlink_metadata', shape=PROCESS)
+    elif RGT:
+        subgraph.node('metadata', label='SFT (file)', shape=PROCESS, color=NEW)
+
 
 # SATELLITE
-with G.subgraph(name='clustersat') as c:
-    c.attr(label='SATELLITE', style='dotted')
-    c.node('image', label='downlink_image', shape=process)
-    c.node('metadata', label='downlink_metadata', shape=process)
+with graph.subgraph(name='cluster_sat') as cluster_sat:
+    cluster_sat.attr(label='SATELLITE', style='dotted')
 
-G.edge('image', 'xband_radio', color=data_color)
-G.edge('image', 'xband_radio', color=new_line)
-G.edge('metadata', 'xband_radio', color=data_color)
+
+def add_groundstation_nodes(subgraph):
+    pass
 
 
 # GROUNDSTATION
-with G.subgraph(name='clustergroundstation') as c:
+with graph.subgraph(name='clustergroundstation') as c:
     c.attr(label='GROUND STATION')
-    c.node('xband_radio', label='radio', shape=service_shape)
-    c.node('rlm', label='sfx_file_monitor', shape=process)
-    c.node('sft_file', label='<sft_file_transfer<BR/><I>via sft-packet-router</I>>', shape=process)
-    c.node('trebuchet', shape=service_shape)
+    c.node('xband_radio', label='radio', shape=SERVICE)
+    c.node('rlm', label='sfx_file_monitor', shape=PROCESS)
+    c.node('sft_file', label='<sft_file_transfer<BR/><I>via sft-packet-router</I>>', shape=PROCESS)
+    c.node('trebuchet', shape=SERVICE)
 
-G.edge('rlm', 'xband_radio', dir='forward', arrowhead='inv', color=data_color)
-G.edge('sft_file', 'xband_radio', dir='forward', arrowhead='inv', color=data_color)
-G.edge('rlm', 'trebuchet', color=fx_call)
-G.edge('sft_file', 'trebuchet', color=fx_call)
-G.edge('trebuchet', 'files_s3', color=data_color)
-G.edge('trebuchet', 'env_files', color=sqs_color)
-G.edge('pdp', 'env_files', dir='forward', arrowhead='inv', color=sqs_color)
+graph.edge('rlm', 'xband_radio', dir='forward', arrowhead='inv', color=DATA)
+graph.edge('sft_file', 'xband_radio', dir='forward', arrowhead='inv', color=DATA)
+graph.edge('rlm', 'trebuchet', color=FX_CALL)
+graph.edge('sft_file', 'trebuchet', color=FX_CALL)
+graph.edge('trebuchet', 'files_s3', color=DATA)
+graph.edge('trebuchet', 'env_files', color=PASS_OFF)
+graph.edge('pdp', 'env_files', dir='forward', arrowhead='inv', color=PASS_OFF)
 
 
 # AWS
-with G.subgraph(name='clusteraws') as c:
+with graph.subgraph(name='clusteraws') as c:
     c.attr(label='AWS', style='filled', color='lightgrey')
     # c.node_attr.update(style='filled', color='white')
-    c.node('files_s3', label='files', shape=data_store)
+    c.node('files_s3', label='files', shape=DATA_STORE)
 
-    c.node('obscura_queue', label='<obscura_queue<BR/><I>ENV-obscura-requests</I>>', shape=queue)
-    c.node('env_files', label='<files from trebuchet<BR/><I>groundstation-ENV-files</I>>', shape=queue)
-    c.node('final_product', label='<products<BR/><I>images-ENV-obscura-products</I>>', shape=queue)
+    c.node('obscura_queue', label='<obscura_queue<BR/><I>ENV-obscura-requests</I>>', shape=SQS_QUEUE)
+    c.node('env_files', label='<files from trebuchet<BR/><I>groundstation-ENV-files</I>>', shape=SQS_QUEUE)
+    c.node('final_product', label='<products<BR/><I>images-ENV-obscura-products</I>>', shape=SQS_QUEUE)
 
 
 # GEMINI
-with G.subgraph(name='clustergemini') as gem:
+with graph.subgraph(name='clustergemini') as gem:
     gem.attr(label='GEMINI', style='dotted')
-    gem.node('pdp', label='<pass-data-processor<BR/><I>file_listener.py</I>>', shape=service_shape)
-    gem.node('satmodel', label='satellite model', shape=service_shape)
-    gem.node('compliance', label='image order compliance', shape=service_shape)
-    gem.node('planner', label='<mission planner<BR/><I>task data</I>>', shape=service_shape)
-    gem.node('cmd_gen', label='<command<BR/>generator>', shape=service_shape)
+    gem.node('pdp', label='<pass-data-processor<BR/><I>file_listener.py</I>>', shape=SERVICE)
+    gem.node('satmodel', label='satellite model', shape=SERVICE)
+    gem.node('compliance', label='image order compliance', shape=SERVICE)
+    gem.node('planner', label='<mission planner<BR/><I>task data</I>>', shape=SERVICE)
+    gem.node('cmd_gen', label='<command<BR/>generator>', shape=SERVICE)
 
     # OBSCURA
     with gem.subgraph(name='clusterobscura') as c:
         c.attr(label='OBSCURA', style='dashed')
-        c.node('img_req', label='ImageRequest', shape=service_shape)
-        c.node('workflow', label='WorkFlow', shape=service_shape)
-        c.node('multi', label='Multi Check', shape=service_shape, color=new_line)
-        c.node('upload', label='Upload', shape=service_shape)
-        c.node('get_sfx', label='SFX file', shape=process)
-        c.node('get_metadata', label='image metadata', shape=process)
-        c.node('get_task', label='task metadata', shape=process)
-        c.node('run_wf', label='run workflow', shape=process)
-        c.node('examine_task', label='<compare accuracy<BR/>vs task data>', shape=process)
-        c.node('post_process_check', label='<Part of multi<BR/>order and all<BR/>images processed?>', shape=process, color=new_line)
-        c.node('gather_multi_images', label='<Gather images<BR/>and create task<BR/>with stereo wf>', shape=process, color=new_line)
+        c.node('img_req', label='ImageRequest', shape=SERVICE)
+        c.node('single_instance', label='<Single-image<BR/>instance>', shape=SERVICE)
+        c.node('multi_instance', label='<Multi-image<BR/>instance>', shape=SERVICE, color=NEW)
+        c.node('multi', label='Multi Check', shape=SERVICE, color=NEW)
+        c.node('upload', label='Upload', shape=SERVICE)
+        c.node('get_sfx', label='SFX file', shape=PROCESS)
+        c.node('get_metadata', label='image metadata', shape=PROCESS)
+        c.node('get_task', label='task metadata', shape=PROCESS)
+        c.node('examine_task', label='<compare accuracy<BR/>vs task data>', shape=PROCESS)
+        c.node('post_process_check', label='<Part of multi<BR/>order and all<BR/>images processed?>', shape=PROCESS, color=NEW)
 
-G.edge('pdp', 'satmodel', arrowhead='inv', dir='forward', color=data_color)
-G.edge('pdp', 'cmd_gen', arrowhead='inv', dir='forward', color=data_color)
-G.edge('pdp', 'files_s3', color=data_color)  # decrypted image_metadata files
-G.edge('pdp', 'obscura_queue', color=sqs_color)
+graph.edge('pdp', 'satmodel', arrowhead='inv', dir='forward', color=DATA)
+graph.edge('pdp', 'cmd_gen', arrowhead='inv', dir='forward', color=DATA)
+graph.edge('pdp', 'files_s3', color=DATA)  # decrypted image_metadata files
+graph.edge('pdp', 'obscura_queue', color=PASS_OFF)
 
-G.edge('img_req', 'obscura_queue', arrowhead='inv', dir='forward', color=sqs_color)
-G.edge('img_req', 'get_sfx', arrowhead='inv', dir='forward', color=data_color)
-G.edge('img_req', 'get_task', arrowhead='inv', dir='forward', color=data_color)
-G.edge('get_sfx', 'files_s3', dir='both', color=data_color)
-G.edge('img_req', 'get_metadata', arrowhead='inv', dir='forward', color=data_color)
-G.edge('get_metadata', 'pdp', arrowhead='inv', dir='forward', color=data_color)
-G.edge('get_task', 'planner', arrowhead='inv', dir='forward', color=data_color)
+graph.edge('img_req', 'obscura_queue', arrowhead='inv', dir='forward', color=PASS_OFF)
+graph.edge('img_req', 'get_sfx', arrowhead='inv', dir='forward', color=DATA)
+graph.edge('img_req', 'get_task', arrowhead='inv', dir='forward', color=DATA)
+graph.edge('get_sfx', 'files_s3', dir='both', color=DATA)
+graph.edge('img_req', 'get_metadata', arrowhead='inv', dir='forward', color=DATA)
+graph.edge('get_metadata', 'pdp', arrowhead='inv', dir='forward', color=DATA)
+graph.edge('get_task', 'planner', arrowhead='inv', dir='forward', color=DATA)
 
-G.edge('img_req', 'workflow', color=sqs_color)
-G.edge('workflow', 'run_wf', arrowhead='inv', dir='forward', color=data_color)
-G.edge('workflow', 'examine_task', color=fx_call)
+graph.edge('img_req', 'single_instance', color=PASS_OFF)
+graph.edge('single_instance', 'examine_task', color=FX_CALL)
 
-G.edge('workflow', 'multi', color=new_line)
-G.edge('multi', 'upload', color=new_line)
-G.edge('upload', 'final_product', color=data_color)
-G.edge('multi', 'post_process_check', color=new_line)
-G.edge('post_process_check', 'satmodel', label='No', color=new_line)
-G.edge('post_process_check', 'gather_multi_images', label=' Yes', color=new_line)
-G.edge('gather_multi_images', 'workflow',color=new_line)
-G.edge('upload', 'compliance', color=fx_call)
+graph.edge('single_instance', 'upload', color=PASS_OFF)
+graph.edge('multi_instance', 'upload', color=NEW)
+graph.edge('upload', 'multi', color=NEW)
+graph.edge('upload', 'final_product', color=DATA)
+graph.edge('multi', 'post_process_check', color=NEW)
+graph.edge('post_process_check', 'satmodel', label='No', color=NEW)
+graph.edge('post_process_check', 'multi_instance', label=' Yes', color=NEW)
+graph.edge('upload', 'compliance', color=FX_CALL)
 
 
-with G.subgraph(name='clusterlegend') as legend:
+with graph.subgraph(name='cluster_legend') as legend:
     legend.attr(label='LEGEND')
-    legend.node('a', label='service', shape=service_shape)
-    legend.node('b', label='function', shape=process)
-    legend.node('c', label='data store', shape=data_store)
-    legend.node('d', label='SQS queue', shape=queue)
-    legend.node('e', label='N/A', shape=process)
+    legend.node('a', label='service', shape=SERVICE)
+    legend.node('b', label='function', shape=PROCESS)
+    legend.node('c', label='data store', shape=DATA_STORE)
+    legend.node('d', label='sqs queue', shape=SQS_QUEUE)
+    legend.node('e', label='N/A', shape=PROCESS)
 
-    legend.edge('a', 'b', label=' foo()', color=fx_call)
-    legend.edge('b', 'c', label=' pull data', arrowhead='inv', color=data_color)
-    legend.edge('c', 'd', label=' SQS', color=sqs_color)
-    legend.edge('d', 'e', label=' new', color=new_line)
+    legend.edge('a', 'b', label=' foo()', color=FX_CALL)
+    legend.edge('b', 'c', label=' pull data', arrowhead='inv', color=DATA)
+    legend.edge('c', 'd', label=' SQS', color=PASS_OFF)
+    legend.edge('d', 'e', label=' new', color=NEW)
 
-# G.attr(engine='neato')
-# G.attr(layout='fdp')
-# G.attr(splines='ortho')
-G.attr(overlap='scale')
-G.attr(overlap_shrink='true')
-G.render()
+graph.attr(overlap='scale')
+graph.attr(overlap_shrink='true')
+graph.render()
