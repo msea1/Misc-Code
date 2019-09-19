@@ -42,6 +42,7 @@ for file in glob.iglob(join(directory, '*.csv')):
 
 with open('/tmp/kix/output.csv', 'w') as fout:
     fout.write(f"{header}\n")
-    for k, v in value_dict.items():
+    for k in sorted(value_dict):
+        v = value_dict[k]
         values_at_k = ",".join(v)
         fout.write(f"{k},{values_at_k}\n")
