@@ -1,3 +1,6 @@
+# take in a text file and spit out the word usage, ranked
+# so as to try and avoid repeating the same words constantly.
+# does not consider phrases or n-grams however
 
 open (FILE, "<./wordList.txt") || die $!;
 open (OUT, ">./wordListOut.txt") || die $!;
