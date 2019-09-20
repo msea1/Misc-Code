@@ -40,12 +40,8 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 export HISTTIMEFORMAT="%a %d %b %T: "
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-export ATLAS_TOKEN=Amz8vbkjRWJJyQ.atlasv1.j6Ybt9wDtwkUZZcck1LffllyR05CMyK7mSjHePCCPL5n4sT7ziNUFM9DuBdASdIiB8g
-export C_INCLUDE_PATH=/usr/include/gdal
-export CPLUS_INCLUDE_PATH=/usr/include/gdal
-export REQUEST_CA_BUNDLE=/usr/local/share/ca-certificates/gd_bundle-g2.crt
-export VAULT_ADDR=https://vault.spaceflightindustries.com:8200
 
+### COMMAND PROMPT ###
 # PS1="\[$BLUE[${PWD#"${PWD%/*/*}/"}] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
 PS1="\[$BLUE[\w] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
 
@@ -69,11 +65,12 @@ set show-all-if-ambiguous On
 ### PATHS ###
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH="$HOME/bin/arc/arcanist/bin:$PATH"
-export PATH="$HOME/bin/terraform/cli/bin:$PATH"
 
-export PYTHONPATH="$HOME/Code/gemini/dist"
 
+### ADDENDUM ###
+if [ -f ~/.bashrc_work ]; then
+. ~/.bashrc_work
+fi
 
 ### ALIASES ###
 if [ -f ~/.bash_aliases ]; then
