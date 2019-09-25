@@ -156,3 +156,7 @@ source ~/.virtualenvs/sandbox/bin/activate
 pip install jupyter
 pip install tornado==4.5.3
 # ipython kernel install --name "sandbox" --user
+
+# add option to /etc/inputrc to enable case-insensitive tab completion for all users
+sudo echo 'set completion-ignore-case On' >> /etc/inputrc
+
