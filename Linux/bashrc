@@ -24,11 +24,13 @@ complete -o default -o nospace -F _git g
 
 
 ### COLORS ###
-BLUE="\033[38;5;39m\]"
-GREEN="\033[38;5;47m\]"
-GREY="\033[38;5;7m\]"
-WHITE="\033[38;5;15m\]"
-YELLOW="\033[38;5;11m\]"
+WHITE="\e[38;5;15m\]"
+GREY="\e[38;5;241m\]"
+RED="\e[38;5;1m\]"
+YELLOW="\e[38;5;11m\]"
+GREEN="\e[38;5;46m\]"
+BLUE="\e[38;5;33m\]"
+PURPLE="\e[38;5;93m\]"
 
 
 ### ENVIRONMENT VARIABLES ###
@@ -39,11 +41,22 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
 export HISTTIMEFORMAT="%a %d %b %T: "
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_DIRTRIM=3
 
+export ATLAS_TOKEN=Amz8vbkjRWJJyQ.atlasv1.j6Ybt9wDtwkUZZcck1LffllyR05CMyK7mSjHePCCPL5n4sT7ziNUFM9DuBdASdIiB8g
+export C_INCLUDE_PATH=/usr/include/gdal
+export CPLUS_INCLUDE_PATH=/usr/include/gdal
+export REQUEST_CA_BUNDLE=/usr/local/share/ca-certificates/gd_bundle-g2.crt
+export VAULT_ADDR=https://vault.spaceflightindustries.com:8200
 
-### COMMAND PROMPT ###
 # PS1="\[$BLUE[${PWD#"${PWD%/*/*}/"}] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
-PS1="\[$BLUE[\w] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
+# PS1="\[$BLUE[\w] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
+if [ $(hostname) == "x1" ];
+then # laptop
+  PS1="\[$PURPLE[\w] \[$YELLOW\$(parse_git_branch) \[$WHITE\\$ \[$(tput sgr0)\]"
+else # desktop
+  PS1="\[$BLUE[\w] \[$GREEN\$(parse_git_branch) \[$WHITE\\$ \[$(tput sgr0)\]"
+fi
 
 
 ### OPTIONS ###
