@@ -37,10 +37,10 @@ def built_in(module_origin):
     return '/usr/lib/python3' in module_origin or 'built-in' in module_origin
 
 
-test_service = 'obscura'
-test_service = 'obscura_workflow'
-path_there = 'services/imaging-services/obscura'
-path_there = 'libraries/obscura-workflow'
+test_service = 'pass_data_processor'
+# test_service = 'obscura_workflow'
+path_there = 'services/satellite-services/pass-data-processor'
+# path_there = 'libraries/obscura-workflow'
 imports_founds = set()
 
 code_files, _ = pyfiles(path_there, test_service)
@@ -71,6 +71,11 @@ for cf in code_files:
         m1 = [x[1].__name__.split('.')[0] for x in filter(lambda x: ismodule(x[1]), m) if not built_in(str(x[1]))]
         m1 = set(m1)
 
+        try:
+            m1.remove(test_service)
+        except KeyError:
+            pass
+
         imports_founds = imports_founds | bi | m1
     except ModuleNotFoundError:
         # try manual scan
@@ -86,11 +91,15 @@ for cf in code_files:
                         pruned.add(f)
                 except Exception as e:
                     print(f'{e} on {f}')
+            try:
+                pruned.remove(test_service)
+            except KeyError:
+                pass
+            
             imports_founds = imports_founds | set(pruned)
 
 third_party = get_3rd_party_list()
 this_code, _ = get_service_build(path_there)
-extra = set()
 missing = set(imports_founds)
 for in_code in imports_founds:
     in_build = in_code.replace('_', '-').lower()
