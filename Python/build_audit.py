@@ -95,7 +95,7 @@ for cf in code_files:
                 pruned.remove(test_service)
             except KeyError:
                 pass
-            
+
             imports_founds = imports_founds | set(pruned)
 
 third_party = get_3rd_party_list()
