@@ -53,9 +53,9 @@ export VAULT_ADDR=https://vault.spaceflightindustries.com:8200
 # PS1="\[$BLUE[\w] \[$(tput sgr0)\]\[$GREEN\$(parse_git_branch) \[$(tput sgr0)\]\[$WHITE\\$ \[$(tput sgr0)\]"
 if [ $(hostname) == "x1" ];
 then # laptop
-  PS1="\[$PURPLE[\w] \[$YELLOW\$(parse_git_branch) \[$WHITE\\$ \[$(tput sgr0)\]"
+  PS1="\[$RED\$(parse_vpn)\[$PURPLE[\w] \[$YELLOW\$(parse_git_branch) \[$WHITE\\$ \[$(tput sgr0)\]"
 else # desktop
-  PS1="\[$BLUE[\w] \[$GREEN\$(parse_git_branch) \[$WHITE\\$ \[$(tput sgr0)\]"
+  PS1="\[$RED\$(parse_vpn)\[$BLUE[\w] \[$GREEN\$(parse_git_branch) \[$WHITE\\$ \[$(tput sgr0)\]"
 fi
 
 
