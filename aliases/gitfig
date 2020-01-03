@@ -1,0 +1,18 @@
+[alias]
+    ### SELF-EXPLANATORY ###
+    a = add
+    aa = add --all
+    amend = commit --amend
+    authors = "!git log --pretty=format:%aN | sort | uniq -c | sort -rn"
+    br = branch -vv
+    co = checkout
+    cm = commit --allow-empty -m
+    commits = "!git shortlog -s -n --all --no-merges"
+    da = diff HEAD
+    del = push origin --delete
+    ds = diff --staged
+    dt = difftool
+    hist = log --oneline --abbrev-commit --all --graph --decorate --color
+    pb = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
+    st = status --short --branch
+    su = submodule update
