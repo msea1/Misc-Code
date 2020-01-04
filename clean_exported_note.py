@@ -12,6 +12,14 @@ class Cleaner:
         # <note><title>G</title><content>
         pass
 
+    def sort_notes(self):
+        # by created? updated? title in alpha?
+        pass
+
+    def build_note_to_import(self):
+        # string formatting or build an XML doc?
+        pass
+
     def split_export_into_each_note(self):
         # break up by en-note
         en_export = self.doc.getElementsByTagName('en-export')[0]
