@@ -60,3 +60,7 @@ for match in re.finditer(entry, track_data):
 
 dupes2 = cross_reference_dicts(local_artists, cloud_artists)
 print(dupes2)
+
+"""
+putting into new album automatically?
+"""
