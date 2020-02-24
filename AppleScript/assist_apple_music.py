@@ -1,15 +1,17 @@
 
 """
 tell application "Music"
-	set t to {}
-	set all_tracks to every track of library playlist id 64
-	repeat with tune in all_tracks
-		set end of t to {artist of tune, name of tune, id of tune, cloud status of tune}
-	end repeat
-	t
+    set t to {}
+    set all_tracks to every track of library playlist id 64
+    repeat with tune in all_tracks
+        set end of t to {artist of tune, name of tune, id of tune, cloud status of tune}
+    end repeat
+    t
 end tell
 """
 from difflib import SequenceMatcher
+
+from MiscCode.Python.compare_dict import cross_reference_dicts
 
 
 def amend_string(input):
@@ -44,14 +46,17 @@ for match in re.finditer(entry, track_data):
         build_dict(local_artists, amended_artist.strip(), amended_song.strip())
 
 # comparing dicts, softly, artist and key
-for artist, songlist in local_artists.items():
-    for apple_artists, apple_songs in cloud_artists.items():
-        check = SequenceMatcher(None, artist, apple_artists).ratio()
-        if check > 0.5:
-            for song in songlist:
-                for cloud_song in apple_songs:
-                    check = SequenceMatcher(None, song, cloud_song).ratio()
-                    if check > 0.5:
-                        build_dict(possible_dupes, artist.strip(), song.strip())
+# for artist, songlist in local_artists.items():
+#     for apple_artists, apple_songs in cloud_artists.items():
+#         check = SequenceMatcher(None, artist, apple_artists).ratio()
+#         if check > 0.5:
+#             for song in songlist:
+#                 for cloud_song in apple_songs:
+#                     check = SequenceMatcher(None, song, cloud_song).ratio()
+#                     if check > 0.5:
+#                         build_dict(possible_dupes, artist.strip(), song.strip())
 
-print(possible_dupes)
+# print(possible_dupes)
+
+dupes2 = cross_reference_dicts(local_artists, cloud_artists)
+print(dupes2)
