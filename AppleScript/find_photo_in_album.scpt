@@ -44,4 +44,3 @@ on check_level(photo_id, container_obj)
 		end if
 	end tell
 end check_level
-

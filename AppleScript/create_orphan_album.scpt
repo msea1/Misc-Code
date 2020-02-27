@@ -44,4 +44,3 @@ on check_level(container_obj)
 	end tell
 	return photos_in_level
 end check_level
-
