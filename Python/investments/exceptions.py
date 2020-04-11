@@ -1,0 +1,2 @@
+class ExceededBudgetError(Exception):
+    pass
