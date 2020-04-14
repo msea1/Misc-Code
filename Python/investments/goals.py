@@ -1,6 +1,7 @@
 from collections import namedtuple
 
-# TODO validator that it adds to 100
+from misc_code.Python.investments.definitions import Bent, Cap
+
 Strategy = namedtuple('strategy', ['Alternatives', 'Intl_Bonds', 'Intl_Stocks', 'USA_Bonds', 'USA_Stocks'])
 AGGRESSIVE_STRATEGY = Strategy(
     Alternatives=5.0,
@@ -54,3 +55,13 @@ SECTOR_BALANCE = Sectors(
 
 BENT_BALANCE = [100/3, 100/3, 100/3]  # Growth, Blend, Value
 CAP_BALANCE = [60, 20, 20]  # Large, Medium, Small
+
+
+def summarize():
+    caps = [f"{Cap(i + 1).name}: {per}" for i, per in enumerate(CAP_BALANCE)]
+    bent = [f"{Bent(i + 1).name}: {per}" for i, per in enumerate(BENT_BALANCE)]
+    
+    summary = f"\nGOALS:\nCONSERVATIVE - {CONSERVATIVE_STRATEGY}\nAGGRESSIVE - {AGGRESSIVE_STRATEGY}\n\n" \
+              f"Cap: {caps}\nBent: {bent}\n\n" \
+              f"{SECTOR_BALANCE}\n{REGIONAL_BALANCE}"
+    return summary

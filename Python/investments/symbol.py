@@ -1,28 +1,8 @@
-from enum import Enum, auto
 from typing import List
 
 from .constants import CUT_OFF_PERCENTAGE
+from .definitions import Bent, Cap, Group
 from .goals import Regions, Sectors
-
-
-class Bent(Enum):
-    Growth = auto()
-    Blend = auto()
-    Value = auto()
-
-
-class Cap(Enum):
-    Small = auto()
-    Medium = auto()
-    Large = auto()
-
-
-class Group(Enum):
-    Alternatives = auto()
-    Intl_Bonds = auto()
-    Intl_Stocks = auto()
-    USA_Bonds = auto()
-    USA_Stocks = auto()
 
 
 class Symbol:
@@ -31,8 +11,8 @@ class Symbol:
         self.cap = Cap[cap]
         self.bent = Bent[gbv]
         self.bond_percentage = bonds
-        self.sector_weights = Sectors(sectors)
-        self.regional_distribution = Regions(regions)
+        self.sector_weights = Sectors(*sectors)
+        self.regional_distribution = Regions(*regions)
     
     @property
     def is_alternative(self):

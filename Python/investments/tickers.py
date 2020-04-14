@@ -1,3 +1,5 @@
+from misc_code.Python.investments import goals
+from misc_code.Python.investments.portfolio import Portfolio
 from misc_code.Python.investments.symbol import Symbol
 
 US_LISTING = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100]  # entirely domestic holdings
@@ -12,3 +14,12 @@ SCHX = Symbol('SCHX', 'Large', 'Blend', 0, [2.18, 10.27, 10.14, 6.94, 3.57, 15.4
 VBK = Symbol('VBK', 'Small', 'Growth', 0, [2.37, 4.65, 10.75, 2.57, 2.47, 4.74, 20.86, 12.39, 10.07, 28.43, 0.70], US_LISTING)
 VOOV = Symbol('VOOV', 'Large', 'Value', 0, [1.97, 7.54, 5.60, 9.81, 7.21, 21.32, 18.55, 10.24, 3.34, 7.58, 6.83], US_LISTING)
 VUG = Symbol('VUG', 'Large', 'Growth', 0, [1.93, 14.30, 15.89, 3.18, 1.16, 9.88, 8.40, 7.99, 4.83, 32.42, 0.03], US_LISTING)
+
+
+# example
+p = Portfolio()
+p.add_to_portfolio(SCHA, 50)
+p.add_to_portfolio(SCHV, 50)
+
+print(p.summarize)
+print(goals.summarize())
