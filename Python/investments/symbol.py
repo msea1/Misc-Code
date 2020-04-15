@@ -1,7 +1,6 @@
-from typing import List
+from typing import List, Tuple
 
-from .constants import CUT_OFF_PERCENTAGE
-from .definitions import Bent, Cap, Group
+from .definitions import Bent, Cap
 from .goals import Regions, Sectors
 
 
@@ -14,23 +13,14 @@ class Symbol:
         self.sector_weights = Sectors(*sectors)
         self.regional_distribution = Regions(*regions)
     
-    @property
-    def is_alternative(self):
-        return self.sector_weights.Real_Estate >= CUT_OFF_PERCENTAGE
+    def __repr__(self) -> str:
+        return f'{self.ticker.upper()}'
+    
+    def __lt__(self, other: "Symbol") -> bool:
+        return self.ticker < other.ticker
     
     @property
-    def is_bond(self):
-        return self.bond_percentage >= CUT_OFF_PERCENTAGE
-    
-    @property
-    def is_domestic(self):
-        return self.regional_distribution.United_States >= CUT_OFF_PERCENTAGE
-    
-    @property
-    def grouping(self):
-        if self.is_alternative:
-            return Group['Alternatives']
-        if self.is_bond:
-            return Group['USA_Bonds'] if self.is_domestic else Group['Intl_Bonds']
-        else:
-            return Group['USA_Stocks'] if self.is_domestic else Group['Intl_Stocks']
+    def foreign_domestic_weight(self) -> Tuple[float, float]:
+        total = sum(self.regional_distribution)
+        domestic_weight = self.regional_distribution.United_States
+        return (total - domestic_weight), domestic_weight

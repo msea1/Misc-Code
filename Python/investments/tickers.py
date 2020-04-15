@@ -1,25 +1,54 @@
 from misc_code.Python.investments import goals
 from misc_code.Python.investments.portfolio import Portfolio
 from misc_code.Python.investments.symbol import Symbol
+'''
+SCHE
+SCHF
+SCHH
+SCHP
+TAIL
+VNQI
+'''
+BOND_SECTORS = [0]*goals.SECTOR_BALANCE.__len__()
+US_LISTING = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100]
+# Bonds
+ILTB = Symbol('ILTB', 'Bond', 'Bond', 100, sectors=BOND_SECTORS, regions=US_LISTING)
+PCY = Symbol('PCY', 'Bond', 'Bond', 100, sectors=BOND_SECTORS, regions=US_LISTING)  # TODO has foreign bonds
 
-US_LISTING = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100]  # entirely domestic holdings
+# Int'l
+SCHC = Symbol('SCHC', 'Small', 'Blend', 0, sectors=[10.49, 4.02, 11.75, 5.78, 3.06, 10.6, 7.63, 20.76, 10.91, 10.84, 4.16],
+              regions=[0.2, 7.4, 0.5, 6.3, 17.8, 0.6, 14.3, 18.2, 20.8, 0.1, 1.0, 12.2, 0.5])
+VT = Symbol('VT', 'Large', 'Value', 0, sectors=[4.52, 8.59, 10.41, 7.87, 4.71, 17.43, 11.67, 11.29, 4.15, 15.94, 3.42],
+            regions=[0.6, 4.2, 5.9, 2.1, 3.0, 0.8, 4.6, 8.9, 7.4, 1.4, 0.7, 5.0, 55.4])
 
-SCHA = Symbol('SCHA', 'Small', 'Blend', 0, [3.57, 3.72, 11.19, 3.88, 2.50, 16.88, 14.41, 15.90, 10.29, 14.47, 3.18], US_LISTING)
-SCHB = Symbol('SCHB', 'Large', 'Blend', 0, [2.30, 9.70, 10.23, 6.67, 3.48, 15.61, 13.81, 9.88, 4.34, 20.69, 3.29], US_LISTING)
-SCHD = Symbol('SCHD', 'Large', 'Value', 0, [0.67, 4.72, 9.61, 22.81, 5.84, 9.54, 12.19, 16.61, 0.01, 17.98, 0.01], US_LISTING)
-SCHG = Symbol('SCHG', 'Large', 'Growth', 0, [1.98, 14.11, 13.65, 2.53, 0.50, 12.25, 12.77, 7.62, 3.45, 30.23, 0.89], US_LISTING)
-SCHK = Symbol('SCHK', 'Large', 'Blend', 0, [2.17, 10.03, 10.16, 6.82, 3.49, 15.49, 13.72, 9.55, 4.00, 21.22, 3.36], US_LISTING)
-SCHV = Symbol('SCHV', 'Large', 'Value', 0, [2.40, 5.94, 6.17, 11.90, 7.03, 19.14, 14.87, 11.19, 4.13, 11.21, 6.01], US_LISTING)
-SCHX = Symbol('SCHX', 'Large', 'Blend', 0, [2.18, 10.27, 10.14, 6.94, 3.57, 15.49, 13.76, 9.30, 3.77, 21.29, 3.30], US_LISTING)
-VBK = Symbol('VBK', 'Small', 'Growth', 0, [2.37, 4.65, 10.75, 2.57, 2.47, 4.74, 20.86, 12.39, 10.07, 28.43, 0.70], US_LISTING)
-VOOV = Symbol('VOOV', 'Large', 'Value', 0, [1.97, 7.54, 5.60, 9.81, 7.21, 21.32, 18.55, 10.24, 3.34, 7.58, 6.83], US_LISTING)
-VUG = Symbol('VUG', 'Large', 'Growth', 0, [1.93, 14.30, 15.89, 3.18, 1.16, 9.88, 8.40, 7.99, 4.83, 32.42, 0.03], US_LISTING)
+# Misc
+XAR = Symbol('XAR', 'Large', 'Value', 0, sectors=[0, 0, 0, 0, 0, 0, 0, 90.99, 0, 9.01, 0], regions=US_LISTING)
+
+# ETFs
+SCHA = Symbol('SCHA', 'Small', 'Blend', 0, sectors=[3.51, 3.8, 9.4, 4.61, 1.72, 16.17, 16.49, 15.91, 8.83, 15.91, 3.66],
+              regions=[0.0, 0.1, 0.1, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.4, 0.0, 0.2, 99.2])
+SCHB = Symbol('SCHB', 'Large', 'Blend', 0, sectors=[2.29, 9.85, 9.89, 7.48, 2.72, 13.87, 15.55, 9.1, 4.1, 21.71, 3.42],
+              regions=[0.0, 0.1, 0.1, 0.0, 0.0, 0.0, 0.3, 0.4, 0.0, 0.0, 0.0, 0.6, 98.6])
+SCHD = Symbol('SCHD', 'Large', 'Value', 0, sectors=[0.65, 4.75, 8.54, 23.1, 6.56, 7.94, 12.54, 17.77, 0.01, 18.13, 0.01],
+              regions=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 99.6])
+SCHG = Symbol('SCHG', 'Large', 'Growth', 0, sectors=[2.06, 13.9, 13.76, 2.71, 0.38, 11.42, 13.67, 6.29, 3.88, 30.99, 0.92],
+              regions=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.9, 98.7])
+SCHK = Symbol('SCHK', 'Large', 'Blend', 0, sectors=[2.18, 10.15, 9.92, 7.59, 2.74, 13.67, 15.46, 8.81, 3.87, 22.15, 3.47],
+              regions=[0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.3, 0.4, 0.0, 0.0, 0.0, 0.6, 98.5])
+SCHV = Symbol('SCHV', 'Large', 'Value', 0, sectors=[2.34, 6.21, 5.47, 13.56, 5.64, 16.33, 17.58, 11.17, 3.51, 11.89, 6.3],
+              regions=[0.0, 0.1, 0.1, 0.0, 0.0, 0.0, 0.6, 0.5, 0.0, 0.0, 0.0, 0.3, 98.3])
+SCHX = Symbol('SCHX', 'Large', 'Blend', 0, sectors=[2.19, 10.36, 9.94, 7.71, 2.81, 13.68, 15.47, 8.54, 3.71, 22.19, 3.4],
+              regions=[0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.3, 0.4, 0.0, 0.0, 0.0, 0.6, 98.5])
+VBK = Symbol('VBK', 'Small', 'Growth', 0, sectors=[2.17, 4.79, 10.49, 2.67, 2.14, 4.59, 21.92, 11.9, 9.95, 28.68, 0.7],
+             regions=[0.0, 0.1, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 99.4])
 
 
 # example
 p = Portfolio()
-p.add_to_portfolio(SCHA, 50)
-p.add_to_portfolio(SCHV, 50)
+p.add_to_portfolio(SCHA, 25)
+p.add_to_portfolio(SCHV, 25)
+p.add_to_portfolio(VT, 25)
+p.add_to_portfolio(PCY, 25)
 
 print(p.summarize)
-print(goals.summarize())
+# print(goals.summarize())
