@@ -4,72 +4,71 @@ from misc_code.Python.investments.goals import Regions
 
 
 sectors = """
-Basic Materials	 	4.52%
-Communication Services	 	8.59%
-Consumer Cyclical	 	10.41%
-Consumer Defensive	 	7.87%
-Energy	 	4.71%
-Financial Services	 	17.43%
-Healthcare	 	11.67%
-Industrials	 	11.29%
-Real Estate	 	4.15%
-Technology	 	15.94%
-Utilities	 	3.42%
-
+Basic Materials	 	0.01%
+Communication Services	 	0%
+Consumer Cyclical	 	0.29%
+Consumer Defensive	 	0%
+Energy	 	0%
+Financial Services	 	0.29%
+Healthcare	 	0%
+Industrials	 	0.16%
+Real Estate	 	99.25%
+Technology	 	0%
+Utilities	 	0%
 """
 
 geography = """
 Africa
 
-0.6%
+1.4%
 
 Asia Developed
 
-4.2%
+16.0%
 
 Asia Emerging
 
-5.9%
+14.8%
 
 Australasia
 
-2.1%
+8.9%
 
 Canada
 
-3.0%
+2.6%
 
 Europe Emerging
 
-0.8%
+0.5%
 
 Europe Ex Euro
 
-4.6%
+5.1%
 
 Eurozone
 
-8.9%
+14.4%
 
 Japan
 
-7.4%
+24.4%
 
 Latin America
 
-1.4%
+2.1%
 
 Middle East
 
-0.7%
+2.5%
 
 United Kingdom
 
-5.0%
+7.1%
 
 United States
 
-55.4%
+0.3%
 """
 
 

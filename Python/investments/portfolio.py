@@ -86,7 +86,7 @@ class Portfolio:
         return goals.Regions(*percentages)
 
 # TODO list
-#   add more tickers
+#   add 401k tickers, options to sector balance
 #   add my current portfolio
 #   regional weighting goal?
 #   decision/re-weighting model?
