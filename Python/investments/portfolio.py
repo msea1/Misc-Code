@@ -87,6 +87,8 @@ class Portfolio:
 
 # TODO list
 #   add 401k tickers, options to sector balance
+#   change balancing to be additive of actual shares rather than constrain 100 budget
 #   add my current portfolio
 #   regional weighting goal?
 #   decision/re-weighting model?
+#   remove mid cap?
