@@ -5,20 +5,25 @@ from misc_code.Python.investments.symbol import Symbol
 
 BOND_SECTORS = [0]*goals.SECTOR_BALANCE.__len__()
 US_LISTING = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100]
+
 # Bonds
 ILTB = Symbol('ILTB', 'Bond', 'Bond', 100, sectors=BOND_SECTORS, regions=US_LISTING)
 PCY = Symbol('PCY', 'Bond', 'Bond', 100, sectors=BOND_SECTORS, regions=[5, 5, 30, 0, 0, 15, 5, 0, 0, 20, 20, 0, 0])
+PTRQX = Symbol('PTRQX', 'Bond', 'Bond', 100, sectors=BOND_SECTORS, regions=[0, 10, 0, 5, 0, 0, 0, 10, 10, 0, 0, 5, 60])
 SCHP = Symbol('SCHP', 'Bond', 'Bond', 100, sectors=BOND_SECTORS, regions=US_LISTING)
 TAIL = Symbol('TAIL', 'Large', 'Blend', 88.2, sectors=[2.09, 10.74, 9.6, 8.14, 2.65, 13.79, 15.54, 8.71, 3.01, 22.18, 3.57],
-              regions=[0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.3, 0.4, 0.0, 0.0, 0.0, 0.6, 98.5])
+              regions=[0, 0, 0.1, 0, 0, 0, 0.3, 0.4, 0, 0, 0, 0.6, 98.5])
+VBTIX = Symbol('VBTIX', 'Bond', 'Bond', 100, sectors=BOND_SECTORS, regions=US_LISTING)
 
 # Int'l
 SCHC = Symbol('SCHC', 'Small', 'Blend', 0, sectors=[10.49, 4.02, 11.75, 5.78, 3.06, 10.6, 7.63, 20.76, 10.91, 10.84, 4.16],
               regions=[0.2, 7.4, 0.5, 6.3, 17.8, 0.6, 14.3, 18.2, 20.8, 0.1, 1.0, 12.2, 0.5])
 SCHE = Symbol('SCHE', 'Large', 'Blend', 0, sectors=[0, 14.87, 14.52, 6.38, 7.13, 23.1, 3.65, 5.32, 3.44, 11.67, 2.92],
-              regions=[4.4, 14.8, 59.8, 0.0, 0.0, 4.9, 0.0, 0.2, 0.0, 9.5, 5.7, 0.0, 0.7])
+              regions=[4.4, 14.8, 59.8, 0, 0, 4.9, 0, 0.2, 0, 9.5, 5.7, 0, 0.7])
 SCHF = Symbol('SCHF', 'Large', 'Blend', 0, sectors=[7.19, 6.15, 9.28, 11.52, 4.92, 17.6, 13.15, 13.85, 2.99, 9.65, 3.69],
-              regions=[0.0, 8.3, 0.4, 5.8, 7.6, 0.3, 13.9, 25.7, 23.9, 0.0, 0.5, 13.0, 0.7])
+              regions=[0, 8.3, 0.4, 5.8, 7.6, 0.3, 13.9, 25.7, 23.9, 0, 0.5, 13.0, 0.7])
+VEMAX = Symbol('VEMAX', 'Large', 'Blend', 0, sectors=[7.68, 12.11, 13.49, 6.45, 7.58, 23.5, 3.69, 6.47, 3.97, 11.89, 3.18],
+               regions=[5, 5, 30, 0, 0, 15, 5, 0, 0, 20, 20, 0, 0])
 VT = Symbol('VT', 'Large', 'Blend', 0, sectors=[4.52, 8.59, 10.41, 7.87, 4.71, 17.43, 11.67, 11.29, 4.15, 15.94, 3.42],
             regions=[0.6, 4.2, 5.9, 2.1, 3.0, 0.8, 4.6, 8.9, 7.4, 1.4, 0.7, 5.0, 55.4])
 
@@ -30,23 +35,39 @@ VNQI = Symbol('VNQI', 'Medium', 'Blend', 0, sectors=[0.01, 0, 0.29, 0, 0, 0.29, 
 # defense industrial
 XAR = Symbol('XAR', 'Medium', 'Blend', 0, sectors=[0, 0, 0, 0, 0, 0, 0, 90.99, 0, 9.01, 0], regions=US_LISTING)
 
+# target retirement
+VTTWX = Symbol('VTTWX', 'Large', 'Blend', 32, sectors=[4.46, 8.57, 10.33, 7.66, 4.98, 17.41, 12.21, 11.37, 4.18, 15.59, 3.24],
+               regions=[0, 9, 0, 5, 0, 0, 0, 9, 9, 0, 0, 5, 63])
+VIRSX = Symbol('VIRSX', 'Large', 'Blend', 17.2, sectors=[4.47, 8.57, 10.33, 7.67, 4.98, 17.42, 12.21, 11.37, 4.18, 15.57, 3.24],
+               regions=[0, 9, 0, 5, 0, 0, 0, 9, 9, 0, 0, 4, 62])
+VTRLX = Symbol('VTRLX', 'Large', 'Blend', 10, sectors=[4.47, 8.57, 10.33, 7.67, 4.98, 17.42, 12.21, 11.37, 4.18, 15.57, 3.24],
+               regions=[0, 9, 0, 5, 0, 0, 0, 9, 9, 0, 0, 4, 62])
+
 # ETFs
+POGRX = Symbol('POGRX', 'Large', 'Growth', 0, sectors=[0.34, 3.1, 10.15, 0.09, 2.2, 9.63, 30.4, 16.06, 0, 28.04, 0],
+               regions=[2, 10, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 83])
 SCHA = Symbol('SCHA', 'Small', 'Blend', 0, sectors=[3.51, 3.8, 9.4, 4.61, 1.72, 16.17, 16.49, 15.91, 8.83, 15.91, 3.66],
-              regions=[0.0, 0.1, 0.1, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.4, 0.0, 0.2, 99.2])
+              regions=[0, 0.1, 0.1, 0, 0, 0, 0.1, 0, 0, 0.4, 0, 0.2, 99.2])
 SCHB = Symbol('SCHB', 'Large', 'Blend', 0, sectors=[2.29, 9.85, 9.89, 7.48, 2.72, 13.87, 15.55, 9.1, 4.1, 21.71, 3.42],
-              regions=[0.0, 0.1, 0.1, 0.0, 0.0, 0.0, 0.3, 0.4, 0.0, 0.0, 0.0, 0.6, 98.6])
+              regions=[0, 0.1, 0.1, 0, 0, 0, 0.3, 0.4, 0, 0, 0, 0.6, 98.6])
 SCHD = Symbol('SCHD', 'Large', 'Value', 0, sectors=[0.65, 4.75, 8.54, 23.1, 6.56, 7.94, 12.54, 17.77, 0.01, 18.13, 0.01],
-              regions=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.0, 0.0, 0.0, 0.0, 0.0, 99.6])
+              regions=[0, 0, 0, 0, 0, 0, 0.4, 0, 0, 0, 0, 0, 99.6])
 SCHG = Symbol('SCHG', 'Large', 'Growth', 0, sectors=[2.06, 13.9, 13.76, 2.71, 0.38, 11.42, 13.67, 6.29, 3.88, 30.99, 0.92],
-              regions=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0, 0.9, 98.7])
+              regions=[0, 0, 0, 0, 0, 0, 0, 0.3, 0, 0, 0, 0.9, 98.7])
 SCHK = Symbol('SCHK', 'Large', 'Blend', 0, sectors=[2.18, 10.15, 9.92, 7.59, 2.74, 13.67, 15.46, 8.81, 3.87, 22.15, 3.47],
-              regions=[0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.3, 0.4, 0.0, 0.0, 0.0, 0.6, 98.5])
+              regions=[0, 0, 0.1, 0, 0, 0, 0.3, 0.4, 0, 0, 0, 0.6, 98.5])
 SCHV = Symbol('SCHV', 'Large', 'Value', 0, sectors=[2.34, 6.21, 5.47, 13.56, 5.64, 16.33, 17.58, 11.17, 3.51, 11.89, 6.3],
-              regions=[0.0, 0.1, 0.1, 0.0, 0.0, 0.0, 0.6, 0.5, 0.0, 0.0, 0.0, 0.3, 98.3])
+              regions=[0, 0.1, 0.1, 0, 0, 0, 0.6, 0.5, 0, 0, 0, 0.3, 98.3])
 SCHX = Symbol('SCHX', 'Large', 'Blend', 0, sectors=[2.19, 10.36, 9.94, 7.71, 2.81, 13.68, 15.47, 8.54, 3.71, 22.19, 3.4],
-              regions=[0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.3, 0.4, 0.0, 0.0, 0.0, 0.6, 98.5])
+              regions=[0, 0, 0.1, 0, 0, 0, 0.3, 0.4, 0, 0, 0, 0.6, 98.5])
 VBK = Symbol('VBK', 'Small', 'Growth', 0, sectors=[2.17, 4.79, 10.49, 2.67, 2.14, 4.59, 21.92, 11.9, 9.95, 28.68, 0.7],
-             regions=[0.0, 0.1, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 99.4])
+             regions=[0, 0.1, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 99.4])
+VFTAX = Symbol('VFTAX', 'Large', 'Growth', 0, sectors=[2.14, 9.28, 8.04, 5.43, 2.35, 18.64, 16.52, 6.02, 3.99, 26.46, 1.11],
+               regions=US_LISTING)
+VSCIX = Symbol('VSCIX', 'Small', 'Blend', 0, sectors=[3.89, 3.11, 11.56, 3.46, 2.29, 13.94, 12.57, 15.86, 11.98, 18.17, 3.15],
+               regions=US_LISTING)
+VTMNX = Symbol('VTMNX', 'Large', 'Blend', 0, sectors=[7.45, 5.65, 9.99, 9.98, 5.66, 18.31, 10.85, 15.48, 3.98, 9.07, 3.6],
+               regions=[5, 35, 0, 20, 0, 0, 5, 25, 10, 0, 0, 0, 0])
 
 
 # example
@@ -59,18 +80,7 @@ p.add_to_portfolio(PCY, 25)
 print(p.summarize)
 # print(goals.summarize())
 
-""" Zillow 401k
-Vanguard FTSE Social Index AdmiralVFTAX 36%
-Vanguard Total Bond Market Index IVBTIX 23%
-Vanguard Emerging Mkts Stock Idx AdmVEMAX 9%
-PGIM Total Return Bond R6PTRQX 5%
-Vanguard Instl Trgt Retire 2030 InstlVTTWX 5%
-Vanguard Instl Trgt Retire 2040 InstlVIRSX 5%
-Vanguard Instl Trgt Retire 2050 InstlVTRLX 5%
-PRIMECAP Odyssey GrowthPOGRX 4%
-Vanguard Developed Markets Index InstlVTMNX 4%
-Vanguard Small Cap Index IVSCIX 4%
-"""
+
 """ Fidelity 401ks
 SymbolSorted in ascending order. Click to reverse.	Description	Quantity	Most Recent	Change Since Close	Action
 Price	Change	Value*	Dollar	Percent

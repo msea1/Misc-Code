@@ -25,7 +25,7 @@ class Portfolio:
     
     @property
     def summarize(self):
-        if self.budget_left == constants.BUDGET_START:
+        if self.budget_spent == 0:
             return 'Nothing added yet'
         portfolio_summary = {k.ticker: v for k, v in self.holdings.items()}
         strategy = self.summarize_strategy()

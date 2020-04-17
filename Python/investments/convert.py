@@ -4,17 +4,18 @@ from misc_code.Python.investments.goals import Regions
 
 
 sectors = """
-Basic Materials	 	0.01%
-Communication Services	 	0%
-Consumer Cyclical	 	0.29%
-Consumer Defensive	 	0%
-Energy	 	0%
-Financial Services	 	0.29%
-Healthcare	 	0%
-Industrials	 	0.16%
-Real Estate	 	99.25%
-Technology	 	0%
-Utilities	 	0%
+Basic Materials	 	3.89%
+Communication Services	 	3.11%
+Consumer Cyclical	 	11.56%
+Consumer Defensive	 	3.46%
+Energy	 	2.29%
+Financial Services	 	13.94%
+Healthcare	 	12.57%
+Industrials	 	15.86%
+Real Estate	 	11.98%
+Technology	 	18.17%
+Utilities	 	3.15%
+
 """
 
 geography = """
