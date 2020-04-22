@@ -85,10 +85,3 @@ class Portfolio:
                 percentages[i] += round(holding.regional_distribution[i]*percentage/self.budget_spent, SIGDIF)
         return goals.Regions(*percentages)
 
-# TODO list
-#   add 401k tickers, options to sector balance
-#   change balancing to be additive of actual shares rather than constrain 100 budget
-#   add my current portfolio
-#   regional weighting goal?
-#   decision/re-weighting model?
-#   remove mid cap?
