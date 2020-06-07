@@ -18,6 +18,7 @@ when re-investing cash from AmEx, etc (~75K) into personal, ADD
 -- us basic materials (VDC, VAW, FMAT, SPDR)
 -- us green energy (CNRG, ICLN)
 -- us utilities (FUTY, VPU)
+-- Euro stocks (FLEE)
 
 
 DISNEY 401k (110K)
