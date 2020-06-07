@@ -10,9 +10,6 @@ Manual entry of ticker sector and geography is not really sustainable. It's too 
 - remove mid cap?
 
 
-For now, actual investments TODO
--- get disney rebalance submitted
--- IRA swap some SCHP to PCY
 when re-investing cash from AmEx, etc (~75K) into personal, ADD
 -- intl bonds (BNDX, BNDW, BWX, VWOB)
 -- us basic materials (VDC, VAW, FMAT, SPDR)
