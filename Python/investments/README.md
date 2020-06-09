@@ -10,14 +10,6 @@ Manual entry of ticker sector and geography is not really sustainable. It's too 
 - remove mid cap?
 
 
-when re-investing cash from AmEx, etc (~75K) into personal, ADD
--- intl bonds (BNDX, BNDW, BWX, VWOB)
--- us basic materials (VDC, VAW, FMAT, SPDR)
--- us green energy (CNRG, ICLN)
--- us utilities (FUTY, VPU)
--- Euro stocks (FLEE)
-
-
 DISNEY 401k (110K)
 Bond/Managed Income	INCOME	VANG INST TOTL BD TR	36%
 Stock Investments	SMALL	VANG SM CP IDX IS PL	05%
