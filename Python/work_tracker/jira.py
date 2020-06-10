@@ -1,3 +1,5 @@
+# https://docs.atlassian.com/software/jira/docs/api/REST/8.5.5/#api/2/worklog-getWorklogsForIds
+
 from subprocess import call
 
 API_BASE = 'https://jira.spaceflightindustries.com/rest/api/2'
