@@ -19,17 +19,17 @@ aws_creds() {
 }
 
 cr() {
-    x=$(python -c "import random;x=['bsteinke','bwolfe','cmaddox','darreng','erybczynski','jhersch','krawson','max','pyoum','sburke','snall','zelan'];random.shuffle(x);print(','.join(x));")
-    echo $x | xsel -ib
+  x=$(python -c "import random;x=['bsteinke','bwolfe','cmaddox','darreng','erybczynski','jhersch','krawson','max','pyoum','sburke','snall','zelan'];random.shuffle(x);print(','.join(x));")
+  echo $x | xsel -ib
 }
 
 cdl() {
-    builtin cd "${@}"
-    if [ "$( ls | wc -l )" -gt 30 ] ; then
-        ll --color=always | awk 'NR < 16 { print }; NR == 16 { print " (... snip ...)" }; { buffer[NR % 14] = $0 } END { for( i = NR + 1; i <= NR+14; i++ ) print buffer[i % 14] }'
-    else
-        ll
-    fi
+  builtin cd "${@}"
+  if [ "$( ls | wc -l )" -gt 30 ] ; then
+    ll --color=always | awk 'NR < 16 { print }; NR == 16 { print " (... snip ...)" }; { buffer[NR % 14] = $0 } END { for( i = NR + 1; i <= NR+14; i++ ) print buffer[i % 14] }'
+  else
+    ll
+  fi
 }
 
 del_br() {
@@ -39,8 +39,8 @@ del_br() {
 }
 
 docker_clean(){
-    docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-    docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+  docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+  docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
 docker_kill(){
@@ -51,25 +51,25 @@ docker_kill(){
 }
 
 extract () {
- if [ -f $1 ] ; then
-     case $1 in
-         *.tar.bz2)   tar xvjf $1    ;;
-         *.tar.gz)    tar xvzf $1    ;;
-         *.bz2)       bunzip2 $1     ;;
-         *.rar)       unrar x $1       ;;
-         *.gz)        gunzip $1      ;;
-         *.tar)       tar xvf $1     ;;
-         *.tbz2)      tar xvjf $1    ;;
-         *.tgz)       tar xvzf $1    ;;
-         *.zip)       unzip $1       ;;
-         *.Z)         uncompress $1  ;;
-         *.7z)        7z x $1        ;;
-         *.xz)        xz -d $1        ;;
-         *)           echo "don't know how to extract '$1'..." ;;
-     esac
- else
-     echo "'$1' is not a valid file!"
- fi
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xvjf $1    ;;
+      *.tar.gz)    tar xvzf $1    ;;
+      *.bz2)       bunzip2 $1     ;;
+      *.rar)       unrar x $1       ;;
+      *.gz)        gunzip $1      ;;
+      *.tar)       tar xvf $1     ;;
+      *.tbz2)      tar xvjf $1    ;;
+      *.tgz)       tar xvzf $1    ;;
+      *.zip)       unzip $1       ;;
+      *.Z)         uncompress $1  ;;
+      *.7z)        7z x $1        ;;
+      *.xz)        xz -d $1        ;;
+      *)           echo "don't know how to extract '$1'..." ;;
+    esac
+  else
+    echo "'$1' is not a valid file!"
+  fi
 }
 
 search_type() {
@@ -84,6 +84,23 @@ gemini_tests() {
   cd -
 }
 
+hotfix_br() {
+  pushd -n $(pwd)
+  local d=$(git rev-parse --abbrev-ref HEAD)
+  # check out ops-test
+  # update ops test versions
+  # check out prod
+  # update prod versions
+  g stash
+  g co master
+  g fetch --prune
+  g reset --hard
+  g rebase
+  g submodule update
+  g co $d
+  popd
+}
+
 ipy() {
   work sandbox
   cd $HOME/.virtualenvs/sandbox/
@@ -93,11 +110,11 @@ ipy() {
 }
 
 release_diff() {
-	echo Commits
-	g log --reverse --oneline $1..$2 -- ./
-	echo
-	echo Files Changed
-	g diff --name-only $2 $1 ./
+  echo Commits
+  g log --reverse --oneline $1..$2 -- ./
+  echo
+  echo Files Changed
+  g diff --name-only $2 $1 ./
 }
 
 work() {
