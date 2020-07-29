@@ -118,6 +118,7 @@ upd_master() {
 }
 
 full_update() {
+  sudo_pw
   pushd -n $(pwd)
   gemini
   upd_master
