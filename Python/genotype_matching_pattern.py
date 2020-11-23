@@ -181,7 +181,7 @@ for patient_file in onlyfiles:
         if left_idx is not None:
             right_idx = binary_search(sorted_list=positions[chrom], value=int(end_pos), find_min=False, start_idx=known_min)
             if right_idx is not None:
-                prev_low = right_idx
+                prev_low = left_idx
                 for x in range(left_idx, right_idx + 1):
                     position, original_row_number = positions[chrom][x]
                     assert start_pos <= position <= end_pos, f'{position} from {record} faulty'
