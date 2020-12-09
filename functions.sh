@@ -19,17 +19,17 @@ aws_creds() {
 }
 
 cr() {
-  x=$(python -c "import random;x=['bsteinke','bwolfe','cmaddox','darreng','erybczynski','jhersch','krawson','max','pyoum','sburke','snall','zelan'];random.shuffle(x);print(','.join(x));")
-  echo $x | xsel -ib
+    x=$(python -c "import random;x=['bsteinke','bwolfe','cmaddox','darreng','erybczynski','jhersch','krawson','max','pyoum','sburke','snall','zelan'];random.shuffle(x);print(','.join(x));")
+    echo $x | xsel -ib
 }
 
 cdl() {
-  builtin cd "${@}"
-  if [ "$( ls | wc -l )" -gt 30 ] ; then
-    ll --color=always | awk 'NR < 16 { print }; NR == 16 { print " (... snip ...)" }; { buffer[NR % 14] = $0 } END { for( i = NR + 1; i <= NR+14; i++ ) print buffer[i % 14] }'
-  else
-    ll
-  fi
+    builtin cd "${@}"
+    if [ "$( ls | wc -l )" -gt 30 ] ; then
+        ll --color=always | awk 'NR < 16 { print }; NR == 16 { print " (... snip ...)" }; { buffer[NR % 14] = $0 } END { for( i = NR + 1; i <= NR+14; i++ ) print buffer[i % 14] }'
+    else
+        ll
+    fi
 }
 
 del_br() {
@@ -39,8 +39,8 @@ del_br() {
 }
 
 docker_clean(){
-  docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-  docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+    docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+    docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
 docker_kill(){
@@ -51,25 +51,25 @@ docker_kill(){
 }
 
 extract () {
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xvjf $1    ;;
-      *.tar.gz)    tar xvzf $1    ;;
-      *.bz2)       bunzip2 $1     ;;
-      *.rar)       unrar x $1       ;;
-      *.gz)        gunzip $1      ;;
-      *.tar)       tar xvf $1     ;;
-      *.tbz2)      tar xvjf $1    ;;
-      *.tgz)       tar xvzf $1    ;;
-      *.zip)       unzip $1       ;;
-      *.Z)         uncompress $1  ;;
-      *.7z)        7z x $1        ;;
-      *.xz)        xz -d $1        ;;
-      *)           echo "don't know how to extract '$1'..." ;;
-    esac
-  else
-    echo "'$1' is not a valid file!"
-  fi
+ if [ -f $1 ] ; then
+     case $1 in
+         *.tar.bz2)   tar xvjf $1    ;;
+         *.tar.gz)    tar xvzf $1    ;;
+         *.bz2)       bunzip2 $1     ;;
+         *.rar)       unrar x $1       ;;
+         *.gz)        gunzip $1      ;;
+         *.tar)       tar xvf $1     ;;
+         *.tbz2)      tar xvjf $1    ;;
+         *.tgz)       tar xvzf $1    ;;
+         *.zip)       unzip $1       ;;
+         *.Z)         uncompress $1  ;;
+         *.7z)        7z x $1        ;;
+         *.xz)        xz -d $1        ;;
+         *)           echo "don't know how to extract '$1'..." ;;
+     esac
+ else
+     echo "'$1' is not a valid file!"
+ fi
 }
 
 search_type() {
@@ -84,23 +84,6 @@ gemini_tests() {
   cd -
 }
 
-hotfix_br() {
-  pushd -n $(pwd)
-  local d=$(git rev-parse --abbrev-ref HEAD)
-  # check out ops-test
-  # update ops test versions
-  # check out prod
-  # update prod versions
-  g stash
-  g co master
-  g fetch --prune
-  g reset --hard
-  g rebase
-  g submodule update
-  g co $d
-  popd
-}
-
 ipy() {
   work sandbox
   cd $HOME/.virtualenvs/sandbox/
@@ -110,11 +93,11 @@ ipy() {
 }
 
 release_diff() {
-  echo Commits
-  g log --reverse --oneline $1..$2 -- ./
-  echo
-  echo Files Changed
-  g diff --name-only $2 $1 ./
+	echo Commits
+	g log --reverse --oneline $1..$2 -- ./
+	echo
+	echo Files Changed
+	g diff --name-only $2 $1 ./
 }
 
 work() {
@@ -198,6 +181,17 @@ pex_test(){
   cd -
 }
 
+pex_coverage(){
+  gemini
+  TEST_LOG_DIR=dist/coverage
+  COV_MODULES=$(find $1 -maxdepth 2 -name "__init__.py" | egrep -v '*/*test[s][_*]/*') || COV_MODULES=""
+  COV_MODULES=$(echo ${COV_MODULES} | sed 's|/__init__.py||g' | sed 's| |,|g')
+  echo $COV_MODULES
+  echo -e 'cd /code\n./pants test $1:test --cache-test-pytest-ignore --test-pytest-coverage=$3 --test-pytest-coverage-output-dir=$2 --test-pytest-junit-xml-dir=$2\nexit' > /tmp/binary.sh
+  sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1 $TEST_LOG_DIR $COV_MODULES
+  cd -
+}
+
 tfe_plan() {
   : "${1?Need to pass TFE env e.g. 'prod'}"
   : "${ATLAS_TOKEN?Need to set ATLAS_TOKEN, available here: https://tfe.spaceflightindustries.com/app/settings/tokens}"
@@ -245,6 +239,11 @@ recycle() {
   nmcli networking off
   nmcli networking on
   nmcli r wifi on
+}
+
+tablet() {
+  cd ~/Downloads/Tablet
+  sudo ./Pentablet_Driver.sh
 }
 
 title() { printf "\e]2;$*\a"; }
