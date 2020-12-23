@@ -1,6 +1,19 @@
 #!/usr/bin/env bash
 
 ### FUNCTIONS ###
+add_pypaths() {
+  PYTHONPATH=~/Code/gemini/dist/
+  for dir in ~/Code/gemini/cli/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
+  for dir in ~/Code/gemini/libraries/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
+  for dir in ~/Code/gemini/services/*/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
+  for dir in ~/Code/gemini/submodules/gemini-mothra-tomls/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
+  for dir in ~/Code/gemini/submodules/obscura-plugins/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
+  for dir in ~/Code/gemini/test-utilities/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
+  for dir in ~/Code/gemini/tools/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
+  for dir in ~/Code/gemini/validation/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
+  export PYTHONPATH=$PYTHONPATH
+}
+
 aws_creds() {
   touch ~/.aws/credentials
   echo -e '[default]' > ~/.aws/credentials
@@ -19,17 +32,8 @@ aws_creds() {
 }
 
 cr() {
-    x=$(python -c "import random;x=['bsteinke','bwolfe','cmaddox','darreng','erybczynski','jhersch','krawson','max','pyoum','sburke','snall','zelan'];random.shuffle(x);print(','.join(x));")
-    echo $x | xsel -ib
-}
-
-cdl() {
-    builtin cd "${@}"
-    if [ "$( ls | wc -l )" -gt 30 ] ; then
-        ll --color=always | awk 'NR < 16 { print }; NR == 16 { print " (... snip ...)" }; { buffer[NR % 14] = $0 } END { for( i = NR + 1; i <= NR+14; i++ ) print buffer[i % 14] }'
-    else
-        ll
-    fi
+  x=$(python -c "import random;x=['bsteinke','bwolfe','cmaddox','darreng','erybczynski','jhersch','krawson','max','pyoum','sburke','snall','zelan'];random.shuffle(x);print(','.join(x));")
+  echo $x | xsel -ib
 }
 
 del_br() {
@@ -39,8 +43,8 @@ del_br() {
 }
 
 docker_clean(){
-    docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-    docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+  docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+  docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
 
 docker_kill(){
@@ -52,28 +56,37 @@ docker_kill(){
 
 extract () {
  if [ -f $1 ] ; then
-     case $1 in
-         *.tar.bz2)   tar xvjf $1    ;;
-         *.tar.gz)    tar xvzf $1    ;;
-         *.bz2)       bunzip2 $1     ;;
-         *.rar)       unrar x $1       ;;
-         *.gz)        gunzip $1      ;;
-         *.tar)       tar xvf $1     ;;
-         *.tbz2)      tar xvjf $1    ;;
-         *.tgz)       tar xvzf $1    ;;
-         *.zip)       unzip $1       ;;
-         *.Z)         uncompress $1  ;;
-         *.7z)        7z x $1        ;;
-         *.xz)        xz -d $1        ;;
-         *)           echo "don't know how to extract '$1'..." ;;
-     esac
+   case $1 in
+     *.tar.bz2)   tar xvjf $1    ;;
+     *.tar.gz)    tar xvzf $1    ;;
+     *.bz2)       bunzip2 $1     ;;
+     *.rar)       unrar x $1       ;;
+     *.gz)        gunzip $1      ;;
+     *.tar)       tar xvf $1     ;;
+     *.tbz2)      tar xvjf $1    ;;
+     *.tgz)       tar xvzf $1    ;;
+     *.zip)       unzip $1       ;;
+     *.Z)         uncompress $1  ;;
+     *.7z)        7z x $1        ;;
+     *.xz)        xz -d $1        ;;
+     *)           echo "don't know how to extract '$1'..." ;;
+   esac
  else
-     echo "'$1' is not a valid file!"
+   echo "'$1' is not a valid file!"
  fi
 }
 
-search_type() {
-  ag -Q -i "$1" -G "$2"$ --ignore-dir="*test*"
+full_update() {
+  sudo_pw
+  pushd -n $(pwd)
+  gemini
+  upd_master
+  tomls
+  upd_master
+  mothra
+  upd_master
+  popd
+  update
 }
 
 gemini_tests() {
@@ -92,55 +105,32 @@ ipy() {
   cd -
 }
 
-release_diff() {
-	echo Commits
-	g log --reverse --oneline $1..$2 -- ./
-	echo
-	echo Files Changed
-	g diff --name-only $2 $1 ./
-}
-
-work() {
-  source $HOME/.virtualenvs/$1/bin/activate
-}
-
-upd_master() {
-  pushd -n $(pwd)
-  local d=$(git rev-parse --abbrev-ref HEAD)
-  g stash
-  g co master
-  g fetch --prune
-  g reset --hard
-  g rebase
-  g submodule update
-  g co $d
-  popd
-}
-
-full_update() {
-  sudo_pw
-  pushd -n $(pwd)
-  gemini
-  upd_master
-  tomls
-  upd_master
-  mothra
-  upd_master
-  popd
-  update
-}
-
-reset_origin() {
-  local d=$(git rev-parse --abbrev-ref HEAD)
-  g stash
-  g fetch --prune
-  g reset --hard origin/$d
-  g su
-}
-
 new_venv() {
   py -m venv $HOME/.virtualenvs/$1
   work $1
+}
+
+package_repos() {
+  full_update
+  # use du -k --max-depth 4 | sort -rn
+  tomls  # /sap-toml ./sap_toml/ and ./tests/
+}
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+parse_vpn() {
+  local n=""
+  d=$(nmcli con show --active | grep tun)
+  if [ "$d" ]; then
+    n="(BSky)"
+  fi
+  d=$(nmcli con show --active | grep tap)
+  if [ "$d" ]; then
+    n="(MOC)"
+  fi
+  echo $n
 }
 
 pex_build(){
@@ -152,13 +142,6 @@ pex_build(){
   echo -e 'cd /code\n./pants binary $1/::\nexit' > /tmp/binary.sh
   sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
   sudo chown $USER dist/$svc_name.pex
-  cd -
-}
-
-pex_dependencies(){
-  gemini
-  echo -e 'cd /code\n./pants dependencies $1/:: > /tmp/service_dependencies.out\nexit' > /tmp/binary.sh
-  sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
   cd -
 }
 
@@ -192,6 +175,42 @@ pex_coverage(){
   cd -
 }
 
+recycle() {
+  nmcli r wifi off
+  nmcli networking off
+  nmcli networking on
+  nmcli r wifi on
+}
+
+release_diff() {
+  echo Commits
+  g log --reverse --oneline $1..$2 -- ./
+  echo
+  echo Files Changed
+  g diff --name-only $2 $1 ./
+}
+
+reset_origin() {
+  local d=$(git rev-parse --abbrev-ref HEAD)
+  g stash
+  g fetch --prune
+  g reset --hard origin/$d
+  g su
+}
+
+search() {
+  ag -Q -i "$1" -G "$2"$
+}
+
+search_code() {
+  ag -Q -i "$1" -G "$2"$ --ignore-dir="*test*"
+}
+
+tablet() {
+  cd ~/Downloads/Tablet
+  sudo ./Pentablet_Driver.sh
+}
+
 tfe_plan() {
   : "${1?Need to pass TFE env e.g. 'prod'}"
   : "${ATLAS_TOKEN?Need to set ATLAS_TOKEN, available here: https://tfe.spaceflightindustries.com/app/settings/tokens}"
@@ -204,47 +223,6 @@ tfe_plan() {
   curl -s $current_run_plan_log | landscape
 }
 
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
-parse_vpn() {
-  local n=""
-  d=$(nmcli con show --active | grep tun)
-  if [ "$d" ]; then
-    n="(BSky)"
-  fi
-  d=$(nmcli con show --active | grep tap)
-  if [ "$d" ]; then
-    n="(MOC)"
-  fi
-  echo $n
-}
-
-add_pypaths() {
-  PYTHONPATH=~/Code/gemini/dist/
-  for dir in ~/Code/gemini/cli/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
-  for dir in ~/Code/gemini/libraries/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
-  for dir in ~/Code/gemini/services/*/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
-  for dir in ~/Code/gemini/submodules/gemini-mothra-tomls/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
-  for dir in ~/Code/gemini/submodules/obscura-plugins/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
-  for dir in ~/Code/gemini/test-utilities/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
-  for dir in ~/Code/gemini/tools/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
-  for dir in ~/Code/gemini/validation/*/; do PYTHONPATH=$PYTHONPATH:$dir; done
-  export PYTHONPATH=$PYTHONPATH
-}
-
-recycle() {
-  nmcli r wifi off
-  nmcli networking off
-  nmcli networking on
-  nmcli r wifi on
-}
-
-tablet() {
-  cd ~/Downloads/Tablet
-  sudo ./Pentablet_Driver.sh
-}
 
 title() { printf "\e]2;$*\a"; }
 
@@ -260,4 +238,21 @@ up(){
     d=..
   fi
   cd $d
+}
+
+upd_master() {
+  pushd -n $(pwd)
+  local d=$(git rev-parse --abbrev-ref HEAD)
+  g stash
+  g co master
+  g fetch --prune
+  g reset --hard
+  g rebase
+  g submodule update
+  g co $d
+  popd
+}
+
+work() {
+  source $HOME/.virtualenvs/$1/bin/activate
 }
