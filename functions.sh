@@ -114,6 +114,20 @@ package_repos() {
   full_update
   # use du -k --max-depth 4 | sort -rn
   tomls  # /sap-toml ./sap_toml/ and ./tests/
+  tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Temp/toml.tar .
+  mothra
+  tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Temp/mothra.tar .
+  gemini
+  tar --exclude-vcs-ignores --exclude-vcs \
+  --exclude='./3rdparty/repos' \
+  --exclude='**/.terraform' \
+  --exclude='./libraries/obscura-workflow/obscura_workflow/files' \
+  --exclude='./libraries/orekit-lib/orekit-data' \
+  --exclude='./services/client-services/client-discovery/public' \
+  --exclude='./services/client-services/constellation-map/public/static' \
+  --exclude='./services/satellite-services/ephemeris/tests_ephemeris/stk_data_files' \
+  --exclude='./submodules' \
+  -zcf ~/Temp/gemini.tar .
 }
 
 parse_git_branch() {
