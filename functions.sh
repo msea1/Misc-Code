@@ -180,7 +180,7 @@ pex_test(){
 
 pex_coverage(){
   gemini
-  TEST_LOG_DIR=dist/coverage
+  TEST_LOG_DIR="dist/coverage"
   COV_MODULES=$(find $1 -maxdepth 2 -name "__init__.py" | egrep -v '*/*test[s][_*]/*') || COV_MODULES=""
   COV_MODULES=$(echo ${COV_MODULES} | sed 's|/__init__.py||g' | sed 's| |,|g')
   echo $COV_MODULES
