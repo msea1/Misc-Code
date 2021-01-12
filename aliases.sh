@@ -15,7 +15,7 @@ alias code='cd ~/Code'
 alias gemini='cd ~/Code/gemini'
 alias mothra='cd ~/Code/mothra'
 alias tomls='cd ~/Code/tomls'
-alias tempd='cd ~/Temp'
+alias tempd='cd ~/Misc'
 
 
 # NEW COMMANDS
