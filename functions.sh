@@ -32,7 +32,7 @@ aws_creds() {
 }
 
 cr() {
-  x=$(python -c "import random;x=['bsteinke','bwolfe','cmaddox','darreng','erybczynski','jhersch','krawson','max','pyoum','sburke','snall','zelan'];random.shuffle(x);print(','.join(x));")
+  x=$(python -c "import random;x=['bsteinke','bwolfe','cmaddox','darreng','erybczynski','jhersch','kmohageri','krawson','max','pyoum','snall','zelan'];random.shuffle(x);print(','.join(x));")
   echo $x | xsel -ib
 }
 
