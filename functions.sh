@@ -108,6 +108,7 @@ ipy() {
 new_venv() {
   py -m venv $HOME/.virtualenvs/$1
   work $1
+  pip install wheel
 }
 
 package_repos() {
