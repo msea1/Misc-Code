@@ -9,13 +9,37 @@ Though AMT credit ($220K) could recoup:
     ~50K in 2024 (from second batch)
 
 
+I vest 7,126 shares per month right now. Though that will halve at end of year. Unless more options come.
 
+Remember, w/r/t AMT "benefit", any long-term cap gains only happen AFTER the AMT benefit.
 
 
 Questions
  - If I exercise options before April 15, then I can sell in early 2021, get long-term gains rate, and free up captial to pay the tax? But what will the IRS say about owing them a huge amount? Are they more forgiving when it's AMT-caused?
  
- - Does first-time home purchase offset anything?
+ - Does first-time home purchase offset anything? Or are there any other ways to offset tax burden?
+ 
+ - AMT credit when caused by long-term gains?
+ 
+ - Does short-term cap gains affect long-term and surtax income bracket?
  
  
+Scenarios
+
+** TRY TO GAME EXERCISE AROUND AMT BUDGET **
+2021: Sell LT (say for 1.25M) and exercise up to AMT budget ($26,711 --> 2,671 shares, leaving 65K)
+2022: Owe extra $175,000 in tax due to AMT?
+
+Overall, I never accrue enough AMT cushion to exercise all my vested shares. Plus I get hit with about 28.8% tax rate on the first sale due to the later AMT hit
  
+ 
+** EXERCISE AND SELL ASAP **
+2021: Exercise 130,000 shares and sell Dec 31, all at $10/share. Would end up owing $670K b/c of the gains, equalling right about 29.5%. Even if the short-term gains do affect my LT rate + surtax, that only adds ~$40K, so 29.5 to 31.1%.
+
+It's slightly more in tax up front, but I realize the gains much quicker and divest myself from company stock; a good thing if I don't trust the company stock vs the overall market.
+
+Since it's short-term no matter what, can wait to exercise shares until late Dec when am sure of the sale value.
+
+If blackout extends into 2022
+
+By end of year, sell ~1.75M in short and ~1.25M in long. Tax bill of 878K = 29.3%, and maybe a 28K AMT credit? Would drop to 28.3% then.
