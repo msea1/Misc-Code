@@ -1,3 +1,14 @@
+IMMEDIATE ADVICE
+If FMV is still at exercise price, then exercise ASAP
+
+Else, do not exercise any more until stock is liquid. Huge risk otherwise, and basically zero benefit to holding for long-term, since AMT rate is 28%, not much different from income.
+
+Sell the LT as soon as liquid
+
+Won't need a tax advisor until near end of year / near end of lock up
+
+
+
 Factors
 
 I vest 7,126 shares per month right now. Though that will halve at end of year. Unless more options come.
@@ -19,8 +30,33 @@ Questions
  - AMT credit when caused by long-term gains?
 
 
+BEST ADVICE:
+* Sell LT ASAP
+* If near start of year, exercise as much as possible
+* At end of year, sell and exercise as much as needed to balance AMT
+
 
 Scenarios
+** SELL OPENS 2021 **
+Balance AMT
+2021 - 1.25M + 810K (short), 620K (even) gets to 28% tax rate on new $
+
+** SELL OPENS 2022 **
+Sell LT right away
+Exercise and sell ST to balance AMT: ~725K
+
+** SELL ONLY LT, NO EXERCISE **
+2021 - 1.25M, 394K (96K AMT)
+2022 - ~15K in AMT credit
+
+** EXERCISE ASAP **
+2021 - 1.25M sold, 757K (458K AMT)
+Expecting ~10K in credit payback/year
+
+** EXERCISE & SELL AS SOON AS LIQUID **
+2022 - 1.25M + 1.3M (short), 853K [~35% tax rate]
+2022 - 1.25M + 1.1M (short), 780K [~35% tax rate], 200K held for possible LT
+
 
 ** TRY TO GAME EXERCISE AROUND AMT BUDGET **
 2021: Sell LT (say for 1.25M) and exercise up to AMT budget ($26,711 --> 2,671 shares, leaving 65K)
