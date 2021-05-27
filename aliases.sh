@@ -12,8 +12,10 @@ alias wget='wget -c'
 # CDs
 alias cd..="cd .."
 alias code='cd ~/Code'
+alias darkroom='cd ~/Code/imaging-tools'
 alias gemini='cd ~/Code/gemini'
 alias mothra='cd ~/Code/mothra'
+alias sops='cd ~/Code/sops'
 alias tomls='cd ~/Code/tomls'
 alias tempd='cd ~/Misc'
 
