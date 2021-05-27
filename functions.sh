@@ -85,6 +85,10 @@ full_update() {
   upd_master
   mothra
   upd_master
+  sops
+  upd_master
+  darkroom
+  upd_master
   popd
   update
 }
@@ -108,7 +112,6 @@ ipy() {
 new_venv() {
   py -m venv $HOME/.virtualenvs/$1
   work $1
-  pip install wheel
 }
 
 package_repos() {
