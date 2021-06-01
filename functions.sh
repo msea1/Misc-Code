@@ -101,6 +101,10 @@ gemini_tests() {
   cd -
 }
 
+get_tag() {
+  TAG=$(http GET ecr-proxy.service.nsi.gemini/v2/gemini/$1/tags/list?n=1000 | jq '.tags[]|select(test("master-[0-9]{8}-[0-9a-f]{9}"))' | sort | tail -n 1 | sed 's/"//g')
+}
+
 ipy() {
   work sandbox
   cd $HOME/.virtualenvs/sandbox/
