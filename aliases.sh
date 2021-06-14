@@ -28,7 +28,9 @@ alias img_cr='echo "nthomas,cmacleod,EDederick,bhadnott,imcgreer,mkinzel" | xsel
 alias ld='ls -ABF --group-directories-first --color=auto'
 alias ll='ls -AhlF --group-directories-first --color=auto'
 alias files='xdg-open . &>/dev/null &'
-alias kill_mc='sudo systemctl stop mcafee.ma.service ma mfeespd.service mfefwd.service mfetpd.service && sudo /opt/McAfee/agent/bin/macmnsvc stop && sudo killall -9 /opt/McAfee/auditengine/bin/auditmanager'
+alias kill_mc='sudo systemctl stop mcafee.ma.service ma mfeespd.service mfefwd.service mfetpd.service'
+alias kill_mc2='sudo /opt/McAfee/agent/bin/macmnsvc stop'
+alias kill_mc3='sudo killall -q -9 /opt/McAfee/auditengine/bin/auditmanager'
 alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc'
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'
