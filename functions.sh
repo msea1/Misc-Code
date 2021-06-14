@@ -85,10 +85,10 @@ full_update() {
   upd_master
   mothra
   upd_master
-  sops
-  upd_master
-  darkroom
-  upd_master
+  # sops
+  # upd_master
+  # darkroom
+  # upd_master
   popd
   update
 }
