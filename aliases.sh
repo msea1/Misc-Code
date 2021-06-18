@@ -35,6 +35,7 @@ alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provi
 alias root="sudo su -"
 alias sorry='sudo $(fc -ln -1)'
 alias sudo_pw='cat ~/.sudo_pw | xsel -ib'
+alias ungron="gron --ungron"
 alias update='sudo_pw && kill_mc && sudo apt update && sudo apt -y upgrade && sudo apt dist-upgrade && sudo apt autoremove'
 alias usb_f5='sudo usbmuxd -u -U usbmux'
 alias vauth='vault auth -method=ldap username=$USER'
