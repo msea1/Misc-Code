@@ -21,6 +21,7 @@ alias tempd='cd ~/Misc'
 
 
 # NEW COMMANDS
+alias checkvpn='until ping -c1 173.226.206.206 >/dev/null 2>&1; do sleep 5 ; done'
 alias diskspace="du -S | sort -n -r |more"
 alias docklist='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias dockstop='docker rm -f -v $(docker ps -a -q)'
@@ -33,6 +34,7 @@ alias kill_mc2='sudo /opt/McAfee/agent/bin/macmnsvc stop'
 alias kill_mc3='sudo killall -q -9 /opt/McAfee/auditengine/bin/auditmanager'
 alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc'
 alias root="sudo su -"
+alias run_psql="docker run -d --net=test --name pg -p 5432:5432 -v $PSQL_DATA:/var/lib/postgresql/data -e POSTGRES_HOST_AUTH_METHOD=trust postgres:11.8"
 alias sorry='sudo $(fc -ln -1)'
 alias sudo_pw='cat ~/.sudo_pw | xsel -ib'
 alias ungron="gron --ungron"
