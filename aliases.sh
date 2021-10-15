@@ -29,16 +29,13 @@ alias img_cr='echo "nthomas,cmacleod,EDederick,bhadnott,imcgreer,mkinzel" | xsel
 alias ld='ls -ABF --group-directories-first --color=auto'
 alias ll='ls -AhlF --group-directories-first --color=auto'
 alias files='xdg-open . &>/dev/null &'
-alias kill_mc='sudo systemctl stop mcafee.ma.service ma mfeespd.service mfefwd.service mfetpd.service'
-alias kill_mc2='sudo /opt/McAfee/agent/bin/macmnsvc stop'
-alias kill_mc3='sudo killall -q -9 /opt/McAfee/auditengine/bin/auditmanager'
 alias qemu='make && ./provision.sh -X -i images -q -S -c && cinderblock -i provision -Q host/usr/bin/qemu-system-ppc'
 alias root="sudo su -"
 alias run_psql="docker run -d --net=test --name pg -p 5432:5432 -v $PSQL_DATA:/var/lib/postgresql/data -e POSTGRES_HOST_AUTH_METHOD=trust postgres:11.8"
 alias sorry='sudo $(fc -ln -1)'
 alias sudo_pw='cat ~/.sudo_pw | xsel -ib'
 alias ungron="gron --ungron"
-alias update='sudo_pw && kill_mc && sudo apt update && sudo apt -y upgrade && sudo apt dist-upgrade && sudo apt autoremove'
+alias update='sudo_pw && sudo apt update && sudo apt -y upgrade && sudo apt dist-upgrade && sudo apt autoremove'
 alias usb_f5='sudo usbmuxd -u -U usbmux'
 alias vauth='vault auth -method=ldap username=$USER'
 alias vssh='vault ssh -role otp_key_role'
