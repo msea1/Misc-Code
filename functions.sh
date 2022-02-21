@@ -100,8 +100,6 @@ full_update() {
   upd_master
   mothra
   upd_master
-  ls_mothra
-  upd_master
   popd
   update
 }
