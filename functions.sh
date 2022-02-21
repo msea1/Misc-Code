@@ -31,11 +31,6 @@ aws_creds() {
   done
 }
 
-cr() {
-  x=$(python -c "import random;x=['bsteinke','bwolfe','cmaddox','darreng','erybczynski','jhersch','kmohageri','krawson','max','pyoum','snall','zelan'];random.shuffle(x);print(','.join(x));")
-  echo $x | xsel -ib
-}
-
 del_br() {
   local d=$(git rev-parse --abbrev-ref HEAD)
   g co master
@@ -134,6 +129,8 @@ package_repos() {
   # use du -k --max-depth 4 | sort -rn
   tomls  # /sap-toml ./sap_toml/ and ./tests/
   tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Misc/toml.tar .
+  mimas
+  tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Misc/mimas.tar .
   mothra
   tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Misc/mothra.tar .
   gemini
@@ -187,6 +184,17 @@ pex_build(){
   cd -
 }
 
+pex_coverage(){
+  gemini
+  TEST_LOG_DIR="dist/coverage"
+  COV_MODULES=$(find $1 -maxdepth 2 -name "__init__.py" | egrep -v '*/*test[s][_*]/*') || COV_MODULES=""
+  COV_MODULES=$(echo ${COV_MODULES} | sed 's|/__init__.py||g' | sed 's| |,|g')
+  echo $COV_MODULES
+  echo -e 'cd /code\n./pants test $1:test --cache-test-pytest-ignore --test-pytest-coverage=$3 --test-pytest-coverage-output-dir=$2 --test-pytest-junit-xml-dir=$2\nexit' > /tmp/binary.sh
+  sudo docker run --net host --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1 $TEST_LOG_DIR $COV_MODULES
+  cd -
+}
+
 pex_push(){
   gemini
   dir_path=${1::-1}
@@ -206,17 +214,6 @@ pex_test(){
   cd -
 }
 
-pex_coverage(){
-  gemini
-  TEST_LOG_DIR="dist/coverage"
-  COV_MODULES=$(find $1 -maxdepth 2 -name "__init__.py" | egrep -v '*/*test[s][_*]/*') || COV_MODULES=""
-  COV_MODULES=$(echo ${COV_MODULES} | sed 's|/__init__.py||g' | sed 's| |,|g')
-  echo $COV_MODULES
-  echo -e 'cd /code\n./pants test $1:test --cache-test-pytest-ignore --test-pytest-coverage=$3 --test-pytest-coverage-output-dir=$2 --test-pytest-junit-xml-dir=$2\nexit' > /tmp/binary.sh
-  sudo docker run --net host --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1 $TEST_LOG_DIR $COV_MODULES
-  cd -
-}
-
 quicklook(){
   # "decrypted SFX image" AND (*112_* OR *113_*) in PDP logs
   gemini
@@ -229,14 +226,8 @@ quicklook(){
   rm ./$"${parts[1]}_${parts[0]}_pan.tiff"
 }
 
-recycle() {
-  nmcli r wifi off
-  nmcli networking off
-  nmcli networking on
-  nmcli r wifi on
-}
-
 release_diff() {
+  # show changes in dir from $1 to $2
   echo Commits
   # g log --reverse --oneline $1..$2 -- ./
   g log --reverse --pretty="format:%h %s (%an, %ar)" $1..$2 -- ./
@@ -316,6 +307,13 @@ upd_master() {
   g submodule update
   g co $d
   popd
+}
+
+wifi_f5() {
+  nmcli r wifi off
+  nmcli networking off
+  nmcli networking on
+  nmcli r wifi on
 }
 
 work() {
