@@ -194,7 +194,9 @@ pex_coverage(){
 }
 
 quicklook(){
+  # "decrypted SFX image" AND (*112_* OR *113_*) in PDP logs
   gemini
+  work gemini
   aws s3 cp $"s3://bsg-gemini-images-prod-sfx-packets/$1" . 
   image=$(basename $1)
   ./dist/dioptra-cli.pex make_pan ./$image
