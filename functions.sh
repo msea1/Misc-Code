@@ -42,6 +42,21 @@ del_br() {
   g branch -D $d
 }
 
+del_rm_br() {
+  # This is a dry run by default; you must pass --go to perform the actual deletions.
+  remote_branches=$(git branch -aavv | grep matthew | sed -E 's#.*remotes/origin/(matthew[^[:space:]]*).*#\1#')
+  for remote_branch in $remote_branches; do
+    echo "Deleting remote branch $remote_branch"
+    if [ "$1" = "--go" ]; then
+      git push origin --delete $remote_branch
+    fi
+  done
+
+  if [ "$1" != "--go" ]; then
+    echo "This was a dry run. Pass --go to this command to actually delete the branches."
+  fi
+}
+
 docker_clean(){
   docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
