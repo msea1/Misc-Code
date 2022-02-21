@@ -100,6 +100,8 @@ full_update() {
   upd_master
   mothra
   upd_master
+  ls_mothra
+  upd_master
   popd
   update
 }
@@ -155,13 +157,18 @@ parse_git_branch() {
 
 parse_vpn() {
   local n=""
-  d=$(nmcli con show --active | grep tun)
+  # used to use nmcli con show --active but no longer works w/AnyConnect
+  d=$(ifconfig | grep "destination 172.22.16.236")
   if [ "$d" ]; then
     n="(BSky)"
   fi
-  d=$(nmcli con show --active | grep tap)
+  d=$(ifconfig | grep "destination 172.22.1.136")
   if [ "$d" ]; then
     n="(MOC)"
+  fi
+  d=$(ifconfig | grep "destination 192.168.215.108")
+  if [ "$d" ]; then
+    n="(LeoS)"
   fi
   echo $n
 }
