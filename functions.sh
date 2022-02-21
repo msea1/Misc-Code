@@ -85,10 +85,6 @@ full_update() {
   upd_master
   mothra
   upd_master
-  # sops
-  # upd_master
-  # darkroom
-  # upd_master
   popd
   update
 }
@@ -218,7 +214,7 @@ release_diff() {
   g log --reverse --oneline $1..$2 -- ./
   echo
   echo Files Changed
-  g diff --name-only $2 $1 ./
+  g diff --name-only $1 $2 ./
 }
 
 reset_origin() {
