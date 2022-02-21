@@ -268,9 +268,9 @@ tablet() {
 
 tfe_plan() {
   : "${1?Need to pass TFE env e.g. 'prod'}"
-  : "${ATLAS_TOKEN?Need to set ATLAS_TOKEN, available here: https://tfe.spaceflightindustries.com/app/settings/tokens}"
+  : "${ATLAS_TOKEN?Need to set ATLAS_TOKEN, available here: https://tfe.blacksky.com/app/settings/tokens}"
   TFE_ENV=$1
-  TFE_URL="https://tfe.spaceflightindustries.com"
+  TFE_URL="https://tfe.blacksky.com"
   current_run_endpoint=$(curl -s -H 'Content-Type: application/vnd.api+json' -H "Authorization: Bearer $ATLAS_TOKEN"  $TFE_URL/api/v2/organizations/bsg/workspaces/$TFE_ENV | jq -r '.data.relationships["current-run"].links.related')
   current_run_plan_endpoint=$(curl -s -H 'Content-Type: application/vnd.api+json' -H "Authorization: Bearer $ATLAS_TOKEN"  $TFE_URL/$current_run_endpoint | jq -r '.data.relationships.plan.links.related')
   current_run_plan_log=$(curl -s -H 'Content-Type: application/vnd.api+json' -H "Authorization: Bearer $ATLAS_TOKEN"  $TFE_URL/$current_run_plan_endpoint | jq -r '.data.attributes["log-read-url"]')
