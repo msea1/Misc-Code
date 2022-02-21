@@ -156,15 +156,15 @@ parse_git_branch() {
 parse_vpn() {
   local n=""
   # used to use nmcli con show --active but no longer works w/AnyConnect
-  d=$(ifconfig | grep "destination 172.22.16.236")
+  d=$(ifconfig | grep "destination 172\.22\.16\.")
   if [ "$d" ]; then
     n="(BSky)"
   fi
-  d=$(ifconfig | grep "destination 172.22.1.136")
+  d=$(ifconfig | grep "destination 172\.22\.1\.")
   if [ "$d" ]; then
     n="(MOC)"
   fi
-  d=$(ifconfig | grep "destination 192.168.215.108")
+  d=$(ifconfig | grep "destination 192\.168\.215\.")
   if [ "$d" ]; then
     n="(LeoS)"
   fi
