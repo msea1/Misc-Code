@@ -154,21 +154,23 @@ parse_git_branch() {
 }
 
 parse_vpn() {
-  local n=""
   # used to use nmcli con show --active but no longer works w/AnyConnect
-  d=$(ifconfig | grep "destination 172\.22\.16\.")
+  d=$(ip --json addr show cscotun0 | grep broadcast | grep "172\.22\.19\.255")
   if [ "$d" ]; then
-    n="(BSky)"
+    echo "(BSky)"
+    return
   fi
-  d=$(ifconfig | grep "destination 172\.22\.1\.")
+  d=$(ip --json addr show cscotun0 | grep broadcast | grep "172\.22\.1\.255")
   if [ "$d" ]; then
-    n="(MOC)"
+    echo "(MOC)"
+    return
   fi
-  d=$(ifconfig | grep "destination 192\.168\.215\.")
+  # ip --json addr --> "broadcast": "192.168.215.255"
+  d=$(ip --json addr show tun0 | grep broadcast | grep "192\.168\.215\.255")
   if [ "$d" ]; then
-    n="(LeoS)"
+    echo "(LeoS)"
+    return
   fi
-  echo $n
 }
 
 pex_build(){
