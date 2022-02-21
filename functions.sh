@@ -155,19 +155,21 @@ parse_git_branch() {
 
 parse_vpn() {
   # used to use nmcli con show --active but no longer works w/AnyConnect
-  d=$(ip --json addr show cscotun0 | grep broadcast | grep "172\.22\.19\.255")
+  d=$(ip --json addr | grep broadcast | grep "172\.2")
   if [ "$d" ]; then
-    echo "(BSky)"
-    return
+    e=$(echo $d | grep "\.19\.255")
+    if [ "$e" ]; then  # also ifindex 20
+      echo "(BSky)"
+      return
+    fi
+    e=$(echo $d | grep "\.1\.255")
+    if [ "$e" ]; then  # also ifindex 13
+      echo "(MOC)"
+      return
+    fi
   fi
-  d=$(ip --json addr show cscotun0 | grep broadcast | grep "172\.22\.1\.255")
-  if [ "$d" ]; then
-    echo "(MOC)"
-    return
-  fi
-  # ip --json addr --> "broadcast": "192.168.215.255"
-  d=$(ip --json addr show tun0 | grep broadcast | grep "192\.168\.215\.255")
-  if [ "$d" ]; then
+  d=$(ip --json addr | grep broadcast | grep "192\.168\.215\.255")
+  if [ "$d" ]; then  # also, ifindex 21
     echo "(LeoS)"
     return
   fi
