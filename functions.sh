@@ -229,7 +229,8 @@ recycle() {
 
 release_diff() {
   echo Commits
-  g log --reverse --oneline $1..$2 -- ./
+  # g log --reverse --oneline $1..$2 -- ./
+  g log --reverse --pretty="format:%h %s (%an, %ar)" $1..$2 -- ./
   echo
   echo Files Changed
   g diff --name-only $1 $2 ./
