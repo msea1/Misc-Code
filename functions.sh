@@ -118,18 +118,11 @@ package_repos() {
   full_update
   # use du -k --max-depth 4 | sort -rn
   tomls  # /sap-toml ./sap_toml/ and ./tests/
-  g gc --aggressive --prune=now
-  tar --exclude-vcs-ignores -zcf ~/Misc/toml.tar .
+  tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Temp/toml.tar .
   mothra
-  g gc --aggressive --prune=now
-  tar --exclude-vcs-ignores \
-  --exclude='./fsw/gemini-mothra-tomls' \
-  --exclude='./fsw/configs' \
-  --exclude='./.git/modules' \
-  -zcf ~/Misc/mothra.tar .
+  tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Temp/mothra.tar .
   gemini
-  g gc --aggressive --prune=now
-  tar --exclude-vcs-ignores \
+  tar --exclude-vcs-ignores --exclude-vcs \
   --exclude='./3rdparty/repos' \
   --exclude='**/.terraform' \
   --exclude='./libraries/obscura-workflow/obscura_workflow/files' \
@@ -138,9 +131,7 @@ package_repos() {
   --exclude='./services/client-services/constellation-map/public/static' \
   --exclude='./services/satellite-services/ephemeris/tests_ephemeris/stk_data_files' \
   --exclude='./submodules' \
-  --exclude='./.git/modules' \
-  --exclude='./.git/objects/pack' \
-  -zcf ~/Misc/gemini.tar .
+  -zcf ~/Temp/gemini.tar .
 }
 
 parse_git_branch() {
@@ -200,6 +191,16 @@ pex_coverage(){
   echo -e 'cd /code\n./pants test $1:test --cache-test-pytest-ignore --test-pytest-coverage=$3 --test-pytest-coverage-output-dir=$2 --test-pytest-junit-xml-dir=$2\nexit' > /tmp/binary.sh
   sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1 $TEST_LOG_DIR $COV_MODULES
   cd -
+}
+
+quicklook(){
+  gemini
+  aws s3 cp $"s3://bsg-gemini-images-prod-sfx-packets/$1" . 
+  image=$(basename $1)
+  ./dist/dioptra-cli.pex make_pan ./$image
+  rm ./$image
+  parts=(${image//_/ })
+  rm ./$"${parts[1]}_${parts[0]}_pan.tiff"
 }
 
 recycle() {
