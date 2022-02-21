@@ -173,7 +173,7 @@ pex_build(){
   dir_path=${1::-1}
   svc_name=${dir_path##*/}
   echo -e 'cd /code\n./pants binary $1/::\nexit' > /tmp/binary.sh
-  sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
+  sudo docker run --net host --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
   sudo chown $USER dist/$svc_name.pex
   cd -
 }
@@ -183,7 +183,7 @@ pex_push(){
   dir_path=${1::-1}
   svc_name=${dir_path##*/}
   echo -e 'cd /code\n./pants binary $1/::\nexit' > /tmp/binary.sh
-  sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
+  sudo docker run --net host --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
   sudo docker build -t registry.service.nsi.gemini/matthew/$svc_name -f $1/Dockerfile .
   sudo docker push registry.service.nsi.gemini/matthew/$svc_name
   sudo chown $USER dist/$svc_name.pex
@@ -193,7 +193,7 @@ pex_push(){
 pex_test(){
   gemini
   echo -e 'cd /code\n./pants test $1/:: --tag=-integration\nexit' > /tmp/binary.sh
-  sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
+  sudo docker run --net host --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1
   cd -
 }
 
@@ -204,7 +204,7 @@ pex_coverage(){
   COV_MODULES=$(echo ${COV_MODULES} | sed 's|/__init__.py||g' | sed 's| |,|g')
   echo $COV_MODULES
   echo -e 'cd /code\n./pants test $1:test --cache-test-pytest-ignore --test-pytest-coverage=$3 --test-pytest-coverage-output-dir=$2 --test-pytest-junit-xml-dir=$2\nexit' > /tmp/binary.sh
-  sudo docker run --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1 $TEST_LOG_DIR $COV_MODULES
+  sudo docker run --net host --rm -v ~/Code/gemini:/code -v /tmp/binary.sh:/dock.sh pants-build bash dock.sh $1 $TEST_LOG_DIR $COV_MODULES
   cd -
 }
 
@@ -249,6 +249,16 @@ search() {
 
 search_code() {
   ag -Q -i "$1" -G "$2"$ --ignore-dir="*test*"
+}
+
+search_dioptra() {
+  ag  --ignore-dir="*test*" -Q -i "$1" -G "$2"$ \
+  libraries/blacksky-payload/ \
+  libraries/image-processing/ \
+  libraries/image-operations/ \
+  libraries/image-utils/ \
+  libraries/dioptra-work/ \
+  services/imaging-services/
 }
 
 tablet() {
