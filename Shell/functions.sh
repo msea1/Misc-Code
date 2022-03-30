@@ -73,6 +73,7 @@ docker_kill(){
   sudo systemctl stop docker
   sudo rm /var/lib/docker/linkgraph.db
   sudo rm -rf /var/lib/docker/containers/
+  sudo mkdir /var/lib/docker/containers/
   sudo systemctl start docker
 }
 
@@ -104,8 +105,6 @@ full_update() {
   gemini
   upd_master
   tomls
-  upd_master
-  mothra
   upd_master
   popd
   update
@@ -143,8 +142,6 @@ package_repos() {
   tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Misc/toml.tar .
   mimas
   tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Misc/mimas.tar .
-  mothra
-  tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Misc/mothra.tar .
   gemini
   tar --exclude-vcs-ignores --exclude-vcs \
   --exclude='./3rdparty/repos' \
