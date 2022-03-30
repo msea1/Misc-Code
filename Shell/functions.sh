@@ -14,6 +14,18 @@ add_pypaths() {
   export PYTHONPATH=$PYTHONPATH
 }
 
+author_by_file() {
+  IFS=$'\n'
+  cd "$1"
+  LIST=""
+  for i in $(find . -iname "*.$2"); do
+    LIST="`git blame --line-porcelain "$i" | grep 'author ' | sed "s,author,," | tr -d ' '`
+    $LIST"
+  done
+  echo "$LIST" | sort | uniq -ic | sort -nr
+  unset IFS
+}
+
 aws_creds() {
   touch ~/.aws/credentials
   echo -e '[default]' > ~/.aws/credentials
