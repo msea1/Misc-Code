@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *.ss~
 *.ss#*
 .#*.ss
@@ -42,4 +41,5 @@ inc/
 /MANIFEST.bak
 /pm_to_blib
 /*.zip
->>>>>>> f6f3b4a... Initial commit
+
+.idea/

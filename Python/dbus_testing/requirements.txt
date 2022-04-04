@@ -1,0 +1,5 @@
+dbus-next
+dbus-python
+pycairo
+PyGObject
+sdbus
