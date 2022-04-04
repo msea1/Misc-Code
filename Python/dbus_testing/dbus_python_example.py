@@ -11,7 +11,7 @@ NAME                                TYPE      SIGNATURE RESULT/VALUE FLAGS
 org.freedesktop.DBus.Introspectable interface -         -            -
 .Introspect                         method    -         s            -
 sand.box.cmds                       interface -         -            -
-.parrot                             method    s         s            -
+.echo                               method    s         s            -
 .ping                               method    -         s            -
 .send_args                          method    s(ddd)    s            -
 .update                             method    s         s            -
@@ -20,7 +20,7 @@ sand.box.cmds                       interface -         -            -
 
 Calls can be make like:
 busctl --user call sand.box /sand/box sand.box.cmds ping
-busctl --user call sand.box /sand/box sand.box.cmds parrot s 'hi.cfg'
+busctl --user call sand.box /sand/box sand.box.cmds echo s 'hi.cfg'
 busctl --user call sand.box /sand/box sand.box.cmds send_args s\(ddd\) hi 2.2 3.3 4.4
 
 Confirmation of signal can be done by running:
@@ -56,14 +56,14 @@ class Emulator(dbus.service.Object):
     def __init__(self, bus, obj_path):
         super().__init__(bus, obj_path)
 
-    @dbus.service.method(IFACE, in_signature='s', out_signature='s')
-    def parrot(self, file_name):
-        return file_name
-
     @dbus.service.method(IFACE, in_signature='', out_signature='s')
     def ping(self):
         resp = 'The world says hello'
         return resp
+
+    @dbus.service.method(IFACE, in_signature='s', out_signature='s')
+    def echo(self, message):
+        return message
 
     @dbus.service.method(IFACE, in_signature='s(ddd)', out_signature='s')
     def send_args(self, word, vector):
