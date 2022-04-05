@@ -252,6 +252,14 @@ search_code() {
   ag -Q -i "$1" -G "$2"$ --ignore-dir="*test*"
 }
 
+search_files() {
+  local d="ag -l -Q -i \"${2}\" -G \"${1}\""
+  for var in "${@:3}"; do
+    d="$d | xargs ag -l -Q -i \"$var\""
+  done
+  eval "$d"
+}
+
 search_dioptra() {
   ag  --ignore-dir="*test*" -Q -i "$1" -G "$2"$ \
   libraries/blacksky-payload/ \
