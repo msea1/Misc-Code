@@ -69,6 +69,11 @@ class ExampleInterface(ServiceInterface):
     def ping(self) -> 's':
         return 'The world says hello'
 
+    @method()
+    async def async_ping(self) -> 's':
+        await asyncio.sleep(0.25)
+        return 'The world says hello'
+
     @dbus_property()
     def string_prop(self) -> 's':
         return self._string_prop
