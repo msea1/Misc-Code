@@ -214,6 +214,10 @@ pex_test(){
   cd -
 }
 
+qemu_scp() {
+  scp root@192.168.13.8:$1 ./
+}
+
 quicklook(){
   # "decrypted SFX image" AND (*112_* OR *113_*) in PDP logs
   gemini
