@@ -18,6 +18,7 @@
     del = push origin --delete
     fep = fetch --prune
     lf = diff-tree --no-commit-id --name-only -r
+    lines = "!git ls-files | while read f; do git blame -w -M -C -C --line-porcelain "$f" | grep -I '^author-mail '; done | cut -f2 -d'<' | cut -f1 -d'>' | sort -f | uniq -ic | sort -n"
     pb = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
     prune-tags = "!git tag -l | xargs git tag -d && git fetch -t"
     st = status --short --branch
