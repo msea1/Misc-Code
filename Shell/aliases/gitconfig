@@ -22,6 +22,7 @@
     pb = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
     prune-tags = "!git tag -l | xargs git tag -d && git fetch -t"
     st = status --short --branch
+    stashcm = stash push -m
     su = submodule update
 
     ### OTHERS ###
