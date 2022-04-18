@@ -44,22 +44,16 @@ class ExampleInterface(DbusInterfaceCommonAsync, interface_name=IFACE):
         }
 
     @dbus_method_async(result_signature='a{sv}')
-    async def read(self) -> dict:
+    async def read_all(self) -> dict:
         return {s.name: (DBUS_TYPES[s.type], s.value) for s in self.saps.values()}
 
     @dbus_method_async(result_signature='v')
-    async def read_one(self) -> tuple:
+    async def read_variant(self) -> tuple:
         sap = self.saps['test.1']
         return DBUS_TYPES[sap.type], sap.value
 
-    @dbus_method_async(result_signature='v')
-    async def read_variant(self) -> tuple:
-        return "s", "test"
-
     @dbus_method_async(result_signature='a{sb}')
     async def read_dict(self) -> dict:
-        # sap = self.saps['test.2']
-        # return {sap.name: bool(sap.value)}
         return {s.name: bool(s.value) for s in self.saps.values()}
 
 
