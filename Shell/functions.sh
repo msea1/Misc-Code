@@ -130,6 +130,15 @@ ipy() {
   cd -
 }
 
+mimas_qemu() {
+  mimas
+  ./mkmimas @mkconfig/arm64 make image
+  ./mkmimas @mkconfig/arm64 export image output/mkmimas-amd64/
+  cd output/mkmimas-amd64
+  mkdir -p ./provision && tar -xf provision.tar.zst -C ./provision
+  mimas-qemu.sh
+}
+
 new_venv() {
   py -m venv $HOME/.virtualenvs/$1
   work $1
@@ -138,10 +147,12 @@ new_venv() {
 package_repos() {
   full_update
   # use du -k --max-depth 4 | sort -rn
-  tomls  # /sap-toml ./sap_toml/ and ./tests/
-  tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Misc/toml.tar .
+  # tomls  # /sap-toml ./sap_toml/ and ./tests/
+  # tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Misc/toml.tar .
   mimas
-  tar --exclude-vcs-ignores --exclude-vcs -zcf ~/Misc/mimas.tar .
+  tar --exclude-vcs-ignores --exclude-vcs \
+  --exclude='./buildroot' \
+  -zcf ~/Misc/mimas.tar .
   gemini
   tar --exclude-vcs-ignores --exclude-vcs \
   --exclude='./3rdparty/repos' \
