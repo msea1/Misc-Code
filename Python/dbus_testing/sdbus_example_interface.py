@@ -1,7 +1,6 @@
 import asyncio
 
-from sdbus import (DbusInterfaceCommonAsync, dbus_method_async, dbus_property_async, dbus_signal_async,
-                   request_default_bus_name_async)
+from sdbus import (DbusInterfaceCommonAsync, dbus_method_async, dbus_property_async, dbus_signal_async)
 
 """
 This script creates a dbus endpoint that you can interact with.
@@ -84,19 +83,3 @@ class ExampleInterface(DbusInterfaceCommonAsync, interface_name=IFACE):
     @dbus_signal_async('s')
     async def signal_alert(self) -> str:
         raise NotImplementedError
-
-
-ex = ExampleInterface()
-
-
-async def start_example():
-    """Perform async startup actions"""
-    await request_default_bus_name_async(BUS_NAME)
-    # Export the object to dbus
-    ex.export_to_dbus(PATH)
-    # wait indefinitely
-    await asyncio.get_event_loop().create_future()
-
-
-if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(start_example())
