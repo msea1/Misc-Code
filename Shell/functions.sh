@@ -130,6 +130,17 @@ ipy() {
   cd -
 }
 
+mimas_rebuild() {
+  mimas
+  ./mkmimas @mkconfig/arm64 make buildcontainer
+  ./mkmimas @mkconfig/arm64 make base
+  ./mkmimas @mkconfig/arm64 make fsw
+  ./mkmimas @mkconfig/arm64 make image
+  ./mkmimas @mkconfig/arm64 export image output/mkmimas-amd64/
+  cd output/mkmimas-amd64
+  mkdir -p ./provision && tar -xf provision.tar.zst -C ./provision
+}
+
 mimas_qemu() {
   mimas
   ./mkmimas @mkconfig/arm64 make image
