@@ -1,5 +1,8 @@
 import asyncio
+from dataclasses import dataclass
+from typing import Any
 
+import sdbus
 from sdbus import (DbusInterfaceCommonAsync, dbus_method_async, dbus_property_async, dbus_signal_async)
 
 """
@@ -44,6 +47,33 @@ PATH = '/sand/box'
 IFACE = 'sand.box.cmds'
 
 
+@dataclass
+class PersistedKeyValue:
+    key_name: str
+    key_value: str
+    data_type: str
+
+
+PERSISTENT_DATA_CACHE = {1: {}}
+booted_image = 1
+DBUS_DATA_TYPE_CONVERSIONS = {
+    # plain text data type to DBus native type designator and lambda to convert to it
+    "boolean": ('b', lambda x: bool(x)),
+    "uint8": ('y', lambda x: int(x)),
+    "uint16": ('q', lambda x: int(x)),
+    "uint32": ('u', lambda x: int(x)),
+    "uint64": ('t', lambda x: int(x)),
+    "int8": ('y', lambda x: int(x)),
+    "int16": ('n', lambda x: int(x)),
+    "int32": ('i', lambda x: int(x)),
+    "int64": ('x', lambda x: int(x)),
+    "float": ('d', lambda x: float(x)),
+    "float32": ('d', lambda x: float(x)),
+    "float64": ('d', lambda x: float(x)),
+    "string": ('s', lambda x: str(x)),
+}
+
+
 class ExampleInterface(DbusInterfaceCommonAsync, interface_name=IFACE):
     def __init__(self):
         super().__init__()
@@ -83,3 +113,31 @@ class ExampleInterface(DbusInterfaceCommonAsync, interface_name=IFACE):
     @dbus_signal_async('s')
     async def signal_alert(self) -> str:
         raise NotImplementedError
+
+    @dbus_method_async(input_signature="sa(sv)")
+    async def set_persistent_list(self, service_name: str, new_entries: list[str, tuple[str, Any]]) -> None:
+        # busctl --user call sand.box /sand/box sand.box.cmds SetPersistentList "sa(sv)" hi 1 two y 2
+        data_cache = PERSISTENT_DATA_CACHE[booted_image]
+        for (key_name, (dbus_type, key_value)) in new_entries:
+            full_name = f"{service_name}.{key_name}"
+            if full_name not in data_cache:
+                data_cache[full_name] = PersistedKeyValue(full_name, key_value, dbus_type)
+                print(f"Create new persistent data store: {data_cache[full_name]}")
+            else:
+                print(f"Updating persistent data store for {full_name} from {data_cache[full_name].key_value} to {key_value}")
+                data_cache[full_name].key_value = key_value
+
+    @dbus_method_async(input_signature='sas', result_signature='a{sv}')
+    async def read_persistent_list(self, service_name: str, key_names: list[str]) -> dict:
+        # busctl --user call sand.box /sand/box sand.box.cmds ReadPersistentList "sas" hi 2 one two
+        data_cache = PERSISTENT_DATA_CACHE[booted_image]
+        resp = {}
+        for key_name in key_names:
+            full_name = f"{service_name}.{key_name}"
+            if full_name not in data_cache:
+                raise sdbus.DbusFailedError(f"{full_name} does not exist in persistent data store")
+            else:
+                entry: PersistedKeyValue = data_cache[full_name]
+                resp[key_name] = (entry.data_type, entry.key_value)
+        print(resp)  # {'one': ('y', 3), 'two': ('y', 2)}
+        return resp
