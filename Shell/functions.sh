@@ -150,6 +150,15 @@ mimas_qemu() {
   mimas-qemu.sh
 }
 
+mimas_qemux() {
+  mimas
+  ./mkmimas @mkconfig/x86 make image -i <(echo "-q -P")
+  ./mkmimas @mkconfig/x86 export image output/mkmimas-x86/
+  cd output/mkmimas-x86
+  mkdir -p ./provision && tar -xf provision.tar.zst -C ./provision
+  mimas-qemu.sh
+}
+
 new_venv() {
   py -m venv $HOME/.virtualenvs/$1
   work $1
