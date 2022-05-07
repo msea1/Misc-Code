@@ -143,20 +143,24 @@ mimas_rebuild() {
 
 mimas_qemu() {
   mimas
+  rm -rf output/mkmimas-arm64/
   ./mkmimas @mkconfig/arm64 make image -i <(echo "-q -P")
-  ./mkmimas @mkconfig/arm64 export image output/mkmimas-amd64/
-  cd output/mkmimas-amd64
+  ./mkmimas @mkconfig/arm64 export image output/mkmimas-arm64/
+  cd output/mkmimas-arm64
   mkdir -p ./provision && tar -xf provision.tar.zst -C ./provision
   mimas-qemu.sh
+  cd -
 }
 
 mimas_qemux() {
   mimas
+  rm -rf output/mkmimas-x86/
   ./mkmimas @mkconfig/x86 make image -i <(echo "-q -P")
   ./mkmimas @mkconfig/x86 export image output/mkmimas-x86/
   cd output/mkmimas-x86
   mkdir -p ./provision && tar -xf provision.tar.zst -C ./provision
   mimas-qemu.sh
+  cd -
 }
 
 new_venv() {
