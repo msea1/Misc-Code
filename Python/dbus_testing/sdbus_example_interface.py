@@ -108,10 +108,15 @@ class ExampleInterface(DbusInterfaceCommonAsync, interface_name=IFACE):
     async def update(self, message: str) -> str:
         resp = f'spreading the good word: {message}'
         self.signal_alert.emit(message)
+        self.signal_alert2.emit((message, ["hello, world"]))
         return resp
 
     @dbus_signal_async('s')
     async def signal_alert(self) -> str:
+        raise NotImplementedError
+
+    @dbus_signal_async('sas')
+    async def signal_alert2(self) -> tuple[str, list[str]]:
         raise NotImplementedError
 
     @dbus_method_async(input_signature="sa(sv)")
