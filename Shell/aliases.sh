@@ -48,6 +48,7 @@ alias desktop_vpn='ssh mcarruth@172.22.16.162'
 alias flatsat='ssh -p 24022 root@192.168.6.10'
 alias laptop='ssh mcarruth@192.168.40.3'
 alias laptop_vpn='ssh mcarruth@172.22.16.175'
+alias leostella='ssh mcarruth@dsk1625.leostella.local'
 alias qemu_ssh='ssh root@192.168.13.8'
 
 # EDITING
