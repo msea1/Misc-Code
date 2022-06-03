@@ -41,6 +41,18 @@ class ExampleInterface(DbusInterfaceCommonAsync, interface_name=IFACE):
         self.signal_alert2.emit(desired_msg)
         return resp
 
+    @dbus_method_async('ya(sv)')
+    async def multi(self, _image: int, updates: list[str, str, str]) -> None:
+        saps = {}
+        for sap_key, (dbus_type, sap_value) in updates:
+            print(f"updating {sap_key} to {sap_value} from dbus type {dbus_type}")
+            saps[sap_key] = (dbus_type, sap_value)
+        desired_msg = [
+            ('svc_a', saps),
+            ('svc_b', saps),
+        ]
+        self.signal_alert2.emit(desired_msg)
+
     @dbus_signal_async('s')
     async def signal_alert(self) -> str:
         raise NotImplementedError
@@ -94,7 +106,7 @@ async def print_alert2() -> None:
 if __name__ == '__main__':
     loop = asyncio.new_event_loop()
     loop.run_until_complete(start_example())
-    loop.create_task(print_alert1())
-    loop.create_task(print_alert2())
-    loop.create_task(clock())
+    # loop.create_task(print_alert1())
+    # loop.create_task(print_alert2())
+    # loop.create_task(clock())
     loop.run_forever()
