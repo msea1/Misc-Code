@@ -1,0 +1,3463 @@
+{
+  "command": [
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Path to file.",
+          "name": "file_name",
+          "type": "str"
+        }
+      ],
+      "desc": "   This command is used to read an on-board configuration file that may be used to update any AFSW parameters.\n                    This is the command that will be used to perform on-orbit updates of AFSW adjustable parameters.",
+      "module": "adcs",
+      "name": "read_cfg_file",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "  The angle, in degrees, to slew about the specified slew_axis_unit_vector.\n\n            To hold the current commanded attitude, specify an angle of 0.0.",
+          "max_value": 360.0,
+          "min_value": 0,
+          "name": "slew_angle_deg",
+          "type": "float"
+        },
+        {
+          "desc": "Three-float list (X, Y, Z) expected that specifies a slew axis in the body coordinate frame.",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "min_values": [
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "name": "slew_axis_unit_vector",
+          "type": "list"
+        }
+      ],
+      "desc": "  Enable the ADCS to slew from the current commanded attitude of the spacecraft to a new attitude.\n\n            The new attitude is defined by a relative slew about a body axis by some angle. At the end of the slew, the\n            spacecraft will hold the new attitude.\n\n            All go_to_hold commands will use EigenSlew, a slew time of 150 seconds, and disable momentum control\n            (torque rods).",
+      "module": "adcs",
+      "name": "go_to_hold",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "  Remove autonomous attitude control of the spacecraft as the attitude and rate errors are set to zero.\n\n            Note: the attitude determination portion of the AFSW will continue to keep the attitude information up to\n            date.\n\n            Note: The momentum control state argument is NOT exposed to the ground (mission commands). Flight software\n            internally manages the momentum control enabling/disabling based on the spacecraft mode. Momentum control\n            is disabled in CHECKOUT mode.  It is enabled in all other modes.\n\n            For example, when in CHECKOUT mode, if go_to_idle command is issued, momentum control is disabled (FSW\n            autonomously sets the momentum control state argument to 0).  Similarly, if adcs is already commanded to\n            idle and then the spacecraft is commanded to CHECKOUT mode, the momentum control will be disabled.",
+      "module": "adcs",
+      "name": "go_to_idle",
+      "response_desc": "Current satellite attitude in ECI coordinates, and current value of control_momentum boolean.",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": "SC2NadirDetic",
+          "desc": "  Ephemeris reference used to define remaining degree of freedom.\n\n            If the spacecraft attitude has been fully acquired, the AFSW is in SunTrack, where the remaining degree of\n            freedom is used to clock to this Ephemeris Reference. Otherwise, the AFSW is in SunAcq, which utilizes only\n            measurements from the Sun sensors to align the panels to the Sun.",
+          "name": "ephemeris_reference",
+          "type": "enum.EphemerisReference"
+        },
+        {
+          "default": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "desc": "Three-float list (X, Y, Z) describing clocking unit vector in spacecraft body coordinate system.",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "min_values": [
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "name": "unit_vector",
+          "type": "list"
+        }
+      ],
+      "desc": "  Orient the spacecraft solar panel to the Sun.\n\n            Uses logic in GoToSunPoint FJ script.\n\n            If attitude is not determined, the ADCS will perform Sun acquisition (search and converge on sun vector,\n            no specific clocking) using the course and fine sun sensors (until ephemeris and attitude become\n            determined). If attitude is determined, the ADCS will perform SunTracking with the specified clocking\n            option/axis.",
+      "module": "adcs",
+      "name": "go_to_sun_point",
+      "response_desc": "Current satellite attitude in ECI coordinates, and angle between +Y body axis and sun vector, in deg.",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": 0,
+          "desc": "  Desired duration of the slew to the new attitude.\n\n            If set to 0.0, or any other unachievable rate, vehicle performs a max-rate slew. Argument only enables a\n            slew to be intentionally retarded below max-rate.",
+          "min_value": 0.0,
+          "name": "slew_time_sec",
+          "type": "float"
+        },
+        {
+          "default": "RendezSlew",
+          "desc": "  Type of slew to perform.\n\n            Slew type affects minimum slew duration and settling performance.\n\n            Body rate at the end of the slew is determined by AFSW based on the track_type (e.g. it will be zero when\n            tracking inertial targets, but non-zero when tracking a ground_target).",
+          "name": "slew_type",
+          "type": "enum.SlewType"
+        },
+        {
+          "desc": "  Track type which defines the primary satellite attitude objective.\n\n            All track_type arguments except for InertialFixed leave one degree of freedom undefined (e.g. +Z axis\n            tracking ground target with undefined azimuth). This third degree of freedom is defined by the\n            ephemeris_reference and clocking_unit_vector.",
+          "name": "track_type",
+          "type": "enum.TrackType"
+        },
+        {
+          "default": "SC2Sun",
+          "desc": "Ephemeris Reference used to define remaining degree of freedom.",
+          "name": "ephemeris_reference",
+          "type": "enum.EphemerisReference"
+        },
+        {
+          "default": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "desc": "  Three-float list (X, Y, Z) describing clocking unit vector in spacecraft body coordinate system.\n\n            Default clocks +Y face to sun vector.",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "min_values": [
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "name": "clocking_unit_vector",
+          "type": "list"
+        }
+      ],
+      "desc": "  Orient the spacecraft to a specific tracking mode and body clocking.\n\n            Enable the ADCS to align a body vector to an EphemerisReference as defined by the track_type argument and\n            clock a body vector to another specified EphemerisReference.\n\n            Slewing is defined by the SlewType and slew duration.",
+      "module": "adcs",
+      "name": "go_to_track",
+      "response_desc": "Current satellite attitude in ECI coordinates and SAP-defined pointing accuracy tolerance.",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Image and communication targets have different tracking accuracy thresholds set by SAP.",
+          "name": "ground_target",
+          "type": "enum.GroundTarget"
+        },
+        {
+          "desc": "  Three-float list (X, Y, Z) describing position of target on surface of WGS84 ellipsoid.\n\n            WGS84 Ellipsoid: Geodetic Latitude in deg, Longitude in deg, and Elevation in meters above ellipsoid.",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            90.0,
+            180.0,
+            10000.0
+          ],
+          "min_values": [
+            -90.0,
+            -180.0,
+            -1000.0
+          ],
+          "name": "geodetic_vector",
+          "type": "list"
+        }
+      ],
+      "desc": "  Set the latitude (deg), longitude (deg), and altitude (m) coordinates of a specified GroundTarget object.\n\n            Note: Does NOT track that target. Use go_to_track to start actively tracking the set_target.",
+      "module": "adcs",
+      "name": "set_target",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": 0,
+          "desc": "  Desired duration of the slew to the new attitude.\n\n            If set to 0.0, or any other unachievable rate, vehicle performs a max-rate slew. Argument only enables a\n            slew to be intentionally retarded below max-rate.",
+          "min_value": 0.0,
+          "name": "slew_time_sec",
+          "type": "float"
+        },
+        {
+          "desc": "  Type of slew to perform.\n\n            Slew type affects minimum slew duration and settling performance.\n\n            Body rate at the end of the slew will be zero.",
+          "name": "slew_type",
+          "type": "enum.SlewType"
+        },
+        {
+          "desc": "  Quaturnion defining the inertial attitude to align the spacecraft body with.\n\n            The quaternion represents the scalar-last True of Date (TOD) to Body coordinate transformation for the\n            desired spacecraft orientation in inertial space",
+          "element_count": 4,
+          "element_type": "float",
+          "max_values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "min_values": [
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "name": "target_quaternion",
+          "type": "list"
+        }
+      ],
+      "desc": "  Align the spacecraft body with a specified inertial attitude.\n\n            Set the inertial attitude (True of Date to Body coordinate system rotation), and slew to orient to that\n            attitude. If the target is moving relative to inertial space, it does NOT track that target. Use\n            go_to_rso_track to actively track a resident space object.",
+      "module": "adcs",
+      "name": "go_to_inertial_point",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Epoch (POSIX time) in seconds",
+          "name": "epoch",
+          "type": "float"
+        },
+        {
+          "desc": "  RSO target position.\n\n            Defined in the True of Date (TOD) Earth-centered inertial (ECI) coordinate system corresponding to the\n            epoch argument.",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            1000000000.0,
+            1000000000.0,
+            1000000000.0
+          ],
+          "min_values": [
+            -1000000000.0,
+            -1000000000.0,
+            -1000000000.0
+          ],
+          "name": "target_position",
+          "type": "list"
+        },
+        {
+          "desc": "  RSO target velocity.\n\n            Defined in the True of Date (TOD) Earth-centered inertial (ECI) coordinate system corresponding to the\n            epoch argument.",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            100000.0,
+            100000.0,
+            100000.0
+          ],
+          "min_values": [
+            -100000.0,
+            -100000.0,
+            -100000.0
+          ],
+          "name": "target_velocity",
+          "type": "list"
+        },
+        {
+          "default": 0,
+          "desc": "  Desired duration of the slew to the new attitude.\n\n            If set to 0.0, or any other unachievable rate, vehicle performs a max-rate slew. Argument only enables a\n            slew to be intentionally retarded below max-rate.",
+          "min_value": 0.0,
+          "name": "slew_time_sec",
+          "type": "float"
+        },
+        {
+          "desc": "  Type of slew to perform.\n\n            Slew type affects minimum slew duration and settling performance.\n\n            Body rate at the end of the slew is determined by the relative rate of the target RSO.",
+          "name": "slew_type",
+          "type": "enum.SlewType"
+        },
+        {
+          "default": "SC2Sun",
+          "desc": "Ephemeris Reference used to define remaining degree of freedom.",
+          "name": "ephemeris_reference",
+          "type": "enum.EphemerisReference"
+        },
+        {
+          "default": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "desc": "  Three-float list (X, Y, Z) describing clocking unit vector in spacecraft body coordinate system.\n\n            Default clocks +Y face to sun vector.",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "min_values": [
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "name": "clocking_unit_vector",
+          "type": "list"
+        }
+      ],
+      "desc": "  Enable the ADCS to align the boresight to a Resident Space Object (RSO).\n\n            The RSO to align with is defined by an ephemeris entry (Epoch, Position, Velocity) and clock a body vector\n            to a specified ClockEphemOption.\n\n            Note: Requires the ephemeris Epoch of the RSO target to be within +/- 1 hour.of the system time at which\n            the command is executed. Otherwise the command is ignored. This is to avoid ephemeris propagation errors.\n\n            Note: Requires ADCS to be using GPS-based ephemeris propagation. If an ephemeris table is active (i.e.\n            ConfigureEphemeris running), the RSO tracking command is ignored. This is due to a limitation in the ADCS\n            ephemeris propagation code.",
+      "module": "adcs",
+      "name": "go_to_rso_track",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": 150.0,
+          "desc": "  Desired duration of the slew to the new attitude.\n\n            If set to 0.0, or any other unachievable rate, vehicle performs a max-rate slew. Argument only enables a\n            slew to be intentionally retarded below max-rate.",
+          "min_value": 0.0,
+          "name": "slew_time_sec",
+          "type": "float"
+        },
+        {
+          "default": 600.0,
+          "desc": "  Duration to execute the dryout procedure.\n\n            If set to 0.0, dryout rotations will continue indefinitely until another external command changes the ADCS\n            mode.\n\n            Note: the seconds here are a minimum. The dryout process does not necessarily end in\n            dryout_duration_sec, since the current 360 deg rotation must have completed before we compare\n            dryout_duration_sec to time elapsed.",
+          "min_value": 0.0,
+          "name": "dryout_duration_sec",
+          "type": "float"
+        }
+      ],
+      "desc": "  Execute the ADCS telescope dryout procedure.\n\n            Commands ADCS to execute the RunTelescopeDryout FJ script which sequentially aligns 4 unique non-primary\n            axes (45 deg off the Z-axis, 45 deg off each Z-adjacent side) to the Sun for a specified duration, while\n            clocking the Z-axis NadirDetic. Duration of slews between 4 orientations is user-specified (or as fast as\n            possible). Uses sunlight to dry a Z-pointing payload while avoiding the payload Sun keep-out-zone (up to 45\n            deg).",
+      "module": "adcs",
+      "name": "run_telescope_dryout",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Image and communication targets have different tracking accuracy thresholds set by SAP.",
+          "name": "ground_target",
+          "type": "enum.GroundTarget"
+        },
+        {
+          "desc": "  Three-float (X, Y, Z) list describing a target on surface of WGS84 ellipsoid to start scan maneuver.\n\n            WGS84 Ellipsoid: Geodetic Latitude in deg, Longitude in deg, and Elevation in meters above ellipsoid.",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            90.0,
+            180.0,
+            10000.0
+          ],
+          "min_values": [
+            -90.0,
+            -180.0,
+            -1000.0
+          ],
+          "name": "starting_geodetic_vector",
+          "type": "list"
+        },
+        {
+          "desc": "  Three-float (X, Y, Z) list describing a target on surface of WGS84 ellipsoid to end scan maneuver.\n\n            WGS84 Ellipsoid: Geodetic Latitude in deg, Longitude in deg, and Elevation in meters above ellipsoid.",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            90.0,
+            180.0,
+            10000.0
+          ],
+          "min_values": [
+            -90.0,
+            -180.0,
+            -1000.0
+          ],
+          "name": "ending_geodetic_vector",
+          "type": "list"
+        },
+        {
+          "desc": "  Ground speed in meters per second.\n\n            min/max values of 0/7200 from here:\n            https://confluence.spaceflightindustries.com/display/SPP/ADCS+Flight+Software+Commands",
+          "max_value": 7200,
+          "min_value": 0,
+          "name": "ground_speed_mps",
+          "type": "float"
+        }
+      ],
+      "desc": "  Set the properties of a specified GroundTarget object for scanning but does NOT track that target.\n\n            The properties include start point, end point, and ground speed. Use go_to_track to start actively tracking\n            the set_target_scan.",
+      "name": "set_target_scan",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "  Epoch timestamp of first orbital element entry. Used to construct\n            the FlightJAS script that loads ephemerides.",
+          "name": "epoch",
+          "type": "float"
+        },
+        {
+          "desc": "  Encoded future ECI positions (m) and velocities (m/s) to install.\n\n            Used to construct the FlightJAS script that loads ephemerides.\n\n            Generated by the following logic:\n\n            1.  For all position and velocity double precision floats\n                a.  Pack value into raw bytes (little-endian)\n                b.  Remove least significant 3 bytes (from the fraction section\n                    of the double precision float)\n                c.  Add the remaining 5 bytes to a binary blob\n            2.  Compress this blob into a z-standard archive (compression level\n                19)\n            3.  Encode this archive in Base64",
+          "name": "b64",
+          "type": "str"
+        }
+      ],
+      "desc": "  Install the spacecraft's future Long Term Ephemeris (LTE) entries.\n\n            Each entry is specified by the first epoch timestamp and the encoded orbital element data. The interval\n            between entries is hardcoded to 1 hour.\n\n            This generates a ConfigureEphemeris FJ script which will then be executed, replacing any existing\n            ConfigureEphemeris FJ script that may have been running at the time.\n\n            Note that this will be done without restarting the ADCS subsystem. The new script will also execute if the\n            ADCS subsystem does restart (including satellite reboots).",
+      "name": "set_ephem",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "desc": "   Power on the propulsion device and allow it to gather telemetry into the telemetry stream.\n             Does not allow the propulsion device to control any actuators including tank heaters. ",
+      "module": "prop",
+      "name": "prop_telem",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "OPERATIONAL"
+      ],
+      "desc": "   Command the propulsion FSW mode (prop.fsw.mode) to Bakeout to perform the propulsion bakeout procedure.\n\n             The bakeout procedure is defined in section 11.8 of the Comet-8000 Interface Control Document Rev 1.9.\n             The propulsion FSW transitions prop.fsw.state to HeatingThruster, and heats the thruster core.\n             Once the prop.core.thrusterTemp telemetry point reaches the prop.core.thrusterTemp.setPoint.bakeout, the\n             propulsion FSW transitions prop.fsw.state to BakingOut. Testing on G4 characterized the duration in\n             HeatingThruster state to be about 300 seconds going from a prop.core.thrusterTemp of 0 to 125 degrees\n             Celsius.  Propulsion FSW remains in this state for a duration determined by the prop.fsw.bakeoutDuration\n             SAP, after which time, the propulsion FSW disables the thruster heaters and transitions prop.system.state\n             to Idle.  The propulsion FSW will remain in this state until the prop_poweroff Mission Command is\n             executed.",
+      "module": "prop",
+      "name": "prop_bakeout",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Duration (in seconds) to remain in the prop.fsw.state of RegulatingPressure before transiting to HeatingThruster.",
+          "max_value": 86400,
+          "min_value": 0,
+          "name": "pressure_regulation_duration_s",
+          "type": "int"
+        },
+        {
+          "desc": "Duration (in seconds) to remain in the prop.fsw.state of HeatingThruster before transitioning to Thrusting.",
+          "max_value": 1200,
+          "min_value": 0,
+          "name": "thruster_preheat_duration_s",
+          "type": "int"
+        },
+        {
+          "desc": "Duration (in seconds) to remain in the prop.fsw.state of Thrusting before transitioning to Idle.",
+          "max_value": 800,
+          "min_value": 1,
+          "name": "thrust_duration_s",
+          "type": "int"
+        }
+      ],
+      "desc": "   Command the propulsion FSW mode (prop.fsw.mode) to Thrust to perform a thrust maneuver.\n\n             The propulsion FSW first transitions prop.fsw.state to RegulatingPressure to regulate the pressure in the\n             propellant tanks. It remains in this state for a duration specified in the pressure_regulation_duration_s\n             argument. Then FSW transitions prop.fsw.state to HeatingThruster to pre-heat the thruster to the\n             prop.thrusterTemp.setPoint.heatingThruster SAP before thrusting. Note that the prop device control\n             software continues to regulate tank pressure in this state. It remains in this state for a duration\n             specified in the thruster_preheat_duration_s argument. Next, the FSW transitions prop.fsw.state to\n             Thrusting which inhibits tank pressure regulation, increases the thruster heater set point to the\n             prop.core.thrusterTemp.setPoint SAP.Thrusting, then causes the thrust valve to open. It remains in this\n             state for a duration specified in the thrust_duration_s argument. Finally, the FSW transitions\n             prop.fsw.state to Idle. The propulsion FSW will remain in this state until the prop_poweroff Mission\n             Command is executed.\n             NOTE: If this command is aborted for any number of reasons, the propulsion FSW will inihibit this command\n             from being executed again until the prop_deinhibit Mission Command is executed.",
+      "module": "prop",
+      "name": "prop_thrust",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "   Command the propulsion FSW to cancel any command it is currently executing and power off the\n             propulsion device.",
+      "module": "prop",
+      "name": "prop_poweroff",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "  Allow prop_thrust to be successfully executed again.\n\n            If the propulsion FSW is currently being inhibited, this commands the propulsion FSW to\n            allow prop_thrust to be successfully executed again.",
+      "module": "prop",
+      "name": "prop_deinhibit",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": "POSIX",
+          "desc": "POSIX (00:00:00Z 1 Jan 1970) or CURRENT (current s/c time)",
+          "name": "time_reference",
+          "type": "enum.TimeReference"
+        },
+        {
+          "desc": "Time, in seconds, from specified epoch or time reference.",
+          "name": "time_offset_sec",
+          "type": "float"
+        }
+      ],
+      "desc": "Adjust satellite time as an offset (positive or negative) from the specified epoch.",
+      "module": "backdoor",
+      "name": "set_time",
+      "response_desc": "Seconds elapsed since the POSIX epoch (00:00:00Z 1 Jan 1970)",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which reaction wheel: RW1, RW2, RW3, or RW4",
+          "name": "component_id",
+          "type": "enum.RWComponent"
+        },
+        {
+          "desc": "  0x00 -- Reset Reason\n            0x01 -- Reset Count\n            0x02 -- RS485_0 Framing Errors\n            0x03 -- RS485_0 Runt Packets\n            0x04 -- RS485_0 Oversize Packets\n            0x05 -- RS485_0 Bad CRC\n            0x06 -- RS485_0 Buffer Overflow\n            0x07 -- RS485_1 Framing Errors\n            0x08 -- RS485_1 Runt Packets\n            0x09 -- RS485_1 Oversize Packets\n            0x0A -- RS485_1 Bad CRC\n            0x0B -- RS485_1 Buffer Overflow\n            0x0C -- CAN_0 Framing Errors\n            0x0D -- CAN_0 Runt Packets\n            0x0E -- CAN_0 Oversize Packets\n            0x0F -- CAN_0 Bad CRC\n            0x10 -- CAN_0 Buffer Overflow\n       ",
+          "max_value": 16,
+          "min_value": 0,
+          "name": "diagnostic_channel",
+          "type": "int"
+        }
+      ],
+      "desc": "Return error statistics.",
+      "module": "wheel",
+      "name": "get_wheel_diagnostic",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which reaction wheel: RW1, RW2, RW3, or RW4",
+          "name": "component_id",
+          "type": "enum.RWComponent"
+        }
+      ],
+      "desc": " Set a specific reaction wheel to idle mode.\n\n           Should only be called after calling go_to_idle while in CHECKOUT Mode.",
+      "module": "wheel",
+      "name": "idle_wheel",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which reaction wheel: RW1, RW2, RW3, or RW4",
+          "name": "component_id",
+          "type": "enum.RWComponent"
+        },
+        {
+          "desc": "",
+          "name": "edac_address",
+          "type": "int"
+        },
+        {
+          "desc": "",
+          "name": "data_value",
+          "type": "float"
+        }
+      ],
+      "desc": "Calls WRITE FILE on a specific reaction wheel to set a specific EDAC address to a new value.",
+      "module": "wheel",
+      "name": "set_wheel_config_value",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which reaction wheel: RW1, RW2, RW3, or RW4",
+          "name": "component_id",
+          "type": "enum.RWComponent"
+        },
+        {
+          "desc": "rads/sec",
+          "max_value": 1385,
+          "min_value": -1385,
+          "name": "rw_rads_sec",
+          "type": "float"
+        }
+      ],
+      "desc": "Set a specific reaction wheel to a specific speed.\n\n          Should only be called after calling go_to_idle while in CHECKOUT Mode.",
+      "module": "wheel",
+      "name": "set_wheel_speed",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which reaction wheel: RW1, RW2, RW3, or RW4",
+          "name": "component_id",
+          "type": "enum.RWComponent"
+        },
+        {
+          "desc": "Nm",
+          "max_value": 0.02,
+          "min_value": -0.02,
+          "name": "rw_torque",
+          "type": "float"
+        }
+      ],
+      "desc": "Set a specific reaction wheel to a specific torque.\n\n          Should only be called after calling go_to_idle while in CHECKOUT Mode.",
+      "module": "wheel",
+      "name": "set_wheel_torque",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "CHECKOUT",
+        "DISPOSAL"
+      ],
+      "argument": [
+        {
+          "desc": "0 passed in will overwrite any previously commanded duration and revert back to 1hz now",
+          "max_value": 3600,
+          "min_value": 0,
+          "name": "log_duration_sec",
+          "type": "int"
+        }
+      ],
+      "desc": "Log telemetry at 20hz instead of 1hz",
+      "module": "logs",
+      "name": "create_adcs_log",
+      "response_desc": "The epoch start time of the 20hz data",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which IMU: IMU1 or IMU2",
+          "name": "component_id",
+          "type": "enum.IMUComponent"
+        }
+      ],
+      "desc": "Enter service mode from normal mode.",
+      "module": "imu",
+      "name": "enter_imu_service_mode",
+      "response_desc": "This command will be answered with an error message if it is sent to an IMU that is already in service mode.",
+      "slow_cmd": false,
+      "status": "NOT FULLY IMPLEMENTED - FSW-1780"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which IMU: IMU1 or IMU2",
+          "name": "component_id",
+          "type": "enum.IMUComponent"
+        }
+      ],
+      "desc": "Exit service mode to normal mode.",
+      "module": "imu",
+      "name": "exit_imu_service_mode",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "NOT FULLY IMPLEMENTED - FSW-1780"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which IMU: IMU1 or IMU2",
+          "name": "component_id",
+          "type": "enum.IMUComponent"
+        }
+      ],
+      "desc": "Perform diagnostic.",
+      "module": "imu",
+      "name": "perform_imu_diagnostic",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "NOT FULLY IMPLEMENTED - FSW-1780"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which IMU: IMU1 or IMU2",
+          "name": "component_id",
+          "type": "enum.IMUComponent"
+        }
+      ],
+      "desc": "Save configuration.",
+      "module": "imu",
+      "name": "save_imu_configuration",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "NOT FULLY IMPLEMENTED - FSW-1780"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which IMU: IMU1 or IMU2",
+          "name": "component_id",
+          "type": "enum.IMUComponent"
+        },
+        {
+          "desc": "Refer to the ICD for what to pass to the 't' command",
+          "name": "cmd_params_str",
+          "type": "str"
+        }
+      ],
+      "desc": "Change serial port parameters.",
+      "module": "imu",
+      "name": "set_imu_serial_port_parameter",
+      "response_desc": " Changes made by this command may be autonomously and silently reverted if the subsequent call to\n                    save_imu_configuration is not confirmed on the first attempt.",
+      "slow_cmd": false,
+      "status": "NOT FULLY IMPLEMENTED - FSW-1780"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Which IMU: IMU1 or IMU2",
+          "name": "component_id",
+          "type": "enum.IMUComponent"
+        },
+        {
+          "desc": "Refer to the ICD for what to pass to the 'f' command",
+          "name": "cmd_params_str",
+          "type": "str"
+        }
+      ],
+      "desc": "Change LP filter cutoff frequency.",
+      "module": "imu",
+      "name": "set_imu_low_pass_filter_freq",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "NOT FULLY IMPLEMENTED - FSW-1780"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Path to the file",
+          "name": "file_path",
+          "type": "str"
+        },
+        {
+          "desc": "key index to use to encrypt the file in space before sending it to ground",
+          "name": "key_index",
+          "type": "int"
+        },
+        {
+          "desc": "hexlified string representing the initialization vector. spacecraft uses this to encrypt",
+          "name": "iv",
+          "type": "str"
+        },
+        {
+          "desc": "Block size of single SFT packet in bytes.",
+          "name": "block_size",
+          "sc_optional": true,
+          "type": "int"
+        },
+        {
+          "default": false,
+          "desc": "When TRUE the downlink is asynchronous and does not require or expect acknowledgement packets.",
+          "name": "use_async",
+          "type": "bool"
+        },
+        {
+          "desc": "  Limits bandwidth used by udpcast. Useful in asynchronous mode, or else the sender may send too fast for the switch\n            and/or receiver to keep up. Bitrate may be expressed in bits per second (--bitrate 5000000),\n            kilobits per second (--bitrate 5000k) or megabits per second (--bitrate 5m). This is the raw bitrate, including\n            packet headers, forward error correction, retransmissions, etc. Actual payload bitrate will be lower.",
+          "name": "max_bitrate",
+          "type": "str"
+        },
+        {
+          "desc": "  Sets forward-error correction (FEC) used by udpcast. This does NOT set the physical-layer Reed-Solomon\n            coding on UHF downlink, which is set by the (non-spec) enable_uhf_fec command.",
+          "name": "fec",
+          "sc_optional": true,
+          "type": "str"
+        },
+        {
+          "default": false,
+          "desc": "If TRUE allows receivers to join an ongoing transmission mid through.",
+          "name": "streaming",
+          "type": "bool"
+        },
+        {
+          "desc": "Starts transmission after n retransmissions of hello packet, without waiting for a key stroke.",
+          "name": "autostart",
+          "type": "int"
+        },
+        {
+          "default": false,
+          "desc": "If not sent, this will default to full-duplex (contra udpcast's default)",
+          "name": "use_half_duplex",
+          "type": "bool"
+        },
+        {
+          "desc": "If set, rebroadcasts the HELLO packet used for initiating the casting each timeout milliseconds.",
+          "name": "rexmit_hello_interval_ms",
+          "sc_optional": true,
+          "type": "int"
+        },
+        {
+          "desc": "If set, how many time to send a REQACK until dropping a receiver.",
+          "name": "retries_until_drop",
+          "sc_optional": true,
+          "type": "int"
+        },
+        {
+          "default": 30,
+          "desc": "  Sender aborts at start if it doesn't see a receiver within this many seconds.\n            Once transmission is started, the timeout no longer applies.",
+          "name": "start_timeout_sec",
+          "type": "int"
+        }
+      ],
+      "desc": " Downlink file (may be split into multiple SFT packets if necessary) located at the specified path.\n\n           Note: Files downlinked this way only have access to cmdseq-service's private tmp directory, so\n           files created in /tmp by other services may not be downloaded with this command.",
+      "module": "files",
+      "name": "downlink_file",
+      "response_desc": "Indicates whether udp-sender began correctly",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Absolute path to the file",
+          "name": "file_path",
+          "type": "str"
+        },
+        {
+          "desc": "key index to use to encrypt the file",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "key_index",
+          "type": "int"
+        },
+        {
+          "desc": "String representing the initialization vector in hex.\n\n          IV string length shall be even and have less than 32 chars (16 bytes).\n          Spacecraft uses this to encrypt the file prior to conversion to encrypted SFT.\n          The IV is prepended to encrypted file in clear prior encapsulation in an SFT packet which will be encrypted separately",
+          "name": "iv",
+          "type": "str"
+        }
+      ],
+      "desc": " Downlink a file with size less than 2K minus IV size located at the specified path.\n\n           Note: Files downlinked this way only have access to cmdseq-service's private tmp directory, so\n           files created in /tmp by other services may not be downloaded with this command. ",
+      "module": "files",
+      "name": "downlink_file_as_sft",
+      "response_desc": "Success indicates that a file is about to be sent as SFT packet",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Absolute path to the file",
+          "name": "file_path",
+          "type": "str"
+        },
+        {
+          "desc": "Populates the file_uid field of the SFX packet when slot is downlinked via downlink_file_slot.",
+          "max_value": 4294967295,
+          "min_value": 0,
+          "name": "file_uid",
+          "type": "int"
+        },
+        {
+          "max_value": 1365,
+          "min_value": 0,
+          "name": "slot_id",
+          "type": "int"
+        }
+      ],
+      "desc": " Transfer a file to a slot on the PIC NAND.\n\n           This command erases the contents of the provided slot ID, then writes the file to that slot. The file data\n           may then be downlinked in one SFX packet using the `downlink_file_slot` command.\n\n           Using this method of file transfer allows for more efficient use of ground-pass time by using the fast SFX\n           downlink path instead of the lower bandwidth SFT path. The file may be generated and transfered to PIC NAND\n           when convenient before the pass. The data trasnfer is performed by comms-service using the xband serial\n           link, which may interfere with other comms-service functions during the transfer.\n\n           The maximum file size is 44739200 bytes. The command completes in less than 90 seconds.\n\n           The file size and provided file uid will be stored in the PIC nonvolatile memory and associated with the\n           slot id. It is not necessary to provide them to the `downlink_file_slot` command.\n\n           The PIC must be powered on and idle or the command will fail. The result of the command is printed to the\n           system logs.",
+      "module": "files",
+      "name": "transfer_file_to_slot",
+      "response_desc": "Success indicates that a file is about to be transfered to pic nand",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "max_value": 1365,
+          "min_value": 0,
+          "name": "slot_id",
+          "type": "int"
+        },
+        {
+          "desc": "key index field of sent SFX packet",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "key_index",
+          "type": "int"
+        }
+      ],
+      "desc": " Downlink a slot on the PIC NAND containing file data.\n\n           The slot must have been populated using transfer_file_to_slot. See the transfer_file_to_slot command for\n           more information.\n       ",
+      "module": "files",
+      "name": "downlink_file_slot",
+      "slow_cmd": false
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Signify that an intermediate master key is required.\n\n          if customer_id = 0 then the master key will be used directly.\n          If > 0, the customer_id will be used as the service_id to derive an intermediate master key",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "customer_id",
+          "type": "int"
+        }
+      ],
+      "desc": "Set the customer id to be used for the next downlinks.",
+      "module": "files",
+      "name": "set_customer_id",
+      "response_desc": "Indicates command success",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "The key id.",
+          "max_value": 1023,
+          "min_value": 0,
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "desc": "The key itself, encoded in B64 format.",
+          "name": "key",
+          "type": "str"
+        },
+        {
+          "desc": "The key CRC.",
+          "name": "crc",
+          "type": "int"
+        }
+      ],
+      "desc": " Upload a new mission key. Mission keys can be used as alternate key\n           when encrypting downlink_file_as_sft, downlink_image and and downlink_file_slot data.",
+      "module": "files",
+      "name": "upload_mission_key",
+      "response_desc": " Execution status of the command. The command is rejected if:\n                     - The specified key id is incorrect\n                     - The specified key has a wrong format\n                     - The specified CRC does not match the key CRC\n                ",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "The key id.",
+          "max_value": 1023,
+          "min_value": 0,
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "desc": " Delete an existing mission key.",
+      "module": "files",
+      "name": "delete_mission_key",
+      "response_desc": " Execution status of the command. The command is rejected if:\n                     - The specified key id is incorrect\n                     - The specified key does not exist\n                ",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": " The id of the key to use. The key must be loaded with upload_mission_key before.\n           The key id -1 selects the spacecraft master key.",
+          "max_value": 1023,
+          "min_value": -1,
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "desc": " Select the specified mission key for the encryption of\n           downlink_file_as_sft, downlink_image and downlink_file_slot commands.\n       ",
+      "module": "files",
+      "name": "select_mission_key",
+      "response_desc": " Execution status of the command. The command is rejected if:\n                    - The specified key does not exist\n                    - The CRC is incorrect.",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Force old IV format if set to true",
+          "name": "old_format",
+          "type": "bool"
+        }
+      ],
+      "desc": " Select the old IV format for for the encryption of\n           downlink_file_as_sft sft packet, downlink_image and downlink_file_slot commands.\n       ",
+      "module": "files",
+      "name": "force_old_iv_format",
+      "response_desc": " Execution status of the command. ",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "max_value": 1365,
+          "min_value": 0,
+          "name": "slot_id",
+          "type": "int"
+        },
+        {
+          "desc": "Used in combination with a master key to generate an encryption key.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "downlink_key_index",
+          "type": "int"
+        }
+      ],
+      "desc": "Downlink the specified image file over the X-band downlink.",
+      "module": "files",
+      "name": "downlink_image",
+      "response_desc": "",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "max_value": 1365,
+          "min_value": 0,
+          "name": "slot_id",
+          "type": "int"
+        }
+      ],
+      "desc": "Erase PIC Image Slot.",
+      "module": "files",
+      "name": "erase_image",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": "BOTH",
+          "desc": "UP, DOWN, or BOTH",
+          "name": "direction",
+          "sc_optional": true,
+          "type": "enum.UDPCastDirection"
+        }
+      ],
+      "desc": " Stop any ongoing file transfers.\n\n           The command is treated as successful even if there are no sessions to terminate.",
+      "module": "files",
+      "name": "kill_file_transfer",
+      "response_desc": "Indicates what was canceled",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Path to the file",
+          "name": "file_path",
+          "type": "str"
+        },
+        {
+          "desc": "key index to use to decrypt the file once it is in space",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "key_index",
+          "type": "int"
+        },
+        {
+          "desc": "hexlified string representing the initialization vector, spacecraft uses this to decrypt",
+          "name": "iv",
+          "type": "str"
+        },
+        {
+          "default": 30,
+          "desc": "  Receiver aborts at start if it doesn't see a sender within this many seconds.\n            Once transmission is started, the timeout no longer applies.",
+          "name": "start_timeout_sec",
+          "type": "int"
+        },
+        {
+          "default": 120,
+          "desc": "  Receiver aborts during transmission if it doesn't see a packet from the sender within this many seconds.\n            This timeout only applies once transmission has started. ",
+          "name": "receive_timeout_sec",
+          "type": "int"
+        },
+        {
+          "default": false,
+          "desc": "  If true, the FSW will try to decompress the file with zstd. ",
+          "name": "is_compressed",
+          "sc_optional": true,
+          "type": "bool"
+        }
+      ],
+      "desc": "Uplink file (may be split into multiple SFT packets if necessary) and store it at the specified path.",
+      "module": "files",
+      "name": "uplink_file",
+      "response_desc": "Indicates whether udp-receiver began correctly",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "STANDBY",
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Path to the file",
+          "name": "file_path",
+          "type": "str"
+        },
+        {
+          "desc": " File content compressed into a z-standard archive and then encoded in Base64.",
+          "name": "file_data",
+          "type": "str"
+        }
+      ],
+      "desc": "Uplink a small file with a single command and store it at the specified path.",
+      "module": "files",
+      "name": "uplink_file_as_sft",
+      "response_desc": " String describing the command execution result. Example responses:\n\n                    SUCCEEDED uplink_file_as_sft: /var/sfs/maintenance/file.tmp\n\n                    FAILED uplink_file_as_sft: InvalidArgument('File already exists.',) ",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "name": "src_packet",
+          "type": "enum.SrcPacket"
+        },
+        {
+          "desc": "  The downlink band (aka channel, i.e. X-band vs. UHF).\n\n            NB: S_BAND is not valid option since it is not a downlink channel.",
+          "name": "comm_channel_dest",
+          "type": "enum.CommChannel"
+        },
+        {
+          "desc": "Used in combination with a master key to generate a Service ID specific encryption key.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "downlink_key_index",
+          "type": "int"
+        }
+      ],
+      "desc": "  Sets downlink band (aka channel, i.e. X-band vs. UHF) for a particular service.\n\n            DEPRECATED!!! Use set_downlink_route and/or set_downlink_key",
+      "module": "radios",
+      "name": "set_downlink_channel",
+      "response_desc": "Echo the arguments",
+      "slow_cmd": false,
+      "status": "Fully implemented in software, but deprecated for set_downlink_route and set_downlink_key"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Specify the type of packet (eg command responses, downlinked data, streams) being re-routed",
+          "name": "src_packet",
+          "type": "enum.SrcPacket"
+        },
+        {
+          "desc": "  The downlink band (aka channel, aka route, i.e. X-band vs. UHF).\n\n            NB: S_BAND is not valid option since it is not a downlink channel.",
+          "name": "comm_channel_dest",
+          "type": "enum.CommChannel"
+        }
+      ],
+      "desc": "Sets downlink band (aka channel, aka route, i.e. X-band vs. UHF) for a particular service.",
+      "module": "radios",
+      "name": "set_downlink_route",
+      "response_desc": "Echo the arguments",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Specify the type of packet (eg command responses, downlinked data, streams) being re-keyed",
+          "name": "src_packet",
+          "type": "enum.SrcPacket"
+        },
+        {
+          "desc": "Used in combination with a master key to generate a Service ID specific encryption key.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "downlink_key_index",
+          "type": "int"
+        }
+      ],
+      "desc": "Sets downlink key for a particular service.",
+      "module": "radios",
+      "name": "set_downlink_key",
+      "response_desc": "Echo the arguments",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "name": "xband_mode",
+          "type": "enum.XBandMode"
+        }
+      ],
+      "desc": "Change the mode of the X-Band radio.",
+      "module": "radios",
+      "name": "change_x_band_mode",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Send 'UHF' or 'S_BAND'",
+          "name": "radio_band",
+          "type": "str"
+        },
+        {
+          "desc": "For the relevant command of loading a preset channel, send a value here: [A, P] for UHF, [A, J] for S_BAND",
+          "name": "preset_channel",
+          "type": "str"
+        }
+      ],
+      "desc": "Load a preset channel to the S-Band or UHF Radio pre-specified command to s-band.",
+      "module": "radios",
+      "name": "load_radio_channel",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Send 'UHF' or 'S_BAND'",
+          "name": "radio_band",
+          "type": "str"
+        }
+      ],
+      "desc": "Query the S-Band or UHF Radio for its ID",
+      "module": "radios",
+      "name": "query_radio_identity",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "Send 'UHF' or 'S_BAND'",
+          "name": "radio_band",
+          "type": "str"
+        }
+      ],
+      "desc": "Query the S-Band or UHF Radio for its status",
+      "module": "radios",
+      "name": "radio_system_check",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "argument": [
+        {
+          "desc": "One of the allowed spacecraft modes. see enum.SpacecraftMode.",
+          "name": "spacecraft_mode",
+          "type": "enum.SpacecraftMode"
+        }
+      ],
+      "desc": "Transitions satellite to the commanded mode",
+      "module": "interface",
+      "name": "change_mode",
+      "response_desc": "Confirmation of mode change or error if already in that mode, or mode change not allowed",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "argument": [
+        {
+          "desc": "Path to the mission script file",
+          "name": "file_path",
+          "type": "str"
+        }
+      ],
+      "desc": "Execute mission script located at specified path.\n\n          The mission script can be either a plain-text JSON file, or it can be compressed with Zstandard",
+      "module": "interface",
+      "name": "execute_script",
+      "response_desc": "Result of queueing script including noting if file not found or if script is in the past.",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "desc": "Get the active Mission Script ID.",
+      "module": "interface",
+      "name": "get_active_script_id",
+      "response_desc": "The 'script_id' field of the active script, or -1 if no script is active.\n\n                   Example response: SUCCEEDED get_active_script_id: 153",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "argument": [
+        {
+          "default": "POSIX",
+          "desc": "A string which selects the format of the command response.\n\n        The command accepts two values: 'POSIX' and 'CURRENT'.\n\n        POSIX: Time returned is 'Unix Time', or seconds from the epoch (00:00:00Z 1 Jan 1970).\n\n        CURRENT: Time returned is relative to current s/c time",
+          "name": "time_reference",
+          "type": "enum.TimeReference"
+        }
+      ],
+      "desc": "Get the time remaining in the current script.\n\n          This time is computed by inspecting the script queue, with no consideration for command\n          execution time or other delays.\n       ",
+      "module": "interface",
+      "name": "get_script_time_remaining",
+      "response_desc": "The number of seconds, as a positive floating point value, until the last\n                   command of the active Mission Script is executed, or an offset of zero if no\n                   script commands are queued.\n\n                   Example response: SUCCEEDED get_script_time_remaining: 23.60264825820923",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Path to the file",
+          "name": "file_path",
+          "type": "str"
+        }
+      ],
+      "desc": "Delete file at arbitrary path. Responds with path of deleted file.",
+      "module": "files",
+      "name": "delete_file",
+      "response_desc": "Result of rm operation, plus a status on the available storage",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "Stop writing to the current health log file and close it out.",
+      "module": "logs",
+      "name": "flush_log",
+      "response_desc": "Path to closed out log file, plus a status on the available storage",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "name": "log_type",
+          "type": "enum.LogType"
+        },
+        {
+          "desc": "Unix timestamp",
+          "max_value": 4294967294,
+          "min_value": 0,
+          "name": "start_time",
+          "type": "int"
+        },
+        {
+          "desc": "  Unix timestamp.\n\n            If you pass 4294967295 here then the spacecraft will interpret that to mean 'give me\n            logs up to right now' with 'now' being the spacecraft's version of now at the time of\n            command execution. The filename of the gathered log will contain this 'now' time, it will\n            NOT contain 4294967295.",
+          "max_value": 4294967295,
+          "min_value": 1,
+          "name": "end_time",
+          "type": "int"
+        }
+      ],
+      "desc": "Search within log files to create file covering desired range.",
+      "module": "logs",
+      "name": "gather_logs",
+      "response_desc": "Path to prepared file, plus a status on the available storage",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "name": "log_type",
+          "type": "enum.LogType"
+        },
+        {
+          "desc": "Unix timestamp",
+          "max_value": 4294967294,
+          "min_value": 0,
+          "name": "start_time",
+          "type": "int"
+        },
+        {
+          "desc": "Unix timestamp",
+          "max_value": 4294967295,
+          "min_value": 1,
+          "name": "end_time",
+          "type": "int"
+        }
+      ],
+      "desc": "Used to delete the log files created by the spacecraft, notably different from the ones created by Operators",
+      "module": "logs",
+      "name": "delete_spacecraft_log_files",
+      "response_desc": "Files deleted, plus a status on the available storage",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": 5,
+          "desc": "Approximate time between consecutive telemetry packets.",
+          "max_value": 1200,
+          "min_value": 1,
+          "name": "sec_between_packets",
+          "type": "int"
+        },
+        {
+          "default": 600,
+          "desc": "  Duration, in seconds, the stream should be in effect.\n\n            0 means to turn off streaming now.\n            This command only affects previously commanded streams. Beaconing is controlled separately via SAPs.",
+          "max_value": 1200,
+          "min_value": 0,
+          "name": "enabled_duration_sec",
+          "type": "int"
+        }
+      ],
+      "desc": "Stream telemetry packets at a specified period for a specified duration.",
+      "module": "logs",
+      "name": "stream_telemetry",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": 600,
+          "desc": "Duration, in seconds, that command should be in effect. 0 means to turn off streaming now.",
+          "max_value": 1200,
+          "min_value": 0,
+          "name": "enabled_duration_sec",
+          "type": "int"
+        }
+      ],
+      "desc": " Begin streaming new syslog entries using SFT service ID REALTIME_SYSLOG.\n\n           Syslog entries occuring after this command will emitted as an SFT packet.",
+      "module": "logs",
+      "name": "stream_system_logs",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "Stop the beacon",
+      "module": "interface",
+      "name": "stop_beacon",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "Start periodic telemetry output (the beacon).\n\n          The beacon is a single-packet transmission of telemetry. When active, it occurs at a\n          SAP-defined frequency and is intended for us to hear proof-of-life from the spacecraft\n          in the event of loss of commanding or nominal communications ability.\n\n          The beacon is issued from the telemetry service on board the spacecraft, and it utilizes\n          the same code as a nominal stream telemetry command does. Commanded streams take priority\n          over autonomous beaconing, so if the spacecraft is streaming telemetry from a ground\n          command, no beacon is sent.",
+      "module": "interface",
+      "name": "start_beacon",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "desc": "Respond and log a 'no-op' for troubleshooting testing.",
+      "module": "interface",
+      "name": "no_op",
+      "response_desc": "No-Op",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "argument": [
+        {
+          "desc": "verbatim message to stick into the system log",
+          "name": "message",
+          "type": "str"
+        }
+      ],
+      "desc": "Print a message into the syslog. Used for marking operational intentions",
+      "module": "interface",
+      "name": "log_message",
+      "response_desc": "Ack",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "an (IP,Port) output address (typically '192.168.53.7,8006')",
+          "name": "transmit_addr",
+          "type": "str"
+        }
+      ],
+      "desc": "DEPRECATED\n\n          Has no effect now as the command backchannel is always active. Kept for compatibility\n          with existing tools.",
+      "module": "backdoor",
+      "name": "open_cmdseq_side_door",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Path to the already uplinked updated updates.toml file",
+          "name": "toml_file_path_str",
+          "type": "str"
+        },
+        {
+          "desc": "Path to the already uplinked new command python file",
+          "name": "cmd_file_path_str",
+          "type": "str"
+        }
+      ],
+      "desc": "Update the updates.toml to load new commands from a new python file.\n\n          Both must have already been uplinked.",
+      "module": "backdoor",
+      "name": "update_toml",
+      "response_desc": "Ack with script path if present",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Case-sensitive name of SAP to be updated.",
+          "name": "sap_id",
+          "type": "str"
+        },
+        {
+          "desc": "  All sap values will be stored as strings, then later interpretated as needed.\n            If you are updating a boolean SAP, you *must* use 1 for True and 0 for False.",
+          "name": "new_sap_value",
+          "type": "str"
+        },
+        {
+          "default": "CURRENT",
+          "desc": " The flight software image being updated. Use CURRENT to specify the currently booted image.\n\n           In Checkout mode, use ALL to specify all images, including the non-booted ones.",
+          "name": "target_image",
+          "sc_optional": true,
+          "type": "enum.FswImage"
+        }
+      ],
+      "desc": " Stage an update of a SAP with the specified value.\n\n           When updating a SAP on the booted image, the new value does not take effect until a\n           commit_sap_updates command is executed. The new value is not written to non-volatile\n           storage until a save_sap_updates command is executed for the image.\n\n           When updating a SAP on a non-booted image, the new value is not written to the image\n           until a save_sap_updates command is executed for the image.\n\n           It is possible to clear the staged updates without committing/saving them by issuing the\n           erase_pending_sap_updates command for a given image.",
+      "module": "saps",
+      "name": "update_sap",
+      "response_desc": "  A JSON document with the following entries:\n                     'sap_id': Mirror the 'sap_id' command argument\n                     'new_sap_value': Mirror the 'new_sap_value' command argument\n                     'target_image': Mirror the 'target_image' command argument, also resolving the value CURRENT to the booted image\n                     'old_sap_value': The value of the SAP before update, as it would be returned by the query_sap command (None when updating ALL images at once)",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": "CURRENT",
+          "desc": "The flight software image being queried. Use CURRENT to specify the currently booted image.",
+          "name": "target_image",
+          "sc_optional": true,
+          "type": "enum.FswImage"
+        }
+      ],
+      "desc": " Print the staged SAP updates.\n\n           Updates are staged with the update_sap command and cleared with the\n           erase_pending_sap_updates command or by applying the updates with commit_sap_updates\n           (for the booted image) or save_sap_updates (for non-booted images).",
+      "module": "saps",
+      "name": "print_pending_sap_updates",
+      "response_desc": "  A JSON document with the following entries:\n                     'target_image': Mirror the 'target_image' command argument, also resolving the value CURRENT to the booted image\n                     'pending_updates': The pending SAP updates, as a dictionary indexed by the name of each SAP being updated.\n                                        Each item in the dictionary contains a 'value' entry with the value of the corresponding SAP",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "  Creates a JSON document in /tmp/file_lists with all the active SAPs and their values.\n\n            The document contains a single entry 'saps', a dictionary indexed by the name of each SAP.\n            Each item in the dictionary contains a 'value' entry with the value of the corresponding SAP.\n\n            Note that if called within a mission script, the satellite model on the ground may not have\n            the correct expected file name. Use a list_files on that directory to be sure. See FSW-2652.\n",
+      "module": "saps",
+      "name": "print_active_sap_values",
+      "response_desc": "  A JSON document with the following entries:\n                     'result_file_path': The path to the side-effect file containing the active SAP values",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": "CURRENT",
+          "desc": "The flight software image being queried. Use CURRENT to specify the currently booted image.",
+          "name": "target_image",
+          "sc_optional": true,
+          "type": "enum.FswImage"
+        }
+      ],
+      "desc": " Creates a JSON file in /tmp/file_lists with all the SAPs and their values which are saved to non-volatile memory.\n\n            The document contains the following entries:\n            'source_image': Mirror the 'target_image' command argument, also resolving the value CURRENT to the booted image\n            'saps': A dictionary indexed by the name of each SAP. Each item in the dictionary contains a 'value' entry with\n                    the value of the corresponding SAP.\n\n            Note that if called within a mission script, the satellite model on the ground may not have\n            the correct expected file name. Use a list_files on that directory to be sure. See FSW-2652.\n            Also note that even if this command returns a successful message, it will fail to create a file\n            if the save_sap_updates Mission Command has never been called and no non-volatile SAPs files exist.\n",
+      "module": "saps",
+      "name": "print_saved_sap_values",
+      "response_desc": "  A JSON document with the following entries:\n                     'target_image': Mirror the 'target_image' command argument, also resolving the value CURRENT to the booted image\n                     'result_file_path': The path to the side-effect file containing the active SAP values",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": " Commit the SAP updates staged for the booted image to the active database in volatile memory.\n\n           This action clears all SAP updates staged for the booted image upon successful commit\n           (like the erase_pending_sap_updates command would do).\n\n           Until the save_sap_updates mission command is called, committed SAPs will be lost upon a\n           panic, alarm or sap-service restart. If the save_sap_updates mission command is not\n           called within a duration determined by the SapCommitTimeoutMinutes SAP, then sap-service\n           will alarm the spacecraft after calling this to activate updated SAPs. Calling this\n           command again will reset the SAP Commit Timeout timer to the current value of the\n           SapCommitTimeoutMinutes SAP.",
+      "module": "saps",
+      "name": "commit_sap_updates",
+      "response_desc": "  A JSON document with the following entries:\n                     'num_committed_updates': The number of pending SAP updates that were committed",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": "CURRENT",
+          "desc": "The flight software image being updated. Use CURRENT to specify the currently booted image.",
+          "name": "target_image",
+          "sc_optional": true,
+          "type": "enum.FswImage"
+        }
+      ],
+      "desc": " Clear the SAP updates staged with the update_sap command.\n\n           For the booted image, staged SAP updates can be cleared up to the call to\n           commit_sap_updates. To undo any SAPs that are committed but not saved with the\n           save_sap_updates command, call the alarm_spacecraft mission command.\n\n           For non-booted images, staged SAP updates can be cleared up to the call to\n           save_sap_updates for the image.",
+      "module": "saps",
+      "name": "erase_pending_sap_updates",
+      "response_desc": "  A JSON document with the following entries:\n                     'target_image': Mirror the 'target_image' command argument, also resolving the value CURRENT to the booted image\n                     'num_erased_updates': The number of pending SAP updates that were cleared",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "default": "CURRENT",
+          "desc": " The flight software image being updated. Use CURRENT to specify the currently booted image.\n\n           In Checkout mode, use ALL to specify all images, including the non-booted ones.",
+          "name": "target_image",
+          "sc_optional": true,
+          "type": "enum.FswImage"
+        }
+      ],
+      "desc": " Store all SAP values into non-volatile memory.\n\n           For the booted image, this operation copies the active database from volatile memory into\n           non-volatile memory. This means that desired SAP changes must be first committed through\n           the commit_sap_updates operation. Attempting to execute the save_sap_updates command\n           while updates are staged to the booted image results in an error.\n\n           For non-booted images, this operation writes all the updates staged for the image\n           directly into non-volatile memory, and clears the staged updates (like the\n           erase_pending_sap_updates command would do).",
+      "module": "saps",
+      "name": "save_sap_updates",
+      "response_desc": "  A JSON document with the following entries:\n                     'target_image': Mirror the 'target_image' command argument, also resolving the value CURRENT to the booted image",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Case-sensitive name of SAP to be queried.",
+          "name": "sap_id",
+          "type": "str"
+        },
+        {
+          "default": "CURRENT",
+          "desc": "The flight software image being queries. Use CURRENT to specify the currently booted image.",
+          "name": "target_image",
+          "sc_optional": true,
+          "type": "enum.FswImage"
+        }
+      ],
+      "desc": " Return current value of the specified SAP.\n\n           For the booted image, this value corresponds to the active value (in volatile memory).\n\n           For non-booted images, this value is the one stored in non-volatile storage.",
+      "module": "saps",
+      "name": "query_sap",
+      "response_desc": "  A JSON document with the following entries:\n                     'sap_id': Mirror the 'sap_id' command argument\n                     'target_image': Mirror the 'target_image' command argument, also resolving the value CURRENT to the booted image\n                     'sap_value': The current value of the SAP\n                     For the booted image, the current value is defined as the active (volatile) value.\n                     For non-booted images, the current value is defined as the saved (non-volatile) value.",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "name": "sc_file_type",
+          "type": "enum.ScFileType"
+        },
+        {
+          "default": "/var/sfs/*",
+          "desc": "When looking for GENERAL files, provide a filepath to return",
+          "name": "custom_path",
+          "type": "str"
+        },
+        {
+          "default": "*",
+          "desc": "Optionally provide a file name pattern to search for. For HEALTH or SYSTEM log searches, this is disregarded.",
+          "name": "file_name_pattern",
+          "type": "str"
+        },
+        {
+          "default": false,
+          "desc": "Possibly temp option to provide md5sum as hex with the files. We will test its use on perf and timing.",
+          "name": "provide_hash",
+          "type": "bool"
+        }
+      ],
+      "desc": "Given a file type, list all such files on the s/c",
+      "module": "files",
+      "name": "list_files",
+      "response_desc": "List of file paths of specified type",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "source file path. Globbing is supported on file name.",
+          "name": "source_file",
+          "type": "str"
+        },
+        {
+          "desc": "destination file path or destination directory if globbing is used for source file.",
+          "name": "destination",
+          "type": "str"
+        }
+      ],
+      "desc": "Copy source file to destination, or multiple source files to directory.",
+      "module": "files",
+      "name": "copy_files",
+      "response_desc": "if command is successful, returns the list of file copied as (source_path, dest_path) couples",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "The master key",
+          "name": "master_key",
+          "type": "str"
+        },
+        {
+          "default": false,
+          "desc": "Confirms that you really want to update the master key",
+          "name": "confirm",
+          "type": "bool"
+        }
+      ],
+      "desc": "Updates master key. Requires confirmation",
+      "module": "backdoor",
+      "name": "update_master_key",
+      "response_desc": "Master key received (for the first command), Master key accepted (for the second time)",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "name": "component",
+          "type": "enum.PwmComponent"
+        },
+        {
+          "desc": "  Percentage of duty cycle.\n\n            Note: Battery heater power supply duty cycles are nominally commanded by flight software.\n            Unless that functionality is disabled, the effects of this command may be over-ridden by software commands.",
+          "max_value": 1,
+          "min_value": 0,
+          "name": "power_supply_duty",
+          "type": "float"
+        }
+      ],
+      "desc": "Sets the pulse-width modulation duty-cycle of a given non-essential bus power.",
+      "module": "power",
+      "name": "set_power",
+      "response_desc": "Echo commanded duty cycle",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "name": "component",
+          "type": "enum.PowerHBridge"
+        },
+        {
+          "desc": "  [0, 1] 1 = North end of a compass points in the positive direction. 0 = North end of a compass points in the negative direction.\n            Note: Torque rod h-bridge polarity is nominally commanded by flight software.\n            Unless that functionality is disabled, the effects of this command may be over-ridden by software commands.",
+          "name": "power_supply_polarity",
+          "type": "bool"
+        },
+        {
+          "desc": "  Percentage of duty cycle. Will be combined with power_supply_polarity above to map to [-1, 1] range.\n\n            Note: Torque rod power supply duty cycles are nominally commanded by flight software.\n            Unless that functionality is disabled, the effects of this command may be over-ridden by software commands.",
+          "max_value": 1,
+          "min_value": 0,
+          "name": "power_supply_duty",
+          "type": "float"
+        }
+      ],
+      "desc": "Sets the pulse-width modulation duty-cycle and polarity of a given non-essential bus power.",
+      "module": "power",
+      "name": "set_h_bridge",
+      "response_desc": "Echo commanded duty cycle and polarity",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "argument": [
+        {
+          "desc": "",
+          "name": "component",
+          "type": "enum.SwitchComponent"
+        },
+        {
+          "default": true,
+          "desc": "True turns on the power supply. False turns it off.",
+          "name": "enable_power",
+          "type": "bool"
+        }
+      ],
+      "desc": "Enables or disables a given non-essential bus power.",
+      "module": "power",
+      "name": "switch_power",
+      "response_desc": "ack",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "True turns on the PIC card. False turns it off.",
+          "name": "enable_pic",
+          "type": "bool"
+        },
+        {
+          "desc": "True turns on the camera. False turns it off. If turning it on, enable_pic should also be set.",
+          "name": "enable_camera",
+          "type": "bool"
+        },
+        {
+          "desc": "True turns on the x-band radio. False turns it off. If turning it on, enable_pic should also be set.",
+          "name": "enable_xband",
+          "type": "bool"
+        }
+      ],
+      "desc": "Turn on/off components related to the pic card: PIC, CAMERA, and X_BAND. Under nominal conops,\n          this command should be used instead of switch_power because of interdependencies of these components. For example,\n          x-band radio and camera should not be turned on until *after* pic card has been turned on and boot sequence is finished.\n          See FSW-2150.",
+      "module": "power",
+      "name": "switch_power_pic",
+      "response_desc": "ack",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Name of the service to restart",
+          "name": "service_name",
+          "type": "enum.FSWService"
+        }
+      ],
+      "desc": "  This is a command to wrap a systemctl call to restart a service. The available services are\n            limited to services that are able to independetly restart without compromising the system's\n            overall stability.",
+      "module": "faults",
+      "name": "restart_fsw_service",
+      "response_desc": "ACK",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "  Send an 'Alarm' signal to health-service.\n\n            This is referred to as a 'Soft Reset' in the requirements, and implemented in FSW via\n            the internal 'Alarm' operation.\n\n            Kills and restarts all Flight Software services. Other OS services, such as\n            systemd-journald, are not restarted. Upon FSW restart, the S/C enters safe mode. This\n            causes all external devices to be powered off. Devices are then powered on according to\n            the defined Safe Mode Power State. If multiple Alarms are issued without the S/C\n            leaving Safe Mode, the Alarm will escalate to a hard reset per a SAP value.",
+      "module": "faults",
+      "name": "alarm_spacecraft",
+      "response_desc": "ACK",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "   Command the FCPU to perform an orderly OS shutdown and reboot.\n\n             All FSW and OS services are stopped and non-volatile storage unmounted.\n             Upon restart of the FCPU, OS services and FSW services are started.\n             The S/C enters safe mode.\n             Devices are then powered on according to the defined Safe Mode Power State.",
+      "module": "faults",
+      "name": "reboot_flight_computer",
+      "response_desc": "ACK",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "  Send a 'Panic' signal to health-service.\n\n            This is referred to as a 'Hard Reset' in the requirements, and implemented in FSW via\n            the internal 'Panic' operation.\n\n            FCPU sends a 'System Reset' command to the PCU.\n            The PCU has a 5 second hold-off before the command is executed.\n            During the hold-off, the FPCU performs an orderly OS shutdown and halt.\n            When the hold-off expires, the PCU inhibits power to the Flight Computer and disables all NEB channels.\n            The PCU holds the Flight Computer in reset for 3 seconds.\n            The PCU then releases the power inihibit and allows the flight computer to power itself back up.\n            Upon restart of the FCPU, OS services and FSW services are started.\n            The S/C enters safe mode.\n            Devices are then powered on according to the defined Safe Mode Power State.",
+      "module": "faults",
+      "name": "panic_spacecraft",
+      "response_desc": "ID of software service restarted",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "Return version of flight software to verify configuration.",
+      "module": "interface",
+      "name": "query_software_version",
+      "response_desc": "Version of flight software",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL",
+        "DISPOSAL"
+      ],
+      "argument": [
+        {
+          "desc": "String containing a shell command.",
+          "name": "shell_cmd",
+          "type": "str"
+        },
+        {
+          "default": true,
+          "desc": "If true (the default), wait for process exit and command response will contain stdout, stderr, and exit code.\n          If false, don't wait for exit. stdout/stderr/exitcode will appear in the syslog.",
+          "name": "wait_for_exit",
+          "type": "bool"
+        },
+        {
+          "default": 10,
+          "desc": "Timeout in seconds. Shell process will be terminated if it's still running after this long.",
+          "min_value": 0,
+          "name": "timeout_sec",
+          "type": "float"
+        }
+      ],
+      "desc": "Executes a shell command. Ye gods be careful.",
+      "module": "backdoor",
+      "name": "run_shell_script",
+      "response_desc": "Shell output",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Which pic register to read.",
+          "max_value": 255,
+          "min_value": 0,
+          "name": "register",
+          "type": "int"
+        }
+      ],
+      "desc": "Read a pic register. Requires PIC to be turned on.",
+      "module": "pic",
+      "name": "pic_read_register",
+      "response_desc": "Value in the register",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Which pic register to write to.",
+          "max_value": 255,
+          "min_value": 0,
+          "name": "register",
+          "type": "int"
+        },
+        {
+          "desc": "The value to write to the pic register.",
+          "max_value": 4294967295,
+          "min_value": 0,
+          "name": "write_value",
+          "type": "int"
+        }
+      ],
+      "desc": "Write a value to a pic register. Requires PIC to be turned on.",
+      "module": "pic",
+      "name": "pic_write_register",
+      "response_desc": "Echo the arguments",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Which camera register to read.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "register",
+          "type": "int"
+        }
+      ],
+      "desc": " Read a camera register.\n\n           Requires PIC to be turned on. Payload is passed to camera over its command interface.",
+      "module": "camera",
+      "name": "camera_read_register",
+      "response_desc": "Value in the register",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Which camera register to write to.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "register",
+          "type": "int"
+        },
+        {
+          "desc": "The value to write to the camera register.",
+          "max_value": 4294967295,
+          "min_value": 0,
+          "name": "write_value",
+          "type": "int"
+        }
+      ],
+      "desc": "Write a value to a camera register.\n\n          Requires PIC to be turned on. Payload is passed to camera over its command interface.",
+      "module": "camera",
+      "name": "camera_write_register",
+      "response_desc": "Outcome of the write",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Exposure time in microseconds",
+          "max_value": 16777215,
+          "min_value": 8,
+          "name": "time_usec",
+          "type": "int"
+        }
+      ],
+      "desc": "  Set camera exposure time in microseconds.\n\n            Requires PIC to be turned on. Payload is passed to camera over its command interface.\n\n            This command is required as part of imaging conops. Camera may be powered down between images. This setting will not be\n            persisted over camera power cycles.",
+      "module": "camera",
+      "name": "set_camera_exposure_time",
+      "response_desc": "Outcome of the write",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "Camera AOI mode",
+          "name": "enable_aoi",
+          "type": "bool"
+        },
+        {
+          "desc": "AOI window width in pixels",
+          "max_value": 6600,
+          "min_value": 2,
+          "name": "h_width",
+          "type": "int"
+        },
+        {
+          "desc": "AOI window horizontal offset in pixels",
+          "max_value": 6598,
+          "min_value": 0,
+          "name": "h_offset",
+          "type": "int"
+        },
+        {
+          "desc": "AOI window height in pixels",
+          "max_value": 4400,
+          "min_value": 2,
+          "name": "v_height",
+          "type": "int"
+        },
+        {
+          "desc": "AOI window vertical offset in pixels",
+          "max_value": 4398,
+          "min_value": 0,
+          "name": "v_offset",
+          "type": "int"
+        }
+      ],
+      "desc": "  Set camera AOI mode and parameters\n\n            Requires PIC to be turned on. Payload is passed to camera over its command interface.\n\n            The total number of pixels (h_width * v_height) must be a multiple of 16. All numeric parameters must be even.\n\n            This command is required as part of imaging conops. Camera may be powered down between images. This setting will not be\n            persisted over camera power cycles.",
+      "module": "camera",
+      "name": "set_camera_aoi",
+      "response_desc": "Outcome of the write",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "how long we will wait (max) for constraints to be met",
+          "max_value": 15000,
+          "min_value": 0,
+          "name": "capture_timeout_ms",
+          "type": "int"
+        },
+        {
+          "desc": "",
+          "max_value": 1365,
+          "min_value": 0,
+          "name": "slot_id",
+          "type": "int"
+        },
+        {
+          "desc": "The UID associated with the file, helps identify the file upon encryption. Should be unique for each payload+key combo.",
+          "max_value": 4294967295,
+          "min_value": 0,
+          "name": "file_uid",
+          "type": "int"
+        }
+      ],
+      "desc": "  Capture image with payload camera.\n\n            Constraints are evaluated when the camera is properly configured with the specified\n            integration time and is ready for image capture. If constraints are met, the image is\n            captured in sync with the next ADCS time-step so that the ADCS telemetry will be\n            time-matched with the exposure. If constraints are not met and the capture_timeout is\n            reached, the image will still be taken at that point.",
+      "module": "camera",
+      "name": "capture_image",
+      "response_desc": "",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": " Enable open-ended transfer to PIC volatile memory.\n\n           Supported on block2-3+. When 'false', the command writes images to slots in PIC NAND. When 'true', the\n           images are left in PIC RAM, allowing the command to complete earlier.\n\n           capture_image_sequence may be called with 'more' unset to write images already in DDR to NAND.\n\n           A maximum of 89 images may stored at once in PIC DDR.\n       ",
+          "name": "more",
+          "sc_optional": true,
+          "type": "bool"
+        },
+        {
+          "desc": "  Delay before image capture.\n\n            For the first capture, how long to wait (max) for constraints to be met. For other captures, the delay\n            between that capture and the previous capture.\n       ",
+          "element_type": "int",
+          "name": "capture_delays_ms",
+          "type": "list"
+        },
+        {
+          "desc": "",
+          "element_type": "int",
+          "name": "slot_ids",
+          "type": "list"
+        },
+        {
+          "desc": "The UID associated with the file, helps identify the file upon encryption. Should be unique for each payload+key combo.",
+          "element_type": "int",
+          "name": "file_uids",
+          "type": "list"
+        },
+        {
+          "desc": "Exposure time for each image. Set to zero for previous exposure time.",
+          "element_type": "int",
+          "name": "exposures_us",
+          "type": "list"
+        }
+      ],
+      "desc": "  Capture images with payload camera.",
+      "module": "camera",
+      "name": "capture_image_sequence",
+      "response_desc": "",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "ST1 or ST2",
+          "name": "component_id",
+          "type": "enum.STComponent"
+        },
+        {
+          "desc": "  Diagnostic Channel -- Function\n            0x00 -- Reset Reason\n            0x01 -- Reset Count\n            0x02 -- Internal Framing Error Count\n            0x03 -- Internal Runt Packet Count\n            0x04 -- Internal Oversize Packet Count\n            0x05 -- Internal Bad CRC Count\n            0x06 -- Internal FIFO Overflow Count\n            0x07 -- External Framing Error Count\n            0x08 -- External Runt Packet Count\n            0x09 -- External Oversize Packet Count\n            0x0A -- External Bad CRC Count\n            0x0B -- External FIFO Overflow Count\n       ",
+          "max_value": 11,
+          "min_value": 0,
+          "name": "diagnostic_channel",
+          "type": "int"
+        }
+      ],
+      "desc": "Return error statistics.",
+      "module": "star_tracker",
+      "name": "get_star_tracker_diagnostic",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "ST1 or ST2",
+          "name": "component_id",
+          "type": "enum.STComponent"
+        }
+      ],
+      "desc": "Primarily used to start a solution cycle, though there are other uses.",
+      "module": "star_tracker",
+      "name": "begin_star_tracker_solution_cycle",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "CHECKOUT"
+      ],
+      "argument": [
+        {
+          "desc": "ST1 or ST2",
+          "name": "component_id",
+          "type": "enum.STComponent"
+        },
+        {
+          "desc": "",
+          "max_value": 2616,
+          "min_value": 0,
+          "name": "start_address_bytes",
+          "type": "int"
+        },
+        {
+          "desc": "",
+          "max_value": 1026,
+          "min_value": 1,
+          "name": "num_bytes",
+          "type": "int"
+        }
+      ],
+      "desc": "Read one specific segment of the result structure.",
+      "module": "star_tracker",
+      "name": "read_star_tracker_result",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "ST1 or ST2",
+          "name": "component_id",
+          "type": "enum.STComponent"
+        }
+      ],
+      "desc": "During next solution cycle save entire result structure to file. Required for on-orbit re-calibration.",
+      "module": "star_tracker",
+      "name": "save_star_tracker_result",
+      "response_desc": "",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "argument": [
+        {
+          "desc": "check or fixup",
+          "name": "nand_op",
+          "type": "enum.STNandOp"
+        },
+        {
+          "desc": "ST1 or ST2",
+          "name": "component_id",
+          "type": "enum.STComponent"
+        }
+      ],
+      "desc": " Initiate Star Tracker NAND Check/Fixup.\n           Operates on the specified Star Tracker's NAND flash\n           The operation(s) are run in the background and take\n           from 1 to 2 minutes to complete. During this time\n           both Star Trackers are disabled.\n\n           A report of the operation(s) is placed in the syslogs.\n\n           If the specified operation is 'check'\n               then only check ST-NAND\n           If the specified operation is 'fixup'\n               then first check ST-NAND,\n               then run the fixup's as needed on ST-NAND,\n               then check again to verify the fixup's were effective.\n       ",
+      "module": "star_tracker",
+      "name": "star_tracker_nand_ops",
+      "response_desc": "",
+      "slow_cmd": true,
+      "status": "Fully implemented in software"
+    },
+    {
+      "allowed_modes": [
+        "SAFE",
+        "CHECKOUT",
+        "STANDBY",
+        "ACG",
+        "OPERATIONAL"
+      ],
+      "desc": "Retrieve the anomaly report for the most recent alarm/panic/reboot.",
+      "module": "faults",
+      "name": "get_anomaly_report",
+      "response_desc": "Anomaly report",
+      "slow_cmd": false,
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "default": "OPERATIONAL",
+          "desc": "One of the allowed spacecraft modes. see enum.SpacecraftMode.",
+          "name": "spacecraft_mode",
+          "type": "enum.SpacecraftMode"
+        },
+        {
+          "desc": "Used in combination with a master key to generate a Service ID specific encryption key for set_downlink_channels.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "downlink_key_index",
+          "type": "int"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "set_low_power_state",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "default": "OPERATIONAL",
+          "desc": "One of the allowed spacecraft modes. see enum.SpacecraftMode.",
+          "name": "spacecraft_mode",
+          "type": "enum.SpacecraftMode"
+        },
+        {
+          "desc": "Used in combination with a master key to generate a Service ID specific encryption key for set_downlink_channels.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "downlink_key_index",
+          "type": "int"
+        }
+      ],
+      "desc": "",
+      "ground_compound_command": true,
+      "name": "set_base_power_state",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "default": "OPERATIONAL",
+          "desc": "One of the allowed spacecraft modes. see enum.SpacecraftMode.",
+          "name": "spacecraft_mode",
+          "type": "enum.SpacecraftMode"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "set_imaging_power_state",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "default": "OPERATIONAL",
+          "desc": "One of the allowed spacecraft modes. see enum.SpacecraftMode.",
+          "name": "spacecraft_mode",
+          "type": "enum.SpacecraftMode"
+        }
+      ],
+      "desc": "This power state should be the default nominal power state for any contact pass that utilizes XS communications.\n          It does not include commands to track a groundstation.",
+      "ground_compound_command": true,
+      "name": "set_xs_comms_power_state_no_track",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "default": "OPERATIONAL",
+          "desc": "One of the allowed spacecraft modes. see enum.SpacecraftMode.",
+          "name": "spacecraft_mode",
+          "type": "enum.SpacecraftMode"
+        },
+        {
+          "desc": "Three-float list describing position of target on surface of WGS84 ellipsoid (Geodetic Latitude in deg, Longitude in deg, and Elevation in meters above ellipsoid).",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            90.0,
+            180.0,
+            10000.0
+          ],
+          "min_values": [
+            -90.0,
+            -180.0,
+            -1000.0
+          ],
+          "name": "geodetic_vector",
+          "type": "list"
+        },
+        {
+          "default": 0,
+          "desc": "  Desired duration of the slew to the new attitude.\n\n            If set to 0.0, or any other unachievable rate, vehicle performs a max-rate slew. Argument only enables a\n            slew to be intentionally retarded below max-rate.",
+          "min_value": 0.0,
+          "name": "slew_time_sec",
+          "type": "float"
+        },
+        {
+          "default": "SCVelocity",
+          "desc": "Ephemeris Reference used to define remaining degree of freedom.",
+          "name": "ephemeris_reference",
+          "type": "enum.EphemerisReference"
+        },
+        {
+          "default": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "desc": "Three-float list (X, Y, Z) describing clocking unit vector in spacecraft body coordinate system. Default clocks +Y face to sun vector.",
+          "element_count": 3,
+          "element_type": "float",
+          "name": "clocking_unit_vector",
+          "type": "list"
+        },
+        {
+          "default": "EigenSlew",
+          "desc": "What type of slew to use",
+          "name": "slew_type",
+          "type": "enum.SlewType"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "set_xs_comms_power_state",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "default": "OPERATIONAL",
+          "desc": "One of the allowed spacecraft modes. see enum.SpacecraftMode.",
+          "name": "spacecraft_mode",
+          "type": "enum.SpacecraftMode"
+        },
+        {
+          "desc": "Three-float list describing position of target on surface of WGS84 ellipsoid (Geodetic Latitude in deg, Longitude in deg, and Elevation in meters above ellipsoid).",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            90.0,
+            180.0,
+            10000.0
+          ],
+          "min_values": [
+            -90.0,
+            -180.0,
+            -1000.0
+          ],
+          "name": "geodetic_vector",
+          "type": "list"
+        },
+        {
+          "default": 0,
+          "desc": "  Desired duration of the slew to the new attitude.\n\n            If set to 0.0, or any other unachievable rate, vehicle performs a max-rate slew. Argument only enables a\n            slew to be intentionally retarded below max-rate.",
+          "min_value": 0.0,
+          "name": "slew_time_sec",
+          "type": "float"
+        },
+        {
+          "default": "SCVelocity",
+          "desc": "Ephemeris Reference used to define remaining degree of freedom.",
+          "name": "ephemeris_reference",
+          "type": "enum.EphemerisReference"
+        },
+        {
+          "default": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "desc": "Three-float list (X, Y, Z) describing clocking unit vector in spacecraft body coordinate system. Default clocks +Y face to sun vector.",
+          "element_count": 3,
+          "element_type": "float",
+          "name": "clocking_unit_vector",
+          "type": "list"
+        },
+        {
+          "default": "EigenSlew",
+          "desc": "What type of slew to use",
+          "name": "slew_type",
+          "type": "enum.SlewType"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "set_s_comms_power_state",
+      "status": "Fully implemented in software"
+    },
+    {
+      "ground_compound_command": true,
+      "name": "set_imaging_xs_power_state",
+      "status": "Fully implemented in software"
+    },
+    {
+      "ground_compound_command": true,
+      "name": "set_imaging_s_power_state",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "desc": "Three-float list describing position of target on surface of WGS84 ellipsoid (Geodetic Latitude in deg, Longitude in deg, and Elevation in meters above ellipsoid).",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            90.0,
+            180.0,
+            10000.0
+          ],
+          "min_values": [
+            -90.0,
+            -180.0,
+            -1000.0
+          ],
+          "name": "geodetic_vector",
+          "type": "list"
+        },
+        {
+          "default": 0,
+          "desc": "  Desired duration of the slew to the new attitude.\n\n            If set to 0.0, or any other unachievable rate, vehicle performs a max-rate slew. Argument only enables a\n            slew to be intentionally retarded below max-rate.",
+          "min_value": 0.0,
+          "name": "slew_time_sec",
+          "type": "float"
+        },
+        {
+          "default": "SC2Sun",
+          "desc": "Ephemeris Reference used to define remaining degree of freedom.",
+          "name": "ephemeris_reference",
+          "type": "enum.EphemerisReference"
+        },
+        {
+          "default": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "desc": "Three-float list (X, Y, Z) describing clocking unit vector in spacecraft body coordinate system. Default clocks +Y face to sun vector.",
+          "element_count": 3,
+          "element_type": "float",
+          "name": "clocking_unit_vector",
+          "type": "list"
+        },
+        {
+          "default": "EigenSlew",
+          "desc": "What type of slew to use",
+          "name": "slew_type",
+          "type": "enum.SlewType"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "track_comm_target",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "desc": "Used in combination with a master key to generate a Service ID specific encryption key for set_downlink_channels.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "downlink_key_index",
+          "type": "int"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "set_downlink_channel_all_uhf",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "desc": "Used in combination with a master key to generate a Service ID specific encryption key for set_downlink_channels.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "downlink_key_index",
+          "type": "int"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "set_downlink_channel_all_x_band",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "desc": "Used in combination with a master key to generate a Service ID specific encryption key for set_downlink_channels.",
+          "max_value": 65535,
+          "min_value": 0,
+          "name": "downlink_key_index",
+          "type": "int"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "set_downlink_channel_standard",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "desc": "Three-float list describing position of target on surface of WGS84 ellipsoid (Geodetic Latitude in deg, Longitude in deg, and Elevation in meters above ellipsoid).",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            90.0,
+            180.0,
+            10000.0
+          ],
+          "min_values": [
+            -90.0,
+            -180.0,
+            -1000.0
+          ],
+          "name": "geodetic_vector",
+          "type": "list"
+        },
+        {
+          "default": "EigenSlew",
+          "desc": "Ground will use EigenSlew unless we are taking a sequence of images while leaving PIC on, in which case RendezSlew",
+          "name": "slew_type",
+          "type": "enum.SlewType"
+        },
+        {
+          "default": 0,
+          "desc": "  Desired duration of the slew to the new attitude.\n\n            If set to 0.0, or any other unachievable rate, vehicle performs a max-rate slew. Argument only enables a\n            slew to be intentionally retarded below max-rate.",
+          "min_value": 0.0,
+          "name": "slew_time_sec",
+          "type": "float"
+        },
+        {
+          "default": "SCVelocity",
+          "desc": "Ephemeris Reference used to define remaining degree of freedom.",
+          "name": "ephemeris_reference",
+          "type": "enum.EphemerisReference"
+        },
+        {
+          "default": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "desc": "Three-float list (X, Y, Z) describing clocking unit vector in spacecraft body coordinate system. Default clocks +Y face to sun vector.",
+          "element_count": 3,
+          "element_type": "float",
+          "name": "clocking_unit_vector",
+          "type": "list"
+        },
+        {
+          "default": "EigenSlew",
+          "desc": "What type of slew to use",
+          "name": "slew_type",
+          "type": "enum.SlewType"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "track_image_target",
+      "status": "Fully implemented in software"
+    },
+    {
+      "argument": [
+        {
+          "default": "ImageTarget",
+          "desc": "Image and communication targets have different tracking accuracy thresholds set by SAP.",
+          "name": "ground_target",
+          "type": "enum.GroundTarget"
+        },
+        {
+          "desc": "Three-float list describing a target on surface of WGS84 ellipsoid to start scan maneuver (Geodetic Latitude in deg, Longitude in deg, and Elevation in meters above ellipsoid).",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            90.0,
+            180.0,
+            10000.0
+          ],
+          "min_values": [
+            -90.0,
+            -180.0,
+            -1000.0
+          ],
+          "name": "starting_geodetic_vector",
+          "type": "list"
+        },
+        {
+          "desc": "Three-float list describing a target on surface of WGS84 ellipsoid to end scan maneuver (Geodetic Latitude in deg, Longitude in deg, and Elevation in meters above ellipsoid).",
+          "element_count": 3,
+          "element_type": "float",
+          "max_values": [
+            90.0,
+            180.0,
+            10000.0
+          ],
+          "min_values": [
+            -90.0,
+            -180.0,
+            -1000.0
+          ],
+          "name": "ending_geodetic_vector",
+          "type": "list"
+        },
+        {
+          "desc": "Ground speed in meters per second",
+          "name": "ground_speed_mps",
+          "type": "float"
+        },
+        {
+          "default": 0,
+          "desc": "  Desired duration of the slew to the new attitude.\n\n            If set to 0.0, or any other unachievable rate, vehicle performs a max-rate slew. Argument only enables a\n            slew to be intentionally retarded below max-rate.",
+          "min_value": 0.0,
+          "name": "slew_time_sec",
+          "type": "float"
+        },
+        {
+          "default": "SC2Sun",
+          "desc": "Ephemeris Reference used to define remaining degree of freedom.",
+          "name": "ephemeris_reference",
+          "type": "enum.EphemerisReference"
+        },
+        {
+          "default": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "desc": "Three-float list (X, Y, Z) describing clocking unit vector in spacecraft body coordinate system. Default clocks +Y face to sun vector.",
+          "element_count": 3,
+          "element_type": "float",
+          "name": "clocking_unit_vector",
+          "type": "list"
+        },
+        {
+          "default": "EigenSlew",
+          "desc": "What type of slew to use",
+          "name": "slew_type",
+          "type": "enum.SlewType"
+        }
+      ],
+      "ground_compound_command": true,
+      "name": "track_target_scan",
+      "status": "Fully implemented in software"
+    }
+  ],
+  "enum": {
+    "CommChannel": {
+      "GSE": 103,
+      "NULL": -1,
+      "S_BAND": 102,
+      "UHF": 100,
+      "X_BAND": 101
+    },
+    "EphemerisReference": {
+      "InertialFixed": 1,
+      "SC2NadirCentric": 3,
+      "SC2NadirDetic": 4,
+      "SC2Sun": 6,
+      "SC2Tgt": 7,
+      "SCMagfield": 2,
+      "SCVelocity": 9,
+      "TgtNormal": 5,
+      "TrueNorth": 8
+    },
+    "FSWService": {
+      "ADCS": "adcs.service",
+      "CMDSEQ": "cmdseq.service",
+      "COMMS": "comms.service",
+      "EPS": "eps.service",
+      "FSS": "fss.service",
+      "GPS": "gps.service",
+      "IMU": "imu.service",
+      "MRM": "mrm.service",
+      "PIC": "pic.service",
+      "PROP": "prop.service",
+      "RW": "rw.service",
+      "ST": "st.service",
+      "TELEM": "telem.service"
+    },
+    "FswImage": {
+      "ALL": 4,
+      "CURRENT": 0,
+      "FSW1": 1,
+      "FSW2": 2,
+      "GOLDEN": 3
+    },
+    "GroundTarget": {
+      "CommTarget": 2,
+      "ImageTarget": 1
+    },
+    "IMUComponent": {
+      "IMU1": 1,
+      "IMU2": 2
+    },
+    "LogType": {
+      "HEALTH": 1,
+      "SYSTEM": 2
+    },
+    "PowerHBridge": {
+      "TQX": 0,
+      "TQY": 1,
+      "TQZ": 2
+    },
+    "PwmComponent": {
+      "BATT_A_HEAT1": 6,
+      "BATT_A_HEAT2": 7,
+      "BATT_B_HEAT1": 8,
+      "BATT_B_HEAT2": 9,
+      "TANK_A_HEAT": 4,
+      "TANK_B_HEAT": 5
+    },
+    "RWComponent": {
+      "RW1": 1,
+      "RW2": 2,
+      "RW3": 3,
+      "RW4": 4
+    },
+    "STComponent": {
+      "ST1": 1,
+      "ST2": 2
+    },
+    "STNandOp": {
+      "CHECK": "check",
+      "FIXUP": "fixup"
+    },
+    "ScFileType": {
+      "GENERAL": 1,
+      "HEALTH_LOG": 2,
+      "MISSION_SCRIPT": 3,
+      "STAR_TRACKER_IMAGE": 4,
+      "SYSTEM_LOG": 5
+    },
+    "SlewType": {
+      "EigenSlew": 1,
+      "RendezSlew": 2
+    },
+    "SpacecraftMode": {
+      "ACG": 2,
+      "CHECKOUT": 3,
+      "DISPOSAL": 0,
+      "OPERATIONAL": 5,
+      "SAFE": 1,
+      "STANDBY": 4
+    },
+    "SrcPacket": {
+      "COMMAND_RESPONSE": 6,
+      "FILE_AS_SFT_DOWNLINK_DATA": 12,
+      "FILE_DOWNLINK_DATA": 3,
+      "FILE_UPLINK_REPLY": 2,
+      "REALTIME_HEALTH": 7,
+      "REALTIME_SYSTEM": 8
+    },
+    "SwitchComponent": {
+      "CAMERA": 2,
+      "FSS": 1,
+      "GPS": 13,
+      "IMU1": 5,
+      "IMU2": 6,
+      "MRM": 4,
+      "PIC": 17,
+      "PRP": 18,
+      "RW1": 7,
+      "RW2": 8,
+      "RW3": 9,
+      "RW4": 10,
+      "ST1": 11,
+      "ST2": 12,
+      "S_BAND": 14,
+      "UHF_RADIO": 15,
+      "X_BAND": 3
+    },
+    "TimeReference": {
+      "CURRENT": 1,
+      "POSIX": 2
+    },
+    "TimingMethod": {
+      "ABSOLUTE": 1,
+      "IMMEDIATE": 3,
+      "SUCCESSIVE": 2
+    },
+    "TrackType": {
+      "AccelBurn": 1,
+      "CommTrack": 2,
+      "DecelBurn": 3,
+      "ImageTrack": 4,
+      "InertialPoint": 5,
+      "NadirTrack": 6,
+      "SunTrack": 7
+    },
+    "UDPCastDirection": {
+      "BOTH": "BOTH",
+      "DOWN": "DOWN",
+      "UP": "UP"
+    },
+    "XBandMode": {
+      "ENTER_INIT_MODE": "C",
+      "ENTER_LOW_POWER_MODE": "S",
+      "ENTER_MODULATION_MODE": "U",
+      "EXIT_INIT_MODE": "X"
+    }
+  },
+  "enum_doc": {
+    "CommChannel": {
+      "GSE": "For testing",
+      "NULL": "Documentation example",
+      "S_BAND": "The S-Band radio channel",
+      "UHF": "The UHF radio channel",
+      "X_BAND": "The X-Band radio channel"
+    },
+    "EphemerisReference": {
+      "InertialFixed": "may be a unit vector, in ECI, when defined for clocking, or a quaternion when used for alignment or pointing",
+      "SC2NadirCentric": "unit vector, in ECI, from spacecraft orbital position to the Geocentric sub-satellite point",
+      "SC2NadirDetic": "unit vector, in ECI, from spacecraft orbital position to the Geodetic sub-satellite point",
+      "SC2Sun": "unit vector, in ECI, from spacecraft orbital position to the Sun",
+      "SC2Tgt": "unit vector, in ECI, from spacecraft orbital position to a Target Object",
+      "SCMagfield": "unit vector, in ECI, of Earth magnetic field at spacecraft orbital position",
+      "SCVelocity": "unit vector, in ECI, along spacecraft inertial velocity",
+      "TgtNormal": "cross product of SC2Tgt and SCVelocity",
+      "TrueNorth": "unit vector, in ECI, along true North at the Geodetic sub-satellite point"
+    },
+    "FswImage": {
+      "ALL": "A special value only available in Checkout mode for update_sap and save_sap_updates",
+      "CURRENT": "The currently booted image. This value is resolved on the spacecraft to one of FSW1, FSW2 or GOLDEN",
+      "FSW1": "The fsw-1 \"silver\" image",
+      "FSW2": "The fsw-2 \"silver\" image",
+      "GOLDEN": "The golden image"
+    },
+    "GroundTarget": {
+      "CommTarget": "communication, i.e. ground station, targets have relatively loose pointing error constraints",
+      "ImageTarget": "image targets have tight pointing error and smear constraints"
+    },
+    "PowerHBridge": {
+      "TQX": "torque rod nominal dipole aligned along X-axis",
+      "TQY": "torque rod nominal dipole aligned along Y-axis",
+      "TQZ": "torque rod nominal dipole aligned along Z-axis"
+    },
+    "RWComponent": {
+      "RW1": "reaction wheel located in the -X, -Y corner of the satellite",
+      "RW2": "reaction wheel located in the +X, -Y corner of the satellite",
+      "RW3": "reaction wheel located in the +X, +Y corner of the satellite",
+      "RW4": "reaction wheel located in the -X, +Y corner of the satellite"
+    },
+    "STComponent": {
+      "ST1": "star tracker boresight has component in the +X direction",
+      "ST2": "star tracker boresight has component in the -X direction"
+    },
+    "SlewType": {
+      "EigenSlew": " A slew maneuver to change spacecraft orientation. The maneuver is a trapezoidal maneuver about the Eigen-axis\n                (cross product of start and end pointing vectors). The command starts and ends with zero body rate",
+      "RendezSlew": " A slew maneuver to change spacecraft orientation from any attitude and rate state to any other.\n                 The maneuver forms a optimal polynomial trajectory to arrive at a specified attitude and rate state."
+    },
+    "SwitchComponent": {
+      "RW1": "reaction wheel located in the -X, -Y corner of the satellite",
+      "RW2": "reaction wheel located in the +X, -Y corner of the satellite",
+      "RW3": "reaction wheel located in the +X, +Y corner of the satellite",
+      "RW4": "reaction wheel located in the -X, +Y corner of the satellite",
+      "ST1": "star tracker boresight has component in the +Y direction",
+      "ST2": "star tracker boresight has component in the -Y direction"
+    },
+    "TimeReference": {
+      "CURRENT": "time offset should be with respect to the current system time",
+      "POSIX": "time offset should be with respect to the POSIX epoch of (00:00:00Z 1 Jan 1970)"
+    },
+    "TrackType": {
+      "AccelBurn": "align +Z body axis with SCVelocity",
+      "CommTrack": "align +Z body axis with SC2Tgt",
+      "DecelBurn": "align -Z body axis with SCVelocity",
+      "ImageTrack": "align +Z body axis with SC2Tgt",
+      "InertialPoint": "align body frame with specified InertialFixed vector, i.e. [0 0 0 1] rotation quaternion in scaler-last form",
+      "NadirTrack": "align +Z body axis with SC2NadirDetic",
+      "SunTrack": "align +Y body axis with SC2Sun"
+    }
+  },
+  "meta": {
+    "config": "block2-5",
+    "doc_type": "command",
+    "format": "TOML. see: https://github.com/toml-lang/toml",
+    "title": "Mission Command Specification",
+    "version": 10
+  },
+  "version_number": 10
+}

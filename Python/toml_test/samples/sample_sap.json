@@ -1,0 +1,2406 @@
+{
+  "ACGCycleSeconds": {
+    "data_type": "uint8",
+    "valid_range": "[1, 60]"
+  },
+  "AnomalyContextMessages": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "AutoSatelliteResetHours": {
+    "data_type": "float",
+    "valid_range": "[1, 72]"
+  },
+  "AutoSatelliteResetHoursEnabled": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "BeaconIntervalSeconds": {
+    "data_type": "uint32",
+    "valid_range": "[10, 600]"
+  },
+  "CheckoutModeTimeoutMinutes": {
+    "data_type": "float",
+    "valid_range": "[0.1, 120]"
+  },
+  "CommandTimeoutSeconds": {
+    "data_type": "float",
+    "valid_range": "[1, 30]"
+  },
+  "DownlinkChannelCommandResponseDefault": {
+    "data_type": "string",
+    "valid_range": "UHF, X_BAND, GSE"
+  },
+  "DownlinkChannelFileAsSftDownlinkDataDefault": {
+    "data_type": "string",
+    "valid_range": "UHF, X_BAND, GSE"
+  },
+  "DownlinkChannelFileDownlinkDataDefault": {
+    "data_type": "string",
+    "valid_range": "UHF, X_BAND, GSE"
+  },
+  "DownlinkChannelFileUplinkReplyDefault": {
+    "data_type": "string",
+    "valid_range": "UHF, X_BAND, GSE"
+  },
+  "DownlinkChannelRealtimeHealthDefault": {
+    "data_type": "string",
+    "valid_range": "UHF, X_BAND, GSE"
+  },
+  "DownlinkChannelRealtimeSystemDefault": {
+    "data_type": "string",
+    "valid_range": "UHF, X_BAND, GSE"
+  },
+  "EnableBeaconOnHardRestart": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "EnableBeaconOnSoftRestart": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "EnableBeaconSyncOnSeconds": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "EnableScriptDeferredValidation": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "FastTelemetryDetumbleDurationMinutes": {
+    "data_type": "float",
+    "valid_range": "[1, 60]"
+  },
+  "FaultLatchTimeoutMinutes": {
+    "data_type": "float",
+    "valid_range": "[0.1, 60]"
+  },
+  "FlightDiskUsageCleanupIntervalSeconds": {
+    "data_type": "float",
+    "valid_range": "[60, 600]"
+  },
+  "FlightDiskUsageCleanupThresholdPercent": {
+    "data_type": "float",
+    "valid_range": "[0.50, 0.95]"
+  },
+  "GroundStationListForACG": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "MaxAlarmCount": {
+    "data_type": "unsigned integer",
+    "valid_range": "[1, 10]"
+  },
+  "RebootContextMessages": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "RebootContextMinutes": {
+    "data_type": "float",
+    "valid_range": "[0.0, 10080.0]"
+  },
+  "RestartFaultLatchTimeoutMinutes": {
+    "data_type": "float",
+    "valid_range": "[0.1, 10]"
+  },
+  "SafeModeBeaconBlackoutSeconds": {
+    "data_type": "uint32",
+    "valid_range": "[0, 14400]"
+  },
+  "SapCommitTimeoutMinutes": {
+    "data_type": "float",
+    "valid_range": "[0.25, 2880.0]"
+  },
+  "SfxDelayForCmdResp": {
+    "data_type": "float",
+    "valid_range": "[0, 10]"
+  },
+  "SyncBeaconModeSeconds": {
+    "data_type": "uint8",
+    "valid_range": "[0, 59]"
+  },
+  "TestSap": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "TotalHealthLogFileSize": {
+    "data_type": "uint32",
+    "valid_range": "[1, 100000000]"
+  },
+  "UHFDownlinkCooldownMicrosec": {
+    "data_type": "uint64",
+    "valid_range": "[0, 5000000]"
+  },
+  "UHFDownlinkWarmupMicrosec": {
+    "data_type": "uint64",
+    "valid_range": "[0, 10000000]"
+  },
+  "UdpSessionTimeoutSeconds": {
+    "data_type": "uint32",
+    "valid_range": "[1, 900]"
+  },
+  "adcs.MeasHealth.accelTemp.high": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.accelTemp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.accelTemp.low": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.accelTemp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.fssTemp.high": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.fssTemp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.fssTemp.low": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.fssTemp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gpsAntCurrent.high": {
+    "data_type": "float",
+    "valid_range": "[0, 1]"
+  },
+  "adcs.MeasHealth.gpsAntCurrent.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gpsAntCurrent.low": {
+    "data_type": "float",
+    "valid_range": "[0, 1]"
+  },
+  "adcs.MeasHealth.gpsAntCurrent.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gpsAntVoltage.high": {
+    "data_type": "float",
+    "valid_range": "[3, 8]"
+  },
+  "adcs.MeasHealth.gpsAntVoltage.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gpsAntVoltage.low": {
+    "data_type": "float",
+    "valid_range": "[3, 8]"
+  },
+  "adcs.MeasHealth.gpsAntVoltage.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gpsBoardTemp.high": {
+    "data_type": "int16",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.gpsBoardTemp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gpsBoardTemp.low": {
+    "data_type": "int16",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.gpsBoardTemp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gpsBoardVoltage.high": {
+    "data_type": "float",
+    "valid_range": "[10, 14]"
+  },
+  "adcs.MeasHealth.gpsBoardVoltage.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gpsBoardVoltage.low": {
+    "data_type": "float",
+    "valid_range": "[10, 14]"
+  },
+  "adcs.MeasHealth.gpsBoardVoltage.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gyroTemp.high": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.gyroTemp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.gyroTemp.low": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.gyroTemp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.magTemp.high": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.magTemp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.magTemp.low": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.magTemp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.magVoltage.high": {
+    "data_type": "float",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.magVoltage.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.magVoltage.low": {
+    "data_type": "float",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.magVoltage.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.rwTemps.high": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.rwTemps.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.rwTemps.low": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.rwTemps.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str1Current.high": {
+    "data_type": "float",
+    "valid_range": "[0, 1]"
+  },
+  "adcs.MeasHealth.str1Current.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str1Current.low": {
+    "data_type": "float",
+    "valid_range": "[0, 1]"
+  },
+  "adcs.MeasHealth.str1Current.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str1Temp.high": {
+    "data_type": "int16",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.str1Temp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str1Temp.low": {
+    "data_type": "int16",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.str1Temp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str1Voltage.high": {
+    "data_type": "float",
+    "valid_range": "[0, 5]"
+  },
+  "adcs.MeasHealth.str1Voltage.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str1Voltage.low": {
+    "data_type": "float",
+    "valid_range": "[0, 5]"
+  },
+  "adcs.MeasHealth.str1Voltage.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str2Current.high": {
+    "data_type": "float",
+    "valid_range": "[0, 1]"
+  },
+  "adcs.MeasHealth.str2Current.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str2Current.low": {
+    "data_type": "float",
+    "valid_range": "[0, 1]"
+  },
+  "adcs.MeasHealth.str2Current.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str2Temp.high": {
+    "data_type": "int16",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.str2Temp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str2Temp.low": {
+    "data_type": "int16",
+    "valid_range": "[-128, 128]"
+  },
+  "adcs.MeasHealth.str2Temp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str2Voltage.high": {
+    "data_type": "float",
+    "valid_range": "[0, 5]"
+  },
+  "adcs.MeasHealth.str2Voltage.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.MeasHealth.str2Voltage.low": {
+    "data_type": "float",
+    "valid_range": "[0, 5]"
+  },
+  "adcs.MeasHealth.str2Voltage.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.attctl.loop.gain": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.cbi2cbf.angle": {
+    "data_type": "double",
+    "valid_range": "[-3.14159265358979, 3.14159265358979]"
+  },
+  "adcs.cbi2cbf.epoch": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.desaturate.mode": {
+    "data_type": "string",
+    "valid_range": "Norm, Safe, Bdot, Trod, Vimu"
+  },
+  "adcs.fail.autobdot.clrcnt": {
+    "data_type": "uint8",
+    "valid_range": "[1, 100]"
+  },
+  "adcs.fail.autobdot.maxcnt": {
+    "data_type": "uint8",
+    "valid_range": "[0, 100]"
+  },
+  "adcs.fdir.slew.duration.limit.high": {
+    "data_type": "float",
+    "valid_range": "[500, 3600]"
+  },
+  "adcs.fdir.slew.duration.limit.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.gps.NumMeasToConverge": {
+    "data_type": "uint32",
+    "valid_range": "[0, 100000]"
+  },
+  "adcs.gps.PosErrGain": {
+    "data_type": "float",
+    "valid_range": "[0, 1]"
+  },
+  "adcs.gps.VelErrGain": {
+    "data_type": "float",
+    "valid_range": "[0, 1]"
+  },
+  "adcs.koz.limb": {
+    "data_type": "double",
+    "valid_range": "[0.0, 1.5707963267949]"
+  },
+  "adcs.koz.payload.axis": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.koz.payload.halfang": {
+    "data_type": "double",
+    "valid_range": "[0.0, 1.5707963267949]"
+  },
+  "adcs.koz.payload2.axis": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.koz.payload2.halfang": {
+    "data_type": "double",
+    "valid_range": "[0.0, 1.5707963267949]"
+  },
+  "adcs.momentum.limit.hi": {
+    "data_type": "float",
+    "valid_range": ""
+  },
+  "adcs.momentum.ratedamp.limit": {
+    "data_type": "float",
+    "valid_range": ""
+  },
+  "adcs.q_tod2j2000.s": {
+    "data_type": "double",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "adcs.q_tod2j2000.x": {
+    "data_type": "double",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "adcs.q_tod2j2000.y": {
+    "data_type": "double",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "adcs.q_tod2j2000.z": {
+    "data_type": "double",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "adcs.rate.bias.est.limit": {
+    "data_type": "float",
+    "valid_range": "[0.0, 0.053]"
+  },
+  "adcs.rw.momt.xy": {
+    "data_type": "double",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "adcs.rw.momt.z": {
+    "data_type": "double",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "adcs.rw.nulspc.ctl.gain": {
+    "data_type": "float",
+    "valid_range": "[0.0, 10.0]"
+  },
+  "adcs.rw.nulspc.mom.bias": {
+    "data_type": "float",
+    "valid_range": "[0.0, 100.0]"
+  },
+  "adcs.rw.q_bdy2rwl.xy": {
+    "data_type": "double",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "adcs.rw.q_bdy2rwl.z": {
+    "data_type": "double",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "adcs.rw.torq.xy": {
+    "data_type": "double",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "adcs.rw.torq.z": {
+    "data_type": "double",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "adcs.saps.alarm.covarerr.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.alarm.ctrlerr.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.alarm.imuerror.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.gocode.aecEnabled": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.gocode.copyFromEnabled": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.gocode.copyToEnabled": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.gocode.darkSubEnabled": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.gocode.exposureEnabled": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.gocode.fitEnabled": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.gocode.readOutEnabled": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.gocode.reserved": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.iterations": {
+    "data_type": "uint8",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.maxExposure": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.minExposure": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "adcs.saps.fss.tgtBrightness": {
+    "data_type": "uint16",
+    "valid_range": ""
+  },
+  "adcs.saps.gps.L5Track": {
+    "data_type": "string",
+    "valid_range": "always, on, off"
+  },
+  "adcs.saps.gps.dopLimit": {
+    "data_type": "float",
+    "valid_range": ""
+  },
+  "adcs.saps.gps.eleMask": {
+    "data_type": "int16",
+    "valid_range": ""
+  },
+  "adcs.saps.gps.eleMaskPos": {
+    "data_type": "int16",
+    "valid_range": ""
+  },
+  "adcs.saps.gps.eleOutMask": {
+    "data_type": "int16",
+    "valid_range": ""
+  },
+  "adcs.saps.gps.holdLastAlt": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.gps.maxAcc": {
+    "data_type": "int16",
+    "valid_range": ""
+  },
+  "adcs.saps.gps.maxVel": {
+    "data_type": "int16",
+    "valid_range": ""
+  },
+  "adcs.saps.gps.pcodeTrack": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw1.adcRefreshEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw1.bypassGain": {
+    "data_type": "float",
+    "valid_range": "[1.0, 8.0]"
+  },
+  "adcs.saps.rw1.currentBypassEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw1.currentLimit": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw1.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw1.motorKT": {
+    "data_type": "float",
+    "valid_range": "[0.001, 0.010]"
+  },
+  "adcs.saps.rw1.speedLimit1": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw1.speedLimit2": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw2.adcRefreshEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw2.bypassGain": {
+    "data_type": "float",
+    "valid_range": "[1.0, 8.0]"
+  },
+  "adcs.saps.rw2.currentBypassEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw2.currentLimit": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw2.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw2.motorKT": {
+    "data_type": "float",
+    "valid_range": "[0.001, 0.010]"
+  },
+  "adcs.saps.rw2.speedLimit1": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw2.speedLimit2": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw3.adcRefreshEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw3.bypassGain": {
+    "data_type": "float",
+    "valid_range": "[1.0, 8.0]"
+  },
+  "adcs.saps.rw3.currentBypassEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw3.currentLimit": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw3.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw3.motorKT": {
+    "data_type": "float",
+    "valid_range": "[0.001, 0.010]"
+  },
+  "adcs.saps.rw3.speedLimit1": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw3.speedLimit2": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw4.adcRefreshEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw4.bypassGain": {
+    "data_type": "float",
+    "valid_range": "[1.0, 8.0]"
+  },
+  "adcs.saps.rw4.currentBypassEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw4.currentLimit": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw4.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.saps.rw4.motorKT": {
+    "data_type": "float",
+    "valid_range": "[0.001, 0.010]"
+  },
+  "adcs.saps.rw4.speedLimit1": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.rw4.speedLimit2": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.K_gyro1[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.K_gyro1[4]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.K_gyro1[8]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.K_gyro2[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.K_gyro2[4]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.K_gyro2[8]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro1[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro1[1]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro1[2]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro1[3]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro1[4]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro1[5]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro1[6]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro1[7]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro1[8]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro2[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro2[1]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro2[2]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro2[3]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro2[4]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro2[5]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro2[6]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro2[7]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_gyro2[8]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_mag[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_mag[1]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_mag[2]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_mag[3]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_mag[4]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_mag[5]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_mag[6]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_mag[7]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.T_mag[8]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_css[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_css[1]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_css[2]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_css[3]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_css[4]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_css[5]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_gyro1[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_gyro1[1]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_gyro1[2]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_gyro2[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_gyro2[1]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_gyro2[2]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_mag[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_mag[1]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.beta_mag[2]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.fssTminValid": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.gyro_select": {
+    "data_type": "uint8",
+    "valid_range": "[1, 2]"
+  },
+  "adcs.saps.sensCorrSAPs.k_css[0]": {
+    "data_type": "double",
+    "valid_range": "[0.0, 15.0]"
+  },
+  "adcs.saps.sensCorrSAPs.k_css[1]": {
+    "data_type": "double",
+    "valid_range": "[0.0, 15.0]"
+  },
+  "adcs.saps.sensCorrSAPs.k_css[2]": {
+    "data_type": "double",
+    "valid_range": "[0.0, 15.0]"
+  },
+  "adcs.saps.sensCorrSAPs.k_css[3]": {
+    "data_type": "double",
+    "valid_range": "[0.0, 15.0]"
+  },
+  "adcs.saps.sensCorrSAPs.k_css[4]": {
+    "data_type": "double",
+    "valid_range": "[0.0, 15.0]"
+  },
+  "adcs.saps.sensCorrSAPs.k_css[5]": {
+    "data_type": "double",
+    "valid_range": "[0.0, 15.0]"
+  },
+  "adcs.saps.sensCorrSAPs.qStr1Align[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.qStr1Align[1]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.qStr1Align[2]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.qStr1Align[3]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.qStr2Align[0]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.qStr2Align[1]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.qStr2Align[2]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.sensCorrSAPs.qStr2Align[3]": {
+    "data_type": "double",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.calStr.hash": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ctrlStr.exp1Exp2Delta": {
+    "data_type": "single",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ctrlStr.exposureLength": {
+    "data_type": "single",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ctrlStr.funcGoBitfield": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ctrlStr.heaterSelect": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ctrlStr.heaterTarget": {
+    "data_type": "int8",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ctrlStr.litPixelLimit": {
+    "data_type": "uint16",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ctrlStr.threshAlg": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ctrlStr.threshRawThresh": {
+    "data_type": "uint16",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ctrlStr.weightingAlgCtrl": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.str1.ephemCtrlByte": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.calStr.hash": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ctrlStr.exp1Exp2Delta": {
+    "data_type": "single",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ctrlStr.exposureLength": {
+    "data_type": "single",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ctrlStr.funcGoBitfield": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ctrlStr.heaterSelect": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ctrlStr.heaterTarget": {
+    "data_type": "int8",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ctrlStr.litPixelLimit": {
+    "data_type": "uint16",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ctrlStr.threshAlg": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ctrlStr.threshRawThresh": {
+    "data_type": "uint16",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ctrlStr.weightingAlgCtrl": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.str2.ephemCtrlByte": {
+    "data_type": "bitfield",
+    "valid_range": ""
+  },
+  "adcs.saps.sunSearchPositive": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.slew.accel.scale": {
+    "data_type": "float",
+    "valid_range": ""
+  },
+  "adcs.slew.rate.limit": {
+    "data_type": "float",
+    "valid_range": ""
+  },
+  "adcs.slew.rate.scale": {
+    "data_type": "float",
+    "valid_range": ""
+  },
+  "adcs.startup.delay": {
+    "data_type": "uint16",
+    "valid_range": "[10, 60]"
+  },
+  "adcs.str1.q_bdy2str": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.str2.q_bdy2str": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.sunacq.search.rate": {
+    "data_type": "double",
+    "valid_range": "[0.0, 0.0872664625997165]"
+  },
+  "adcs.suntrack.clocking": {
+    "data_type": "string",
+    "valid_range": "IntertialFixd, SC2Sun, SC2NadirDetic, SC2NadirCentric, SCVelocity, SCMagField, SC2Tgt, TgtNormal, TrueNorth, TrueNorthAtTgt"
+  },
+  "adcs.suntrack.desat.clock.axis": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.track.align.comm": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.track.align.image": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.track.align.inertial": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.track.align.nadir": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.track.align.rso": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.trdb.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "adcs.vehicle.cm": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.vehicle.inertia": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "adcs.vehicle.mass": {
+    "data_type": "float",
+    "valid_range": "[0, 1e+6]"
+  },
+  "data.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "data.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "data.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[10000000, 600000000]"
+  },
+  "eps.pcu.batteryATemp1.chargeFault": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp1.chargeFault.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryATemp1.regulate.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryATemp1.regulate.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp1.regulate.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp1.regulate.safemode.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp1.regulate.safemode.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp2.chargeFault": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp2.chargeFault.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryATemp2.regulate.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryATemp2.regulate.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp2.regulate.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp2.regulate.safemode.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp2.regulate.safemode.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp3.chargeFault": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp3.chargeFault.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryATemp3.regulate.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryATemp3.regulate.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp3.regulate.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp3.regulate.safemode.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryATemp3.regulate.safemode.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp1.chargeFault": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp1.chargeFault.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryBTemp1.regulate.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryBTemp1.regulate.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp1.regulate.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp1.regulate.safemode.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp1.regulate.safemode.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp2.chargeFault": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp2.chargeFault.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryBTemp2.regulate.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryBTemp2.regulate.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp2.regulate.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp2.regulate.safemode.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp2.regulate.safemode.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp3.chargeFault": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp3.chargeFault.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryBTemp3.regulate.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryBTemp3.regulate.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp3.regulate.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp3.regulate.safemode.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryBTemp3.regulate.safemode.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryHarnessResistance": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.batteryHysteresisCritical": {
+    "data_type": "uint32",
+    "valid_range": "[1, 99]"
+  },
+  "eps.pcu.batteryHysteresisNominal": {
+    "data_type": "uint32",
+    "valid_range": "[1, 99]"
+  },
+  "eps.pcu.batteryVoltage.alarmInSafeEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryVoltage.high": {
+    "data_type": "uint16",
+    "valid_range": "[3047, 3342]"
+  },
+  "eps.pcu.batteryVoltage.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryVoltage.low": {
+    "data_type": "uint16",
+    "valid_range": "[2850, 3047]"
+  },
+  "eps.pcu.batteryVoltage.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.batteryVoltage.setPoint": {
+    "data_type": "uint16",
+    "valid_range": "[2948, 3342]"
+  },
+  "eps.pcu.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "eps.pcu.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[2000000, 120000000]"
+  },
+  "eps.pcu.eolRelayState.batteryVoltage.high": {
+    "data_type": "uint16",
+    "valid_range": "[2949, 4095]"
+  },
+  "eps.pcu.eolRelayState.batteryVoltage.low": {
+    "data_type": "uint16",
+    "valid_range": "[2949, 4095]"
+  },
+  "eps.pcu.eolRelayState.nominal": {
+    "data_type": "string",
+    "valid_range": "CLOSED, OPEN"
+  },
+  "eps.pcu.eolRelayState.safe": {
+    "data_type": "string",
+    "valid_range": "CLOSED, OPEN"
+  },
+  "eps.pcu.loadCurrent.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.loadCurrent.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.loadCurrent.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.loadCurrent.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.solarArrayCurrentEstimateCalibration.gain": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "eps.pcu.solarArrayCurrentEstimateCalibration.offset": {
+    "data_type": "float",
+    "valid_range": "[-0.5, 0.5]"
+  },
+  "eps.pcu.solarPanel1Temp.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.solarPanel1Temp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.solarPanel1Temp.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.solarPanel1Temp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.solarPanel2Temp.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.solarPanel2Temp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.solarPanel2Temp.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.solarPanel2Temp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.solarPanel3Temp.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.solarPanel3Temp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.solarPanel3Temp.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.solarPanel3Temp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.solarPanel4Temp.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.solarPanel4Temp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.solarPanel4Temp.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.solarPanel4Temp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp1.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp1.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp1.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp1.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp2.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp2.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp2.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp2.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp3.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp3.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp3.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp3.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp4.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp4.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp4.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp4.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp5.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp5.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp5.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp5.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp6.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp6.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp6.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp6.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp7.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp7.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp7.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp7.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp8.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp8.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp8.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp8.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp9.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp9.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "eps.pcu.structTemp9.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "eps.pcu.structTemp9.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "fss.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "fss.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "fss.devfault.alarm.filter.window.multiplier": {
+    "data_type": "uint8",
+    "valid_range": "[1, 20]"
+  },
+  "fss.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[2000000, 120000000]"
+  },
+  "fss.devfault.power.cycle.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "fss.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "gps.RecordsDecimationFactor": {
+    "data_type": "uint32",
+    "valid_range": "[1, 200]"
+  },
+  "gps.antispoof.elev.max": {
+    "data_type": "float",
+    "valid_range": "[0.0, 700.0e+3]"
+  },
+  "gps.antispoof.elev.min": {
+    "data_type": "float",
+    "valid_range": "[0.0, 700.0e+3]"
+  },
+  "gps.antispoof.vel.max": {
+    "data_type": "float",
+    "valid_range": "[0.0, 10.0e+3]"
+  },
+  "gps.antispoof.vel.min": {
+    "data_type": "float",
+    "valid_range": "[0.0, 10.0e+3]"
+  },
+  "gps.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "gps.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[2000000, 120000000]"
+  },
+  "gps.devfault.power.cycle.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "gps.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "gps.dlr.almanac.save.interval": {
+    "data_type": "uint16",
+    "valid_range": "[0, 14400]"
+  },
+  "gps.dlr.dw": {
+    "data_type": "uint16",
+    "valid_range": "[0, 40000]"
+  },
+  "gps.dlr.em": {
+    "data_type": "float",
+    "valid_range": "[-90.0, 90.0]"
+  },
+  "gps.dlr.mc": {
+    "data_type": "uint8",
+    "valid_range": "[0, 3]"
+  },
+  "gps.dlr.nolock.maxcnt": {
+    "data_type": "uint16",
+    "valid_range": "[1, 20]"
+  },
+  "gps.dlr.nolock.timeout": {
+    "data_type": "uint16",
+    "valid_range": "[0, 240]"
+  },
+  "gps.dlr.pm": {
+    "data_type": "float",
+    "valid_range": "[1.0, 99.0]"
+  },
+  "gps.dlr.pv.expire": {
+    "data_type": "uint16",
+    "valid_range": "[0, 65535]"
+  },
+  "gps.leap_seconds": {
+    "data_type": "uint32",
+    "valid_range": "[18, 1000000]"
+  },
+  "gps.maxdop": {
+    "data_type": "float",
+    "valid_range": "[1.0, 99.0]"
+  },
+  "gps.numStoredRecords": {
+    "data_type": "uint32",
+    "valid_range": "[0, 80]"
+  },
+  "gps.powerOnDelayUs": {
+    "data_type": "uint32",
+    "valid_range": "[200000, 60000000]"
+  },
+  "gps.pps.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "gps.settime.holdoff1": {
+    "data_type": "uint32",
+    "valid_range": "[10, 1200]"
+  },
+  "gps.settime.holdoff2": {
+    "data_type": "uint32",
+    "valid_range": "[10, 1200]"
+  },
+  "gps.staticClockFrequencyOffsetPpm": {
+    "data_type": "float",
+    "valid_range": "[-500.0, 500.0]"
+  },
+  "imu.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "imu.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "imu.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[2000000, 120000000]"
+  },
+  "imu.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "imu.faults.allowed.count": {
+    "data_type": "uint8",
+    "valid_range": "[0, 10]"
+  },
+  "imu.faults.clear.minutes": {
+    "data_type": "uint16",
+    "valid_range": "[0, 1440]"
+  },
+  "imu.init.fails.allowed.count": {
+    "data_type": "uint8",
+    "valid_range": "[0, 100]"
+  },
+  "imu.init.retry.count": {
+    "data_type": "uint8",
+    "valid_range": "[0, 100]"
+  },
+  "imu.powerOnDelayUs": {
+    "data_type": "uint32",
+    "valid_range": "[200000, 60000000]"
+  },
+  "mrm.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "mrm.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "mrm.devfault.alarm.filter.window.multiplier": {
+    "data_type": "uint8",
+    "valid_range": "[1, 20]"
+  },
+  "mrm.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[2000000, 120000000]"
+  },
+  "mrm.devfault.power.cycle.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "mrm.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.camera.temp.high": {
+    "data_type": "int16",
+    "valid_range": "[-128, 128]"
+  },
+  "payload.camera.temp.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.camera.temp.low": {
+    "data_type": "int16",
+    "valid_range": "[-128, 128]"
+  },
+  "payload.camera.temp.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp1.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp1.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp1.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp1.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp2.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp2.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp2.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp2.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp3.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp3.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp3.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp3.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp4.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp4.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp4.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp4.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp5.high": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp5.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "payload.telescope.temp5.low": {
+    "data_type": "uint16",
+    "valid_range": "[0, 4095]"
+  },
+  "payload.telescope.temp5.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "pic.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "pic.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "pic.devfault.alarm.filter.window.multiplier": {
+    "data_type": "uint8",
+    "valid_range": "[1, 20]"
+  },
+  "pic.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[2000000, 120000000]"
+  },
+  "pic.devfault.power.cycle.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "pic.devfault.powerCycleEnable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "pic.devfault.powerOffDelay": {
+    "data_type": "uint32",
+    "valid_range": "[0, 60000000]"
+  },
+  "prop.core.highRegulatorTempAbortLimit": {
+    "data_type": "float",
+    "valid_range": "[-30.0, 80.0]"
+  },
+  "prop.core.highTempAbortLimit.bakeout": {
+    "data_type": "float",
+    "valid_range": "[-30.0, 1200.0]"
+  },
+  "prop.core.highTempAbortLimit.thrust": {
+    "data_type": "float",
+    "valid_range": "[-30.0, 1200.0]"
+  },
+  "prop.core.highTempAlarmLimit.bakeout": {
+    "data_type": "float",
+    "valid_range": "[-30.0, 1200.0]"
+  },
+  "prop.core.highTempAlarmLimit.thrust": {
+    "data_type": "float",
+    "valid_range": "[-30.0, 1200.0]"
+  },
+  "prop.core.lowTempInhibitLimit": {
+    "data_type": "float",
+    "valid_range": "[-30.0, 1200.0]"
+  },
+  "prop.core.powerIntegralGain": {
+    "data_type": "float",
+    "valid_range": "[0.0002, 40]"
+  },
+  "prop.core.powerOutputLimit.bakeout": {
+    "data_type": "uint16",
+    "valid_range": "[0, 65535]"
+  },
+  "prop.core.powerOutputLimit.thrust": {
+    "data_type": "uint16",
+    "valid_range": "[0, 65535]"
+  },
+  "prop.core.thermostatDerivativeGain": {
+    "data_type": "float",
+    "valid_range": "[0.0, 8.0]"
+  },
+  "prop.core.thermostatDerivativeGainInputFiltering": {
+    "data_type": "float",
+    "valid_range": "[0.0, 0.40]"
+  },
+  "prop.core.thermostatIntegralGain": {
+    "data_type": "float",
+    "valid_range": "[0.0, 0.5]"
+  },
+  "prop.core.thermostatIntegralGainWindupLimit.bakeout": {
+    "data_type": "float",
+    "valid_range": "[0.0, 8.0]"
+  },
+  "prop.core.thermostatIntegralGainWindupLimit.thrust": {
+    "data_type": "float",
+    "valid_range": "[0.0, 34.0]"
+  },
+  "prop.core.thermostatOutputLimit.bakeout": {
+    "data_type": "float",
+    "valid_range": "[0.0, 8.0]"
+  },
+  "prop.core.thermostatOutputLimit.thrust": {
+    "data_type": "float",
+    "valid_range": "[0.0, 34.0]"
+  },
+  "prop.core.thermostatProportionalGain": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "prop.core.thrusterTemp.setPoint.bakeout": {
+    "data_type": "float",
+    "valid_range": "[-30.0, 1250.0]"
+  },
+  "prop.core.thrusterTemp.setPoint.heatingThruster": {
+    "data_type": "float",
+    "valid_range": "[-30.0, 1250.0]"
+  },
+  "prop.core.thrusterTemp.setPoint.thrusting": {
+    "data_type": "float",
+    "valid_range": "[-30.0, 1250.0]"
+  },
+  "prop.external.tank.heater.survivalTemp.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "prop.external.tank.heater.survivalTemp.hysteresis": {
+    "data_type": "uint16",
+    "valid_range": "[1, 50]"
+  },
+  "prop.external.tank.heater.survivalTemp.setPoint": {
+    "data_type": "int16",
+    "valid_range": "[50, 400]"
+  },
+  "prop.fsw.bakeoutDuration": {
+    "data_type": "uint16",
+    "valid_range": "[0, 2400]"
+  },
+  "prop.fsw.bakeoutHeatingThrusterTimeout": {
+    "data_type": "uint16",
+    "valid_range": "[0, 800]"
+  },
+  "prop.tank.lowPressureInhibitLimit": {
+    "data_type": "float",
+    "valid_range": "[-15.6, 126.0]"
+  },
+  "prop.tank.pressure.hysteresis": {
+    "data_type": "float",
+    "valid_range": "[0.01, 10.0]"
+  },
+  "prop.tank.pressure.setPoint": {
+    "data_type": "float",
+    "valid_range": "[0.0, 70.0]"
+  },
+  "prop.tank.tempLimit": {
+    "data_type": "float",
+    "valid_range": "[25.0, 55.0]"
+  },
+  "prop.tcbm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "prop.tcbm.preheat.delay.intermediate": {
+    "data_type": "int16",
+    "valid_range": "[0, 300]"
+  },
+  "prop.tcbm.preheat.delay.steady": {
+    "data_type": "int16",
+    "valid_range": "[0, 1200]"
+  },
+  "prop.tcbm.preheat.volt.initial": {
+    "data_type": "float",
+    "valid_range": "[0.0, 34.0]"
+  },
+  "prop.tcbm.preheat.volt.intermediate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 34.0]"
+  },
+  "prop.tcbm.preheat.volt.steady": {
+    "data_type": "float",
+    "valid_range": "[0.0, 34.0]"
+  },
+  "prop.tcbm.thrust.delay.steady": {
+    "data_type": "int16",
+    "valid_range": "[0, 300]"
+  },
+  "prop.tcbm.thrust.volt.initial": {
+    "data_type": "float",
+    "valid_range": "[0.0, 34.0]"
+  },
+  "prop.tcbm.thrust.volt.steady": {
+    "data_type": "float",
+    "valid_range": "[0.0, 34.0]"
+  },
+  "prop.thrust.coefficient1": {
+    "data_type": "float",
+    "valid_range": "[-1.0, 1.0]"
+  },
+  "prop.thrust.coefficient2": {
+    "data_type": "float",
+    "valid_range": "[-100.0, 100.0]"
+  },
+  "prop.thrust.maxDuration": {
+    "data_type": "float",
+    "valid_range": "[1, 900]"
+  },
+  "prop.thrust.maxImpulse": {
+    "data_type": "float",
+    "valid_range": "[0.05, 15.0]"
+  },
+  "rw.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "rw.devfault.alarm.filter.window.multiplier": {
+    "data_type": "uint8",
+    "valid_range": "[1, 20]"
+  },
+  "rw.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[2000000, 120000000]"
+  },
+  "rw.devfault.power.cycle.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "rw.fdir.current.isFlatline.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.current.isHigh.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.current.isNan.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.current.limit.high": {
+    "data_type": "float",
+    "valid_range": "[0.0, 4.0]"
+  },
+  "rw.fdir.current.persist.long": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "rw.fdir.current.persist.short": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "rw.fdir.powerCycle.interval": {
+    "data_type": "float",
+    "valid_range": "[0.0, 3600.0]"
+  },
+  "rw.fdir.speed.isNan.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.speed.isUnresponsive.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.speed.persist.long": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "rw.fdir.speed.persist.short": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "rw.fdir.temp.cooldown": {
+    "data_type": "float",
+    "valid_range": "[0.0, 3600.0]"
+  },
+  "rw.fdir.temp.drive.isHigh.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.temp.drive.isNan.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.temp.drive.limit.high": {
+    "data_type": "float",
+    "valid_range": "[0.0, 125.0]"
+  },
+  "rw.fdir.temp.mcu.isHigh.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.temp.mcu.isNan.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.temp.mcu.limit.high": {
+    "data_type": "float",
+    "valid_range": "[0.0, 125.0]"
+  },
+  "rw.fdir.temp.motor.isHigh.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.temp.motor.isNan.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "rw.fdir.temp.motor.limit.high": {
+    "data_type": "float",
+    "valid_range": "[0.0, 125.0]"
+  },
+  "rw.fdir.temp.persist": {
+    "data_type": "uint32",
+    "valid_range": ""
+  },
+  "rw.powerOnCntClear": {
+    "data_type": "uint32",
+    "valid_range": "[10, 3600]"
+  },
+  "rw.powerOnDelay1": {
+    "data_type": "uint32",
+    "valid_range": "[1, 60]"
+  },
+  "rw.powerOnDelay2": {
+    "data_type": "uint32",
+    "valid_range": "[10, 3600]"
+  },
+  "rw.powerOnDelay3": {
+    "data_type": "uint32",
+    "valid_range": "[0, 3600]"
+  },
+  "rw.powerOnMaxCnt": {
+    "data_type": "uint32",
+    "valid_range": "[0, 20]"
+  },
+  "sband.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "sband.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "sband.devfault.alarm.filter.window.multiplier": {
+    "data_type": "uint8",
+    "valid_range": "[1, 20]"
+  },
+  "sband.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[15000000, 120000000]"
+  },
+  "sband.devfault.power.cycle.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "sband.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "st.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "st.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "st.devfault.alarm.filter.window.multiplier": {
+    "data_type": "uint8",
+    "valid_range": "[1, 20]"
+  },
+  "st.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[2000000, 200000000]"
+  },
+  "st.devfault.power.cycle.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "st.powerOnDelayUs": {
+    "data_type": "uint32",
+    "valid_range": "[200000, 60000000]"
+  },
+  "st1.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "st2.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "testdev.sap01": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "testdev.sap02": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "testdev.sap03": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "testdev.sap04": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "testdev.sap05": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "testdev.sap06": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "testdev.sap07": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "testdev.sap08": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "testdev.sap09": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "testdev.sap10": {
+    "data_type": "string",
+    "valid_range": ""
+  },
+  "uhf.channel.select": {
+    "data_type": "string",
+    "valid_range": "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z"
+  },
+  "uhf.devfault.alarm.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "uhf.devfault.alarm.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "uhf.devfault.alarm.filter.window.multiplier": {
+    "data_type": "uint8",
+    "valid_range": "[1, 20]"
+  },
+  "uhf.devfault.filter.window.microsec": {
+    "data_type": "uint32",
+    "valid_range": "[15000000, 120000000]"
+  },
+  "uhf.devfault.power.cycle.error.rate": {
+    "data_type": "float",
+    "valid_range": "[0.0, 1.0]"
+  },
+  "uhf.disable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "uhf.temp.limit.high": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "uhf.temp.limit.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "uhf.temp.limit.low": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "uhf.temp.limit.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "xBandRadio.temp.limit.high": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "xBandRadio.temp.limit.high.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "xBandRadio.temp.limit.low": {
+    "data_type": "int8",
+    "valid_range": "[-128, 128]"
+  },
+  "xBandRadio.temp.limit.low.enable": {
+    "data_type": "boolean",
+    "valid_range": ""
+  },
+  "xBandRadio.xmit.power.dbm": {
+    "data_type": "uint32",
+    "valid_range": "[30, 39]"
+  }
+}
