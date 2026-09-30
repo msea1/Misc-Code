@@ -1,0 +1,96 @@
+level,key,data_type,re-request_if_missing,required_for_abstraction,required_for_ingestion,comment,examples
+root,crescendoSchemaID,string,n/a,n/a,y,,claimsabstraction0012
+root,participantFirstName,string,n,n,y,Can usually be inferred by accompanying communication with data source.,Smith
+root,participantLastName,string,n,n,y,Can usually be inferred by accompanying communication with data source.,John
+root,participantID,string,n/a,n/a,y,,(see comment)
+root,carrierName,string,n,n,y,Can usually be inferred by accompanying communication with data source.,Aetna
+root,document,string,n/a,n/a,y,,(see comment)
+root,medicalClaims,array of medicalClaimSchema (see below),n/a,n/a,n,,
+root,pharmacyClaims,array of pharmacyClaimSchema (see below),n/a,n/a,n,,
+medicalClaimSchema,auditLog,array of abstractorSchema (see below),n/a,n/a,y,,
+medicalClaimSchema,claimId,string,y,n,n,,XYZ12345
+medicalClaimSchema,facility,providerSchema (see below),y (see comment),n,n,Re-request will be performed if NEITHER facility OR servicing provider is included in a medical claim.,
+medicalClaimSchema,providers,array of providerSchema (see below),y (see comment),n,n,Re-request will be performed if NEITHER facility OR servicing provider is included in a medical claim.,
+medicalClaimSchema,serviceStartDate,string,y (see comment),n,n,Re-request will be performed if service start date is lacking at BOTH the overall claim level AND for any line items included in a medical claim.,2025-01-10
+medicalClaimSchema,serviceEndDate,string,n,n,n,,2025-01-14
+medicalClaimSchema,adjudicationDecision,string,y (see comment),n,n,"Re-request will be performed if adjudication decision is not included at EITHER the overall claim or all line-item levels for a medical claim, unless payor is among those that only send us approved claims (Ops is compiling that list as of 8/2025).",denied
+medicalClaimSchema,amounts,amountsSchema (see below),y (see comment),n,n,Re-request will be performed if amounts is not included at EITHER the overall claim or all line-item levels for a medical claim.,
+medicalClaimSchema,diagnosisCodes,array of diagnosisCodesSchema (see below),y (see comment),n,n,"Re-request will be performed if diagnosis data is not included at EITHER the overall claim or all line-item levels for a medical claim.
+
+At the discretion of Ops, if there is evidence to suggest that only a single diagnosis is being communicated even when the claim has multiple, a re-contact to request clarification may occur.",
+medicalClaimSchema,lineItems,array of medicalClaimLineItemSchema (see below),y,y,y,"This refers to data that represents the services provided, even if it is not given the explicit label ""line item"" on the claim document.
+A medical claim will be ingested only if it contains at least one medicalClaimLineItemSchema element, otherwise an error will be triggered.  Other claims within an abstraction file may still be ingested.",
+medicalClaimSchema,page_and_line_number_reference,string,n/a,n/a,n,,pages 2-4
+medicalClaimSchema,notes,array of ClaimNoteItemSchema (see below),n/a,n/a,n,,
+pharmacyClaimSchema,claimId,string,y (see comment),n,n,Re-request will be performed if NEITHER claimId nor Rx number is provided for a pharmacy claim.,ABC23456
+pharmacyClaimSchema,adjudicationDecision,string,y (see comment),n,n,"Re-request will be performed if adjudication decision is not included, unless payor is among those that only send us approved claims (Ops is compiling that list as of 8/2025).",approved
+pharmacyClaimSchema,amounts,amountsSchema (see below),y (see comment),n,n,Re-request will be performed if amounts is not included for a pharmacy claim.,
+pharmacyClaimSchema,prescribingProviderName,string,n,n,n,,"Jones, Anthony"
+pharmacyClaimSchema,prescribingProviderNPI,string,y,n,n,,12345678
+pharmacyClaimSchema,fillLocationName,string,n,n,n,,Uptown Cheyenne CVS #43
+pharmacyClaimSchema,fillLocationNPI,string,n,n,n,,23456789
+pharmacyClaimSchema,fillDate,string,y,y,y,"A pharmacy claim will be ingested only if a fill date is provided, otherwise an error will be triggered.  Other claims within an abstraction file may still be ingested.",2025-02-20
+pharmacyClaimSchema,nationalDrugCode,string,y,(see comment),y,Abstraction will be performed only if EITHER NDC or label name is provided for a given pharmacy claim..,143988601
+pharmacyClaimSchema,labelName,string,n,(see comment),n,Abstraction will be performed only if EITHER NDC or label name is provided for a given pharmacy claim..,amoxicillin 200mg/5mL
+pharmacyClaimSchema,daysSupply,integer,y,n,n,,7
+pharmacyClaimSchema,quantityValue,number,y,n,n,,210
+pharmacyClaimSchema,quantityUnits,number,n,n,n,,mL
+pharmacyClaimSchema,rxNumber,string,y (see comment),n,n,Re-request will be performed if NEITHER claimId nor Rx number is provided for a pharmacy claim.,CDE345678
+pharmacyClaimSchema,pageAndLineNumberReference,string,n/a,n/a,n,,page 5 line 2
+pharmacyClaimSchema,notes,array of ClaimNoteItemSchema (see below),n/a,n/a,n,,
+pharmacyClaimSchema,auditLog,array of abstractorSchema (see below),n/a,n/a,y,,
+providerSchema,name,string,y (see comment),n,n,"For any provider recorded, re-request will be performed if NEITHER provider name nor provider NPI is provided.","Brown, Samantha"
+providerSchema,npi,string,y (see comment),n,n,"For any provider recorded, re-request will be performed if NEITHER provider name nor provider NPI is provided.",34567890
+providerSchema,providerType,enum,n,n,n,,billing
+diagnosisCodesSchema,code,string,y (see comment),n,n,"For any diagnosis recorded, re-request will be performed if NEITHER code nor descriptoin is provided.",H66.002
+diagnosisCodesSchema,description,string,y (see comment),n,n,"For any diagnosis recorded, re-request will be performed if NEITHER code nor descriptoin is provided.","Acute suppurative otitis media without spontaneous rupture of ear drum, left ear"
+medicalClaimLineItemSchema,amounts,amountsSchema (see below),y (see comment),n,n,Re-request will be performed if amounts is not included at EITHER the overall claim or all line-item levels for a medical claim.,
+medicalClaimLineItemSchema,procedureCode,string,y (see comment),n,n,Re-request will be performed if a line item contains NEITHER a procedure code nor a revenue code.,99213
+medicalClaimLineItemSchema,procedureCodeDescription,string,n,n,n,,"Established patient office or other outpatient visit, 20-29 minutes"
+medicalClaimLineItemSchema,procedureCodeModifiers,[string],n,n,n,,[25]
+medicalClaimLineItemSchema,revenueCode,string,y (see comment),n,n,Re-request will be performed if a line item contains NEITHER a procedure code nor a revenue code.,0450
+medicalClaimLineItemSchema,serviceStartDate,string,y,n,n,Re-request will be performed if a line item does not contain a service start date.,2022-03-01
+medicalClaimLineItemSchema,serviceEndDate,string,n,n,n,,2022-03-01
+medicalClaimLineItemSchema,auditLog,array of abstractorSchema (see below),n/a,n/a,y,,
+medicalClaimLineItemSchema,adjudicationDecision,string,y (see comment),n,n,"Re-request will be performed if adjudication decision is not included at EITHER the overall claim or all line-item levels for a medical claim, unless payor is among those that only send us approved claims (Ops is compiling that list as of 8/2025).",approved
+medicalClaimLineItemSchema,diagnosisCodes,array of diagnosisCodesSchema(see above),y (see comment),n,n,Re-request will be performed if diagnosis data is not included at EITHER the overall claim or all line-item levels for a medical claim.,
+medicalClaimLineItemSchema,quantity,integer,n,n,n,,1
+medicalClaimLineItemSchema,nationalDrugCode,string,n,n,n,,143988601
+medicalClaimLineItemSchema,page_and_line_number_reference,string,n/a,n/a,n,,page 4
+amountsSchema,allowedCents,integer,y (see comment),n,n,"Re-request will be performed if, for a given occurrence of amountsSchema, the claim does not provide EITHER:
+a) allowed, OR
+b) BOTH (patient overall responsibility OR ALL OF (coinsurance, copay, and deductible)) AND paid by insurance, OR
+c) [pharmacy claims only] BOTH paid by patient AND paid by insurance",12500
+amountsSchema,billedCents,integer,n,n,n,,15000
+amountsSchema,patientOverallResponsibilityCents,integer,y (see comment),n,n,"Re-request will be performed if, for a given occurrence of amountsSchema, the claim does not provide EITHER:
+a) allowed, OR
+b) BOTH (patient overall responsibility OR ALL OF (coinsurance, copay, and deductible)) AND paid by insurance, OR
+c) [pharmacy claims only] BOTH paid by patient AND paid by insurance",2500
+amountsSchema,coinsuranceCents,integer,y (see comment),n,n,"Re-request will be performed if, for a given occurrence of amountsSchema, the claim does not provide EITHER:
+a) allowed, OR
+b) BOTH (patient overall responsibility OR ALL OF (coinsurance, copay, and deductible)) AND paid by insurance, OR
+c) [pharmacy claims only] BOTH paid by patient AND paid by insurance",500
+amountsSchema,copayCents,integer,y (see comment),n,n,"Re-request will be performed if, for a given occurrence of amountsSchema, the claim does not provide EITHER:
+a) allowed, OR
+b) BOTH (patient overall responsibility OR ALL OF (coinsurance, copay, and deductible)) AND paid by insurance, OR
+c) [pharmacy claims only] BOTH paid by patient AND paid by insurance",2000
+amountsSchema,deductibleCents,integer,y (see comment),n,n,"Re-request will be performed if, for a given occurrence of amountsSchema, the claim does not provide EITHER:
+a) allowed, OR
+b) BOTH (patient overall responsibility OR ALL OF (coinsurance, copay, and deductible)) AND paid by insurance, OR
+c) [pharmacy claims only] BOTH paid by patient AND paid by insurance",0
+amountsSchema,nonCoveredCents,integer,n,n,n,,2500
+amountsSchema,paidByInsuranceCents,integer,y (see comment),n,n,"Re-request will be performed if, for a given occurrence of amountsSchema, the claim does not provide EITHER:
+a) allowed, OR
+b) BOTH (patient overall responsibility OR ALL OF (coinsurance, copay, and deductible)) AND paid by insurance, OR
+c) [pharmacy claims only] BOTH paid by patient AND paid by insurance",10000
+amountsSchema,paidByPatientCents,integer,y (see comment),n,n,"Re-request will be performed if, for a given occurrence of amountsSchema, the claim does not provide EITHER:
+a) allowed, OR
+b) BOTH (patient overall responsibility OR ALL OF (coinsurance, copay, and deductible)) AND paid by insurance, OR
+c) [pharmacy claims only] BOTH paid by patient AND paid by insurance",2500
+abstractorSchema,abstractionRound,integer,n/a,n/a,n,,1
+abstractorSchema,abstractionState,string,n/a,n/a,n,,complete
+abstractorSchema,abstractorName,string,n/a,n/a,y,"Please add description to schema: ""Full abstractor name as (last name, first name), not e-mail address, initials, etc.""","Henderson, Samuel"
+abstractorSchema,abstractionCompletionDateTime,string,n/a,n/a,y,,2022-05-01
+abstractorSchema,abstractionDiscrepancies,string,n/a,n/a,n,,
+abstractorSchema,abstractionResolution,string,n/a,n/a,n,,
+claimNoteItemSchema,message,string,n/a,n/a,n,,
